@@ -50,32 +50,32 @@
   describe('ContactCommand', function() {
     it('should create an instance of ContactCommand', function() {
       // uncomment below and update the code to test ContactCommand
-      //var instance = new SiigoApi.ContactCommand();
-      //expect(instance).to.be.a(SiigoApi.ContactCommand);
+      var instance = new SiigoApi.ContactCommand();
+      expect(instance).to.be.a(SiigoApi.ContactCommand);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new SiigoApi.ContactCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ContactCommand();
+      expect(instance.first_name).to.be(undefined);
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new SiigoApi.ContactCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ContactCommand();
+      expect(instance.last_name).to.be(undefined);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instance = new SiigoApi.ContactCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ContactCommand();
+      expect(instance.email).to.be(undefined);
     });
 
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
-      //var instance = new SiigoApi.ContactCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ContactCommand();
+      expect(instance.phone).to.be(undefined);
     });
 
   });

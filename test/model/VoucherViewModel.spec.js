@@ -50,86 +50,86 @@
   describe('VoucherViewModel', function() {
     it('should create an instance of VoucherViewModel', function() {
       // uncomment below and update the code to test VoucherViewModel
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be.a(SiigoApi.VoucherViewModel);
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance).to.be.a(SiigoApi.VoucherViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property document (base name: "document")', function() {
       // uncomment below and update the code to test the property document
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.document).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.number).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.date).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property costCenter (base name: "cost_center")', function() {
       // uncomment below and update the code to test the property costCenter
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.cost_center).to.be(undefined);
     });
 
     it('should have the property customer (base name: "customer")', function() {
       // uncomment below and update the code to test the property customer
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.customer).to.be(undefined);
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.currency).to.be(undefined);
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.items).to.be(undefined);
     });
 
     it('should have the property payment (base name: "payment")', function() {
       // uncomment below and update the code to test the property payment
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.payment).to.be(undefined);
     });
 
     it('should have the property observations (base name: "observations")', function() {
       // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.observations).to.be(undefined);
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instance = new SiigoApi.VoucherViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VoucherViewModel();
+      expect(instance.metadata).to.be(undefined);
     });
 
   });

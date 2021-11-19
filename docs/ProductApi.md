@@ -2,11 +2,11 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createProduct**](ProductApi.md#createProduct) | **POST** /v1/products | Creates a produc
-[**deleteProduct**](ProductApi.md#deleteProduct) | **DELETE** /v1/products/{id} | Deletes a Product by GUID
-[**getProduct**](ProductApi.md#getProduct) | **GET** /v1/products/{id} | Gets a Product by GUID.
-[**getProducts**](ProductApi.md#getProducts) | **GET** /v1/products | Gets a list of Products with pagination.
-[**updateProduct**](ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates a Product by GUID
+[**createProduct**](ProductApi.md#createProduct) | **POST** /v1/products | Creates a product.
+[**deleteProduct**](ProductApi.md#deleteProduct) | **DELETE** /v1/products/{id} | Deletes the product by GUID.
+[**getProduct**](ProductApi.md#getProduct) | **GET** /v1/products/{id} | Gets the product by GUID.
+[**getProducts**](ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
+[**updateProduct**](ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates the product by GUID.
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > ProductsModel createProduct(opts)
 
-Creates a produc
+Creates a product.
 
 ### Example
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 > ProductDeleteViewModel deleteProduct(id)
 
-Deletes a Product by GUID
+Deletes the product by GUID.
 
 ### Example
 
@@ -93,7 +93,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.deleteProduct(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -109,7 +109,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.deleteProduct(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -125,7 +125,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 > ProductsModel getProduct(id)
 
-Gets a Product by GUID.
+Gets the product by GUID.
 
 ### Example
 
@@ -156,7 +156,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getProduct(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -172,7 +172,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getProduct(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -188,7 +188,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 > ProductDetailsViewModel getProducts(opts)
 
-Gets a list of Products with pagination.
+Returns a paginated list of products.
 
 ### Example
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 > ProductsModel updateProduct(id, opts)
 
-Updates a Product by GUID
+Updates the product by GUID.
 
 ### Example
 
@@ -325,7 +325,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 let opts = {
   'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information to update.
 };
@@ -344,7 +344,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let id = null; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
     let opts = {
     'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information to update.
     };
@@ -363,7 +363,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
  **productCommand** | [**ProductCommand**](ProductCommand.md)| Represents the request with the product information to update. | [optional] 
 
 ### Return type

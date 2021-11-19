@@ -50,20 +50,20 @@
   describe('RelatedUsersModel', function() {
     it('should create an instance of RelatedUsersModel', function() {
       // uncomment below and update the code to test RelatedUsersModel
-      //var instance = new SiigoApi.RelatedUsersModel();
-      //expect(instance).to.be.a(SiigoApi.RelatedUsersModel);
+      var instance = new SiigoApi.RelatedUsersModel();
+      expect(instance).to.be.a(SiigoApi.RelatedUsersModel);
     });
 
     it('should have the property sellerId (base name: "seller_id")', function() {
       // uncomment below and update the code to test the property sellerId
-      //var instance = new SiigoApi.RelatedUsersModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RelatedUsersModel();
+      expect(instance.seller_id).to.be(undefined);
     });
 
     it('should have the property collectorId (base name: "collector_id")', function() {
       // uncomment below and update the code to test the property collectorId
-      //var instance = new SiigoApi.RelatedUsersModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RelatedUsersModel();
+      expect(instance.collector_id).to.be(undefined);
     });
 
   });

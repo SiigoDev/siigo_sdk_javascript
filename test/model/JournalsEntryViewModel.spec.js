@@ -50,26 +50,26 @@
   describe('JournalsEntryViewModel', function() {
     it('should create an instance of JournalsEntryViewModel', function() {
       // uncomment below and update the code to test JournalsEntryViewModel
-      //var instance = new SiigoApi.JournalsEntryViewModel();
-      //expect(instance).to.be.a(SiigoApi.JournalsEntryViewModel);
+      var instance = new SiigoApi.JournalsEntryViewModel();
+      expect(instance).to.be.a(SiigoApi.JournalsEntryViewModel);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.JournalsEntryViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalsEntryViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.JournalsEntryViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalsEntryViewModel();
+      expect(instance.results).to.be(undefined);
     });
 
     it('should have the property links (base name: "__links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new SiigoApi.JournalsEntryViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalsEntryViewModel();
+      expect(instance.__links).to.be(undefined);
     });
 
   });

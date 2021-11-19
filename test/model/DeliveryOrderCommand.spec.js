@@ -50,26 +50,26 @@
   describe('DeliveryOrderCommand', function() {
     it('should create an instance of DeliveryOrderCommand', function() {
       // uncomment below and update the code to test DeliveryOrderCommand
-      //var instance = new SiigoApi.DeliveryOrderCommand();
-      //expect(instance).to.be.a(SiigoApi.DeliveryOrderCommand);
+      var instance = new SiigoApi.DeliveryOrderCommand();
+      expect(instance).to.be.a(SiigoApi.DeliveryOrderCommand);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instance = new SiigoApi.DeliveryOrderCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DeliveryOrderCommand();
+      expect(instance.prefix).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.DeliveryOrderCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DeliveryOrderCommand();
+      expect(instance.number).to.be(undefined);
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new SiigoApi.DeliveryOrderCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DeliveryOrderCommand();
+      expect(instance.date).to.be(undefined);
     });
 
   });

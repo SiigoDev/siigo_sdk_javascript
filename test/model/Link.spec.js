@@ -50,14 +50,14 @@
   describe('Link', function() {
     it('should create an instance of Link', function() {
       // uncomment below and update the code to test Link
-      //var instance = new SiigoApi.Link();
-      //expect(instance).to.be.a(SiigoApi.Link);
+      var instance = new SiigoApi.Link();
+      expect(instance).to.be.a(SiigoApi.Link);
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new SiigoApi.Link();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Link();
+      expect(instance.href).to.be(undefined);
     });
 
   });

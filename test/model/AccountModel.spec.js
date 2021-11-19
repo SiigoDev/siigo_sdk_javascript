@@ -50,20 +50,20 @@
   describe('AccountModel', function() {
     it('should create an instance of AccountModel', function() {
       // uncomment below and update the code to test AccountModel
-      //var instance = new SiigoApi.AccountModel();
-      //expect(instance).to.be.a(SiigoApi.AccountModel);
+      var instance = new SiigoApi.AccountModel();
+      expect(instance).to.be.a(SiigoApi.AccountModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.AccountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AccountModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property movement (base name: "movement")', function() {
       // uncomment below and update the code to test the property movement
-      //var instance = new SiigoApi.AccountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AccountModel();
+      expect(instance.movement).to.be(undefined);
     });
 
   });

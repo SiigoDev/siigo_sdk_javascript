@@ -2,8 +2,8 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAssetGroups**](FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Gets a list of fixed assets.
-[**getFixedAssets**](FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Gets a list of fixed assets.
+[**getAssetGroups**](FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Returns a list of asset groups.
+[**getFixedAssets**](FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Returns a list of fixed assets.
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > [AssetGroupsViewModel] getAssetGroups()
 
-Gets a list of fixed assets.
+Returns a list of asset groups.
 
 ### Example
 
@@ -70,7 +70,7 @@ This endpoint does not need any parameter.
 
 > [FixedAssetsViewModel] getFixedAssets()
 
-Gets a list of fixed assets.
+Returns a list of fixed assets.
 
 ### Example
 

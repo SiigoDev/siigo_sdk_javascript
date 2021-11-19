@@ -14,20 +14,22 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd()+'/src/index', process.cwd()+'/test/app'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd()+'/src/index'), require(process.cwd()+'/test/app.js'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
+    factory(root.expect, root.SiigoApi, root.app);
   }
-}(this, function(expect, SiigoApi) {
+}(this, function(expect, SiigoApi, app) {
   'use strict';
 
   var instance;
+  var result;
 
   beforeEach(function() {
+    SiigoApi = app._test.initialize(SiigoApi);
     instance = new SiigoApi.DocumentTypeApi();
   });
 
@@ -49,15 +51,35 @@
 
   describe('DocumentTypeApi', function() {
     describe('getDocumentTypes', function() {
-      it('should call getDocumentTypes successfully', function(done) {
-        //uncomment below and update the code to test getDocumentTypes
-        //instance.getDocumentTypes(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call getDocumentTypes successfully', async function() {
+        try {
+          result = await instance.getDocumentTypesWithHttpInfo({ type: 'FV' });
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200);
+        expect(result.response.body[0].id).to.be(115057);
+        expect(result.response.body[0].code).to.be('1');
+        expect(result.response.body[0].name).to.be('Factura');
+        expect(result.response.body[0].description).to.be('Factura de venta No');
+        expect(result.response.body[0].type).to.be('FV');
+        expect(result.response.body[0].active).to.be(true);
+        expect(result.response.body[0].seller_by_item).to.be(false);
+        expect(result.response.body[0].cost_center).to.be(true);
+        expect(result.response.body[0].cost_center_mandatory).to.be(false);
+        expect(result.response.body[0].cost_center_default).to.be(13212);
+        expect(result.response.body[0].automatic_number).to.be(true);
+        //expect(result.response.body[0].consecutive).to.be(-539214787);
+        expect(result.response.body[0].discount_type).to.be('Percentage');
+        expect(result.response.body[0].decimals).to.be(true);
+        expect(result.response.body[0].advance_payment).to.be(true);
+        expect(result.response.body[0].reteiva).to.be(true);
+        expect(result.response.body[0].reteica).to.be(true);
+        expect(result.response.body[0].self_withholding).to.be(true);
+        expect(result.response.body[0].self_withholding_limit).to.be(1000);
+        expect(result.response.body[0].electronic_type).to.be('NoElectronic');
       });
-    });
+    }); 
   });
 
 }));

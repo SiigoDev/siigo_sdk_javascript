@@ -50,38 +50,38 @@
   describe('PaymentTypesViewModel', function() {
     it('should create an instance of PaymentTypesViewModel', function() {
       // uncomment below and update the code to test PaymentTypesViewModel
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be.a(SiigoApi.PaymentTypesViewModel);
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance).to.be.a(SiigoApi.PaymentTypesViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance.active).to.be(undefined);
     });
 
     it('should have the property dueDate (base name: "due_date")', function() {
       // uncomment below and update the code to test the property dueDate
-      //var instance = new SiigoApi.PaymentTypesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentTypesViewModel();
+      expect(instance.due_date).to.be(undefined);
     });
 
   });

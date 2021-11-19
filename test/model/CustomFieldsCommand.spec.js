@@ -50,20 +50,20 @@
   describe('CustomFieldsCommand', function() {
     it('should create an instance of CustomFieldsCommand', function() {
       // uncomment below and update the code to test CustomFieldsCommand
-      //var instance = new SiigoApi.CustomFieldsCommand();
-      //expect(instance).to.be.a(SiigoApi.CustomFieldsCommand);
+      var instance = new SiigoApi.CustomFieldsCommand();
+      expect(instance).to.be.a(SiigoApi.CustomFieldsCommand);
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new SiigoApi.CustomFieldsCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CustomFieldsCommand();
+      expect(instance.key).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.CustomFieldsCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CustomFieldsCommand();
+      expect(instance.value).to.be(undefined);
     });
 
   });

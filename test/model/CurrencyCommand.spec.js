@@ -50,20 +50,20 @@
   describe('CurrencyCommand', function() {
     it('should create an instance of CurrencyCommand', function() {
       // uncomment below and update the code to test CurrencyCommand
-      //var instance = new SiigoApi.CurrencyCommand();
-      //expect(instance).to.be.a(SiigoApi.CurrencyCommand);
+      var instance = new SiigoApi.CurrencyCommand();
+      expect(instance).to.be.a(SiigoApi.CurrencyCommand);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.CurrencyCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CurrencyCommand();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property exchangeRate (base name: "exchange_rate")', function() {
       // uncomment below and update the code to test the property exchangeRate
-      //var instance = new SiigoApi.CurrencyCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CurrencyCommand();
+      expect(instance.exchange_rate).to.be(undefined);
     });
 
   });

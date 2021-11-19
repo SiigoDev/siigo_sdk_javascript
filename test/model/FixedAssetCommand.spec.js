@@ -50,14 +50,14 @@
   describe('FixedAssetCommand', function() {
     it('should create an instance of FixedAssetCommand', function() {
       // uncomment below and update the code to test FixedAssetCommand
-      //var instance = new SiigoApi.FixedAssetCommand();
-      //expect(instance).to.be.a(SiigoApi.FixedAssetCommand);
+      var instance = new SiigoApi.FixedAssetCommand();
+      expect(instance).to.be.a(SiigoApi.FixedAssetCommand);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.FixedAssetCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FixedAssetCommand();
+      expect(instance.id).to.be(undefined);
     });
 
   });

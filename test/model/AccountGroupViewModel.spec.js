@@ -51,25 +51,25 @@
     it('should create an instance of AccountGroupViewModel', function() {
       // uncomment below and update the code to test AccountGroupViewModel
       //var instance = new SiigoApi.AccountGroupViewModel();
-      //expect(instance).to.be.a(SiigoApi.AccountGroupViewModel);
+      expect(instance).to.be.a(SiigoApi.AccountGroupViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new SiigoApi.AccountGroupViewModel();
-      //expect(instance).to.be();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new SiigoApi.AccountGroupViewModel();
-      //expect(instance).to.be();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
       //var instance = new SiigoApi.AccountGroupViewModel();
-      //expect(instance).to.be();
+      expect(instance.active).to.be(undefined);
     });
 
   });

@@ -9,29 +9,31 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  *
- */
+ */ 
 
-(function(root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd() + '/src/index', process.cwd() + '/test/app'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd() + '/src/index'), require(process.cwd() + '/test/app.js'));
   } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
+    
+    factory(root.expect, root.SiigoApi, root.app);
   }
-}(this, function(expect, SiigoApi) {
+}(this, function (expect, SiigoApi, app) {
   'use strict';
-
   var instance;
 
-  beforeEach(function() {
+  var result;
+
+  before(function () {
+    SiigoApi = app._test.initialize(SiigoApi);
     instance = new SiigoApi.CostCenterApi();
   });
 
-  var getProperty = function(object, getter, property) {
+  var getProperty = function (object, getter, property) {
     // Use getter method if present; otherwise, get the property directly.
     if (typeof object[getter] === 'function')
       return object[getter]();
@@ -39,7 +41,7 @@
       return object[property];
   }
 
-  var setProperty = function(object, setter, property, value) {
+  var setProperty = function (object, setter, property, value) {
     // Use setter method if present; otherwise, set the property directly.
     if (typeof object[setter] === 'function')
       object[setter](value);
@@ -47,15 +49,20 @@
       object[property] = value;
   }
 
-  describe('CostCenterApi', function() {
-    describe('getCostCenters', function() {
-      it('should call getCostCenters successfully', function(done) {
+  describe('CostCenterApi', function () {
+    describe('getCostCenters', function () {
+      it('should call getCostCenters successfully', async function () {
         //uncomment below and update the code to test getCostCenters
-        //instance.getCostCenters(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        try {
+          result = await instance.getCostCentersWithHttpInfo();
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200);
+        expect(result.data[0].id).to.be(13212);
+        expect(result.data[0].code).to.be('1112-1');
+        expect(result.data[0].name).to.be('polas center');
+        expect(result.data[0].active).to.be(true);
       });
     });
   });

@@ -50,20 +50,20 @@
   describe('Payment', function() {
     it('should create an instance of Payment', function() {
       // uncomment below and update the code to test Payment
-      //var instance = new SiigoApi.Payment();
-      //expect(instance).to.be.a(SiigoApi.Payment);
+      var instance = new SiigoApi.Payment();
+      expect(instance).to.be.a(SiigoApi.Payment);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.Payment();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Payment();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.Payment();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Payment();
+      expect(instance.value).to.be(undefined);
     });
 
   });

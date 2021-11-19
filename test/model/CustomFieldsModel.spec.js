@@ -50,20 +50,20 @@
   describe('CustomFieldsModel', function() {
     it('should create an instance of CustomFieldsModel', function() {
       // uncomment below and update the code to test CustomFieldsModel
-      //var instance = new SiigoApi.CustomFieldsModel();
-      //expect(instance).to.be.a(SiigoApi.CustomFieldsModel);
+      var instance = new SiigoApi.CustomFieldsModel();
+      expect(instance).to.be.a(SiigoApi.CustomFieldsModel);
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new SiigoApi.CustomFieldsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CustomFieldsModel();
+      expect(instance.key).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.CustomFieldsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CustomFieldsModel();
+      expect(instance.value).to.be(undefined);
     });
 
   });

@@ -2,11 +2,11 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCustomer**](CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a Customer.
-[**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes a Customer by GUID.
-[**getCustomer**](CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets a Customer by GUID.
-[**getCustomers**](CustomerApi.md#getCustomers) | **GET** /v1/customers | Gets a list of Customers.
-[**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates a Customer by GUID.
+[**createCustomer**](CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a customer.
+[**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes the customer by GUID.
+[**getCustomer**](CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets the customer by GUID.
+[**getCustomers**](CustomerApi.md#getCustomers) | **GET** /v1/customers | Returns a paginated list of customers.
+[**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates the customer by GUID.
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > CustomerViewModel createCustomer(opts)
 
-Creates a Customer.
+Creates a customer.
 
 ### Example
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 > CustomerDeleteViewModel deleteCustomer(id)
 
-Deletes a Customer by GUID.
+Deletes the customer by GUID.
 
 ### Example
 
@@ -93,7 +93,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CustomerApi();
 
-let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.deleteCustomer(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -109,7 +109,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
-    let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.deleteCustomer(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -125,7 +125,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 > CustomerViewModel getCustomer(id)
 
-Gets a Customer by GUID.
+Gets the customer by GUID.
 
 ### Example
 
@@ -156,7 +156,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CustomerApi();
 
-let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getCustomer(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -172,7 +172,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
-    let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getCustomer(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -188,7 +188,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 > CustomersViewModel getCustomers(opts)
 
-Gets a list of Customers.
+Returns a paginated list of customers.
 
 ### Example
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 > CustomerViewModel updateCustomer(id, opts)
 
-Updates a Customer by GUID.
+Updates the customer by GUID.
 
 ### Example
 
@@ -322,7 +322,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CustomerApi();
 
-let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 let opts = {
   'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
 };
@@ -341,7 +341,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
-    let id = null; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
     let opts = {
     'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
     };
@@ -360,7 +360,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
  **createCustomerCommand** | [**CreateCustomerCommand**](CreateCustomerCommand.md)| Represents the request with the customer information. | [optional] 
 
 ### Return type

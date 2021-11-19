@@ -50,44 +50,44 @@
   describe('CityModel', function() {
     it('should create an instance of CityModel', function() {
       // uncomment below and update the code to test CityModel
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be.a(SiigoApi.CityModel);
+      var instance = new SiigoApi.CityModel();
+      expect(instance).to.be.a(SiigoApi.CityModel);
     });
 
     it('should have the property countryCode (base name: "country_code")', function() {
       // uncomment below and update the code to test the property countryCode
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.country_code).to.be(undefined);
     });
 
     it('should have the property countryName (base name: "country_name")', function() {
       // uncomment below and update the code to test the property countryName
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.country_name).to.be(undefined);
     });
 
     it('should have the property stateCode (base name: "state_code")', function() {
       // uncomment below and update the code to test the property stateCode
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.state_code).to.be(undefined);
     });
 
     it('should have the property stateName (base name: "state_name")', function() {
       // uncomment below and update the code to test the property stateName
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.state_name).to.be(undefined);
     });
 
     it('should have the property cityCode (base name: "city_code")', function() {
       // uncomment below and update the code to test the property cityCode
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.city_code).to.be(undefined);
     });
 
     it('should have the property cityName (base name: "city_name")', function() {
       // uncomment below and update the code to test the property cityName
-      //var instance = new SiigoApi.CityModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityModel();
+      expect(instance.city_name).to.be(undefined);
     });
 
   });

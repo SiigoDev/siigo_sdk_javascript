@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTaxes**](TaxesApi.md#getTaxes) | **GET** /v1/taxes | Gets a list of Taxes.
+[**getTaxes**](TaxesApi.md#getTaxes) | **GET** /v1/taxes | Returns a list of taxes.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > TaxViewModel getTaxes()
 
-Gets a list of Taxes.
+Returns a list of taxes.
 
 ### Example
 

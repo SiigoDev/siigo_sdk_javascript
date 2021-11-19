@@ -50,26 +50,26 @@
   describe('CreditNotePdfViewModel', function() {
     it('should create an instance of CreditNotePdfViewModel', function() {
       // uncomment below and update the code to test CreditNotePdfViewModel
-      //var instance = new SiigoApi.CreditNotePdfViewModel();
+      var instance = new SiigoApi.CreditNotePdfViewModel();
       //expect(instance).to.be.a(SiigoApi.CreditNotePdfViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.CreditNotePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotePdfViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property cude (base name: "cude")', function() {
       // uncomment below and update the code to test the property cude
-      //var instance = new SiigoApi.CreditNotePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotePdfViewModel();
+      expect(instance.cude).to.be(undefined);
     });
 
     it('should have the property base64 (base name: "base64")', function() {
       // uncomment below and update the code to test the property base64
-      //var instance = new SiigoApi.CreditNotePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotePdfViewModel();
+      expect(instance.base64).to.be(undefined);
     });
 
   });

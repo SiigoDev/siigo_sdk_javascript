@@ -50,32 +50,32 @@
   describe('ProductDetail', function() {
     it('should create an instance of ProductDetail', function() {
       // uncomment below and update the code to test ProductDetail
-      //var instance = new SiigoApi.ProductDetail();
-      //expect(instance).to.be.a(SiigoApi.ProductDetail);
+      var instance = new SiigoApi.ProductDetail();
+      expect(instance).to.be.a(SiigoApi.ProductDetail);
     });
 
     it('should have the property detailName (base name: "detail_name")', function() {
       // uncomment below and update the code to test the property detailName
-      //var instance = new SiigoApi.ProductDetail();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetail();
+      expect(instance.detail_name).to.be(undefined);
     });
 
     it('should have the property detailDescription (base name: "detail_description")', function() {
       // uncomment below and update the code to test the property detailDescription
-      //var instance = new SiigoApi.ProductDetail();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetail();
+      expect(instance.detail_description).to.be(undefined);
     });
 
     it('should have the property definitionName (base name: "definition_name")', function() {
       // uncomment below and update the code to test the property definitionName
-      //var instance = new SiigoApi.ProductDetail();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetail();
+      expect(instance.definition_name).to.be(undefined);
     });
 
     it('should have the property definitionDescription (base name: "definition_description")', function() {
       // uncomment below and update the code to test the property definitionDescription
-      //var instance = new SiigoApi.ProductDetail();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetail();
+      expect(instance.definition_description).to.be(undefined);
     });
 
   });

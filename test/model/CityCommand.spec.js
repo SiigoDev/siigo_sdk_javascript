@@ -50,26 +50,26 @@
   describe('CityCommand', function() {
     it('should create an instance of CityCommand', function() {
       // uncomment below and update the code to test CityCommand
-      //var instance = new SiigoApi.CityCommand();
-      //expect(instance).to.be.a(SiigoApi.CityCommand);
+      var instance = new SiigoApi.CityCommand();
+      expect(instance).to.be.a(SiigoApi.CityCommand);
     });
 
     it('should have the property countryCode (base name: "country_code")', function() {
       // uncomment below and update the code to test the property countryCode
-      //var instance = new SiigoApi.CityCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityCommand();
+      expect(instance.country_code).to.be(undefined);
     });
 
     it('should have the property stateCode (base name: "state_code")', function() {
       // uncomment below and update the code to test the property stateCode
-      //var instance = new SiigoApi.CityCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityCommand();
+      expect(instance.state_code).to.be(undefined);
     });
 
     it('should have the property cityCode (base name: "city_code")', function() {
       // uncomment below and update the code to test the property cityCode
-      //var instance = new SiigoApi.CityCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CityCommand();
+      expect(instance.city_code).to.be(undefined);
     });
 
   });

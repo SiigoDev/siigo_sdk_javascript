@@ -29,6 +29,7 @@
 
   beforeEach(function() {
     instance = new SiigoApi.AccountGroup();
+    // dt = await instance.getAccountGroups();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,20 +51,20 @@
   describe('AccountGroup', function() {
     it('should create an instance of AccountGroup', function() {
       // uncomment below and update the code to test AccountGroup
-      //var instance = new SiigoApi.AccountGroup();
-      //expect(instance).to.be.a(SiigoApi.AccountGroup);
+      var instance = new SiigoApi.AccountGroup();
+      expect(instance).to.be.a(SiigoApi.AccountGroup);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.AccountGroup();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AccountGroup();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.AccountGroup();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AccountGroup();
+      expect(instance.name).to.be(undefined);
     });
 
   });

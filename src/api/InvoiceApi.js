@@ -40,7 +40,7 @@ export default class InvoiceApi {
 
 
     /**
-     * Creates an Invoice.
+     * Creates an invoice.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
@@ -70,7 +70,7 @@ export default class InvoiceApi {
     }
 
     /**
-     * Creates an Invoice.
+     * Creates an invoice.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
@@ -84,7 +84,53 @@ export default class InvoiceApi {
 
 
     /**
-     * Gets an Invoice by GUID.
+     * Returns the errors list for a rejected electronic invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EInvoiceErrorsViewModel} and HTTP response
+     */
+    getElectronicInvoiceErrorsWithHttpInfo(id) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getElectronicInvoiceErrors");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer'];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = EInvoiceErrorsViewModel;
+      return this.apiClient.callApi(
+        '/v1/invoices/{id}/stamp/errors', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Returns the errors list for a rejected electronic invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EInvoiceErrorsViewModel}
+     */
+    getElectronicInvoiceErrors(id) {
+      return this.getElectronicInvoiceErrorsWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets the invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
      */
@@ -117,7 +163,7 @@ export default class InvoiceApi {
     }
 
     /**
-     * Gets an Invoice by GUID.
+     * Gets the invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
      */
@@ -130,53 +176,7 @@ export default class InvoiceApi {
 
 
     /**
-     * Get errors for a rejected invoice by GUID.
-     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EInvoiceErrorsViewModel} and HTTP response
-     */
-    getInvoiceErrorsWithHttpInfo(id) {
-      let postBody = null;
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getInvoiceErrors");
-      }
-
-      let pathParams = {
-        'id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['Bearer'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = EInvoiceErrorsViewModel;
-      return this.apiClient.callApi(
-        '/v1/invoices/{id}/stamp/errors', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get errors for a rejected invoice by GUID.
-     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EInvoiceErrorsViewModel}
-     */
-    getInvoiceErrors(id) {
-      return this.getInvoiceErrorsWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Gets an Invoice PDF by GUID.
+     * Gets the invoice PDF by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoicePdfViewModel} and HTTP response
      */
@@ -209,7 +209,7 @@ export default class InvoiceApi {
     }
 
     /**
-     * Gets an Invoice PDF by GUID.
+     * Gets the invoice PDF by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoicePdfViewModel}
      */
@@ -222,7 +222,7 @@ export default class InvoiceApi {
 
 
     /**
-     * Gets a list of Invoices with pagination.
+     * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
      * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
@@ -275,7 +275,7 @@ export default class InvoiceApi {
     }
 
     /**
-     * Gets a list of Invoices with pagination.
+     * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
      * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.

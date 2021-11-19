@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAccountGroups**](AccountGroupsApi.md#getAccountGroups) | **GET** /v1/account-groups | Gets a list of AccountGroups.
+[**getAccountGroups**](AccountGroupsApi.md#getAccountGroups) | **GET** /v1/account-groups | Returns a list of account groups.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > [AccountGroupViewModel] getAccountGroups()
 
-Gets a list of AccountGroups.
+Returns a list of account groups.
 
 ### Example
 

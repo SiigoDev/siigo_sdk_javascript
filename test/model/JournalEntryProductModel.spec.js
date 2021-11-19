@@ -50,38 +50,38 @@
   describe('JournalEntryProductModel', function() {
     it('should create an instance of JournalEntryProductModel', function() {
       // uncomment below and update the code to test JournalEntryProductModel
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryProductModel);
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance).to.be.a(SiigoApi.JournalEntryProductModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property warehouse (base name: "warehouse")', function() {
       // uncomment below and update the code to test the property warehouse
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance.warehouse).to.be(undefined);
     });
 
     it('should have the property quantity (base name: "quantity")', function() {
       // uncomment below and update the code to test the property quantity
-      //var instance = new SiigoApi.JournalEntryProductModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductModel();
+      expect(instance.quantity).to.be(undefined);
     });
 
   });

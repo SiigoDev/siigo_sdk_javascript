@@ -50,44 +50,44 @@
   describe('CreateJournalEntryCommand', function() {
     it('should create an instance of CreateJournalEntryCommand', function() {
       // uncomment below and update the code to test CreateJournalEntryCommand
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be.a(SiigoApi.CreateJournalEntryCommand);
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance).to.be.a(SiigoApi.CreateJournalEntryCommand);
     });
 
     it('should have the property document (base name: "document")', function() {
       // uncomment below and update the code to test the property document
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.document).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.number).to.be(undefined);
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.date).to.be(undefined);
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.currency).to.be(undefined);
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.items).to.be(undefined);
     });
 
     it('should have the property observations (base name: "observations")', function() {
       // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.CreateJournalEntryCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateJournalEntryCommand();
+      expect(instance.observations).to.be(undefined);
     });
 
   });

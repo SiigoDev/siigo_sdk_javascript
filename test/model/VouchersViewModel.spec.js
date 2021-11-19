@@ -50,26 +50,26 @@
   describe('VouchersViewModel', function() {
     it('should create an instance of VouchersViewModel', function() {
       // uncomment below and update the code to test VouchersViewModel
-      //var instance = new SiigoApi.VouchersViewModel();
-      //expect(instance).to.be.a(SiigoApi.VouchersViewModel);
+      var instance = new SiigoApi.VouchersViewModel();
+      expect(instance).to.be.a(SiigoApi.VouchersViewModel);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.VouchersViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VouchersViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.VouchersViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VouchersViewModel();
+      expect(instance.results).to.be(undefined);
     });
 
     it('should have the property links (base name: "__links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new SiigoApi.VouchersViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.VouchersViewModel();
+      expect(instance.__links).to.be(undefined);
     });
 
   });

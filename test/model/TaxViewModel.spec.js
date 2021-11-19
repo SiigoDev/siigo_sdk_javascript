@@ -50,38 +50,38 @@
   describe('TaxViewModel', function() {
     it('should create an instance of TaxViewModel', function() {
       // uncomment below and update the code to test TaxViewModel
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be.a(SiigoApi.TaxViewModel);
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance).to.be.a(SiigoApi.TaxViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property percentage (base name: "percentage")', function() {
       // uncomment below and update the code to test the property percentage
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance.percentage).to.be(undefined);
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instance = new SiigoApi.TaxViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxViewModel();
+      expect(instance.active).to.be(undefined);
     });
 
   });

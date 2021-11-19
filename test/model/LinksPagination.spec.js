@@ -50,26 +50,26 @@
   describe('LinksPagination', function() {
     it('should create an instance of LinksPagination', function() {
       // uncomment below and update the code to test LinksPagination
-      //var instance = new SiigoApi.LinksPagination();
-      //expect(instance).to.be.a(SiigoApi.LinksPagination);
+      var instance = new SiigoApi.LinksPagination();
+      expect(instance).to.be.a(SiigoApi.LinksPagination);
     });
 
     it('should have the property previous (base name: "previous")', function() {
       // uncomment below and update the code to test the property previous
-      //var instance = new SiigoApi.LinksPagination();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.LinksPagination();
+      expect(instance.previous).to.be(undefined);
     });
 
     it('should have the property self (base name: "self")', function() {
       // uncomment below and update the code to test the property self
-      //var instance = new SiigoApi.LinksPagination();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.LinksPagination();
+      expect(instance.self).to.be(undefined);
     });
 
     it('should have the property next (base name: "next")', function() {
       // uncomment below and update the code to test the property next
-      //var instance = new SiigoApi.LinksPagination();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.LinksPagination();
+      expect(instance.next).to.be(undefined);
     });
 
   });

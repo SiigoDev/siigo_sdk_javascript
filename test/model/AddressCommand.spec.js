@@ -50,26 +50,26 @@
   describe('AddressCommand', function() {
     it('should create an instance of AddressCommand', function() {
       // uncomment below and update the code to test AddressCommand
-      //var instance = new SiigoApi.AddressCommand();
-      //expect(instance).to.be.a(SiigoApi.AddressCommand);
+      var instance = new SiigoApi.AddressCommand();
+      expect(instance).to.be.a(SiigoApi.AddressCommand);
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instance = new SiigoApi.AddressCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AddressCommand();
+      expect(instance.address).to.be(undefined);
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instance = new SiigoApi.AddressCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AddressCommand();
+      expect(instance.city).to.be(undefined);
     });
 
     it('should have the property postalCode (base name: "postal_code")', function() {
       // uncomment below and update the code to test the property postalCode
-      //var instance = new SiigoApi.AddressCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AddressCommand();
+      expect(instance.postal_code).to.be(undefined);
     });
 
   });

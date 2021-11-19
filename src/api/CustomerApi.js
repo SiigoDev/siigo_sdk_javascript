@@ -39,7 +39,7 @@ export default class CustomerApi {
 
 
     /**
-     * Creates a Customer.
+     * Creates a customer.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
@@ -69,7 +69,7 @@ export default class CustomerApi {
     }
 
     /**
-     * Creates a Customer.
+     * Creates a customer.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
@@ -83,7 +83,7 @@ export default class CustomerApi {
 
 
     /**
-     * Deletes a Customer by GUID.
+     * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerDeleteViewModel} and HTTP response
      */
@@ -116,7 +116,7 @@ export default class CustomerApi {
     }
 
     /**
-     * Deletes a Customer by GUID.
+     * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerDeleteViewModel}
      */
@@ -129,7 +129,7 @@ export default class CustomerApi {
 
 
     /**
-     * Gets a Customer by GUID.
+     * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
@@ -162,7 +162,7 @@ export default class CustomerApi {
     }
 
     /**
-     * Gets a Customer by GUID.
+     * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
@@ -175,7 +175,7 @@ export default class CustomerApi {
 
 
     /**
-     * Gets a list of Customers.
+     * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
      * @param {String} opts.identification Represents the identification number of customer.  For example, the identifitication number '13832081'.
      * @param {Number} opts.branchOffice Represents the branch office of customer, this value by default will be 0.
@@ -230,7 +230,7 @@ export default class CustomerApi {
     }
 
     /**
-     * Gets a list of Customers.
+     * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
      * @param {String} opts.identification Represents the identification number of customer.  For example, the identifitication number '13832081'.
      * @param {Number} opts.branchOffice Represents the branch office of customer, this value by default will be 0.
@@ -256,7 +256,7 @@ export default class CustomerApi {
 
 
     /**
-     * Updates a Customer by GUID.
+     * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
@@ -292,7 +292,7 @@ export default class CustomerApi {
     }
 
     /**
-     * Updates a Customer by GUID.
+     * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.

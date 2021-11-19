@@ -14,20 +14,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd()+'/src/index', process.cwd()+'/test/app'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd()+'/src/index'), require(process.cwd()+'/test/app.js'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
+    factory(root.expect, root.SiigoApi, root.app);
   }
-}(this, function(expect, SiigoApi) {
+}(this, function(expect, SiigoApi, app) {
   'use strict';
 
   var instance;
 
-  beforeEach(function() {
+  before(function() {
+    SiigoApi = app._test.initialize(SiigoApi);
     instance = new SiigoApi.CreditNoteApi();
   });
 
@@ -47,47 +48,80 @@
       object[property] = value;
   }
 
+  var result = {};
+  var id = "";
+  var data = {
+    "document": {
+        "id": 115064
+    },
+    "date": "2020-12-04",
+    "invoice": "38866804-ad85-43b6-a7c9-7a6c24e42f76",
+    "items": [
+        {
+            "code": "1215",
+            "quantity": "1",
+            "price": 1000
+        }
+    ],
+    "payments": [
+        {
+            "id": 34450,
+            "value": 1000
+        }
+    ]
+}
   describe('CreditNoteApi', function() {
     describe('createCreditNote', function() {
-      it('should call createCreditNote successfully', function(done) {
-        //uncomment below and update the code to test createCreditNote
-        //instance.createCreditNote(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call createCreditNote successfully', async function() {
+        let opts = {
+          'createCreditNoteCommand': data
+        };
+        try {                
+          result = await instance.createCreditNoteWithHttpInfo(opts);
+          id = result.response.body.id;
+        } catch (error) {
+          console.error(error.response.body);
+        }
+        expect(result.response.statusCode).to.be(201); 
+        expect(result.response.body.id).to.be(id); 
       });
     });
     describe('getCreditNote', function() {
-      it('should call getCreditNote successfully', function(done) {
-        //uncomment below and update the code to test getCreditNote
-        //instance.getCreditNote(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call getCreditNote successfully', async function() {
+        try {      
+          result = await instance.getCreditNoteWithHttpInfo(id);
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200); 
+        expect(result.response.body.id).to.be(id);
       });
     });
-    describe('getCreditNotePdf', function() {
-      it('should call getCreditNotePdf successfully', function(done) {
-        //uncomment below and update the code to test getCreditNotePdf
-        //instance.getCreditNotePdf(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getCreditNotePDF', function() {
+      it('should call getCreditNotePDF successfully', async function() {
+        try {      
+          result = await instance.getCreditNotePDFWithHttpInfo(id);
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200); 
+        expect(result.response.body.id).to.be(id);
       });
-    });
+    }); 
     describe('getCreditNotes', function() {
-      it('should call getCreditNotes successfully', function(done) {
-        //uncomment below and update the code to test getCreditNotes
-        //instance.getCreditNotes(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call getCreditNotes successfully', async function() {
+        let invoice = "";
+        try {
+          result = await instance.getCreditNotesWithHttpInfo();
+          id = result.response.body.results[0].id;
+          invoice = result.response.body.results[0].invoice.id;
+        } catch (error) {
+          console.error(error.response.body);
+        }
+        expect(result.response.statusCode).to.be(200);
+        expect(result.response.body.results[0].id).to.be(id);
+        expect(result.response.body.results[0].invoice.id).to.be(invoice);
       });
     });
   });
-
 }));
