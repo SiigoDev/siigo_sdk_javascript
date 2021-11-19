@@ -50,26 +50,26 @@
   describe('PriceListItemViewModel', function() {
     it('should create an instance of PriceListItemViewModel', function() {
       // uncomment below and update the code to test PriceListItemViewModel
-      //var instance = new SiigoApi.PriceListItemViewModel();
-      //expect(instance).to.be.a(SiigoApi.PriceListItemViewModel);
+      var instance = new SiigoApi.PriceListItemViewModel();
+      expect(instance).to.be.a(SiigoApi.PriceListItemViewModel);
     });
 
     it('should have the property position (base name: "position")', function() {
       // uncomment below and update the code to test the property position
-      //var instance = new SiigoApi.PriceListItemViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PriceListItemViewModel();
+      expect(instance.position).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.PriceListItemViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PriceListItemViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.PriceListItemViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PriceListItemViewModel();
+      expect(instance.value).to.be(undefined);
     });
 
   });

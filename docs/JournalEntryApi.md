@@ -2,9 +2,9 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createJournal**](JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates JournalEntry.
-[**getJournal**](JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets a Journal by GUID.
-[**getJournals**](JournalEntryApi.md#getJournals) | **GET** /v1/journals | Gets a list of Journals Entry with pagination.
+[**createJournal**](JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
+[**getJournal**](JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets the journal entry by GUID.
+[**getJournals**](JournalEntryApi.md#getJournals) | **GET** /v1/journals | Returns a paginated list of journals entries.
 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > JournalEntryViewModel createJournal(opts)
 
-Creates JournalEntry.
+Creates a journal entry.
 
 ### Example
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 > JournalEntryViewModel getJournal(id)
 
-Gets a Journal by GUID.
+Gets the journal entry by GUID.
 
 ### Example
 
@@ -91,7 +91,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.JournalEntryApi();
 
-let id = null; // String | Represent the Journal id by GUID.
+let id = "id_example"; // String | Represent the Journal id by GUID.
 
 apiInstance.getJournal(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -107,7 +107,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.JournalEntryApi();
-    let id = null; // String | Represent the Journal id by GUID.
+    let id = "id_example"; // String | Represent the Journal id by GUID.
 
     const data = await apiInstance.getJournal(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +123,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represent the Journal id by GUID. | 
+ **id** | **String**| Represent the Journal id by GUID. | 
 
 ### Return type
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 > JournalsEntryViewModel getJournals(opts)
 
-Gets a list of Journals Entry with pagination.
+Returns a paginated list of journals entries.
 
 ### Example
 

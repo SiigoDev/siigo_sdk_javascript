@@ -50,20 +50,20 @@
   describe('PricesProducts', function() {
     it('should create an instance of PricesProducts', function() {
       // uncomment below and update the code to test PricesProducts
-      //var instance = new SiigoApi.PricesProducts();
-      //expect(instance).to.be.a(SiigoApi.PricesProducts);
+      var instance = new SiigoApi.PricesProducts();
+      expect(instance).to.be.a(SiigoApi.PricesProducts);
     });
 
     it('should have the property currencyCode (base name: "currency_code")', function() {
       // uncomment below and update the code to test the property currencyCode
-      //var instance = new SiigoApi.PricesProducts();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PricesProducts();
+      expect(instance.currency).to.be(undefined);
     });
 
     it('should have the property priceList (base name: "price_list")', function() {
       // uncomment below and update the code to test the property priceList
-      //var instance = new SiigoApi.PricesProducts();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PricesProducts();
+      expect(instance.price_list).to.be(undefined);
     });
 
   });

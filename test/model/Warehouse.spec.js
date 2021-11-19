@@ -50,26 +50,26 @@
   describe('Warehouse', function() {
     it('should create an instance of Warehouse', function() {
       // uncomment below and update the code to test Warehouse
-      //var instance = new SiigoApi.Warehouse();
-      //expect(instance).to.be.a(SiigoApi.Warehouse);
+      var instance = new SiigoApi.Warehouse();
+      expect(instance).to.be.a(SiigoApi.Warehouse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.Warehouse();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Warehouse();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.Warehouse();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Warehouse();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property quantity (base name: "quantity")', function() {
       // uncomment below and update the code to test the property quantity
-      //var instance = new SiigoApi.Warehouse();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Warehouse();
+      expect(instance.quantity).to.be(undefined);
     });
 
   });

@@ -50,20 +50,20 @@
   describe('Customer', function() {
     it('should create an instance of Customer', function() {
       // uncomment below and update the code to test Customer
-      //var instance = new SiigoApi.Customer();
-      //expect(instance).to.be.a(SiigoApi.Customer);
+      var instance = new SiigoApi.Customer();
+      expect(instance).to.be.a(SiigoApi.Customer);
     });
 
     it('should have the property identification (base name: "identification")', function() {
       // uncomment below and update the code to test the property identification
-      //var instance = new SiigoApi.Customer();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Customer();
+      expect(instance.identification).to.be(undefined);
     });
 
     it('should have the property branchOffice (base name: "branch_office")', function() {
       // uncomment below and update the code to test the property branchOffice
-      //var instance = new SiigoApi.Customer();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Customer();
+      expect(instance.branch_office).to.be(undefined);
     });
 
   });

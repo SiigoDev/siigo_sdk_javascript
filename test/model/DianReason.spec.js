@@ -49,8 +49,8 @@
   describe('DianReason', function() {
     it('should create an instance of DianReason', function() {
       // uncomment below and update the code to test DianReason
-      //var instance = new SiigoApi.DianReason();
-      //expect(instance).to.be.a(SiigoApi.DianReason);
+      var instance = new SiigoApi.DianReason();
+      expect(instance).to.be.a(SiigoApi.DianReason);
     });
 
   });

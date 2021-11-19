@@ -50,14 +50,14 @@
   describe('DocumentCommand', function() {
     it('should create an instance of DocumentCommand', function() {
       // uncomment below and update the code to test DocumentCommand
-      //var instance = new SiigoApi.DocumentCommand();
-      //expect(instance).to.be.a(SiigoApi.DocumentCommand);
+      var instance = new SiigoApi.DocumentCommand();
+      expect(instance).to.be.a(SiigoApi.DocumentCommand);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.DocumentCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentCommand();
+      expect(instance.id).to.be(undefined);
     });
 
   });

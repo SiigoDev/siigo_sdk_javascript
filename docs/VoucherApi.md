@@ -2,9 +2,9 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a Voucher.
-[**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets a Voucher by GUID.
-[**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Gets a list of Vouchers with pagination.
+[**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
+[**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
+[**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > VoucherViewModel createVoucher(opts)
 
-Creates a Voucher.
+Creates a voucher.
 
 ### Example
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 > VoucherViewModel getVoucher(id)
 
-Gets a Voucher by GUID.
+Gets the voucher by GUID.
 
 ### Example
 
@@ -91,7 +91,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.VoucherApi();
 
-let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getVoucher(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -107,7 +107,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
-    let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getVoucher(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +123,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 > VouchersViewModel getVouchers(opts)
 
-Gets a list of Vouchers with pagination.
+Returns a paginated list of vouchers.
 
 ### Example
 

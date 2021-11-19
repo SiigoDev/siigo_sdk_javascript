@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getUsers**](UsersApi.md#getUsers) | **GET** /v1/users | Gets a list of Users with pagination.
+[**getUsers**](UsersApi.md#getUsers) | **GET** /v1/users | Returns a paginated list of users.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > UsersViewModel getUsers(opts)
 
-Gets a list of Users with pagination.
+Returns a paginated list of users.
 
 ### Example
 

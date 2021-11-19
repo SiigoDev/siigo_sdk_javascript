@@ -50,14 +50,14 @@
   describe('DocumentVoucher', function() {
     it('should create an instance of DocumentVoucher', function() {
       // uncomment below and update the code to test DocumentVoucher
-      //var instance = new SiigoApi.DocumentVoucher();
-      //expect(instance).to.be.a(SiigoApi.DocumentVoucher);
+      var instance = new SiigoApi.DocumentVoucher();
+      expect(instance).to.be.a(SiigoApi.DocumentVoucher);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.DocumentVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentVoucher();
+      expect(instance.id).to.be(undefined);
     });
 
   });

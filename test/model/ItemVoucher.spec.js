@@ -50,38 +50,38 @@
   describe('ItemVoucher', function() {
     it('should create an instance of ItemVoucher', function() {
       // uncomment below and update the code to test ItemVoucher
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be.a(SiigoApi.ItemVoucher);
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance).to.be.a(SiigoApi.ItemVoucher);
     });
 
     it('should have the property account (base name: "account")', function() {
       // uncomment below and update the code to test the property account
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance.account).to.be(undefined);
     });
 
     it('should have the property due (base name: "due")', function() {
       // uncomment below and update the code to test the property due
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance.due).to.be(undefined);
     });
 
     it('should have the property tax (base name: "tax")', function() {
       // uncomment below and update the code to test the property tax
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance.tax).to.be(undefined);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance.description).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.ItemVoucher();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemVoucher();
+      expect(instance.value).to.be(undefined);
     });
 
   });

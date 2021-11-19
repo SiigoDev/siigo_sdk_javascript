@@ -50,20 +50,20 @@
   describe('AdditionalFieldsCommand', function() {
     it('should create an instance of AdditionalFieldsCommand', function() {
       // uncomment below and update the code to test AdditionalFieldsCommand
-      //var instance = new SiigoApi.AdditionalFieldsCommand();
-      //expect(instance).to.be.a(SiigoApi.AdditionalFieldsCommand);
+      var instance = new SiigoApi.AdditionalFieldsCommand();
+      expect(instance).to.be.a(SiigoApi.AdditionalFieldsCommand);
     });
 
     it('should have the property purchaseOrder (base name: "purchase_order")', function() {
       // uncomment below and update the code to test the property purchaseOrder
-      //var instance = new SiigoApi.AdditionalFieldsCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFieldsCommand();
+      expect(instance.purchase_order).to.be(undefined);
     });
 
     it('should have the property deliveryOrder (base name: "delivery_order")', function() {
       // uncomment below and update the code to test the property deliveryOrder
-      //var instance = new SiigoApi.AdditionalFieldsCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFieldsCommand();
+      expect(instance.delivery_order).to.be(undefined);
     });
 
   });

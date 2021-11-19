@@ -36,7 +36,7 @@ export default class UsersApi {
 
 
     /**
-     * Gets a list of Users with pagination.
+     * Returns a paginated list of users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Represents the current page of the results that you get. For example, '1'.
      * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.
@@ -69,7 +69,7 @@ export default class UsersApi {
     }
 
     /**
-     * Gets a list of Users with pagination.
+     * Returns a paginated list of users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Represents the current page of the results that you get. For example, '1'.
      * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.

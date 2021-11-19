@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPriceList**](PriceListsApi.md#getPriceList) | **GET** /v1/price-lists | Get a list of Price Lists.
+[**getPriceList**](PriceListsApi.md#getPriceList) | **GET** /v1/price-lists | Returns a list of price lists.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > [PriceListsViewModel] getPriceList()
 
-Get a list of Price Lists.
+Returns a list of price lists.
 
 ### Example
 

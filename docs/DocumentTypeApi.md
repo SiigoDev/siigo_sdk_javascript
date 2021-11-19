@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDocumentTypes**](DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Gets a list of Document Types.
+[**getDocumentTypes**](DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Returns a list of document types.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > [DocumentTypeViewModel] getDocumentTypes(opts)
 
-Gets a list of Document Types.
+Returns a list of document types.
 
 ### Example
 

@@ -50,20 +50,20 @@
   describe('FiscalResponsabilitiesModel', function() {
     it('should create an instance of FiscalResponsabilitiesModel', function() {
       // uncomment below and update the code to test FiscalResponsabilitiesModel
-      //var instance = new SiigoApi.FiscalResponsabilitiesModel();
-      //expect(instance).to.be.a(SiigoApi.FiscalResponsabilitiesModel);
+      var instance = new SiigoApi.FiscalResponsabilitiesModel();
+      expect(instance).to.be.a(SiigoApi.FiscalResponsabilitiesModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.FiscalResponsabilitiesModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FiscalResponsabilitiesModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.FiscalResponsabilitiesModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FiscalResponsabilitiesModel();
+      expect(instance.name).to.be(undefined);
     });
 
   });

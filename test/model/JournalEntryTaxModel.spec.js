@@ -50,44 +50,44 @@
   describe('JournalEntryTaxModel', function() {
     it('should create an instance of JournalEntryTaxModel', function() {
       // uncomment below and update the code to test JournalEntryTaxModel
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryTaxModel);
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance).to.be.a(SiigoApi.JournalEntryTaxModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property percentage (base name: "percentage")', function() {
       // uncomment below and update the code to test the property percentage
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.percentage).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.value).to.be(undefined);
     });
 
     it('should have the property baseValue (base name: "base_value")', function() {
       // uncomment below and update the code to test the property baseValue
-      //var instance = new SiigoApi.JournalEntryTaxModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryTaxModel();
+      expect(instance.base_value).to.be(undefined);
     });
 
   });

@@ -50,38 +50,38 @@
   describe('Item', function() {
     it('should create an instance of Item', function() {
       // uncomment below and update the code to test Item
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be.a(SiigoApi.Item);
+      var instance = new SiigoApi.Item();
+      expect(instance).to.be.a(SiigoApi.Item);
     });
 
     it('should have the property account (base name: "account")', function() {
       // uncomment below and update the code to test the property account
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Item();
+      expect(instance.account).to.be(undefined);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Item();
+      expect(instance.description).to.be(undefined);
     });
 
     it('should have the property due (base name: "due")', function() {
       // uncomment below and update the code to test the property due
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Item();
+      expect(instance.due).to.be(undefined);
     });
 
     it('should have the property tax (base name: "tax")', function() {
       // uncomment below and update the code to test the property tax
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Item();
+      expect(instance.tax).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.Item();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Item();
+      expect(instance.value).to.be(undefined);
     });
 
   });

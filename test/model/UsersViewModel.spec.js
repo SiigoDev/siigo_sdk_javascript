@@ -50,20 +50,20 @@
   describe('UsersViewModel', function() {
     it('should create an instance of UsersViewModel', function() {
       // uncomment below and update the code to test UsersViewModel
-      //var instance = new SiigoApi.UsersViewModel();
-      //expect(instance).to.be.a(SiigoApi.UsersViewModel);
+      var instance = new SiigoApi.UsersViewModel();
+      expect(instance).to.be.a(SiigoApi.UsersViewModel);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.UsersViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.UsersViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.UsersViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.UsersViewModel();
+      expect(instance.results).to.be(undefined);
     });
 
   });

@@ -38,7 +38,7 @@ export default class JournalEntryApi {
 
 
     /**
-     * Creates JournalEntry.
+     * Creates a journal entry.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
@@ -68,7 +68,7 @@ export default class JournalEntryApi {
     }
 
     /**
-     * Creates JournalEntry.
+     * Creates a journal entry.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
@@ -82,7 +82,7 @@ export default class JournalEntryApi {
 
 
     /**
-     * Gets a Journal by GUID.
+     * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
      */
@@ -115,7 +115,7 @@ export default class JournalEntryApi {
     }
 
     /**
-     * Gets a Journal by GUID.
+     * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
      */
@@ -128,7 +128,7 @@ export default class JournalEntryApi {
 
 
     /**
-     * Gets a list of Journals Entry with pagination.
+     * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -173,7 +173,7 @@ export default class JournalEntryApi {
     }
 
     /**
-     * Gets a list of Journals Entry with pagination.
+     * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date

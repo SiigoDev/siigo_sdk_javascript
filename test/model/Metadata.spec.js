@@ -50,26 +50,26 @@
   describe('Metadata', function() {
     it('should create an instance of Metadata', function() {
       // uncomment below and update the code to test Metadata
-      //var instance = new SiigoApi.Metadata();
-      //expect(instance).to.be.a(SiigoApi.Metadata);
+      var instance = new SiigoApi.Metadata();
+      expect(instance).to.be.a(SiigoApi.Metadata);
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new SiigoApi.Metadata();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Metadata();
+      expect(instance.created).to.be(undefined);
     });
 
     it('should have the property lastUpdated (base name: "last_updated")', function() {
       // uncomment below and update the code to test the property lastUpdated
-      //var instance = new SiigoApi.Metadata();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Metadata();
+      expect(instance.last_updated).to.be(undefined);
     });
 
     it('should have the property stockUpdated (base name: "stock_updated")', function() {
       // uncomment below and update the code to test the property stockUpdated
-      //var instance = new SiigoApi.Metadata();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Metadata();
+      expect(instance.stock_updated).to.be(undefined);
     });
 
   });

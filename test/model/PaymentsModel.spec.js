@@ -50,32 +50,32 @@
   describe('PaymentsModel', function() {
     it('should create an instance of PaymentsModel', function() {
       // uncomment below and update the code to test PaymentsModel
-      //var instance = new SiigoApi.PaymentsModel();
-      //expect(instance).to.be.a(SiigoApi.PaymentsModel);
+      var instance = new SiigoApi.PaymentsModel();
+      expect(instance).to.be.a(SiigoApi.PaymentsModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.PaymentsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentsModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.PaymentsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentsModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.PaymentsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentsModel();
+      expect(instance.value).to.be(undefined);
     });
 
     it('should have the property dueDate (base name: "due_date")', function() {
       // uncomment below and update the code to test the property dueDate
-      //var instance = new SiigoApi.PaymentsModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PaymentsModel();
+      expect(instance.due_date).to.be(undefined);
     });
 
   });

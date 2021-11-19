@@ -86,41 +86,41 @@ async function main(){
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SiigoApi.AccountGroupsApi* | [**getAccountGroups**](docs/AccountGroupsApi.md#getAccountGroups) | **GET** /v1/account-groups | Gets a list of AccountGroups.
-*SiigoApi.CostCenterApi* | [**getCostCenters**](docs/CostCenterApi.md#getCostCenters) | **GET** /v1/cost-centers | Gets a list of Cost Centers.
-*SiigoApi.CreditNoteApi* | [**createCreditNote**](docs/CreditNoteApi.md#createCreditNote) | **POST** /v1/credit-notes | Creates a Credit Note.
-*SiigoApi.CreditNoteApi* | [**getCreditNote**](docs/CreditNoteApi.md#getCreditNote) | **GET** /v1/credit-notes/{id} | Gets a CreditNote by GUID.
-*SiigoApi.CreditNoteApi* | [**getCreditNotePdf**](docs/CreditNoteApi.md#getCreditNotePdf) | **GET** /v1/credit-notes/{id}/pdf | Gets a Credit Note PDF by GUID.
-*SiigoApi.CreditNoteApi* | [**getCreditNotes**](docs/CreditNoteApi.md#getCreditNotes) | **GET** /v1/credit-notes | Gets a list of Credit Notes with pagination.
-*SiigoApi.CustomerApi* | [**createCustomer**](docs/CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a Customer.
-*SiigoApi.CustomerApi* | [**deleteCustomer**](docs/CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes a Customer by GUID.
-*SiigoApi.CustomerApi* | [**getCustomer**](docs/CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets a Customer by GUID.
-*SiigoApi.CustomerApi* | [**getCustomers**](docs/CustomerApi.md#getCustomers) | **GET** /v1/customers | Gets a list of Customers.
-*SiigoApi.CustomerApi* | [**updateCustomer**](docs/CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates a Customer by GUID.
-*SiigoApi.DocumentTypeApi* | [**getDocumentTypes**](docs/DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Gets a list of Document Types.
-*SiigoApi.FixedAssetsApi* | [**getAssetGroups**](docs/FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Gets a list of fixed assets.
-*SiigoApi.FixedAssetsApi* | [**getFixedAssets**](docs/FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Gets a list of fixed assets.
-*SiigoApi.InvoiceApi* | [**createInvoice**](docs/InvoiceApi.md#createInvoice) | **POST** /v1/invoices | Creates an Invoice.
-*SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets an Invoice by GUID.
-*SiigoApi.InvoiceApi* | [**getInvoiceErrors**](docs/InvoiceApi.md#getInvoiceErrors) | **GET** /v1/invoices/{id}/stamp/errors | Get errors for a rejected invoice by GUID.
-*SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets an Invoice PDF by GUID.
-*SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Gets a list of Invoices with pagination.
-*SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates JournalEntry.
-*SiigoApi.JournalEntryApi* | [**getJournal**](docs/JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets a Journal by GUID.
-*SiigoApi.JournalEntryApi* | [**getJournals**](docs/JournalEntryApi.md#getJournals) | **GET** /v1/journals | Gets a list of Journals Entry with pagination.
-*SiigoApi.PaymentTypesApi* | [**getPaymentTypes**](docs/PaymentTypesApi.md#getPaymentTypes) | **GET** /v1/payment-types | Get a list of Payment Types.
-*SiigoApi.PriceListsApi* | [**getPriceList**](docs/PriceListsApi.md#getPriceList) | **GET** /v1/price-lists | Get a list of Price Lists.
-*SiigoApi.ProductApi* | [**createProduct**](docs/ProductApi.md#createProduct) | **POST** /v1/products | Creates a produc
-*SiigoApi.ProductApi* | [**deleteProduct**](docs/ProductApi.md#deleteProduct) | **DELETE** /v1/products/{id} | Deletes a Product by GUID
-*SiigoApi.ProductApi* | [**getProduct**](docs/ProductApi.md#getProduct) | **GET** /v1/products/{id} | Gets a Product by GUID.
-*SiigoApi.ProductApi* | [**getProducts**](docs/ProductApi.md#getProducts) | **GET** /v1/products | Gets a list of Products with pagination.
-*SiigoApi.ProductApi* | [**updateProduct**](docs/ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates a Product by GUID
-*SiigoApi.TaxesApi* | [**getTaxes**](docs/TaxesApi.md#getTaxes) | **GET** /v1/taxes | Gets a list of Taxes.
-*SiigoApi.UsersApi* | [**getUsers**](docs/UsersApi.md#getUsers) | **GET** /v1/users | Gets a list of Users with pagination.
-*SiigoApi.VoucherApi* | [**createVoucher**](docs/VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a Voucher.
-*SiigoApi.VoucherApi* | [**getVoucher**](docs/VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets a Voucher by GUID.
-*SiigoApi.VoucherApi* | [**getVouchers**](docs/VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Gets a list of Vouchers with pagination.
-*SiigoApi.WarehousesApi* | [**getProductWarehouse**](docs/WarehousesApi.md#getProductWarehouse) | **GET** /v1/warehouses | Gets a list of Warehouses.
+*SiigoApi.AccountGroupsApi* | [**getAccountGroups**](docs/AccountGroupsApi.md#getAccountGroups) | **GET** /v1/account-groups | Returns a list of account groups.
+*SiigoApi.CostCenterApi* | [**getCostCenters**](docs/CostCenterApi.md#getCostCenters) | **GET** /v1/cost-centers | Returns a list of cost centers.
+*SiigoApi.CreditNoteApi* | [**createCreditNote**](docs/CreditNoteApi.md#createCreditNote) | **POST** /v1/credit-notes | Creates a credit note.
+*SiigoApi.CreditNoteApi* | [**getCreditNote**](docs/CreditNoteApi.md#getCreditNote) | **GET** /v1/credit-notes/{id} | Gets the credit note by GUID.
+*SiigoApi.CreditNoteApi* | [**getCreditNotePDF**](docs/CreditNoteApi.md#getCreditNotePDF) | **GET** /v1/credit-notes/{id}/pdf | Gets the credit note PDF by GUID.
+*SiigoApi.CreditNoteApi* | [**getCreditNotes**](docs/CreditNoteApi.md#getCreditNotes) | **GET** /v1/credit-notes | Returns a paginated list of credit notes.
+*SiigoApi.CustomerApi* | [**createCustomer**](docs/CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a customer.
+*SiigoApi.CustomerApi* | [**deleteCustomer**](docs/CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes the customer by GUID.
+*SiigoApi.CustomerApi* | [**getCustomer**](docs/CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets the customer by GUID.
+*SiigoApi.CustomerApi* | [**getCustomers**](docs/CustomerApi.md#getCustomers) | **GET** /v1/customers | Returns a paginated list of customers.
+*SiigoApi.CustomerApi* | [**updateCustomer**](docs/CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates the customer by GUID.
+*SiigoApi.DocumentTypeApi* | [**getDocumentTypes**](docs/DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Returns a list of document types.
+*SiigoApi.FixedAssetsApi* | [**getAssetGroups**](docs/FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Returns a list of asset groups.
+*SiigoApi.FixedAssetsApi* | [**getFixedAssets**](docs/FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Returns a list of fixed assets.
+*SiigoApi.InvoiceApi* | [**createInvoice**](docs/InvoiceApi.md#createInvoice) | **POST** /v1/invoices | Creates an invoice.
+*SiigoApi.InvoiceApi* | [**getElectronicInvoiceErrors**](docs/InvoiceApi.md#getElectronicInvoiceErrors) | **GET** /v1/invoices/{id}/stamp/errors | Returns the errors list for a rejected electronic invoice by GUID.
+*SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
+*SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
+*SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+*SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
+*SiigoApi.JournalEntryApi* | [**getJournal**](docs/JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets the journal entry by GUID.
+*SiigoApi.JournalEntryApi* | [**getJournals**](docs/JournalEntryApi.md#getJournals) | **GET** /v1/journals | Returns a paginated list of journals entries.
+*SiigoApi.PaymentTypesApi* | [**getPaymentTypes**](docs/PaymentTypesApi.md#getPaymentTypes) | **GET** /v1/payment-types | Returns a list of payment types.
+*SiigoApi.PriceListsApi* | [**getPriceList**](docs/PriceListsApi.md#getPriceList) | **GET** /v1/price-lists | Returns a list of price lists.
+*SiigoApi.ProductApi* | [**createProduct**](docs/ProductApi.md#createProduct) | **POST** /v1/products | Creates a product.
+*SiigoApi.ProductApi* | [**deleteProduct**](docs/ProductApi.md#deleteProduct) | **DELETE** /v1/products/{id} | Deletes the product by GUID.
+*SiigoApi.ProductApi* | [**getProduct**](docs/ProductApi.md#getProduct) | **GET** /v1/products/{id} | Gets the product by GUID.
+*SiigoApi.ProductApi* | [**getProducts**](docs/ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
+*SiigoApi.ProductApi* | [**updateProduct**](docs/ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates the product by GUID.
+*SiigoApi.TaxesApi* | [**getTaxes**](docs/TaxesApi.md#getTaxes) | **GET** /v1/taxes | Returns a list of taxes.
+*SiigoApi.UsersApi* | [**getUsers**](docs/UsersApi.md#getUsers) | **GET** /v1/users | Returns a paginated list of users.
+*SiigoApi.VoucherApi* | [**createVoucher**](docs/VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
+*SiigoApi.VoucherApi* | [**getVoucher**](docs/VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
+*SiigoApi.VoucherApi* | [**getVouchers**](docs/VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
+*SiigoApi.WarehousesApi* | [**getWarehouse**](docs/WarehousesApi.md#getWarehouse) | **GET** /v1/warehouses | Returns a list of warehouse.
 
 
 ## Documentation for Models

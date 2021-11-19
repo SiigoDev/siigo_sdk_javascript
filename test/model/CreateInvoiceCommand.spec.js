@@ -50,104 +50,98 @@
   describe('CreateInvoiceCommand', function() {
     it('should create an instance of CreateInvoiceCommand', function() {
       // uncomment below and update the code to test CreateInvoiceCommand
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be.a(SiigoApi.CreateInvoiceCommand);
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance).to.be.a(SiigoApi.CreateInvoiceCommand);
     });
 
     it('should have the property document (base name: "document")', function() {
       // uncomment below and update the code to test the property document
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.document).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.number).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.date).to.be(undefined);
     });
 
     it('should have the property customer (base name: "customer")', function() {
       // uncomment below and update the code to test the property customer
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.customer).to.be(undefined);
     });
 
     it('should have the property costCenter (base name: "cost_center")', function() {
       // uncomment below and update the code to test the property costCenter
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.cost_center).to.be(undefined);
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.currency).to.be(undefined);
     });
 
     it('should have the property seller (base name: "seller")', function() {
       // uncomment below and update the code to test the property seller
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.seller).to.be(undefined);
     });
 
     it('should have the property retentions (base name: "retentions")', function() {
       // uncomment below and update the code to test the property retentions
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.retentions).to.be(undefined);
     });
 
     it('should have the property advancePayment (base name: "advance_payment")', function() {
       // uncomment below and update the code to test the property advancePayment
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.advance_payment).to.be(undefined);
     });
 
     it('should have the property observations (base name: "observations")', function() {
       // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.observations).to.be(undefined);
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.items).to.be(undefined);
     });
 
     it('should have the property payments (base name: "payments")', function() {
       // uncomment below and update the code to test the property payments
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.payments).to.be(undefined);
     });
 
     it('should have the property additionalFields (base name: "additional_fields")', function() {
       // uncomment below and update the code to test the property additionalFields
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.additional_fields).to.be(undefined);
     });
 
     it('should have the property stamp (base name: "stamp")', function() {
       // uncomment below and update the code to test the property stamp
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mail (base name: "mail")', function() {
-      // uncomment below and update the code to test the property mail
-      //var instance = new SiigoApi.CreateInvoiceCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreateInvoiceCommand();
+      expect(instance.stamp).to.be(undefined);
     });
 
   });

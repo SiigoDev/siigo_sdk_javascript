@@ -50,26 +50,26 @@
   describe('PageListModel', function() {
     it('should create an instance of PageListModel', function() {
       // uncomment below and update the code to test PageListModel
-      //var instance = new SiigoApi.PageListModel();
-      //expect(instance).to.be.a(SiigoApi.PageListModel);
+      var instance = new SiigoApi.PageListModel();
+      expect(instance).to.be.a(SiigoApi.PageListModel);
     });
 
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
-      //var instance = new SiigoApi.PageListModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListModel();
+      expect(instance.page).to.be(undefined);
     });
 
     it('should have the property pageSize (base name: "page_size")', function() {
       // uncomment below and update the code to test the property pageSize
-      //var instance = new SiigoApi.PageListModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListModel();
+      expect(instance.page_size).to.be(undefined);
     });
 
     it('should have the property totalResults (base name: "total_results")', function() {
       // uncomment below and update the code to test the property totalResults
-      //var instance = new SiigoApi.PageListModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListModel();
+      expect(instance.total_results).to.be(undefined);
     });
 
   });

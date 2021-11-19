@@ -50,62 +50,62 @@
   describe('JournalEntryItem', function() {
     it('should create an instance of JournalEntryItem', function() {
       // uncomment below and update the code to test JournalEntryItem
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryItem);
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance).to.be.a(SiigoApi.JournalEntryItem);
     });
 
     it('should have the property account (base name: "account")', function() {
       // uncomment below and update the code to test the property account
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.account).to.be(undefined);
     });
 
     it('should have the property customer (base name: "customer")', function() {
       // uncomment below and update the code to test the property customer
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.customer).to.be(undefined);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.description).to.be(undefined);
     });
 
     it('should have the property tax (base name: "tax")', function() {
       // uncomment below and update the code to test the property tax
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.tax).to.be(undefined);
     });
 
     it('should have the property due (base name: "due")', function() {
       // uncomment below and update the code to test the property due
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.due).to.be(undefined);
     });
 
     it('should have the property product (base name: "product")', function() {
       // uncomment below and update the code to test the property product
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.product).to.be(undefined);
     });
 
     it('should have the property costCenter (base name: "cost_center")', function() {
       // uncomment below and update the code to test the property costCenter
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.cost_center).to.be(undefined);
     });
 
     it('should have the property fixedAsset (base name: "fixed_asset")', function() {
       // uncomment below and update the code to test the property fixedAsset
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.fixed_asset).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.JournalEntryItem();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryItem();
+      expect(instance.value).to.be(undefined);
     });
 
   });

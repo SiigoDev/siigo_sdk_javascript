@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCostCenters**](CostCenterApi.md#getCostCenters) | **GET** /v1/cost-centers | Gets a list of Cost Centers.
+[**getCostCenters**](CostCenterApi.md#getCostCenters) | **GET** /v1/cost-centers | Returns a list of cost centers.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > [CostCentersViewModel] getCostCenters()
 
-Gets a list of Cost Centers.
+Returns a list of cost centers.
 
 ### Example
 

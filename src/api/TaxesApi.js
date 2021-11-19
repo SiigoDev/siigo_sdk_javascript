@@ -36,7 +36,7 @@ export default class TaxesApi {
 
 
     /**
-     * Gets a list of Taxes.
+     * Returns a list of taxes.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaxViewModel} and HTTP response
      */
     getTaxesWithHttpInfo() {
@@ -63,7 +63,7 @@ export default class TaxesApi {
     }
 
     /**
-     * Gets a list of Taxes.
+     * Returns a list of taxes.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaxViewModel}
      */
     getTaxes() {

@@ -50,26 +50,26 @@
   describe('JournalEntryProductCommand', function() {
     it('should create an instance of JournalEntryProductCommand', function() {
       // uncomment below and update the code to test JournalEntryProductCommand
-      //var instance = new SiigoApi.JournalEntryProductCommand();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryProductCommand);
+      var instance = new SiigoApi.JournalEntryProductCommand();
+      expect(instance).to.be.a(SiigoApi.JournalEntryProductCommand);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.JournalEntryProductCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductCommand();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property warehouse (base name: "warehouse")', function() {
       // uncomment below and update the code to test the property warehouse
-      //var instance = new SiigoApi.JournalEntryProductCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductCommand();
+      expect(instance.warehouse).to.be(undefined);
     });
 
     it('should have the property quantity (base name: "quantity")', function() {
       // uncomment below and update the code to test the property quantity
-      //var instance = new SiigoApi.JournalEntryProductCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryProductCommand();
+      expect(instance.quantity).to.be(undefined);
     });
 
   });

@@ -50,14 +50,14 @@
   describe('StampCommand', function() {
     it('should create an instance of StampCommand', function() {
       // uncomment below and update the code to test StampCommand
-      //var instance = new SiigoApi.StampCommand();
-      //expect(instance).to.be.a(SiigoApi.StampCommand);
+      var instance = new SiigoApi.StampCommand();
+      expect(instance).to.be.a(SiigoApi.StampCommand);
     });
 
     it('should have the property send (base name: "send")', function() {
       // uncomment below and update the code to test the property send
-      //var instance = new SiigoApi.StampCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampCommand();
+      expect(instance.send).to.be(undefined);
     });
 
   });
