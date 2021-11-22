@@ -50,26 +50,26 @@
   describe('InvoicePdfViewModel', function() {
     it('should create an instance of InvoicePdfViewModel', function() {
       // uncomment below and update the code to test InvoicePdfViewModel
-      //var instance = new SiigoApi.InvoicePdfViewModel();
-      //expect(instance).to.be.a(SiigoApi.InvoicePdfViewModel);
+      var instance = new SiigoApi.InvoicePdfViewModel();
+      expect(instance).to.be.a(SiigoApi.InvoicePdfViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.InvoicePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.InvoicePdfViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property cufe (base name: "cufe")', function() {
       // uncomment below and update the code to test the property cufe
-      //var instance = new SiigoApi.InvoicePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.InvoicePdfViewModel();
+      expect(instance.cufe).to.be(undefined);
     });
 
     it('should have the property base64 (base name: "base64")', function() {
       // uncomment below and update the code to test the property base64
-      //var instance = new SiigoApi.InvoicePdfViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.InvoicePdfViewModel();
+      expect(instance.base64).to.be(undefined);
     });
 
   });

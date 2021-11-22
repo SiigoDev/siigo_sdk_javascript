@@ -50,32 +50,32 @@
   describe('FixedAssetsViewModel', function() {
     it('should create an instance of FixedAssetsViewModel', function() {
       // uncomment below and update the code to test FixedAssetsViewModel
-      //var instance = new SiigoApi.FixedAssetsViewModel();
-      //expect(instance).to.be.a(SiigoApi.FixedAssetsViewModel);
+      var instance = new SiigoApi.FixedAssetsViewModel();
+      expect(instance).to.be.a(SiigoApi.FixedAssetsViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.FixedAssetsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FixedAssetsViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.FixedAssetsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FixedAssetsViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property group (base name: "group")', function() {
       // uncomment below and update the code to test the property group
-      //var instance = new SiigoApi.FixedAssetsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FixedAssetsViewModel();
+      expect(instance.group).to.be(undefined);
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instance = new SiigoApi.FixedAssetsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.FixedAssetsViewModel();
+      expect(instance.active).to.be(undefined);
     });
 
   });

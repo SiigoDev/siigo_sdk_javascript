@@ -50,32 +50,32 @@
   describe('Tax', function() {
     it('should create an instance of Tax', function() {
       // uncomment below and update the code to test Tax
-      //var instance = new SiigoApi.Tax();
-      //expect(instance).to.be.a(SiigoApi.Tax);
+      var instance = new SiigoApi.Tax();
+      expect(instance).to.be.a(SiigoApi.Tax);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.Tax();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Tax();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.Tax();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Tax();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.Tax();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Tax();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property percentage (base name: "percentage")', function() {
       // uncomment below and update the code to test the property percentage
-      //var instance = new SiigoApi.Tax();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Tax();
+      expect(instance.percentage).to.be(undefined);
     });
 
   });

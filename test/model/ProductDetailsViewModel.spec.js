@@ -50,38 +50,38 @@
   describe('ProductDetailsViewModel', function() {
     it('should create an instance of ProductDetailsViewModel', function() {
       // uncomment below and update the code to test ProductDetailsViewModel
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be.a(SiigoApi.ProductDetailsViewModel);
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance).to.be.a(SiigoApi.ProductDetailsViewModel);
     });
 
     it('should have the property productId (base name: "product_id")', function() {
       // uncomment below and update the code to test the property productId
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance.product_id).to.be(undefined);
     });
 
     it('should have the property productName (base name: "product_name")', function() {
       // uncomment below and update the code to test the property productName
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance.product_name).to.be(undefined);
     });
 
     it('should have the property productDescription (base name: "product_description")', function() {
       // uncomment below and update the code to test the property productDescription
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance.product_description).to.be(undefined);
     });
 
     it('should have the property productPrice (base name: "product_price")', function() {
       // uncomment below and update the code to test the property productPrice
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance.product_price).to.be(undefined);
     });
 
     it('should have the property productDetails (base name: "product_details")', function() {
       // uncomment below and update the code to test the property productDetails
-      //var instance = new SiigoApi.ProductDetailsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductDetailsViewModel();
+      expect(instance.product_details).to.be(undefined);
     });
 
   });

@@ -50,20 +50,20 @@
   describe('JournalEntryWarehouseModel', function() {
     it('should create an instance of JournalEntryWarehouseModel', function() {
       // uncomment below and update the code to test JournalEntryWarehouseModel
-      //var instance = new SiigoApi.JournalEntryWarehouseModel();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryWarehouseModel);
+      var instance = new SiigoApi.JournalEntryWarehouseModel();
+      expect(instance).to.be.a(SiigoApi.JournalEntryWarehouseModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.JournalEntryWarehouseModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryWarehouseModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.JournalEntryWarehouseModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryWarehouseModel();
+      expect(instance.name).to.be(undefined);
     });
 
   });

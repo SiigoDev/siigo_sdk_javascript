@@ -36,10 +36,10 @@ export default class WarehousesApi {
 
 
     /**
-     * Gets a list of Warehouses.
+     * Returns a list of warehouse.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WarehouseViewModel} and HTTP response
      */
-    getProductWarehouseWithHttpInfo() {
+    getWarehouseWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -63,11 +63,11 @@ export default class WarehousesApi {
     }
 
     /**
-     * Gets a list of Warehouses.
+     * Returns a list of warehouse.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WarehouseViewModel}
      */
-    getProductWarehouse() {
-      return this.getProductWarehouseWithHttpInfo()
+    getWarehouse() {
+      return this.getWarehouseWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

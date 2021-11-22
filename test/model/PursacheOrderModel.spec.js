@@ -50,20 +50,20 @@
   describe('PursacheOrderModel', function() {
     it('should create an instance of PursacheOrderModel', function() {
       // uncomment below and update the code to test PursacheOrderModel
-      //var instance = new SiigoApi.PursacheOrderModel();
-      //expect(instance).to.be.a(SiigoApi.PursacheOrderModel);
+      var instance = new SiigoApi.PursacheOrderModel();
+      expect(instance).to.be.a(SiigoApi.PursacheOrderModel);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instance = new SiigoApi.PursacheOrderModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PursacheOrderModel();
+      expect(instance.prefix).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.PursacheOrderModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PursacheOrderModel();
+      expect(instance.number).to.be(undefined);
     });
 
   });

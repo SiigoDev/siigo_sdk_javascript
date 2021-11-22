@@ -50,20 +50,20 @@
   describe('JournalEntryAccountModel', function() {
     it('should create an instance of JournalEntryAccountModel', function() {
       // uncomment below and update the code to test JournalEntryAccountModel
-      //var instance = new SiigoApi.JournalEntryAccountModel();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryAccountModel);
+      var instance = new SiigoApi.JournalEntryAccountModel();
+      expect(instance).to.be.a(SiigoApi.JournalEntryAccountModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.JournalEntryAccountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryAccountModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property movement (base name: "movement")', function() {
       // uncomment below and update the code to test the property movement
-      //var instance = new SiigoApi.JournalEntryAccountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryAccountModel();
+      expect(instance.movement).to.be(undefined);
     });
 
   });

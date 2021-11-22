@@ -14,20 +14,21 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
+    define(['expect.js', process.cwd()+'/src/index', process.cwd()+'/test/app'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
+    factory(require('expect.js'), require(process.cwd()+'/src/index'), require(process.cwd()+'/test/app.js'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
+    factory(root.expect, root.SiigoApi, root.app);
   }
-}(this, function(expect, SiigoApi) {
+}(this, function(expect, SiigoApi, app) {
   'use strict';
 
   var instance;
-
+  var result;
   beforeEach(function() {
+    SiigoApi = app._test.initialize(SiigoApi);
     instance = new SiigoApi.FixedAssetsApi();
   });
 
@@ -49,23 +50,31 @@
 
   describe('FixedAssetsApi', function() {
     describe('getAssetGroups', function() {
-      it('should call getAssetGroups successfully', function(done) {
-        //uncomment below and update the code to test getAssetGroups
-        //instance.getAssetGroups(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call getAssetGroups successfully', async function() {
+        //uncomment below and update the code to test getCostCenters
+        try {
+          result = await instance.getAssetGroupsWithHttpInfo();
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200);
+        expect(result.response.body[0].id).to.be(17174);
+        expect(result.response.body[0].name).to.be('Equipo de computacion');
+        expect(result.response.body[0].active).to.be(true);
       });
     });
     describe('getFixedAssets', function() {
-      it('should call getFixedAssets successfully', function(done) {
-        //uncomment below and update the code to test getFixedAssets
-        //instance.getFixedAssets(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+      it('should call getFixedAssets successfully', async function() {
+        try {
+          result = await instance.getFixedAssetsWithHttpInfo();
+        } catch (error) {
+          console.error(error);
+        }
+        expect(result.response.statusCode).to.be(200);
+        expect(result.response.body[0].id).to.be(28801);
+        expect(result.response.body[0].name).to.be('Computador oficina');
+        expect(result.response.body[0].group).to.be('Equipo de computacion');
+        expect(result.response.body[0].active).to.be(true);
       });
     });
   });

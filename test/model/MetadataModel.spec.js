@@ -50,20 +50,20 @@
   describe('MetadataModel', function() {
     it('should create an instance of MetadataModel', function() {
       // uncomment below and update the code to test MetadataModel
-      //var instance = new SiigoApi.MetadataModel();
-      //expect(instance).to.be.a(SiigoApi.MetadataModel);
+      var instance = new SiigoApi.MetadataModel();
+      expect(instance).to.be.a(SiigoApi.MetadataModel);
     });
 
     it('should have the property created (base name: "created")', function() {
       // uncomment below and update the code to test the property created
-      //var instance = new SiigoApi.MetadataModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MetadataModel();
+      expect(instance.created).to.be(undefined);
     });
 
     it('should have the property lastUpdated (base name: "last_updated")', function() {
       // uncomment below and update the code to test the property lastUpdated
-      //var instance = new SiigoApi.MetadataModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MetadataModel();
+      expect(instance.last_updated).to.be(undefined);
     });
 
   });

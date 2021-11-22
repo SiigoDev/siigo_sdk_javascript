@@ -50,20 +50,20 @@
   describe('CurrencyModel', function() {
     it('should create an instance of CurrencyModel', function() {
       // uncomment below and update the code to test CurrencyModel
-      //var instance = new SiigoApi.CurrencyModel();
-      //expect(instance).to.be.a(SiigoApi.CurrencyModel);
+      var instance = new SiigoApi.CurrencyModel();
+      expect(instance).to.be.a(SiigoApi.CurrencyModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.CurrencyModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CurrencyModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property exchangeRate (base name: "exchange_rate")', function() {
       // uncomment below and update the code to test the property exchangeRate
-      //var instance = new SiigoApi.CurrencyModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CurrencyModel();
+      expect(instance.exchange_rate).to.be(undefined);
     });
 
   });

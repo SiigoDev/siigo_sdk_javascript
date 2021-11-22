@@ -50,32 +50,32 @@
   describe('ItemDue', function() {
     it('should create an instance of ItemDue', function() {
       // uncomment below and update the code to test ItemDue
-      //var instance = new SiigoApi.ItemDue();
-      //expect(instance).to.be.a(SiigoApi.ItemDue);
+      var instance = new SiigoApi.ItemDue();
+      expect(instance).to.be.a(SiigoApi.ItemDue);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instance = new SiigoApi.ItemDue();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemDue();
+      expect(instance.prefix).to.be(undefined);
     });
 
     it('should have the property consecutive (base name: "consecutive")', function() {
       // uncomment below and update the code to test the property consecutive
-      //var instance = new SiigoApi.ItemDue();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemDue();
+      expect(instance.consecutive).to.be(undefined);
     });
 
     it('should have the property quote (base name: "quote")', function() {
       // uncomment below and update the code to test the property quote
-      //var instance = new SiigoApi.ItemDue();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemDue();
+      expect(instance.quote).to.be(undefined);
     });
 
     it('should have the property date (base name: "date")', function() {
       // uncomment below and update the code to test the property date
-      //var instance = new SiigoApi.ItemDue();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ItemDue();
+      expect(instance.date).to.be(undefined);
     });
 
   });

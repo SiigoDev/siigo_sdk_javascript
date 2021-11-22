@@ -2,11 +2,11 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createInvoice**](InvoiceApi.md#createInvoice) | **POST** /v1/invoices | Creates an Invoice.
-[**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets an Invoice by GUID.
-[**getInvoiceErrors**](InvoiceApi.md#getInvoiceErrors) | **GET** /v1/invoices/{id}/stamp/errors | Get errors for a rejected invoice by GUID.
-[**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets an Invoice PDF by GUID.
-[**getInvoices**](InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Gets a list of Invoices with pagination.
+[**createInvoice**](InvoiceApi.md#createInvoice) | **POST** /v1/invoices | Creates an invoice.
+[**getElectronicInvoiceErrors**](InvoiceApi.md#getElectronicInvoiceErrors) | **GET** /v1/invoices/{id}/stamp/errors | Returns the errors list for a rejected electronic invoice by GUID.
+[**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
+[**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
+[**getInvoices**](InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > InvoiceViewModel createInvoice(opts)
 
-Creates an Invoice.
+Creates an invoice.
 
 ### Example
 
@@ -78,11 +78,74 @@ Name | Type | Description  | Notes
 - **Accept**: text/plain, application/json, text/json
 
 
+## getElectronicInvoiceErrors
+
+> EInvoiceErrorsViewModel getElectronicInvoiceErrors(id)
+
+Returns the errors list for a rejected electronic invoice by GUID.
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+apiInstance.getElectronicInvoiceErrors(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+    const data = await apiInstance.getElectronicInvoiceErrors(id);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+
+### Return type
+
+[**EInvoiceErrorsViewModel**](EInvoiceErrorsViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## getInvoice
 
 > InvoiceViewModel getInvoice(id)
 
-Gets an Invoice by GUID.
+Gets the invoice by GUID.
 
 ### Example
 
@@ -141,74 +204,11 @@ Name | Type | Description  | Notes
 - **Accept**: text/plain, application/json, text/json
 
 
-## getInvoiceErrors
-
-> EInvoiceErrorsViewModel getInvoiceErrors(id)
-
-Get errors for a rejected invoice by GUID.
-
-### Example
-
-#### - calls with promises
-
-```javascript
-import * as SiigoApi from 'siigo_api';
-
-let apiInstance = new SiigoApi.InvoiceApi();
-
-let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-
-apiInstance.getInvoiceErrors(id).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-```
-#### - calls with async await
-
-```javascript
-import * as SiigoApi from 'siigo_api';
-
-async function main(){
-  try {
-    let apiInstance = new SiigoApi.InvoiceApi();
-    let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-
-    const data = await apiInstance.getInvoiceErrors(id);
-    console.log('API called successfully. Returned data: ' + data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-```
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
-
-### Return type
-
-[**EInvoiceErrorsViewModel**](EInvoiceErrorsViewModel.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## getInvoicePDF
 
 > InvoicePdfViewModel getInvoicePDF(id)
 
-Gets an Invoice PDF by GUID.
+Gets the invoice PDF by GUID.
 
 ### Example
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 > InvoicesViewModel getInvoices(opts)
 
-Gets a list of Invoices with pagination.
+Returns a paginated list of invoices.
 
 ### Example
 

@@ -50,26 +50,26 @@
   describe('CreditNotesViewModel', function() {
     it('should create an instance of CreditNotesViewModel', function() {
       // uncomment below and update the code to test CreditNotesViewModel
-      //var instance = new SiigoApi.CreditNotesViewModel();
-      //expect(instance).to.be.a(SiigoApi.CreditNotesViewModel);
+      var instance = new SiigoApi.CreditNotesViewModel();
+      expect(instance).to.be.a(SiigoApi.CreditNotesViewModel);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.CreditNotesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotesViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.CreditNotesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotesViewModel();
+      expect(instance.results).to.be(undefined);
     });
 
     it('should have the property links (base name: "__links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new SiigoApi.CreditNotesViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.CreditNotesViewModel();
+      expect(instance._links).to.be(undefined);
     });
 
   });

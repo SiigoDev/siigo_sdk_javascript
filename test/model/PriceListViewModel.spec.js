@@ -50,20 +50,20 @@
   describe('PriceListViewModel', function() {
     it('should create an instance of PriceListViewModel', function() {
       // uncomment below and update the code to test PriceListViewModel
-      //var instance = new SiigoApi.PriceListViewModel();
-      //expect(instance).to.be.a(SiigoApi.PriceListViewModel);
+      var instance = new SiigoApi.PriceListViewModel();
+      expect(instance).to.be.a(SiigoApi.PriceListViewModel);
     });
 
     it('should have the property currencyCode (base name: "currency_code")', function() {
       // uncomment below and update the code to test the property currencyCode
-      //var instance = new SiigoApi.PriceListViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PriceListViewModel();
+      expect(instance.currency_code).to.be(undefined);
     });
 
     it('should have the property priceList (base name: "price_list")', function() {
       // uncomment below and update the code to test the property priceList
-      //var instance = new SiigoApi.PriceListViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PriceListViewModel();
+      expect(instance.price_list).to.be(undefined);
     });
 
   });

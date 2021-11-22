@@ -46,7 +46,7 @@ var AccountGroupsApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of AccountGroups.
+   * Returns a list of account groups.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AccountGroupViewModel>} and HTTP response
    */
 
@@ -66,7 +66,7 @@ var AccountGroupsApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/account-groups', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of AccountGroups.
+     * Returns a list of account groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AccountGroupViewModel>}
      */
 

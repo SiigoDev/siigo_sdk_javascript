@@ -24,6 +24,6 @@
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
 
-package.json
-test/model/*.spec.js
-test/api/*.spec.js
+# package.json
+# test/model/*.spec.js
+# test/api/*.spec.js

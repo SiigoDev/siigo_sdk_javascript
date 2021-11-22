@@ -2,7 +2,7 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPaymentTypes**](PaymentTypesApi.md#getPaymentTypes) | **GET** /v1/payment-types | Get a list of Payment Types.
+[**getPaymentTypes**](PaymentTypesApi.md#getPaymentTypes) | **GET** /v1/payment-types | Returns a list of payment types.
 
 
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 > PaymentTypesViewModel getPaymentTypes(opts)
 
-Get a list of Payment Types.
+Returns a list of payment types.
 
 ### Example
 

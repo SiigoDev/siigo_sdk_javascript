@@ -50,20 +50,20 @@
   describe('PricesListProducts', function() {
     it('should create an instance of PricesListProducts', function() {
       // uncomment below and update the code to test PricesListProducts
-      //var instance = new SiigoApi.PricesListProducts();
-      //expect(instance).to.be.a(SiigoApi.PricesListProducts);
+      var instance = new SiigoApi.PricesListProducts();
+      expect(instance).to.be.a(SiigoApi.PricesListProducts);
     });
 
     it('should have the property position (base name: "position")', function() {
       // uncomment below and update the code to test the property position
-      //var instance = new SiigoApi.PricesListProducts();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PricesListProducts();
+      expect(instance.position).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.PricesListProducts();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PricesListProducts();
+      expect(instance.value).to.be(undefined);
     });
 
   });

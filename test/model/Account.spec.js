@@ -27,7 +27,8 @@
 
   var instance;
 
-  beforeEach(function() {
+  beforeEach(function() 
+  {
     instance = new SiigoApi.Account();
   });
 
@@ -50,20 +51,20 @@
   describe('Account', function() {
     it('should create an instance of Account', function() {
       // uncomment below and update the code to test Account
-      //var instance = new SiigoApi.Account();
-      //expect(instance).to.be.a(SiigoApi.Account);
+      var instance = new SiigoApi.Account();
+      expect(instance).to.be.a(SiigoApi.Account);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.Account();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Account();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property movement (base name: "movement")', function() {
       // uncomment below and update the code to test the property movement
-      //var instance = new SiigoApi.Account();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.Account();
+      expect(instance.movement).to.be();
     });
 
   });

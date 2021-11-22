@@ -46,7 +46,7 @@ var TaxesApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of Taxes.
+   * Returns a list of taxes.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaxViewModel} and HTTP response
    */
 
@@ -66,7 +66,7 @@ var TaxesApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/taxes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Taxes.
+     * Returns a list of taxes.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaxViewModel}
      */
 

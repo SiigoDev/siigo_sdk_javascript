@@ -50,146 +50,146 @@
   describe('DocumentTypeViewModel', function() {
     it('should create an instance of DocumentTypeViewModel', function() {
       // uncomment below and update the code to test DocumentTypeViewModel
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be.a(SiigoApi.DocumentTypeViewModel);
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance).to.be.a(SiigoApi.DocumentTypeViewModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.description).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.active).to.be(undefined);
     });
 
     it('should have the property sellerByItem (base name: "seller_by_item")', function() {
       // uncomment below and update the code to test the property sellerByItem
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.seller_by_item).to.be(undefined);
     });
 
     it('should have the property costCenter (base name: "cost_center")', function() {
       // uncomment below and update the code to test the property costCenter
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.cost_center).to.be(undefined);
     });
 
     it('should have the property costCenterMandatory (base name: "cost_center_mandatory")', function() {
       // uncomment below and update the code to test the property costCenterMandatory
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.cost_center_mandatory).to.be(undefined);
     });
 
     it('should have the property costCenterDefault (base name: "cost_center_default")', function() {
       // uncomment below and update the code to test the property costCenterDefault
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.cost_center_default).to.be(undefined);
     });
 
     it('should have the property automaticNumber (base name: "automatic_number")', function() {
       // uncomment below and update the code to test the property automaticNumber
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.automatic_number).to.be(undefined);
     });
 
     it('should have the property consecutive (base name: "consecutive")', function() {
       // uncomment below and update the code to test the property consecutive
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.consecutive).to.be(undefined);
     });
 
     it('should have the property discountType (base name: "discount_type")', function() {
       // uncomment below and update the code to test the property discountType
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.discount_type).to.be(undefined);
     });
 
     it('should have the property decimals (base name: "decimals")', function() {
       // uncomment below and update the code to test the property decimals
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.decimals).to.be(undefined);
     });
 
     it('should have the property advancePayment (base name: "advance_payment")', function() {
       // uncomment below and update the code to test the property advancePayment
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.advance_payment).to.be(undefined);
     });
 
     it('should have the property reteiva (base name: "reteiva")', function() {
       // uncomment below and update the code to test the property reteiva
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.reteiva).to.be(undefined);
     });
 
     it('should have the property reteica (base name: "reteica")', function() {
       // uncomment below and update the code to test the property reteica
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.reteica).to.be(undefined);
     });
 
     it('should have the property selfWithholding (base name: "self_withholding")', function() {
       // uncomment below and update the code to test the property selfWithholding
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.self_withholding).to.be(undefined);
     });
 
     it('should have the property selfWithholdingLimit (base name: "self_withholding_limit")', function() {
       // uncomment below and update the code to test the property selfWithholdingLimit
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.self_withholding_limit).to.be(undefined);
     });
 
     it('should have the property electronicType (base name: "electronic_type")', function() {
       // uncomment below and update the code to test the property electronicType
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.electronic_type).to.be(undefined);
     });
 
     it('should have the property officialBook (base name: "official_book")', function() {
       // uncomment below and update the code to test the property officialBook
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.official_book).to.be(undefined);
     });
 
     it('should have the property documentSupport (base name: "document_support")', function() {
       // uncomment below and update the code to test the property documentSupport
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.document_support).to.be(undefined);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instance = new SiigoApi.DocumentTypeViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DocumentTypeViewModel();
+      expect(instance.prefix).to.be(undefined);
     });
 
   });

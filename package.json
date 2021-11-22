@@ -7,13 +7,14 @@
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",
-    "test": "mocha --require @babel/register --recursive --timeout 5000"
+    "test": "mocha --require @babel/register --recursive --timeout 420000"
   },
   "browser": {
     "fs": false
   },
   "dependencies": {
     "@babel/cli": "^7.0.0",
+    "@babel/runtime": "^7.15.4",
     "superagent": "^5.3.0"
   },
   "devDependencies": {
@@ -35,7 +36,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/runtime": "^7.15.4",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@commitlint/cli": "^14.1.0",
@@ -55,11 +55,7 @@
     "type": "git",
     "url": "git+https://github.com/SiigoDev/siigo_sdk_javascript.git"
   },
-  "keywords": [
-    "SDK",
-    "SIIGO",
-    "JAVASCRIPT"
-  ],
+  "keywords": ["SDK", "SIIGO"],
   "author": "siigo",
   "bugs": {
     "url": "https://github.com/SiigoDev/siigo_sdk_javascript/issues"

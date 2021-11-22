@@ -50,14 +50,14 @@
   describe('EInvoiceErrorViewModel', function() {
     it('should create an instance of EInvoiceErrorViewModel', function() {
       // uncomment below and update the code to test EInvoiceErrorViewModel
-      //var instance = new SiigoApi.EInvoiceErrorViewModel();
-      //expect(instance).to.be.a(SiigoApi.EInvoiceErrorViewModel);
+      var instance = new SiigoApi.EInvoiceErrorViewModel();
+      expect(instance).to.be.a(SiigoApi.EInvoiceErrorViewModel);
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new SiigoApi.EInvoiceErrorViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.EInvoiceErrorViewModel();
+      expect(instance.message).to.be(undefined);
     });
 
   });

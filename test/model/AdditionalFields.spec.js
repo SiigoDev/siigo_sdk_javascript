@@ -50,32 +50,32 @@
   describe('AdditionalFields', function() {
     it('should create an instance of AdditionalFields', function() {
       // uncomment below and update the code to test AdditionalFields
-      //var instance = new SiigoApi.AdditionalFields();
-      //expect(instance).to.be.a(SiigoApi.AdditionalFields);
+      var instance = new SiigoApi.AdditionalFields();
+      expect(instance).to.be.a(SiigoApi.AdditionalFields);
     });
 
     it('should have the property barcode (base name: "barcode")', function() {
       // uncomment below and update the code to test the property barcode
-      //var instance = new SiigoApi.AdditionalFields();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFields();
+      expect(instance.barcode).to.be(undefined);
     });
 
     it('should have the property brand (base name: "brand")', function() {
       // uncomment below and update the code to test the property brand
-      //var instance = new SiigoApi.AdditionalFields();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFields();
+      expect(instance.brand).to.be(undefined);
     });
 
     it('should have the property tariff (base name: "tariff")', function() {
       // uncomment below and update the code to test the property tariff
-      //var instance = new SiigoApi.AdditionalFields();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFields();
+      expect(instance.tariff).to.be(undefined);
     });
 
     it('should have the property model (base name: "model")', function() {
       // uncomment below and update the code to test the property model
-      //var instance = new SiigoApi.AdditionalFields();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.AdditionalFields();
+      expect(instance.model).to.be(undefined);
     });
 
   });

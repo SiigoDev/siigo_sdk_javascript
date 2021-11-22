@@ -50,38 +50,38 @@
   describe('RetentionsOutModel', function() {
     it('should create an instance of RetentionsOutModel', function() {
       // uncomment below and update the code to test RetentionsOutModel
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be.a(SiigoApi.RetentionsOutModel);
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance).to.be.a(SiigoApi.RetentionsOutModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance.id).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance.name).to.be(undefined);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance.type).to.be(undefined);
     });
 
     it('should have the property percentage (base name: "percentage")', function() {
       // uncomment below and update the code to test the property percentage
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance.percentage).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.RetentionsOutModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.RetentionsOutModel();
+      expect(instance.value).to.be(undefined);
     });
 
   });

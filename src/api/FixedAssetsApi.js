@@ -37,7 +37,7 @@ export default class FixedAssetsApi {
 
 
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of asset groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AssetGroupsViewModel>} and HTTP response
      */
     getAssetGroupsWithHttpInfo() {
@@ -64,7 +64,7 @@ export default class FixedAssetsApi {
     }
 
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of asset groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AssetGroupsViewModel>}
      */
     getAssetGroups() {
@@ -76,7 +76,7 @@ export default class FixedAssetsApi {
 
 
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of fixed assets.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FixedAssetsViewModel>} and HTTP response
      */
     getFixedAssetsWithHttpInfo() {
@@ -103,7 +103,7 @@ export default class FixedAssetsApi {
     }
 
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of fixed assets.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/FixedAssetsViewModel>}
      */
     getFixedAssets() {

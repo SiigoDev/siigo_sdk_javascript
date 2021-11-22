@@ -50,20 +50,20 @@
   describe('PurchaseOrderCommand', function() {
     it('should create an instance of PurchaseOrderCommand', function() {
       // uncomment below and update the code to test PurchaseOrderCommand
-      //var instance = new SiigoApi.PurchaseOrderCommand();
-      //expect(instance).to.be.a(SiigoApi.PurchaseOrderCommand);
+      var instance = new SiigoApi.PurchaseOrderCommand();
+      expect(instance).to.be.a(SiigoApi.PurchaseOrderCommand);
     });
 
     it('should have the property prefix (base name: "prefix")', function() {
       // uncomment below and update the code to test the property prefix
-      //var instance = new SiigoApi.PurchaseOrderCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PurchaseOrderCommand();
+      expect(instance.prefix).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.PurchaseOrderCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PurchaseOrderCommand();
+      expect(instance.number).to.be(undefined);
     });
 
   });

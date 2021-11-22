@@ -50,38 +50,38 @@
   describe('StampViewModel', function() {
     it('should create an instance of StampViewModel', function() {
       // uncomment below and update the code to test StampViewModel
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be.a(SiigoApi.StampViewModel);
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance).to.be.a(SiigoApi.StampViewModel);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance.status).to.be(undefined);
     });
 
     it('should have the property cufe (base name: "cufe")', function() {
       // uncomment below and update the code to test the property cufe
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance.cufe).to.be(undefined);
     });
 
     it('should have the property cude (base name: "cude")', function() {
       // uncomment below and update the code to test the property cude
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance.cude).to.be(undefined);
     });
 
     it('should have the property observations (base name: "observations")', function() {
       // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance.observations).to.be(undefined);
     });
 
     it('should have the property errors (base name: "errors")', function() {
       // uncomment below and update the code to test the property errors
-      //var instance = new SiigoApi.StampViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.StampViewModel();
+      expect(instance.errors).to.be(undefined);
     });
 
   });

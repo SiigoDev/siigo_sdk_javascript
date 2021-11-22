@@ -50,14 +50,14 @@
   describe('TaxesCommand', function() {
     it('should create an instance of TaxesCommand', function() {
       // uncomment below and update the code to test TaxesCommand
-      //var instance = new SiigoApi.TaxesCommand();
-      //expect(instance).to.be.a(SiigoApi.TaxesCommand);
+      var instance = new SiigoApi.TaxesCommand();
+      expect(instance).to.be.a(SiigoApi.TaxesCommand);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.TaxesCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.TaxesCommand();
+      expect(instance.id).to.be(undefined);
     });
 
   });

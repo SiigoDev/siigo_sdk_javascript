@@ -50,14 +50,14 @@
   describe('JournalEntryDocumentModel', function() {
     it('should create an instance of JournalEntryDocumentModel', function() {
       // uncomment below and update the code to test JournalEntryDocumentModel
-      //var instance = new SiigoApi.JournalEntryDocumentModel();
-      //expect(instance).to.be.a(SiigoApi.JournalEntryDocumentModel);
+      var instance = new SiigoApi.JournalEntryDocumentModel();
+      expect(instance).to.be.a(SiigoApi.JournalEntryDocumentModel);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new SiigoApi.JournalEntryDocumentModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.JournalEntryDocumentModel();
+      expect(instance.id).to.be(undefined);
     });
 
   });

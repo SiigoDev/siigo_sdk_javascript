@@ -50,26 +50,26 @@
   describe('PhoneModel', function() {
     it('should create an instance of PhoneModel', function() {
       // uncomment below and update the code to test PhoneModel
-      //var instance = new SiigoApi.PhoneModel();
-      //expect(instance).to.be.a(SiigoApi.PhoneModel);
+      var instance = new SiigoApi.PhoneModel();
+      expect(instance).to.be.a(SiigoApi.PhoneModel);
     });
 
     it('should have the property indicative (base name: "indicative")', function() {
       // uncomment below and update the code to test the property indicative
-      //var instance = new SiigoApi.PhoneModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PhoneModel();
+      expect(instance.indicative).to.be(undefined);
     });
 
     it('should have the property number (base name: "number")', function() {
       // uncomment below and update the code to test the property number
-      //var instance = new SiigoApi.PhoneModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PhoneModel();
+      expect(instance.number).to.be(undefined);
     });
 
     it('should have the property extension (base name: "extension")', function() {
       // uncomment below and update the code to test the property extension
-      //var instance = new SiigoApi.PhoneModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PhoneModel();
+      expect(instance.extension).to.be(undefined);
     });
 
   });

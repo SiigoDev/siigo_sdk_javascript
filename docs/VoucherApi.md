@@ -2,9 +2,9 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a Voucher.
-[**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets a Voucher by GUID.
-[**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Gets a list of Vouchers with pagination.
+[**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
+[**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
+[**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > VoucherViewModel createVoucher(opts)
 
-Creates a Voucher.
+Creates a voucher.
 
 ### Example
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 > VoucherViewModel getVoucher(id)
 
-Gets a Voucher by GUID.
+Gets the voucher by GUID.
 
 ### Example
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 > VouchersViewModel getVouchers(opts)
 
-Gets a list of Vouchers with pagination.
+Returns a paginated list of vouchers.
 
 ### Example
 

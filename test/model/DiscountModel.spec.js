@@ -50,20 +50,20 @@
   describe('DiscountModel', function() {
     it('should create an instance of DiscountModel', function() {
       // uncomment below and update the code to test DiscountModel
-      //var instance = new SiigoApi.DiscountModel();
-      //expect(instance).to.be.a(SiigoApi.DiscountModel);
+      var instance = new SiigoApi.DiscountModel();
+      expect(instance).to.be.a(SiigoApi.DiscountModel);
     });
 
     it('should have the property percentage (base name: "percentage")', function() {
       // uncomment below and update the code to test the property percentage
-      //var instance = new SiigoApi.DiscountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DiscountModel();
+      expect(instance.percentage).to.be(undefined);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new SiigoApi.DiscountModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.DiscountModel();
+      expect(instance.value).to.be(undefined);
     });
 
   });

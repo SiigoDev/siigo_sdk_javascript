@@ -36,7 +36,7 @@ export default class AccountGroupsApi {
 
 
     /**
-     * Gets a list of AccountGroups.
+     * Returns a list of account groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AccountGroupViewModel>} and HTTP response
      */
     getAccountGroupsWithHttpInfo() {
@@ -63,7 +63,7 @@ export default class AccountGroupsApi {
     }
 
     /**
-     * Gets a list of AccountGroups.
+     * Returns a list of account groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AccountGroupViewModel>}
      */
     getAccountGroups() {

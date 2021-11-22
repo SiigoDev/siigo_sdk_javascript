@@ -2,11 +2,11 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCustomer**](CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a Customer.
-[**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes a Customer by GUID.
-[**getCustomer**](CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets a Customer by GUID.
-[**getCustomers**](CustomerApi.md#getCustomers) | **GET** /v1/customers | Gets a list of Customers.
-[**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates a Customer by GUID.
+[**createCustomer**](CustomerApi.md#createCustomer) | **POST** /v1/customers | Creates a customer.
+[**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /v1/customers/{id} | Deletes the customer by GUID.
+[**getCustomer**](CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets the customer by GUID.
+[**getCustomers**](CustomerApi.md#getCustomers) | **GET** /v1/customers | Returns a paginated list of customers.
+[**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates the customer by GUID.
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > CustomerViewModel createCustomer(opts)
 
-Creates a Customer.
+Creates a customer.
 
 ### Example
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 > CustomerDeleteViewModel deleteCustomer(id)
 
-Deletes a Customer by GUID.
+Deletes the customer by GUID.
 
 ### Example
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 > CustomerViewModel getCustomer(id)
 
-Gets a Customer by GUID.
+Gets the customer by GUID.
 
 ### Example
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 > CustomersViewModel getCustomers(opts)
 
-Gets a list of Customers.
+Returns a paginated list of customers.
 
 ### Example
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 > CustomerViewModel updateCustomer(id, opts)
 
-Updates a Customer by GUID.
+Updates the customer by GUID.
 
 ### Example
 

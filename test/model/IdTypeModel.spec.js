@@ -50,20 +50,20 @@
   describe('IdTypeModel', function() {
     it('should create an instance of IdTypeModel', function() {
       // uncomment below and update the code to test IdTypeModel
-      //var instance = new SiigoApi.IdTypeModel();
-      //expect(instance).to.be.a(SiigoApi.IdTypeModel);
+      var instance = new SiigoApi.IdTypeModel();
+      expect(instance).to.be.a(SiigoApi.IdTypeModel);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new SiigoApi.IdTypeModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.IdTypeModel();
+      expect(instance.code).to.be(undefined);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new SiigoApi.IdTypeModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.IdTypeModel();
+      expect(instance.name).to.be(undefined);
     });
 
   });
