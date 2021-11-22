@@ -52,7 +52,7 @@ var ProductApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Creates a produc
+   * Creates a product.
    * @param {Object} opts Optional parameters
    * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
@@ -75,7 +75,7 @@ var ProductApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/products', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Creates a produc
+     * Creates a product.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
@@ -89,7 +89,7 @@ var ProductApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Deletes a Product by GUID
+     * Deletes the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductDeleteViewModel} and HTTP response
      */
@@ -116,7 +116,7 @@ var ProductApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/products/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Deletes a Product by GUID
+     * Deletes the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductDeleteViewModel}
      */
@@ -129,7 +129,7 @@ var ProductApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a Product by GUID.
+     * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
      */
@@ -156,7 +156,7 @@ var ProductApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/products/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a Product by GUID.
+     * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
      */
@@ -169,7 +169,7 @@ var ProductApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a list of Products with pagination.
+     * Returns a paginated list of products.
      * @param {Object} opts Optional parameters
      * @param {String} opts.code Represents the identification code of the product. This value can be an alphanumeric  code that will represent the code id of the cost center.  For example, this name can be 'Item-1' or 'toy007'.
      * @param {String} opts.accountGroup Represents the id of inventory classification
@@ -219,7 +219,7 @@ var ProductApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/products', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Products with pagination.
+     * Returns a paginated list of products.
      * @param {Object} opts Optional parameters
      * @param {String} opts.code Represents the identification code of the product. This value can be an alphanumeric  code that will represent the code id of the cost center.  For example, this name can be 'Item-1' or 'toy007'.
      * @param {String} opts.accountGroup Represents the id of inventory classification
@@ -246,7 +246,7 @@ var ProductApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Updates a Product by GUID
+     * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
@@ -276,7 +276,7 @@ var ProductApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/products/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Updates a Product by GUID
+     * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.

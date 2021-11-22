@@ -50,7 +50,7 @@ var VoucherApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Creates a Voucher.
+   * Creates a voucher.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateVoucherCommand} opts.createVoucherCommand Represents the request with the voucher information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModel} and HTTP response
@@ -73,7 +73,7 @@ var VoucherApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/vouchers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Creates a Voucher.
+     * Creates a voucher.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateVoucherCommand} opts.createVoucherCommand Represents the request with the voucher information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModel}
@@ -87,7 +87,7 @@ var VoucherApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a Voucher by GUID.
+     * Gets the voucher by GUID.
      * @param {String} id Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModel} and HTTP response
      */
@@ -114,7 +114,7 @@ var VoucherApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/vouchers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a Voucher by GUID.
+     * Gets the voucher by GUID.
      * @param {String} id Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModel}
      */
@@ -127,7 +127,7 @@ var VoucherApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a list of Vouchers with pagination.
+     * Returns a paginated list of vouchers.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -165,7 +165,7 @@ var VoucherApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/vouchers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Vouchers with pagination.
+     * Returns a paginated list of vouchers.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date

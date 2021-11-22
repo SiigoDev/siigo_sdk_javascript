@@ -46,7 +46,7 @@ var UsersApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of Users with pagination.
+   * Returns a paginated list of users.
    * @param {Object} opts Optional parameters
    * @param {Number} opts.page Represents the current page of the results that you get. For example, '1'.
    * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.
@@ -73,7 +73,7 @@ var UsersApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/users', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Users with pagination.
+     * Returns a paginated list of users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Represents the current page of the results that you get. For example, '1'.
      * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.

@@ -46,7 +46,7 @@ var PaymentTypesApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Get a list of Payment Types.
+   * Returns a list of payment types.
    * @param {Object} opts Optional parameters
    * @param {String} opts.documentType Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentTypesViewModel} and HTTP response
@@ -71,7 +71,7 @@ var PaymentTypesApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/payment-types', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Get a list of Payment Types.
+     * Returns a list of payment types.
      * @param {Object} opts Optional parameters
      * @param {String} opts.documentType Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentTypesViewModel}

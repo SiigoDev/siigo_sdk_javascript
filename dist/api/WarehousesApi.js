@@ -46,14 +46,14 @@ var WarehousesApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of Warehouses.
+   * Returns a list of warehouse.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WarehouseViewModel} and HTTP response
    */
 
 
   (0, _createClass2["default"])(WarehousesApi, [{
-    key: "getProductWarehouseWithHttpInfo",
-    value: function getProductWarehouseWithHttpInfo() {
+    key: "getWarehouseWithHttpInfo",
+    value: function getWarehouseWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -66,14 +66,14 @@ var WarehousesApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/warehouses', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Warehouses.
+     * Returns a list of warehouse.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WarehouseViewModel}
      */
 
   }, {
-    key: "getProductWarehouse",
-    value: function getProductWarehouse() {
-      return this.getProductWarehouseWithHttpInfo().then(function (response_and_data) {
+    key: "getWarehouse",
+    value: function getWarehouse() {
+      return this.getWarehouseWithHttpInfo().then(function (response_and_data) {
         return response_and_data.data;
       });
     }
