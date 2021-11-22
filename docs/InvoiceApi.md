@@ -93,7 +93,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.InvoiceApi();
 
-let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getElectronicInvoiceErrors(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -109,7 +109,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.InvoiceApi();
-    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getElectronicInvoiceErrors(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -125,7 +125,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | [**String**](.md)| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -156,7 +156,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.InvoiceApi();
 
-let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getInvoice(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -172,7 +172,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.InvoiceApi();
-    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getInvoice(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -188,7 +188,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | [**String**](.md)| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -219,7 +219,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.InvoiceApi();
 
-let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getInvoicePDF(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -235,7 +235,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.InvoiceApi();
-    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = null; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getInvoicePDF(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -251,7 +251,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | [**String**](.md)| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
