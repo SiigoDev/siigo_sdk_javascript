@@ -46,7 +46,7 @@ var DocumentTypeApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of Document Types.
+   * Returns a list of document types.
    * @param {Object} opts Optional parameters
    * @param {String} opts.type Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/DocumentTypeViewModel>} and HTTP response
@@ -71,7 +71,7 @@ var DocumentTypeApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/document-types', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Document Types.
+     * Returns a list of document types.
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/DocumentTypeViewModel>}

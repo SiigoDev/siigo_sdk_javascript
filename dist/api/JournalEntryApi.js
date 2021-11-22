@@ -50,7 +50,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Creates JournalEntry.
+   * Creates a journal entry.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
@@ -73,7 +73,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/journals', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Creates JournalEntry.
+     * Creates a journal entry.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
@@ -87,7 +87,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a Journal by GUID.
+     * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
      */
@@ -114,7 +114,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/journals/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a Journal by GUID.
+     * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
      */
@@ -127,7 +127,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a list of Journals Entry with pagination.
+     * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -165,7 +165,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/journals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Journals Entry with pagination.
+     * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date

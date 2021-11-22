@@ -48,7 +48,7 @@ var FixedAssetsApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Gets a list of fixed assets.
+   * Returns a list of asset groups.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AssetGroupsViewModel>} and HTTP response
    */
 
@@ -68,7 +68,7 @@ var FixedAssetsApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/asset-groups', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of asset groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AssetGroupsViewModel>}
      */
 
@@ -80,7 +80,7 @@ var FixedAssetsApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of fixed assets.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FixedAssetsViewModel>} and HTTP response
      */
 
@@ -99,7 +99,7 @@ var FixedAssetsApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/fixed-assets', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of fixed assets.
+     * Returns a list of fixed assets.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/FixedAssetsViewModel>}
      */
 

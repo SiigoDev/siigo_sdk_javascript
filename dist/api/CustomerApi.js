@@ -52,7 +52,7 @@ var CustomerApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Creates a Customer.
+   * Creates a customer.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
@@ -75,7 +75,7 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/customers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Creates a Customer.
+     * Creates a customer.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
@@ -89,7 +89,7 @@ var CustomerApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Deletes a Customer by GUID.
+     * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerDeleteViewModel} and HTTP response
      */
@@ -116,7 +116,7 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/customers/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Deletes a Customer by GUID.
+     * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerDeleteViewModel}
      */
@@ -129,7 +129,7 @@ var CustomerApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a Customer by GUID.
+     * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
@@ -156,7 +156,7 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/customers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a Customer by GUID.
+     * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
@@ -169,7 +169,7 @@ var CustomerApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Gets a list of Customers.
+     * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
      * @param {String} opts.identification Represents the identification number of customer.  For example, the identifitication number '13832081'.
      * @param {Number} opts.branchOffice Represents the branch office of customer, this value by default will be 0.
@@ -217,7 +217,7 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/customers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Gets a list of Customers.
+     * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
      * @param {String} opts.identification Represents the identification number of customer.  For example, the identifitication number '13832081'.
      * @param {Number} opts.branchOffice Represents the branch office of customer, this value by default will be 0.
@@ -243,7 +243,7 @@ var CustomerApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Updates a Customer by GUID.
+     * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
@@ -273,7 +273,7 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/v1/customers/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Updates a Customer by GUID.
+     * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
