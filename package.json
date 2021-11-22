@@ -7,7 +7,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",
-    "test": "mocha --require @babel/register --recursive --timeout 5000"
+    "test": "mocha --require @babel/register --recursive --timeout 420000"
   },
   "browser": {
     "fs": false
@@ -55,11 +55,7 @@
     "type": "git",
     "url": "git+https://github.com/SiigoDev/siigo_sdk_javascript.git"
   },
-  "keywords": [
-    "SDK",
-    "SIIGO",
-    "JAVASCRIPT"
-  ],
+  "keywords": ["SDK", "SIIGO"],
   "author": "siigo",
   "bugs": {
     "url": "https://github.com/SiigoDev/siigo_sdk_javascript/issues"

@@ -91,7 +91,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.VoucherApi();
 
-let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getVoucher(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -107,7 +107,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
-    let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getVoucher(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +123,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | [**String**](.md)| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 

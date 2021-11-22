@@ -138,6 +138,7 @@ docs/WarehouseViewModel.md
 docs/WarehousesApi.md
 git_push.sh
 mocha.opts
+package.json
 src/ApiClient.js
 src/api/AccountGroupsApi.js
 src/api/CostCenterApi.js
