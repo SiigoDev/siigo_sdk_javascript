@@ -55,7 +55,10 @@
     "type": "git",
     "url": "git+https://github.com/SiigoDev/siigo_sdk_javascript.git"
   },
-  "keywords": ["SDK", "SIIGO"],
+  "keywords": [
+    "SDK",
+    "SIIGO"
+  ],
   "author": "siigo",
   "bugs": {
     "url": "https://github.com/SiigoDev/siigo_sdk_javascript/issues"

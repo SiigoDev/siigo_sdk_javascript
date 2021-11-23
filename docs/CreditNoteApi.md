@@ -92,7 +92,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CreditNoteApi();
 
-let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getCreditNote(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -108,7 +108,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
-    let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getCreditNote(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -124,7 +124,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -155,7 +155,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CreditNoteApi();
 
-let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getCreditNotePDF(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -171,7 +171,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
-    let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getCreditNotePDF(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -187,7 +187,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
