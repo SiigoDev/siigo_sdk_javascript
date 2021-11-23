@@ -91,7 +91,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.VoucherApi();
 
-let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getVoucher(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -107,7 +107,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
-    let id = null; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getVoucher(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +123,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -155,6 +155,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.VoucherApi();
 
 let opts = {
+  'name': RC-01-45, // String | Represents the name of voucher.  For example, the name of a voucher can be like 'RC-01-45'.
   'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
   'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
   'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
@@ -180,6 +181,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
     let opts = {
+    'name': RC-01-45, // String | Represents the name of voucher.  For example, the name of a voucher can be like 'RC-01-45'.
     'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
     'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
     'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
@@ -204,6 +206,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **name** | **String**| Represents the name of voucher.  For example, the name of a voucher can be like &#39;RC-01-45&#39;. | [optional] 
  **createdStart** | **Date**| Returns results where the \&quot;created\&quot; field is greater or equal than the entered date | [optional] 
  **createdEnd** | **Date**| Returns results where the \&quot;created\&quot; field is less or equal than the entered date | [optional] 
  **dateStart** | **Date**| Returns results with date greater or equal than the \&quot;date_start\&quot; date | [optional] 
