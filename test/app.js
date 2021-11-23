@@ -20,3 +20,4 @@ function initialize(siigo)
 exports._test = {
     initialize: initialize
 }
+
