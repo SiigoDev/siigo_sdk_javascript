@@ -61,7 +61,7 @@ var VoucherApi = /*#__PURE__*/function () {
     key: "createVoucherWithHttpInfo",
     value: function createVoucherWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['createVoucherCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

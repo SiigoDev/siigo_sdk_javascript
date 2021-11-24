@@ -47,7 +47,7 @@ export default class InvoiceApi {
      */
     createInvoiceWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createInvoiceCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };

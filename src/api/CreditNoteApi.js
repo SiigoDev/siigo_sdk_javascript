@@ -46,7 +46,7 @@ export default class CreditNoteApi {
      */
     createCreditNoteWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createCreditNoteCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };

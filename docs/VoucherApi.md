@@ -24,9 +24,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.VoucherApi();
 
-let opts = {
-  'createVoucherCommand': new SiigoApi.CreateVoucherCommand() // CreateVoucherCommand | Represents the request with the voucher information.
-};
+let opts = new SiigoApi.CreateVoucherCommand(); // CreateVoucherCommand | Represents the request with the voucher information.
 
 apiInstance.createVoucher(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,9 +40,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
-    let opts = {
-    'createVoucherCommand': new SiigoApi.CreateVoucherCommand() // CreateVoucherCommand | Represents the request with the voucher information.
-    };
+    let opts = new SiigoApi.CreateVoucherCommand(); // CreateVoucherCommand | Represents the request with the voucher information.
 
     const data = await apiInstance.createVoucher(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -181,15 +177,15 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
     let opts = {
-    'name': RC-01-45, // String | Represents the name of voucher.  For example, the name of a voucher can be like 'RC-01-45'.
-    'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
-    'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
-    'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
-    'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
-    'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
-    'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
-    'page': 1, // Number | Represents the current page
-    'pageSize': 25 // Number | Represents the number of results per page.
+      'name': RC-01-45, // String | Represents the name of voucher.  For example, the name of a voucher can be like 'RC-01-45'.
+      'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
+      'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
+      'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
+      'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
+      'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
+      'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
+      'page': 1, // Number | Represents the current page
+      'pageSize': 25 // Number | Represents the number of results per page.
     };
 
     const data = await apiInstance.getVouchers(opts);

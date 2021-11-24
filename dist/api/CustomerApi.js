@@ -63,7 +63,7 @@ var CustomerApi = /*#__PURE__*/function () {
     key: "createCustomerWithHttpInfo",
     value: function createCustomerWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['createCustomerCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};
@@ -254,7 +254,7 @@ var CustomerApi = /*#__PURE__*/function () {
     key: "updateCustomerWithHttpInfo",
     value: function updateCustomerWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts['createCustomerCommand']; // verify the required parameter 'id' is set
+      var postBody = opts; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateCustomer");

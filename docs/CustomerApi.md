@@ -26,9 +26,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CustomerApi();
 
-let opts = {
-  'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
-};
+let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
 
 apiInstance.createCustomer(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -44,9 +42,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
-    let opts = {
-    'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
-    };
+    let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
 
     const data = await apiInstance.createCustomer(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -250,19 +246,19 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
     let opts = {
-    'identification': 13832081, // String | Represents the identification number of customer.  For example, the identifitication number '13832081'.
-    'branchOffice': 0, // Number | Represents the branch office of customer, this value by default will be 0.
-    'active': true, // String | Represents the state of customer.  This value can be 'true' or 'false', by default will be true.
-    'type': Customer, // String | Represents the customer type (this type can be 'Customer', 'Supplier 'and 'Other'),  this field will be 'Customer' by default.
-    'personType': 'Person', // String | Represents the person type, this type can be a 'Person' or 'Company'.
-    'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
-    'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
-    'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
-    'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
-    'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
-    'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
-    'page': 1, // Number | Represents the current page
-    'pageSize': 25 // Number | Represents the number of results per page.
+      'identification': 13832081, // String | Represents the identification number of customer.  For example, the identifitication number '13832081'.
+      'branchOffice': 0, // Number | Represents the branch office of customer, this value by default will be 0.
+      'active': true, // String | Represents the state of customer.  This value can be 'true' or 'false', by default will be true.
+      'type': Customer, // String | Represents the customer type (this type can be 'Customer', 'Supplier 'and 'Other'),  this field will be 'Customer' by default.
+      'personType': 'Person', // String | Represents the person type, this type can be a 'Person' or 'Company'.
+      'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
+      'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
+      'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
+      'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
+      'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
+      'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
+      'page': 1, // Number | Represents the current page
+      'pageSize': 25 // Number | Represents the number of results per page.
     };
 
     const data = await apiInstance.getCustomers(opts);
@@ -323,9 +319,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.CustomerApi();
 
 let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-let opts = {
-  'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
-};
+let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
 
 apiInstance.updateCustomer(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -342,9 +336,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
     let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-    let opts = {
-    'createCustomerCommand': new SiigoApi.CreateCustomerCommand() // CreateCustomerCommand | Represents the request with the customer information.
-    };
+    let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
 
     const data = await apiInstance.updateCustomer(id, opts);
     console.log('API called successfully. Returned data: ' + data);
