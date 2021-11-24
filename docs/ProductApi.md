@@ -26,9 +26,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let opts = {
-  'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information.
-};
+let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
 
 apiInstance.createProduct(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -44,9 +42,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let opts = {
-    'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information.
-    };
+    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
 
     const data = await apiInstance.createProduct(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -251,20 +247,20 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
     let opts = {
-    'code': Item-1, // String | Represents the identification code of the product. This value can be an alphanumeric  code that will represent the code id of the cost center.  For example, this name can be 'Item-1' or 'toy007'.
-    'accountGroup': 1253, // String | Represents the id of inventory classification
-    'type': Product, // String | Represents the type of product. This product could be of type 'Product', 'Service' or 'Consumer Good',  by the default this field will be Product.
-    'stockControl': false, // String | Represents the inventory control, by the fault this field will be false.
-    'active': true, // String | Represents the status of product, by default this field will be true.
-    'ids': 63f918c2-ca65-4edc-a7db-66bcdd5159fb, // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.  Up to 20 id can be filtered at a time:  https://api.siigo.com/v1/products?ids={GUID},{GUID}
-    'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
-    'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
-    'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
-    'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
-    'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
-    'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
-    'page': 1, // Number | Represents the current page
-    'pageSize': 25 // Number | Represents the number of results per page.
+      'code': Item-1, // String | Represents the identification code of the product. This value can be an alphanumeric  code that will represent the code id of the cost center.  For example, this name can be 'Item-1' or 'toy007'.
+      'accountGroup': 1253, // String | Represents the id of inventory classification
+      'type': Product, // String | Represents the type of product. This product could be of type 'Product', 'Service' or 'Consumer Good',  by the default this field will be Product.
+      'stockControl': false, // String | Represents the inventory control, by the fault this field will be false.
+      'active': true, // String | Represents the status of product, by default this field will be true.
+      'ids': 63f918c2-ca65-4edc-a7db-66bcdd5159fb, // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.  Up to 20 id can be filtered at a time:  https://api.siigo.com/v1/products?ids={GUID},{GUID}
+      'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
+      'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
+      'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
+      'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
+      'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
+      'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
+      'page': 1, // Number | Represents the current page
+      'pageSize': 25 // Number | Represents the number of results per page.
     };
 
     const data = await apiInstance.getProducts(opts);
@@ -326,9 +322,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.ProductApi();
 
 let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-let opts = {
-  'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information to update.
-};
+let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
 
 apiInstance.updateProduct(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -345,9 +339,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
     let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-    let opts = {
-    'productCommand': new SiigoApi.ProductCommand() // ProductCommand | Represents the request with the product information to update.
-    };
+    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
 
     const data = await apiInstance.updateProduct(id, opts);
     console.log('API called successfully. Returned data: ' + data);

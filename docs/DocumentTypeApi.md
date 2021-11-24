@@ -41,7 +41,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.DocumentTypeApi();
     let opts = {
-    'type': FV // String | Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
+      'type': FV // String | Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
     };
 
     const data = await apiInstance.getDocumentTypes(opts);

@@ -46,7 +46,7 @@ export default class CustomerApi {
      */
     createCustomerWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createCustomerCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };
@@ -264,7 +264,7 @@ export default class CustomerApi {
      */
     updateCustomerWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['createCustomerCommand'];
+      let postBody = opts;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateCustomer");

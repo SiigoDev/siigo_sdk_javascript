@@ -61,7 +61,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
     key: "createJournalWithHttpInfo",
     value: function createJournalWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['createJournalEntryCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

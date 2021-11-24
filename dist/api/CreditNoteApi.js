@@ -63,7 +63,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
     key: "createCreditNoteWithHttpInfo",
     value: function createCreditNoteWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['createCreditNoteCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

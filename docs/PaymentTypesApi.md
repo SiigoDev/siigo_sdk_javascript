@@ -41,7 +41,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.PaymentTypesApi();
     let opts = {
-    'documentType': "documentType_example" // String | Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
+      'documentType': "documentType_example" // String | Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
     };
 
     const data = await apiInstance.getPaymentTypes(opts);

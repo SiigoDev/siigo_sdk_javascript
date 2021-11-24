@@ -65,7 +65,7 @@ var InvoiceApi = /*#__PURE__*/function () {
     key: "createInvoiceWithHttpInfo",
     value: function createInvoiceWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['createInvoiceCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};

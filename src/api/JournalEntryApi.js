@@ -45,7 +45,7 @@ export default class JournalEntryApi {
      */
     createJournalWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createJournalEntryCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };

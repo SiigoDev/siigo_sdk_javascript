@@ -45,7 +45,7 @@ export default class VoucherApi {
      */
     createVoucherWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createVoucherCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };
