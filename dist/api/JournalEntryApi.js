@@ -129,6 +129,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name For filtering by Journals Entry name
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
      * @param {Date} opts.dateStart Returns results with date greater or equal than the \"date_start\" date
@@ -147,6 +148,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var postBody = null;
       var pathParams = {};
       var queryParams = {
+        'name': opts['name'],
         'created_start': opts['createdStart'],
         'created_end': opts['createdEnd'],
         'date_start': opts['dateStart'],
@@ -167,6 +169,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name For filtering by Journals Entry name
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
      * @param {Date} opts.dateStart Returns results with date greater or equal than the \"date_start\" date
