@@ -83,9 +83,7 @@
   describe('VoucherApi', function() {
     describe('createVoucher', function() {
       it('should call createVoucher successfully', async function() {
-        let opts = {
-          'createVoucherCommand': data
-        };
+        let opts = data;
         try {
           result = await instance.createVoucherWithHttpInfo(opts);
           id = result.response.body.id;

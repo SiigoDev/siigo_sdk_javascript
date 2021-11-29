@@ -99,9 +99,7 @@
     describe('createInvoice', function() {
       it('should call createInvoice successfully', async function() {
         try {
-          let opts = {
-          'createInvoiceCommand': data
-          };      
+          let opts = data;     
           result = await instance.createInvoiceWithHttpInfo(opts);
           document = result.response.body;
         } catch (error) {
