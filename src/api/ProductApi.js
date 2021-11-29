@@ -46,7 +46,7 @@ export default class ProductApi {
      */
     createProductWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['productCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };
@@ -267,7 +267,7 @@ export default class ProductApi {
      */
     updateProductWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['productCommand'];
+      let postBody = opts;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateProduct");

@@ -37,7 +37,7 @@ export default class TaxesApi {
 
     /**
      * Returns a list of taxes.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaxViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TaxViewModel>} and HTTP response
      */
     getTaxesWithHttpInfo() {
       let postBody = null;
@@ -54,7 +54,7 @@ export default class TaxesApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TaxViewModel;
+      let returnType = [TaxViewModel];
       return this.apiClient.callApi(
         '/v1/taxes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -64,7 +64,7 @@ export default class TaxesApi {
 
     /**
      * Returns a list of taxes.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaxViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TaxViewModel>}
      */
     getTaxes() {
       return this.getTaxesWithHttpInfo()

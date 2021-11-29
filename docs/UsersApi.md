@@ -42,8 +42,8 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.UsersApi();
     let opts = {
-    'page': 1, // Number | Represents the current page of the results that you get. For example, '1'.
-    'pageSize': 25 // Number | Represents the number of users that you will get per page. For example, '20'.
+      'page': 1, // Number | Represents the current page of the results that you get. For example, '1'.
+      'pageSize': 25 // Number | Represents the number of users that you will get per page. For example, '20'.
     };
 
     const data = await apiInstance.getUsers(opts);

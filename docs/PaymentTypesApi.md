@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 ## getPaymentTypes
 
-> PaymentTypesViewModel getPaymentTypes(opts)
+> [PaymentTypesViewModel] getPaymentTypes(opts)
 
 Returns a list of payment types.
 
@@ -41,7 +41,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.PaymentTypesApi();
     let opts = {
-    'documentType': "documentType_example" // String | Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
+      'documentType': "documentType_example" // String | Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
     };
 
     const data = await apiInstance.getPaymentTypes(opts);
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentTypesViewModel**](PaymentTypesViewModel.md)
+[**[PaymentTypesViewModel]**](PaymentTypesViewModel.md)
 
 ### Authorization
 

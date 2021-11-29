@@ -24,9 +24,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.JournalEntryApi();
 
-let opts = {
-  'createJournalEntryCommand': new SiigoApi.CreateJournalEntryCommand() // CreateJournalEntryCommand | Represents the request with the journal entry information.
-};
+let opts = new SiigoApi.CreateJournalEntryCommand(); // CreateJournalEntryCommand | Represents the request with the journal entry information.
 
 apiInstance.createJournal(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,9 +40,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.JournalEntryApi();
-    let opts = {
-    'createJournalEntryCommand': new SiigoApi.CreateJournalEntryCommand() // CreateJournalEntryCommand | Represents the request with the journal entry information.
-    };
+    let opts = new SiigoApi.CreateJournalEntryCommand(); // CreateJournalEntryCommand | Represents the request with the journal entry information.
 
     const data = await apiInstance.createJournal(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -91,7 +87,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.JournalEntryApi();
 
-let id = null; // String | Represent the Journal id by GUID.
+let id = "id_example"; // String | Represent the Journal id by GUID.
 
 apiInstance.getJournal(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -107,7 +103,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.JournalEntryApi();
-    let id = null; // String | Represent the Journal id by GUID.
+    let id = "id_example"; // String | Represent the Journal id by GUID.
 
     const data = await apiInstance.getJournal(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -123,7 +119,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represent the Journal id by GUID. | 
+ **id** | **String**| Represent the Journal id by GUID. | 
 
 ### Return type
 
@@ -155,6 +151,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.JournalEntryApi();
 
 let opts = {
+  'name': CC-1-85, // String | For filtering by Journals Entry name
   'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
   'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
   'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
@@ -180,14 +177,15 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.JournalEntryApi();
     let opts = {
-    'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
-    'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
-    'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
-    'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
-    'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
-    'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
-    'page': 1, // Number | Represents the current page
-    'pageSize': 25 // Number | Represents the number of results per page.
+      'name': CC-1-85, // String | For filtering by Journals Entry name
+      'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
+      'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
+      'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
+      'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
+      'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
+      'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
+      'page': 1, // Number | Represents the current page
+      'pageSize': 25 // Number | Represents the number of results per page.
     };
 
     const data = await apiInstance.getJournals(opts);
@@ -204,6 +202,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **name** | **String**| For filtering by Journals Entry name | [optional] 
  **createdStart** | **Date**| Returns results where the \&quot;created\&quot; field is greater or equal than the entered date | [optional] 
  **createdEnd** | **Date**| Returns results where the \&quot;created\&quot; field is less or equal than the entered date | [optional] 
  **dateStart** | **Date**| Returns results with date greater or equal than the \&quot;date_start\&quot; date | [optional] 

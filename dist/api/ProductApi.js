@@ -63,7 +63,7 @@ var ProductApi = /*#__PURE__*/function () {
     key: "createProductWithHttpInfo",
     value: function createProductWithHttpInfo(opts) {
       opts = opts || {};
-      var postBody = opts['productCommand'];
+      var postBody = opts;
       var pathParams = {};
       var queryParams = {};
       var headerParams = {};
@@ -257,7 +257,7 @@ var ProductApi = /*#__PURE__*/function () {
     key: "updateProductWithHttpInfo",
     value: function updateProductWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts['productCommand']; // verify the required parameter 'id' is set
+      var postBody = opts; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateProduct");

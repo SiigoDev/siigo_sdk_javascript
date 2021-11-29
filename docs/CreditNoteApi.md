@@ -25,9 +25,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CreditNoteApi();
 
-let opts = {
-  'createCreditNoteCommand': new SiigoApi.CreateCreditNoteCommand() // CreateCreditNoteCommand | Represents the request with the credit note information.
-};
+let opts = new SiigoApi.CreateCreditNoteCommand(); // CreateCreditNoteCommand | Represents the request with the credit note information.
 
 apiInstance.createCreditNote(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -43,9 +41,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
-    let opts = {
-    'createCreditNoteCommand': new SiigoApi.CreateCreditNoteCommand() // CreateCreditNoteCommand | Represents the request with the credit note information.
-    };
+    let opts = new SiigoApi.CreateCreditNoteCommand(); // CreateCreditNoteCommand | Represents the request with the credit note information.
 
     const data = await apiInstance.createCreditNote(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -92,7 +88,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CreditNoteApi();
 
-let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getCreditNote(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -108,7 +104,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
-    let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getCreditNote(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -124,7 +120,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -155,7 +151,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CreditNoteApi();
 
-let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
 apiInstance.getCreditNotePDF(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -171,7 +167,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
-    let id = null; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
+    let id = "id_example"; // String | Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
 
     const data = await apiInstance.getCreditNotePDF(id);
     console.log('API called successfully. Returned data: ' + data);
@@ -187,7 +183,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **id** | **String**| Represents the unique Id of credit note, this value must be a &#39;Guid&#39;  with the next format 00000000-0000-0000-0000-000000000000. | 
 
 ### Return type
 
@@ -219,6 +215,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.CreditNoteApi();
 
 let opts = {
+  'name': NC-1-1516, // String | For filtering by Credit Note name
   'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
   'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
   'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
@@ -244,14 +241,15 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.CreditNoteApi();
     let opts = {
-    'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
-    'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
-    'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
-    'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
-    'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
-    'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
-    'page': 1, // Number | Represents the current page
-    'pageSize': 25 // Number | Represents the number of results per page.
+      'name': NC-1-1516, // String | For filtering by Credit Note name
+      'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
+      'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
+      'dateStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date greater or equal than the \"date_start\" date
+      'dateEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results with date less or equal than the \"date_end\" date
+      'updatedStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is greater or equal than the entered date
+      'updatedEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"last_updated\" field is less or equal than the entered date
+      'page': 1, // Number | Represents the current page
+      'pageSize': 25 // Number | Represents the number of results per page.
     };
 
     const data = await apiInstance.getCreditNotes(opts);
@@ -268,6 +266,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **name** | **String**| For filtering by Credit Note name | [optional] 
  **createdStart** | **Date**| Returns results where the \&quot;created\&quot; field is greater or equal than the entered date | [optional] 
  **createdEnd** | **Date**| Returns results where the \&quot;created\&quot; field is less or equal than the entered date | [optional] 
  **dateStart** | **Date**| Returns results with date greater or equal than the \&quot;date_start\&quot; date | [optional] 

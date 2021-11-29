@@ -99,9 +99,7 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        let opts = {
-          'createJournalEntryCommand': data
-        };
+        let opts = data;
         try {
           result = await instance.createJournalWithHttpInfo(opts);
           id = result.response.body.id;

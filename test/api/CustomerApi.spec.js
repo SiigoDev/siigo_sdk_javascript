@@ -104,9 +104,7 @@
   describe("CustomerApi", function () {
     describe("createCustomer", function () {
       it("should call createCustomer successfully", async function () {
-        let opts = {
-          createCustomerCommand: data,
-        };
+        let opts = data;
         try {
           result = await instance.createCustomerWithHttpInfo(opts);
           id = result.response.body.id;
@@ -268,9 +266,7 @@
         let newCode = Date.now().toString();
         try {
           data.identification = newCode;
-          let opts = {
-            createCustomerCommand: data,
-          };
+          let opts = data;
           result = await instance.updateCustomerWithHttpInfo(id, opts);
         } catch (error) {
           console.error(error);

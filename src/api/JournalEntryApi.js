@@ -45,7 +45,7 @@ export default class JournalEntryApi {
      */
     createJournalWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['createJournalEntryCommand'];
+      let postBody = opts;
 
       let pathParams = {
       };
@@ -130,6 +130,7 @@ export default class JournalEntryApi {
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name For filtering by Journals Entry name
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
      * @param {Date} opts.dateStart Returns results with date greater or equal than the \"date_start\" date
@@ -147,6 +148,7 @@ export default class JournalEntryApi {
       let pathParams = {
       };
       let queryParams = {
+        'name': opts['name'],
         'created_start': opts['createdStart'],
         'created_end': opts['createdEnd'],
         'date_start': opts['dateStart'],
@@ -175,6 +177,7 @@ export default class JournalEntryApi {
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name For filtering by Journals Entry name
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
      * @param {Date} opts.dateStart Returns results with date greater or equal than the \"date_start\" date

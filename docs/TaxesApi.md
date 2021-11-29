@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 ## getTaxes
 
-> TaxViewModel getTaxes()
+> [TaxViewModel] getTaxes()
 
 Returns a list of taxes.
 
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TaxViewModel**](TaxViewModel.md)
+[**[TaxViewModel]**](TaxViewModel.md)
 
 ### Authorization
 
