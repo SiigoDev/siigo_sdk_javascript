@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 ## getPaymentTypes
 
-> PaymentTypesViewModel getPaymentTypes(opts)
+> [PaymentTypesViewModel] getPaymentTypes(opts)
 
 Returns a list of payment types.
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentTypesViewModel**](PaymentTypesViewModel.md)
+[**[PaymentTypesViewModel]**](PaymentTypesViewModel.md)
 
 ### Authorization
 

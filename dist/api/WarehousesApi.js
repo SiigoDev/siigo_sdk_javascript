@@ -47,7 +47,7 @@ var WarehousesApi = /*#__PURE__*/function () {
   }
   /**
    * Returns a list of warehouse.
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WarehouseViewModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WarehouseViewModel>} and HTTP response
    */
 
 
@@ -62,12 +62,12 @@ var WarehousesApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _WarehouseViewModel["default"];
+      var returnType = [_WarehouseViewModel["default"]];
       return this.apiClient.callApi('/v1/warehouses', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Returns a list of warehouse.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WarehouseViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WarehouseViewModel>}
      */
 
   }, {

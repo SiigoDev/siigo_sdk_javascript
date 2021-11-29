@@ -47,7 +47,7 @@ var TaxesApi = /*#__PURE__*/function () {
   }
   /**
    * Returns a list of taxes.
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaxViewModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TaxViewModel>} and HTTP response
    */
 
 
@@ -62,12 +62,12 @@ var TaxesApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _TaxViewModel["default"];
+      var returnType = [_TaxViewModel["default"]];
       return this.apiClient.callApi('/v1/taxes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Returns a list of taxes.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaxViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TaxViewModel>}
      */
 
   }, {

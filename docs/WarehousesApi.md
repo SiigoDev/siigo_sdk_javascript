@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 ## getWarehouse
 
-> WarehouseViewModel getWarehouse()
+> [WarehouseViewModel] getWarehouse()
 
 Returns a list of warehouse.
 
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WarehouseViewModel**](WarehouseViewModel.md)
+[**[WarehouseViewModel]**](WarehouseViewModel.md)
 
 ### Authorization
 
