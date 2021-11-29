@@ -96,9 +96,7 @@
   describe('ProductApi', function () {
     describe('createProduct', function () {
       it('should call createProduct successfully', async function () {
-        let opts = {
-          'productCommand': data
-        };
+        let opts = data;
         try {
           result = await instance.createProductWithHttpInfo(opts);
           id = result.response.body.id;
@@ -139,8 +137,7 @@
     });
     describe('getProducts', function () {
       it('should call getProducts successfully', async function () {
-        let opts = {
-        }
+        let opts = {}
         try {
           result = await instance.getProductsWithHttpInfo(opts);
         } catch (error) {

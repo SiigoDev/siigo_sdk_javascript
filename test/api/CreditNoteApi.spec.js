@@ -73,10 +73,8 @@
   describe('CreditNoteApi', function() {
     describe('createCreditNote', function() {
       it('should call createCreditNote successfully', async function() {
-        let opts = {
-          'createCreditNoteCommand': data
-        };
-        try {                
+        let opts = data;
+        try {
           result = await instance.createCreditNoteWithHttpInfo(opts);
           id = result.response.body.id;
         } catch (error) {
