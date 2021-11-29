@@ -37,7 +37,7 @@ export default class WarehousesApi {
 
     /**
      * Returns a list of warehouse.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WarehouseViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WarehouseViewModel>} and HTTP response
      */
     getWarehouseWithHttpInfo() {
       let postBody = null;
@@ -54,7 +54,7 @@ export default class WarehousesApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = WarehouseViewModel;
+      let returnType = [WarehouseViewModel];
       return this.apiClient.callApi(
         '/v1/warehouses', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -64,7 +64,7 @@ export default class WarehousesApi {
 
     /**
      * Returns a list of warehouse.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WarehouseViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WarehouseViewModel>}
      */
     getWarehouse() {
       return this.getWarehouseWithHttpInfo()
