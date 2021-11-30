@@ -32,10 +32,8 @@ class ApiClient {
      * @param {Object} params - implicit object with params to initialize the class 
      * @param {string} params.basePath - The base URL against which to resolve every API call's path.
      * @param {string} params.urlSignIn - The url sign-in.
-     * @param {string} params.userName - The user name to sign-in.
-     * @param {string} params.accessKey - The access key to sign-in.
      */
-    constructor({ basePath = 'http://localhost', urlSignIn, userName, accessKey }) {
+    constructor({ basePath = 'http://localhost', urlSignIn }) {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
@@ -43,14 +41,7 @@ class ApiClient {
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
-        /**
-         * assigns authentication values ​​to be used in the token obtaining process
-         */
-        if (urlSignIn && userName && accessKey) {
-            this.urlSignIn = urlSignIn.replace(/\/+$/, '');
-            this.userName = userName;
-            this.accessKey = accessKey;
-        }
+        this.urlSignIn = urlSignIn.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -412,20 +403,6 @@ class ApiClient {
             }
         }
 
-        // call process to obtain access token
-        if (this.authentications["Bearer"].type === "bearer" && !this.accessToken) {
-            try {
-                const { access_token } = await this.getAuthToken(
-                this.urlSignIn,
-                this.userName,
-                this.accessKey
-                );
-                this.accessToken = access_token;
-            } catch (err) {
-                throw new Error("error getting access token", err.mesage);
-            }
-        }
-
         this.authentications["Bearer"].accessToken = this.accessToken;
 
         // apply authentications
@@ -676,12 +653,11 @@ class ApiClient {
 
     /**
     * Get the Authentication Token
-    * @param urlSignIn {String} The url sign-in.
     * @param userName {String} The user name to sign-in.
     * @param accessKey {String} The access key to sign-in.
     */
-    getAuthToken(urlSignIn, userName, accessKey) {
-        var url = urlSignIn;
+    getAuthToken(userName, accessKey) {
+        var url = this.urlSignIn;
 
         let bodyParam = {
             username: userName,
@@ -719,10 +695,10 @@ class ApiClient {
                         let { access_token } = JSON.parse(response.text);
                         resolve({ access_token, response });
                     } catch (error) {
-                        reject(error);
+                        reject(response.text);
                     }
                 } else {
-                    reject(error);
+                    reject(response.text);
                 }
             });
         });
@@ -734,17 +710,24 @@ class ApiClient {
     * @param {Object} params - implicit object with params to initialize the class.
     * @param {string} params.basePath - The base URL against which to resolve every API call's path.
     * @param {string} params.urlSignIn - The url sign-in.
-    * @param {string} params.userName - The user name to sign-in.
-    * @param {string} params.accessKey - The access key to sign-in.
     */
-    static initialize({ basePath, urlSignIn, userName, accessKey }) {
+    static initialize({ basePath, urlSignIn }) {
         if (!ApiClient.instance)
             ApiClient.instance = new ApiClient({
                 basePath,
                 urlSignIn,
-                userName,
-                accessKey,
             });
+    }
+
+    /**
+    * signIn in SiigoAPI to get Token.
+    * @param {Object} params - implicit object with params to signIn
+    * @param {string} params.userName - The user name to sign-in.
+    * @param {string} params.accessKey - The access key to sign-in.
+    */
+    static async signIn({userName, accessKey}){
+        const { access_token } = await ApiClient.instance.getAuthToken(userName, accessKey);
+        ApiClient.instance.accessToken = access_token;
     }
 }
 
