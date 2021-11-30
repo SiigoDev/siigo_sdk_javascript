@@ -91,6 +91,7 @@ docs/MailCommand.md
 docs/MailViewModel.md
 docs/Metadata.md
 docs/MetadataModel.md
+docs/PageListDto.md
 docs/PageListModel.md
 docs/Payment.md
 docs/PaymentTypesApi.md
@@ -108,10 +109,9 @@ docs/PricesProducts.md
 docs/ProductApi.md
 docs/ProductCommand.md
 docs/ProductDeleteViewModel.md
-docs/ProductDetail.md
-docs/ProductDetailsViewModel.md
 docs/ProductTaxesCommand.md
 docs/ProductsModel.md
+docs/ProductsViewModel.md
 docs/PurchaseOrderCommand.md
 docs/PursacheOrderModel.md
 docs/RelatedUsersCommand.md
@@ -237,6 +237,7 @@ src/model/MailCommand.js
 src/model/MailViewModel.js
 src/model/Metadata.js
 src/model/MetadataModel.js
+src/model/PageListDto.js
 src/model/PageListModel.js
 src/model/Payment.js
 src/model/PaymentTypesViewModel.js
@@ -251,10 +252,9 @@ src/model/PricesListProducts.js
 src/model/PricesProducts.js
 src/model/ProductCommand.js
 src/model/ProductDeleteViewModel.js
-src/model/ProductDetail.js
-src/model/ProductDetailsViewModel.js
 src/model/ProductTaxesCommand.js
 src/model/ProductsModel.js
+src/model/ProductsViewModel.js
 src/model/PurchaseOrderCommand.js
 src/model/PursacheOrderModel.js
 src/model/RelatedUsersCommand.js
@@ -275,3 +275,5 @@ src/model/VouchersViewModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
+test/model/PageListDto.spec.js
+test/model/ProductsViewModel.spec.js

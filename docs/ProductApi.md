@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## getProducts
 
-> ProductDetailsViewModel getProducts(opts)
+> ProductsViewModel getProducts(opts)
 
 Returns a paginated list of products.
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductDetailsViewModel**](ProductDetailsViewModel.md)
+[**ProductsViewModel**](ProductsViewModel.md)
 
 ### Authorization
 

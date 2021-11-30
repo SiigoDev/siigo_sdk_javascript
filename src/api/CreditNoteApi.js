@@ -42,7 +42,7 @@ export default class CreditNoteApi {
      * Creates a credit note.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCreditNoteCommand} opts.createCreditNoteCommand Represents the request with the credit note information.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNotesViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNoteViewModel} and HTTP response
      */
     createCreditNoteWithHttpInfo(opts) {
       opts = opts || {};
@@ -60,7 +60,7 @@ export default class CreditNoteApi {
       let authNames = ['Bearer'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = CreditNotesViewModel;
+      let returnType = CreditNoteViewModel;
       return this.apiClient.callApi(
         '/v1/credit-notes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -72,7 +72,7 @@ export default class CreditNoteApi {
      * Creates a credit note.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCreditNoteCommand} opts.createCreditNoteCommand Represents the request with the credit note information.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNotesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNoteViewModel}
      */
     createCreditNote(opts) {
       return this.createCreditNoteWithHttpInfo(opts)

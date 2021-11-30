@@ -15,8 +15,8 @@
 import ApiClient from "../ApiClient";
 import ProductCommand from '../model/ProductCommand';
 import ProductDeleteViewModel from '../model/ProductDeleteViewModel';
-import ProductDetailsViewModel from '../model/ProductDetailsViewModel';
 import ProductsModel from '../model/ProductsModel';
+import ProductsViewModel from '../model/ProductsViewModel';
 
 /**
 * Product service.
@@ -191,7 +191,7 @@ export default class ProductApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductDetailsViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsViewModel} and HTTP response
      */
     getProductsWithHttpInfo(opts) {
       opts = opts || {};
@@ -223,7 +223,7 @@ export default class ProductApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProductDetailsViewModel;
+      let returnType = ProductsViewModel;
       return this.apiClient.callApi(
         '/v1/products', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -248,7 +248,7 @@ export default class ProductApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductDetailsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsViewModel}
      */
     getProducts(opts) {
       return this.getProductsWithHttpInfo(opts)
