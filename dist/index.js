@@ -816,6 +816,11 @@ Object.defineProperty(exports, "WarehousesApi", {
   }
 });
 exports.initialize = initialize;
+exports.signIn = signIn;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _ApiClient = _interopRequireDefault(require("./ApiClient"));
 
@@ -1122,6 +1127,17 @@ function initialize(_ref) {
   });
 }
 /**
+* signIn in SiigoAPI to get Token. 
+* @param {Object} params - implicit object with params to signIn and get token.
+* @param {string} params.userName - The user name to sign-in.
+* @param {string} params.accessKey - The access key to sign-in.
+*/
+
+
+function signIn(_x) {
+  return _signIn.apply(this, arguments);
+}
+/**
 * Siigo_Api_v1.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
@@ -1152,3 +1168,28 @@ function initialize(_ref) {
 * @module index
 * @version v1
 */
+
+
+function _signIn() {
+  _signIn = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(_ref2) {
+    var userName, accessKey;
+    return _regenerator["default"].wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            userName = _ref2.userName, accessKey = _ref2.accessKey;
+            _context.next = 3;
+            return _ApiClient["default"].signIn({
+              userName: userName,
+              accessKey: accessKey
+            });
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _signIn.apply(this, arguments);
+}

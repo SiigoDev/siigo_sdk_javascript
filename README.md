@@ -15,18 +15,27 @@ npm install siigo_api --save
 
 ### Initialization, add only one time in your project setup
 
-##### With this configuration, the SDK will establish communication with the Siigo APIs, internally it is in charge of obtaining the access token for the calls to the APIs
-
 ```javascript
 import * as SiigoApi from 'siigo_api';
 
 // initial configuration for the SDK  
 SiigoApi.initialize({
-  basePath: "The base URL for call APIs", // https://services.siigo.com/alliances/api
+  basePath: "The base URL for call APIs",  // https://services.siigo.com/alliances/api
   urlSignIn: "The full url sign-in",       // https://services.siigo.com/alliances/api/siigoapi-users/v1/sign-in
-  userName: "The user name to sign-in",   // testname
-  accessKey: "The access key to sign-in", // euy3423uykwjehqwuywj
 });
+```
+
+### use the method signIn to generate internally the access token so that the SDK use this in the calls to endpoints of SiigoApi
+
+```javascript
+try {
+  await SiigoApi.signIn({ 
+    userName: "The user name to sign-in",   // testname
+    accessKey: "The access key to sign-in", // euy3423uykwjehqwuywj
+  });
+} catch (err) {
+  // logic when credentials are invalid or present errors in getting token
+}
 ```
 
 ### Example of use
@@ -51,7 +60,6 @@ apiInstance.getAccountGroups().then((data) => {
 
 ```javascript
 import * as SiigoApi from 'siigo_api';
-
 
 async function main(){
   try {

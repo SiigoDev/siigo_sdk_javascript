@@ -162,6 +162,17 @@ export function initialize({ basePath, urlSignIn, userName, accessKey }) {
 }
 
 /**
+* signIn in SiigoAPI to get Token. 
+* @param {Object} params - implicit object with params to signIn and get token.
+* @param {string} params.userName - The user name to sign-in.
+* @param {string} params.accessKey - The access key to sign-in.
+*/
+export async function signIn({ userName, accessKey }) {
+  await ApiClient.signIn({ userName, accessKey });
+}
+
+
+/**
 * Siigo_Api_v1.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
