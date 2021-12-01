@@ -275,5 +275,3 @@ src/model/VouchersViewModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
-test/model/PageListDto.spec.js
-test/model/ProductsViewModel.spec.js
