@@ -94,6 +94,7 @@ import MailCommand from './model/MailCommand';
 import MailViewModel from './model/MailViewModel';
 import Metadata from './model/Metadata';
 import MetadataModel from './model/MetadataModel';
+import PageListDto from './model/PageListDto';
 import PageListModel from './model/PageListModel';
 import Payment from './model/Payment';
 import PaymentTypesViewModel from './model/PaymentTypesViewModel';
@@ -108,10 +109,9 @@ import PricesListProducts from './model/PricesListProducts';
 import PricesProducts from './model/PricesProducts';
 import ProductCommand from './model/ProductCommand';
 import ProductDeleteViewModel from './model/ProductDeleteViewModel';
-import ProductDetail from './model/ProductDetail';
-import ProductDetailsViewModel from './model/ProductDetailsViewModel';
 import ProductTaxesCommand from './model/ProductTaxesCommand';
 import ProductsModel from './model/ProductsModel';
+import ProductsViewModel from './model/ProductsViewModel';
 import PurchaseOrderCommand from './model/PurchaseOrderCommand';
 import PursacheOrderModel from './model/PursacheOrderModel';
 import RelatedUsersCommand from './model/RelatedUsersCommand';
@@ -697,6 +697,12 @@ export {
     MetadataModel,
 
     /**
+     * The PageListDto model constructor.
+     * @property {module:model/PageListDto}
+     */
+    PageListDto,
+
+    /**
      * The PageListModel model constructor.
      * @property {module:model/PageListModel}
      */
@@ -781,18 +787,6 @@ export {
     ProductDeleteViewModel,
 
     /**
-     * The ProductDetail model constructor.
-     * @property {module:model/ProductDetail}
-     */
-    ProductDetail,
-
-    /**
-     * The ProductDetailsViewModel model constructor.
-     * @property {module:model/ProductDetailsViewModel}
-     */
-    ProductDetailsViewModel,
-
-    /**
      * The ProductTaxesCommand model constructor.
      * @property {module:model/ProductTaxesCommand}
      */
@@ -803,6 +797,12 @@ export {
      * @property {module:model/ProductsModel}
      */
     ProductsModel,
+
+    /**
+     * The ProductsViewModel model constructor.
+     * @property {module:model/ProductsViewModel}
+     */
+    ProductsViewModel,
 
     /**
      * The PurchaseOrderCommand model constructor.

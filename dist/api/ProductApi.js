@@ -17,9 +17,9 @@ var _ProductCommand = _interopRequireDefault(require("../model/ProductCommand"))
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
 
-var _ProductDetailsViewModel = _interopRequireDefault(require("../model/ProductDetailsViewModel"));
-
 var _ProductsModel = _interopRequireDefault(require("../model/ProductsModel"));
+
+var _ProductsViewModel = _interopRequireDefault(require("../model/ProductsViewModel"));
 
 /**
  * Siigo API
@@ -185,7 +185,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductDetailsViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsViewModel} and HTTP response
      */
 
   }, {
@@ -215,7 +215,7 @@ var ProductApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProductDetailsViewModel["default"];
+      var returnType = _ProductsViewModel["default"];
       return this.apiClient.callApi('/v1/products', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -235,7 +235,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductDetailsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsViewModel}
      */
 
   }, {

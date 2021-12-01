@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createCreditNote
 
-> CreditNotesViewModel createCreditNote(opts)
+> CreditNoteViewModel createCreditNote(opts)
 
 Creates a credit note.
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditNotesViewModel**](CreditNotesViewModel.md)
+[**CreditNoteViewModel**](CreditNoteViewModel.md)
 
 ### Authorization
 

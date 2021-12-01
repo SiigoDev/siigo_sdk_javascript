@@ -545,6 +545,12 @@ Object.defineProperty(exports, "MetadataModel", {
     return _MetadataModel["default"];
   }
 });
+Object.defineProperty(exports, "PageListDto", {
+  enumerable: true,
+  get: function get() {
+    return _PageListDto["default"];
+  }
+});
 Object.defineProperty(exports, "PageListModel", {
   enumerable: true,
   get: function get() {
@@ -647,18 +653,6 @@ Object.defineProperty(exports, "ProductDeleteViewModel", {
     return _ProductDeleteViewModel["default"];
   }
 });
-Object.defineProperty(exports, "ProductDetail", {
-  enumerable: true,
-  get: function get() {
-    return _ProductDetail["default"];
-  }
-});
-Object.defineProperty(exports, "ProductDetailsViewModel", {
-  enumerable: true,
-  get: function get() {
-    return _ProductDetailsViewModel["default"];
-  }
-});
 Object.defineProperty(exports, "ProductTaxesCommand", {
   enumerable: true,
   get: function get() {
@@ -669,6 +663,12 @@ Object.defineProperty(exports, "ProductsModel", {
   enumerable: true,
   get: function get() {
     return _ProductsModel["default"];
+  }
+});
+Object.defineProperty(exports, "ProductsViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _ProductsViewModel["default"];
   }
 });
 Object.defineProperty(exports, "PurchaseOrderCommand", {
@@ -986,6 +986,8 @@ var _Metadata = _interopRequireDefault(require("./model/Metadata"));
 
 var _MetadataModel = _interopRequireDefault(require("./model/MetadataModel"));
 
+var _PageListDto = _interopRequireDefault(require("./model/PageListDto"));
+
 var _PageListModel = _interopRequireDefault(require("./model/PageListModel"));
 
 var _Payment = _interopRequireDefault(require("./model/Payment"));
@@ -1014,13 +1016,11 @@ var _ProductCommand = _interopRequireDefault(require("./model/ProductCommand"));
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDeleteViewModel"));
 
-var _ProductDetail = _interopRequireDefault(require("./model/ProductDetail"));
-
-var _ProductDetailsViewModel = _interopRequireDefault(require("./model/ProductDetailsViewModel"));
-
 var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
 
 var _ProductsModel = _interopRequireDefault(require("./model/ProductsModel"));
+
+var _ProductsViewModel = _interopRequireDefault(require("./model/ProductsViewModel"));
 
 var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand"));
 
