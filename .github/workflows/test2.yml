@@ -1,0 +1,21 @@
+name: test2
+
+on:
+  push:
+    branches: [test/alliens/rest800746/test]
+
+jobs: 
+  test2:
+    name: Integration Test 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Install dependencies
+      run: npx ci
+    - name: Test
+      run: npm test 
