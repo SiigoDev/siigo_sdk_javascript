@@ -8,6 +8,11 @@ jobs:
   test:
     name: Integration Test 
     runs-on: ubuntu-latest
+    env:
+      BASE_PATH: ${{secrets.BASE_PATH}} 
+      URL_SIGN_IN: ${{secrets.URL_SIGN_IN}} 
+      USER_NAME: ${{secrets.USER_NAME}} 
+      ACCESS_KEY: ${{secrets.ACCESS_KEY}}     
     steps:
     - name: Checkout
       uses: actions/checkout@v2
