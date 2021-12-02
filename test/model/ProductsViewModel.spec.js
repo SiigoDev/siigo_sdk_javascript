@@ -50,26 +50,26 @@
   describe('ProductsViewModel', function() {
     it('should create an instance of ProductsViewModel', function() {
       // uncomment below and update the code to test ProductsViewModel
-      //var instance = new SiigoApi.ProductsViewModel();
-      //expect(instance).to.be.a(SiigoApi.ProductsViewModel);
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance).to.be.a(SiigoApi.ProductsViewModel);
     });
 
     it('should have the property pagination (base name: "pagination")', function() {
       // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.ProductsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.ProductsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.results).to.be(undefined);
     });
 
     it('should have the property links (base name: "__links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new SiigoApi.ProductsViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.__links).to.be(undefined);
     });
 
   });

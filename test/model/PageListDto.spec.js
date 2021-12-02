@@ -50,26 +50,26 @@
   describe('PageListDto', function() {
     it('should create an instance of PageListDto', function() {
       // uncomment below and update the code to test PageListDto
-      //var instance = new SiigoApi.PageListDto();
-      //expect(instance).to.be.a(SiigoApi.PageListDto);
+      var instance = new SiigoApi.PageListDto();
+      expect(instance).to.be.a(SiigoApi.PageListDto);
     });
 
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
-      //var instance = new SiigoApi.PageListDto();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.page).to.be(undefined);
     });
 
     it('should have the property pageSize (base name: "page_size")', function() {
       // uncomment below and update the code to test the property pageSize
-      //var instance = new SiigoApi.PageListDto();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.page_size).to.be(undefined);
     });
 
     it('should have the property totalResults (base name: "total_results")', function() {
       // uncomment below and update the code to test the property totalResults
-      //var instance = new SiigoApi.PageListDto();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.total_results).to.be(undefined);
     });
 
   });

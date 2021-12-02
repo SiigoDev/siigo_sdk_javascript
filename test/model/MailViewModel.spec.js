@@ -50,20 +50,20 @@
   describe('MailViewModel', function() {
     it('should create an instance of MailViewModel', function() {
       // uncomment below and update the code to test MailViewModel
-      //var instance = new SiigoApi.MailViewModel();
-      //expect(instance).to.be.a(SiigoApi.MailViewModel);
+      var instance = new SiigoApi.MailViewModel();
+      expect(instance).to.be.a(SiigoApi.MailViewModel);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new SiigoApi.MailViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MailViewModel();
+      expect(instance.status).to.be(undefined);
     });
 
     it('should have the property observations (base name: "observations")', function() {
       // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.MailViewModel();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MailViewModel();
+      expect(instance.observations).to.be(undefined);
     });
 
   });

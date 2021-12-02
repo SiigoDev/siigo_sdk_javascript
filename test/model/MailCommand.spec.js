@@ -50,20 +50,20 @@
   describe('MailCommand', function() {
     it('should create an instance of MailCommand', function() {
       // uncomment below and update the code to test MailCommand
-      //var instance = new SiigoApi.MailCommand();
-      //expect(instance).to.be.a(SiigoApi.MailCommand);
+      var instance = new SiigoApi.MailCommand();
+      expect(instance).to.be.a(SiigoApi.MailCommand);
     });
 
     it('should have the property send (base name: "send")', function() {
       // uncomment below and update the code to test the property send
-      //var instance = new SiigoApi.MailCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MailCommand();
+      expect(instance.send).to.be(undefined);
     });
 
     it('should have the property copyTo (base name: "copy_to")', function() {
       // uncomment below and update the code to test the property copyTo
-      //var instance = new SiigoApi.MailCommand();
-      //expect(instance).to.be();
+      var instance = new SiigoApi.MailCommand();
+      expect(instance.copy_to).to.be(undefined);
     });
 
   });
