@@ -28,8 +28,8 @@
   var instance;
   var result;
 
-  beforeEach(function() {
-    SiigoApi = app._test.initialize(SiigoApi);
+  beforeEach(async function() {
+    SiigoApi = await app._test.initialize(SiigoApi);
     instance = new SiigoApi.DocumentTypeApi();
   });
 
