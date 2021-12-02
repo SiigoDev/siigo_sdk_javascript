@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SiigoApi.MailViewModel();
+    instance = new SiigoApi.ProductsViewModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +47,29 @@
       object[property] = value;
   }
 
-  describe('MailViewModel', function() {
-    it('should create an instance of MailViewModel', function() {
-      // uncomment below and update the code to test MailViewModel
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance).to.be.a(SiigoApi.MailViewModel);
+  describe('ProductsViewModel', function() {
+    it('should create an instance of ProductsViewModel', function() {
+      // uncomment below and update the code to test ProductsViewModel
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance).to.be.a(SiigoApi.ProductsViewModel);
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance.status).to.be(undefined);
+    it('should have the property pagination (base name: "pagination")', function() {
+      // uncomment below and update the code to test the property pagination
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.pagination).to.be(undefined);
     });
 
-    it('should have the property observations (base name: "observations")', function() {
-      // uncomment below and update the code to test the property observations
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance.observations).to.be(undefined);
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.results).to.be(undefined);
+    });
+
+    it('should have the property links (base name: "__links")', function() {
+      // uncomment below and update the code to test the property links
+      var instance = new SiigoApi.ProductsViewModel();
+      expect(instance.__links).to.be(undefined);
     });
 
   });

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SiigoApi.MailViewModel();
+    instance = new SiigoApi.PageListDto();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +47,29 @@
       object[property] = value;
   }
 
-  describe('MailViewModel', function() {
-    it('should create an instance of MailViewModel', function() {
-      // uncomment below and update the code to test MailViewModel
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance).to.be.a(SiigoApi.MailViewModel);
+  describe('PageListDto', function() {
+    it('should create an instance of PageListDto', function() {
+      // uncomment below and update the code to test PageListDto
+      var instance = new SiigoApi.PageListDto();
+      expect(instance).to.be.a(SiigoApi.PageListDto);
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance.status).to.be(undefined);
+    it('should have the property page (base name: "page")', function() {
+      // uncomment below and update the code to test the property page
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.page).to.be(undefined);
     });
 
-    it('should have the property observations (base name: "observations")', function() {
-      // uncomment below and update the code to test the property observations
-      var instance = new SiigoApi.MailViewModel();
-      expect(instance.observations).to.be(undefined);
+    it('should have the property pageSize (base name: "page_size")', function() {
+      // uncomment below and update the code to test the property pageSize
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.page_size).to.be(undefined);
+    });
+
+    it('should have the property totalResults (base name: "total_results")', function() {
+      // uncomment below and update the code to test the property totalResults
+      var instance = new SiigoApi.PageListDto();
+      expect(instance.total_results).to.be(undefined);
     });
 
   });

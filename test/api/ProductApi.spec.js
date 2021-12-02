@@ -27,8 +27,8 @@
 
   var instance;
 
-  before(function () {
-    SiigoApi = app._test.initialize(SiigoApi);
+  before(async function () {
+    SiigoApi = await app._test.initialize(SiigoApi);
     instance = new SiigoApi.ProductApi();
   });
 

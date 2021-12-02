@@ -51,15 +51,11 @@ var ApiClient = /*#__PURE__*/function () {
    * @param {Object} params - implicit object with params to initialize the class 
    * @param {string} params.basePath - The base URL against which to resolve every API call's path.
    * @param {string} params.urlSignIn - The url sign-in.
-   * @param {string} params.userName - The user name to sign-in.
-   * @param {string} params.accessKey - The access key to sign-in.
    */
   function ApiClient(_ref) {
     var _ref$basePath = _ref.basePath,
         basePath = _ref$basePath === void 0 ? 'http://localhost' : _ref$basePath,
-        urlSignIn = _ref.urlSignIn,
-        userName = _ref.userName,
-        accessKey = _ref.accessKey;
+        urlSignIn = _ref.urlSignIn;
     (0, _classCallCheck2["default"])(this, ApiClient);
 
     /**
@@ -68,20 +64,11 @@ var ApiClient = /*#__PURE__*/function () {
      * @default http://localhost
      */
     this.basePath = basePath.replace(/\/+$/, '');
-    /**
-     * assigns authentication values ​​to be used in the token obtaining process
-     */
-
-    if (urlSignIn && userName && accessKey) {
-      this.urlSignIn = urlSignIn.replace(/\/+$/, '');
-      this.userName = userName;
-      this.accessKey = accessKey;
-    }
+    this.urlSignIn = urlSignIn.replace(/\/+$/, '');
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
-
 
     this.authentications = {
       'Bearer': {
@@ -465,7 +452,7 @@ var ApiClient = /*#__PURE__*/function () {
       var _callApi = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(path, httpMethod, pathParams, queryParams, headerParams, formParams, bodyParam, authNames, contentTypes, accepts, returnType, apiBasePath) {
         var _this3 = this;
 
-        var url, request, index, _yield$this$getAuthTo, access_token, contentType, _formParams, key, _formParamsValue, accept;
+        var url, request, index, contentType, _formParams, key, _formParamsValue, accept;
 
         return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
@@ -480,31 +467,8 @@ var ApiClient = /*#__PURE__*/function () {
                       request.use(this.plugins[index]);
                     }
                   }
-                } // call process to obtain access token
-
-
-                if (!(this.authentications["Bearer"].type === "bearer" && !this.accessToken)) {
-                  _context.next = 15;
-                  break;
                 }
 
-                _context.prev = 4;
-                _context.next = 7;
-                return this.getAuthToken(this.urlSignIn, this.userName, this.accessKey);
-
-              case 7:
-                _yield$this$getAuthTo = _context.sent;
-                access_token = _yield$this$getAuthTo.access_token;
-                this.accessToken = access_token;
-                _context.next = 15;
-                break;
-
-              case 12:
-                _context.prev = 12;
-                _context.t0 = _context["catch"](4);
-                throw new Error("error getting access token", _context.t0.mesage);
-
-              case 15:
                 this.authentications["Bearer"].accessToken = this.accessToken; // apply authentications
 
                 this.applyAuthToRequest(request, authNames); // set query parameters
@@ -616,12 +580,12 @@ var ApiClient = /*#__PURE__*/function () {
                   });
                 }));
 
-              case 30:
+              case 18:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[4, 12]]);
+        }, _callee, this);
       }));
 
       function callApi(_x, _x2, _x3, _x4, _x5, _x6, _x7, _x8, _x9, _x10, _x11, _x12) {
@@ -690,12 +654,11 @@ var ApiClient = /*#__PURE__*/function () {
     value:
     /**
     * Get the Authentication Token
-    * @param urlSignIn {String} The url sign-in.
     * @param userName {String} The user name to sign-in.
     * @param accessKey {String} The access key to sign-in.
     */
-    function getAuthToken(urlSignIn, userName, accessKey) {
-      var url = urlSignIn;
+    function getAuthToken(userName, accessKey) {
+      var url = this.urlSignIn;
       var bodyParam = {
         username: userName,
         access_key: accessKey
@@ -736,10 +699,10 @@ var ApiClient = /*#__PURE__*/function () {
                 response: response
               });
             } catch (error) {
-              reject(error);
+              reject(response.text);
             }
           } else {
-            reject(error);
+            reject(response.text);
           }
         });
       });
@@ -749,8 +712,6 @@ var ApiClient = /*#__PURE__*/function () {
     * @param {Object} params - implicit object with params to initialize the class.
     * @param {string} params.basePath - The base URL against which to resolve every API call's path.
     * @param {string} params.urlSignIn - The url sign-in.
-    * @param {string} params.userName - The user name to sign-in.
-    * @param {string} params.accessKey - The access key to sign-in.
     */
 
   }], [{
@@ -868,16 +829,52 @@ var ApiClient = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize(_ref2) {
       var basePath = _ref2.basePath,
-          urlSignIn = _ref2.urlSignIn,
-          userName = _ref2.userName,
-          accessKey = _ref2.accessKey;
+          urlSignIn = _ref2.urlSignIn;
       if (!ApiClient.instance) ApiClient.instance = new ApiClient({
         basePath: basePath,
-        urlSignIn: urlSignIn,
-        userName: userName,
-        accessKey: accessKey
+        urlSignIn: urlSignIn
       });
     }
+    /**
+    * signIn in SiigoAPI to get Token.
+    * @param {Object} params - implicit object with params to signIn
+    * @param {string} params.userName - The user name to sign-in.
+    * @param {string} params.accessKey - The access key to sign-in.
+    */
+
+  }, {
+    key: "signIn",
+    value: function () {
+      var _signIn = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(_ref3) {
+        var userName, accessKey, _yield$ApiClient$inst, access_token;
+
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                userName = _ref3.userName, accessKey = _ref3.accessKey;
+                _context2.next = 3;
+                return ApiClient.instance.getAuthToken(userName, accessKey);
+
+              case 3:
+                _yield$ApiClient$inst = _context2.sent;
+                access_token = _yield$ApiClient$inst.access_token;
+                ApiClient.instance.accessToken = access_token;
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function signIn(_x13) {
+        return _signIn.apply(this, arguments);
+      }
+
+      return signIn;
+    }()
   }]);
   return ApiClient;
 }();

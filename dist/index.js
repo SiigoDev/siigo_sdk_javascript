@@ -545,6 +545,12 @@ Object.defineProperty(exports, "MetadataModel", {
     return _MetadataModel["default"];
   }
 });
+Object.defineProperty(exports, "PageListDto", {
+  enumerable: true,
+  get: function get() {
+    return _PageListDto["default"];
+  }
+});
 Object.defineProperty(exports, "PageListModel", {
   enumerable: true,
   get: function get() {
@@ -647,18 +653,6 @@ Object.defineProperty(exports, "ProductDeleteViewModel", {
     return _ProductDeleteViewModel["default"];
   }
 });
-Object.defineProperty(exports, "ProductDetail", {
-  enumerable: true,
-  get: function get() {
-    return _ProductDetail["default"];
-  }
-});
-Object.defineProperty(exports, "ProductDetailsViewModel", {
-  enumerable: true,
-  get: function get() {
-    return _ProductDetailsViewModel["default"];
-  }
-});
 Object.defineProperty(exports, "ProductTaxesCommand", {
   enumerable: true,
   get: function get() {
@@ -669,6 +663,12 @@ Object.defineProperty(exports, "ProductsModel", {
   enumerable: true,
   get: function get() {
     return _ProductsModel["default"];
+  }
+});
+Object.defineProperty(exports, "ProductsViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _ProductsViewModel["default"];
   }
 });
 Object.defineProperty(exports, "PurchaseOrderCommand", {
@@ -816,6 +816,11 @@ Object.defineProperty(exports, "WarehousesApi", {
   }
 });
 exports.initialize = initialize;
+exports.signIn = signIn;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _ApiClient = _interopRequireDefault(require("./ApiClient"));
 
@@ -981,6 +986,8 @@ var _Metadata = _interopRequireDefault(require("./model/Metadata"));
 
 var _MetadataModel = _interopRequireDefault(require("./model/MetadataModel"));
 
+var _PageListDto = _interopRequireDefault(require("./model/PageListDto"));
+
 var _PageListModel = _interopRequireDefault(require("./model/PageListModel"));
 
 var _Payment = _interopRequireDefault(require("./model/Payment"));
@@ -1009,13 +1016,11 @@ var _ProductCommand = _interopRequireDefault(require("./model/ProductCommand"));
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDeleteViewModel"));
 
-var _ProductDetail = _interopRequireDefault(require("./model/ProductDetail"));
-
-var _ProductDetailsViewModel = _interopRequireDefault(require("./model/ProductDetailsViewModel"));
-
 var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
 
 var _ProductsModel = _interopRequireDefault(require("./model/ProductsModel"));
+
+var _ProductsViewModel = _interopRequireDefault(require("./model/ProductsViewModel"));
 
 var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand"));
 
@@ -1122,6 +1127,17 @@ function initialize(_ref) {
   });
 }
 /**
+* signIn in SiigoAPI to get Token. 
+* @param {Object} params - implicit object with params to signIn and get token.
+* @param {string} params.userName - The user name to sign-in.
+* @param {string} params.accessKey - The access key to sign-in.
+*/
+
+
+function signIn(_x) {
+  return _signIn.apply(this, arguments);
+}
+/**
 * Siigo_Api_v1.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
@@ -1152,3 +1168,28 @@ function initialize(_ref) {
 * @module index
 * @version v1
 */
+
+
+function _signIn() {
+  _signIn = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(_ref2) {
+    var userName, accessKey;
+    return _regenerator["default"].wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            userName = _ref2.userName, accessKey = _ref2.accessKey;
+            _context.next = 3;
+            return _ApiClient["default"].signIn({
+              userName: userName,
+              accessKey: accessKey
+            });
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _signIn.apply(this, arguments);
+}

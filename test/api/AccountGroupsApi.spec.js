@@ -30,8 +30,8 @@
   var instance;
   var result;
 
-  before(function () {
-    SiigoApi = app._test.initialize(SiigoApi);
+  before(async function () {
+    SiigoApi = await app._test.initialize(SiigoApi);
     instance = new SiigoApi.AccountGroupsApi();
   });
 
