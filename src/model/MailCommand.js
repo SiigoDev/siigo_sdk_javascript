@@ -50,9 +50,6 @@ class MailCommand {
             if (data.hasOwnProperty('send')) {
                 obj['send'] = ApiClient.convertToType(data['send'], 'Boolean');
             }
-            if (data.hasOwnProperty('copy_to')) {
-                obj['copy_to'] = ApiClient.convertToType(data['copy_to'], 'String');
-            }
         }
         return obj;
     }
@@ -65,12 +62,6 @@ class MailCommand {
  * @member {Boolean} send
  */
 MailCommand.prototype['send'] = undefined;
-
-/**
- * A maximum of five additional email addresses can be configured to send the document by email.
- * @member {String} copy_to
- */
-MailCommand.prototype['copy_to'] = undefined;
 
 
 

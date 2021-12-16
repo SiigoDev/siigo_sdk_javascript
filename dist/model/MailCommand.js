@@ -67,10 +67,6 @@ var MailCommand = /*#__PURE__*/function () {
         if (data.hasOwnProperty('send')) {
           obj['send'] = _ApiClient["default"].convertToType(data['send'], 'Boolean');
         }
-
-        if (data.hasOwnProperty('copy_to')) {
-          obj['copy_to'] = _ApiClient["default"].convertToType(data['copy_to'], 'String');
-        }
       }
 
       return obj;
@@ -85,11 +81,5 @@ var MailCommand = /*#__PURE__*/function () {
 
 
 MailCommand.prototype['send'] = undefined;
-/**
- * A maximum of five additional email addresses can be configured to send the document by email.
- * @member {String} copy_to
- */
-
-MailCommand.prototype['copy_to'] = undefined;
 var _default = MailCommand;
 exports["default"] = _default;
