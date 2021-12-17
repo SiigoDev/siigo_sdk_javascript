@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+*SiigoApi.InvoiceApi* | [**updateInvoice**](docs/InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 *SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
 *SiigoApi.JournalEntryApi* | [**getJournal**](docs/JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets the journal entry by GUID.
 *SiigoApi.JournalEntryApi* | [**getJournals**](docs/JournalEntryApi.md#getJournals) | **GET** /v1/journals | Returns a paginated list of journals entries.

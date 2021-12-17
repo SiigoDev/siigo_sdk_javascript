@@ -299,4 +299,55 @@ export default class InvoiceApi {
     }
 
 
+    /**
+     * Updates the Invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
+     */
+    updateInvoiceWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling updateInvoice");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = InvoiceViewModel;
+      return this.apiClient.callApi(
+        '/v1/invoices/{id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Updates the Invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
+     */
+    updateInvoice(id, opts) {
+      return this.updateInvoiceWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
 }
