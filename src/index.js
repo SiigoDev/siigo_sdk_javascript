@@ -53,16 +53,21 @@ import DianReason from './model/DianReason';
 import DiscountModel from './model/DiscountModel';
 import DocumentCommand from './model/DocumentCommand';
 import DocumentModel from './model/DocumentModel';
+import DocumentTypeTaxModel from './model/DocumentTypeTaxModel';
 import DocumentTypeViewModel from './model/DocumentTypeViewModel';
 import DocumentVoucher from './model/DocumentVoucher';
 import Due from './model/Due';
 import EInvoiceErrorViewModel from './model/EInvoiceErrorViewModel';
 import EInvoiceErrorsViewModel from './model/EInvoiceErrorsViewModel';
+import ErrorDetail from './model/ErrorDetail';
+import ErrorResponse from './model/ErrorResponse';
 import FiscalResponsabilitiesModel from './model/FiscalResponsabilitiesModel';
 import FiscalResponsibilitiesCommand from './model/FiscalResponsibilitiesCommand';
 import FixedAssetCommand from './model/FixedAssetCommand';
 import FixedAssetModel from './model/FixedAssetModel';
 import FixedAssetsViewModel from './model/FixedAssetsViewModel';
+import GlobalTaxCommand from './model/GlobalTaxCommand';
+import GlobalTaxModel from './model/GlobalTaxModel';
 import IdTypeModel from './model/IdTypeModel';
 import InvoiceCustomerModel from './model/InvoiceCustomerModel';
 import InvoiceModel from './model/InvoiceModel';
@@ -118,6 +123,7 @@ import RelatedUsersCommand from './model/RelatedUsersCommand';
 import RelatedUsersModel from './model/RelatedUsersModel';
 import RetentionsCommand from './model/RetentionsCommand';
 import RetentionsOutModel from './model/RetentionsOutModel';
+import SendInvoiceByEmailCommand from './model/SendInvoiceByEmailCommand';
 import StampCommand from './model/StampCommand';
 import StampViewModel from './model/StampViewModel';
 import Tax from './model/Tax';
@@ -451,6 +457,12 @@ export {
     DocumentModel,
 
     /**
+     * The DocumentTypeTaxModel model constructor.
+     * @property {module:model/DocumentTypeTaxModel}
+     */
+    DocumentTypeTaxModel,
+
+    /**
      * The DocumentTypeViewModel model constructor.
      * @property {module:model/DocumentTypeViewModel}
      */
@@ -481,6 +493,18 @@ export {
     EInvoiceErrorsViewModel,
 
     /**
+     * The ErrorDetail model constructor.
+     * @property {module:model/ErrorDetail}
+     */
+    ErrorDetail,
+
+    /**
+     * The ErrorResponse model constructor.
+     * @property {module:model/ErrorResponse}
+     */
+    ErrorResponse,
+
+    /**
      * The FiscalResponsabilitiesModel model constructor.
      * @property {module:model/FiscalResponsabilitiesModel}
      */
@@ -509,6 +533,18 @@ export {
      * @property {module:model/FixedAssetsViewModel}
      */
     FixedAssetsViewModel,
+
+    /**
+     * The GlobalTaxCommand model constructor.
+     * @property {module:model/GlobalTaxCommand}
+     */
+    GlobalTaxCommand,
+
+    /**
+     * The GlobalTaxModel model constructor.
+     * @property {module:model/GlobalTaxModel}
+     */
+    GlobalTaxModel,
 
     /**
      * The IdTypeModel model constructor.
@@ -839,6 +875,12 @@ export {
      * @property {module:model/RetentionsOutModel}
      */
     RetentionsOutModel,
+
+    /**
+     * The SendInvoiceByEmailCommand model constructor.
+     * @property {module:model/SendInvoiceByEmailCommand}
+     */
+    SendInvoiceByEmailCommand,
 
     /**
      * The StampCommand model constructor.

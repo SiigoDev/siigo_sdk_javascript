@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **balance** | **Number** | Represents balance pending payment on the invoice. | [optional] 
 **observations** | **String** | Represent additional comments in document. | [optional] 
 **items** | [**[ItemsModel]**](ItemsModel.md) | Contains a list of items associated with the invoice. | [optional] 
+**globalCharges** | [**[GlobalTaxModel]**](GlobalTaxModel.md) | Contains information about the global charges associated to invoice. | [optional] 
+**globalDiscounts** | [**[GlobalTaxModel]**](GlobalTaxModel.md) | Contains information about the global discounts associated to invoice. | [optional] 
 **payments** | [**[PaymentsModel]**](PaymentsModel.md) | Contains a list with payments types associated to invoice. | [optional] 
 **additionalFields** | [**AdditionalFieldsModel**](AdditionalFieldsModel.md) |  | [optional] 
 **stamp** | [**StampViewModel**](StampViewModel.md) |  | [optional] 

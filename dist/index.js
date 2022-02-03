@@ -281,6 +281,12 @@ Object.defineProperty(exports, "DocumentTypeApi", {
     return _DocumentTypeApi["default"];
   }
 });
+Object.defineProperty(exports, "DocumentTypeTaxModel", {
+  enumerable: true,
+  get: function get() {
+    return _DocumentTypeTaxModel["default"];
+  }
+});
 Object.defineProperty(exports, "DocumentTypeViewModel", {
   enumerable: true,
   get: function get() {
@@ -309,6 +315,18 @@ Object.defineProperty(exports, "EInvoiceErrorsViewModel", {
   enumerable: true,
   get: function get() {
     return _EInvoiceErrorsViewModel["default"];
+  }
+});
+Object.defineProperty(exports, "ErrorDetail", {
+  enumerable: true,
+  get: function get() {
+    return _ErrorDetail["default"];
+  }
+});
+Object.defineProperty(exports, "ErrorResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ErrorResponse["default"];
   }
 });
 Object.defineProperty(exports, "FiscalResponsabilitiesModel", {
@@ -345,6 +363,18 @@ Object.defineProperty(exports, "FixedAssetsViewModel", {
   enumerable: true,
   get: function get() {
     return _FixedAssetsViewModel["default"];
+  }
+});
+Object.defineProperty(exports, "GlobalTaxCommand", {
+  enumerable: true,
+  get: function get() {
+    return _GlobalTaxCommand["default"];
+  }
+});
+Object.defineProperty(exports, "GlobalTaxModel", {
+  enumerable: true,
+  get: function get() {
+    return _GlobalTaxModel["default"];
   }
 });
 Object.defineProperty(exports, "IdTypeModel", {
@@ -707,6 +737,12 @@ Object.defineProperty(exports, "RetentionsOutModel", {
     return _RetentionsOutModel["default"];
   }
 });
+Object.defineProperty(exports, "SendInvoiceByEmailCommand", {
+  enumerable: true,
+  get: function get() {
+    return _SendInvoiceByEmailCommand["default"];
+  }
+});
 Object.defineProperty(exports, "StampCommand", {
   enumerable: true,
   get: function get() {
@@ -904,6 +940,8 @@ var _DocumentCommand = _interopRequireDefault(require("./model/DocumentCommand")
 
 var _DocumentModel = _interopRequireDefault(require("./model/DocumentModel"));
 
+var _DocumentTypeTaxModel = _interopRequireDefault(require("./model/DocumentTypeTaxModel"));
+
 var _DocumentTypeViewModel = _interopRequireDefault(require("./model/DocumentTypeViewModel"));
 
 var _DocumentVoucher = _interopRequireDefault(require("./model/DocumentVoucher"));
@@ -914,6 +952,10 @@ var _EInvoiceErrorViewModel = _interopRequireDefault(require("./model/EInvoiceEr
 
 var _EInvoiceErrorsViewModel = _interopRequireDefault(require("./model/EInvoiceErrorsViewModel"));
 
+var _ErrorDetail = _interopRequireDefault(require("./model/ErrorDetail"));
+
+var _ErrorResponse = _interopRequireDefault(require("./model/ErrorResponse"));
+
 var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./model/FiscalResponsabilitiesModel"));
 
 var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./model/FiscalResponsibilitiesCommand"));
@@ -923,6 +965,10 @@ var _FixedAssetCommand = _interopRequireDefault(require("./model/FixedAssetComma
 var _FixedAssetModel = _interopRequireDefault(require("./model/FixedAssetModel"));
 
 var _FixedAssetsViewModel = _interopRequireDefault(require("./model/FixedAssetsViewModel"));
+
+var _GlobalTaxCommand = _interopRequireDefault(require("./model/GlobalTaxCommand"));
+
+var _GlobalTaxModel = _interopRequireDefault(require("./model/GlobalTaxModel"));
 
 var _IdTypeModel = _interopRequireDefault(require("./model/IdTypeModel"));
 
@@ -1033,6 +1079,8 @@ var _RelatedUsersModel = _interopRequireDefault(require("./model/RelatedUsersMod
 var _RetentionsCommand = _interopRequireDefault(require("./model/RetentionsCommand"));
 
 var _RetentionsOutModel = _interopRequireDefault(require("./model/RetentionsOutModel"));
+
+var _SendInvoiceByEmailCommand = _interopRequireDefault(require("./model/SendInvoiceByEmailCommand"));
 
 var _StampCommand = _interopRequireDefault(require("./model/StampCommand"));
 

@@ -16,6 +16,7 @@ import AdditionalFieldsCommand from './AdditionalFieldsCommand';
 import CurrencyCommand from './CurrencyCommand';
 import CustomerCommand from './CustomerCommand';
 import DocumentCommand from './DocumentCommand';
+import GlobalTaxCommand from './GlobalTaxCommand';
 import ItemsCommand from './ItemsCommand';
 import MailCommand from './MailCommand';
 import PaymentsCommand from './PaymentsCommand';
@@ -103,6 +104,12 @@ class CreateInvoiceCommand {
             }
             if (data.hasOwnProperty('mail')) {
                 obj['mail'] = MailCommand.constructFromObject(data['mail']);
+            }
+            if (data.hasOwnProperty('global_charges')) {
+                obj['global_charges'] = ApiClient.convertToType(data['global_charges'], [GlobalTaxCommand]);
+            }
+            if (data.hasOwnProperty('global_discounts')) {
+                obj['global_discounts'] = ApiClient.convertToType(data['global_discounts'], [GlobalTaxCommand]);
             }
         }
         return obj;
@@ -200,6 +207,18 @@ CreateInvoiceCommand.prototype['stamp'] = undefined;
  * @member {module:model/MailCommand} mail
  */
 CreateInvoiceCommand.prototype['mail'] = undefined;
+
+/**
+ * Contains information about the global taxes charges associated to document type.
+ * @member {Array.<module:model/GlobalTaxCommand>} global_charges
+ */
+CreateInvoiceCommand.prototype['global_charges'] = undefined;
+
+/**
+ * Contains information about the global taxes discounts associated to document type.
+ * @member {Array.<module:model/GlobalTaxCommand>} global_discounts
+ */
+CreateInvoiceCommand.prototype['global_discounts'] = undefined;
 
 
 

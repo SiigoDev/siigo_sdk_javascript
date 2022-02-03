@@ -27,5 +27,7 @@ Name | Type | Description | Notes
 **officialBook** | **String** | Represents the official book type of the Journals. This value can be &#39;0&#39; to sales book,  &#39;1&#39; to sales returns book, &#39;2&#39; to purchase book, or &#39;3&#39; to purchase return book. | [optional] 
 **documentSupport** | **Boolean** | Represents if the Journals supports documents or not. | [optional] 
 **prefix** | **String** | Invoice prefix to which the credit or payent will be applied. For example, &#39;FV-1&#39;. | [optional] 
+**globalDiscounts** | [**[DocumentTypeTaxModel]**](DocumentTypeTaxModel.md) | Contains information about the global discounts associated to document type. | [optional] 
+**globalCharges** | [**[DocumentTypeTaxModel]**](DocumentTypeTaxModel.md) | Contains information about the global charges associated to document type. | [optional] 
 
 

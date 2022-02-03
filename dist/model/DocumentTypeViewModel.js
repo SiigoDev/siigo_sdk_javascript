@@ -13,6 +13,8 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _DocumentTypeTaxModel = _interopRequireDefault(require("./DocumentTypeTaxModel"));
+
 /**
  * Siigo API
  * Siigo Api v1
@@ -154,6 +156,14 @@ var DocumentTypeViewModel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('prefix')) {
           obj['prefix'] = _ApiClient["default"].convertToType(data['prefix'], 'String');
+        }
+
+        if (data.hasOwnProperty('global_discounts')) {
+          obj['global_discounts'] = _ApiClient["default"].convertToType(data['global_discounts'], [_DocumentTypeTaxModel["default"]]);
+        }
+
+        if (data.hasOwnProperty('global_charges')) {
+          obj['global_charges'] = _ApiClient["default"].convertToType(data['global_charges'], [_DocumentTypeTaxModel["default"]]);
         }
       }
 
@@ -301,5 +311,17 @@ DocumentTypeViewModel.prototype['document_support'] = undefined;
  */
 
 DocumentTypeViewModel.prototype['prefix'] = undefined;
+/**
+ * Contains information about the global discounts associated to document type.
+ * @member {Array.<module:model/DocumentTypeTaxModel>} global_discounts
+ */
+
+DocumentTypeViewModel.prototype['global_discounts'] = undefined;
+/**
+ * Contains information about the global charges associated to document type.
+ * @member {Array.<module:model/DocumentTypeTaxModel>} global_charges
+ */
+
+DocumentTypeViewModel.prototype['global_charges'] = undefined;
 var _default = DocumentTypeViewModel;
 exports["default"] = _default;
