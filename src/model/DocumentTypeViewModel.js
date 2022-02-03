@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DocumentTypeTaxModel from './DocumentTypeTaxModel';
 
 /**
  * The DocumentTypeViewModel model module.
@@ -115,6 +116,12 @@ class DocumentTypeViewModel {
             }
             if (data.hasOwnProperty('prefix')) {
                 obj['prefix'] = ApiClient.convertToType(data['prefix'], 'String');
+            }
+            if (data.hasOwnProperty('global_discounts')) {
+                obj['global_discounts'] = ApiClient.convertToType(data['global_discounts'], [DocumentTypeTaxModel]);
+            }
+            if (data.hasOwnProperty('global_charges')) {
+                obj['global_charges'] = ApiClient.convertToType(data['global_charges'], [DocumentTypeTaxModel]);
             }
         }
         return obj;
@@ -260,6 +267,18 @@ DocumentTypeViewModel.prototype['document_support'] = undefined;
  * @member {String} prefix
  */
 DocumentTypeViewModel.prototype['prefix'] = undefined;
+
+/**
+ * Contains information about the global discounts associated to document type.
+ * @member {Array.<module:model/DocumentTypeTaxModel>} global_discounts
+ */
+DocumentTypeViewModel.prototype['global_discounts'] = undefined;
+
+/**
+ * Contains information about the global charges associated to document type.
+ * @member {Array.<module:model/DocumentTypeTaxModel>} global_charges
+ */
+DocumentTypeViewModel.prototype['global_charges'] = undefined;
 
 
 

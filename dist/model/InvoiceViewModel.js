@@ -19,6 +19,8 @@ var _CurrencyModel = _interopRequireDefault(require("./CurrencyModel"));
 
 var _DocumentModel = _interopRequireDefault(require("./DocumentModel"));
 
+var _GlobalTaxModel = _interopRequireDefault(require("./GlobalTaxModel"));
+
 var _InvoiceCustomerModel = _interopRequireDefault(require("./InvoiceCustomerModel"));
 
 var _ItemsModel = _interopRequireDefault(require("./ItemsModel"));
@@ -145,6 +147,14 @@ var InvoiceViewModel = /*#__PURE__*/function () {
           obj['items'] = _ApiClient["default"].convertToType(data['items'], [_ItemsModel["default"]]);
         }
 
+        if (data.hasOwnProperty('global_charges')) {
+          obj['global_charges'] = _ApiClient["default"].convertToType(data['global_charges'], [_GlobalTaxModel["default"]]);
+        }
+
+        if (data.hasOwnProperty('global_discounts')) {
+          obj['global_discounts'] = _ApiClient["default"].convertToType(data['global_discounts'], [_GlobalTaxModel["default"]]);
+        }
+
         if (data.hasOwnProperty('payments')) {
           obj['payments'] = _ApiClient["default"].convertToType(data['payments'], [_PaymentsModel["default"]]);
         }
@@ -259,6 +269,18 @@ InvoiceViewModel.prototype['observations'] = undefined;
  */
 
 InvoiceViewModel.prototype['items'] = undefined;
+/**
+ * Contains information about the global charges associated to invoice.
+ * @member {Array.<module:model/GlobalTaxModel>} global_charges
+ */
+
+InvoiceViewModel.prototype['global_charges'] = undefined;
+/**
+ * Contains information about the global discounts associated to invoice.
+ * @member {Array.<module:model/GlobalTaxModel>} global_discounts
+ */
+
+InvoiceViewModel.prototype['global_discounts'] = undefined;
 /**
  * Contains a list with payments types associated to invoice.
  * @member {Array.<module:model/PaymentsModel>} payments

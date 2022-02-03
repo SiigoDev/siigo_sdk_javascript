@@ -21,6 +21,8 @@ var _CustomerCommand = _interopRequireDefault(require("./CustomerCommand"));
 
 var _DocumentCommand = _interopRequireDefault(require("./DocumentCommand"));
 
+var _GlobalTaxCommand = _interopRequireDefault(require("./GlobalTaxCommand"));
+
 var _ItemsCommand = _interopRequireDefault(require("./ItemsCommand"));
 
 var _MailCommand = _interopRequireDefault(require("./MailCommand"));
@@ -145,6 +147,14 @@ var CreateInvoiceCommand = /*#__PURE__*/function () {
         if (data.hasOwnProperty('mail')) {
           obj['mail'] = _MailCommand["default"].constructFromObject(data['mail']);
         }
+
+        if (data.hasOwnProperty('global_charges')) {
+          obj['global_charges'] = _ApiClient["default"].convertToType(data['global_charges'], [_GlobalTaxCommand["default"]]);
+        }
+
+        if (data.hasOwnProperty('global_discounts')) {
+          obj['global_discounts'] = _ApiClient["default"].convertToType(data['global_discounts'], [_GlobalTaxCommand["default"]]);
+        }
       }
 
       return obj;
@@ -243,5 +253,17 @@ CreateInvoiceCommand.prototype['stamp'] = undefined;
  */
 
 CreateInvoiceCommand.prototype['mail'] = undefined;
+/**
+ * Contains information about the global taxes charges associated to document type.
+ * @member {Array.<module:model/GlobalTaxCommand>} global_charges
+ */
+
+CreateInvoiceCommand.prototype['global_charges'] = undefined;
+/**
+ * Contains information about the global taxes discounts associated to document type.
+ * @member {Array.<module:model/GlobalTaxCommand>} global_discounts
+ */
+
+CreateInvoiceCommand.prototype['global_discounts'] = undefined;
 var _default = CreateInvoiceCommand;
 exports["default"] = _default;

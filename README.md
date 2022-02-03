@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+*SiigoApi.InvoiceApi* | [**sendInvoiceByEmail**](docs/InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
 *SiigoApi.InvoiceApi* | [**updateInvoice**](docs/InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 *SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
 *SiigoApi.JournalEntryApi* | [**getJournal**](docs/JournalEntryApi.md#getJournal) | **GET** /v1/journals/{id} | Gets the journal entry by GUID.
@@ -174,16 +175,21 @@ Class | Method | HTTP request | Description
  - [SiigoApi.DiscountModel](docs/DiscountModel.md)
  - [SiigoApi.DocumentCommand](docs/DocumentCommand.md)
  - [SiigoApi.DocumentModel](docs/DocumentModel.md)
+ - [SiigoApi.DocumentTypeTaxModel](docs/DocumentTypeTaxModel.md)
  - [SiigoApi.DocumentTypeViewModel](docs/DocumentTypeViewModel.md)
  - [SiigoApi.DocumentVoucher](docs/DocumentVoucher.md)
  - [SiigoApi.Due](docs/Due.md)
  - [SiigoApi.EInvoiceErrorViewModel](docs/EInvoiceErrorViewModel.md)
  - [SiigoApi.EInvoiceErrorsViewModel](docs/EInvoiceErrorsViewModel.md)
+ - [SiigoApi.ErrorDetail](docs/ErrorDetail.md)
+ - [SiigoApi.ErrorResponse](docs/ErrorResponse.md)
  - [SiigoApi.FiscalResponsabilitiesModel](docs/FiscalResponsabilitiesModel.md)
  - [SiigoApi.FiscalResponsibilitiesCommand](docs/FiscalResponsibilitiesCommand.md)
  - [SiigoApi.FixedAssetCommand](docs/FixedAssetCommand.md)
  - [SiigoApi.FixedAssetModel](docs/FixedAssetModel.md)
  - [SiigoApi.FixedAssetsViewModel](docs/FixedAssetsViewModel.md)
+ - [SiigoApi.GlobalTaxCommand](docs/GlobalTaxCommand.md)
+ - [SiigoApi.GlobalTaxModel](docs/GlobalTaxModel.md)
  - [SiigoApi.IdTypeModel](docs/IdTypeModel.md)
  - [SiigoApi.InvoiceCustomerModel](docs/InvoiceCustomerModel.md)
  - [SiigoApi.InvoiceModel](docs/InvoiceModel.md)
@@ -239,6 +245,7 @@ Class | Method | HTTP request | Description
  - [SiigoApi.RelatedUsersModel](docs/RelatedUsersModel.md)
  - [SiigoApi.RetentionsCommand](docs/RetentionsCommand.md)
  - [SiigoApi.RetentionsOutModel](docs/RetentionsOutModel.md)
+ - [SiigoApi.SendInvoiceByEmailCommand](docs/SendInvoiceByEmailCommand.md)
  - [SiigoApi.StampCommand](docs/StampCommand.md)
  - [SiigoApi.StampViewModel](docs/StampViewModel.md)
  - [SiigoApi.Tax](docs/Tax.md)
