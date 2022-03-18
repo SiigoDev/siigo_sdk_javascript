@@ -683,16 +683,16 @@ Object.defineProperty(exports, "ProductDeleteViewModel", {
     return _ProductDeleteViewModel["default"];
   }
 });
+Object.defineProperty(exports, "ProductModel", {
+  enumerable: true,
+  get: function get() {
+    return _ProductModel["default"];
+  }
+});
 Object.defineProperty(exports, "ProductTaxesCommand", {
   enumerable: true,
   get: function get() {
     return _ProductTaxesCommand["default"];
-  }
-});
-Object.defineProperty(exports, "ProductsModel", {
-  enumerable: true,
-  get: function get() {
-    return _ProductsModel["default"];
   }
 });
 Object.defineProperty(exports, "ProductsViewModel", {
@@ -1062,9 +1062,9 @@ var _ProductCommand = _interopRequireDefault(require("./model/ProductCommand"));
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDeleteViewModel"));
 
-var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
+var _ProductModel = _interopRequireDefault(require("./model/ProductModel"));
 
-var _ProductsModel = _interopRequireDefault(require("./model/ProductsModel"));
+var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
 
 var _ProductsViewModel = _interopRequireDefault(require("./model/ProductsViewModel"));
 

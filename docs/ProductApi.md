@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createProduct
 
-> ProductsModel createProduct(opts)
+> ProductModel createProduct(opts)
 
 Creates a product.
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsModel**](ProductsModel.md)
+[**ProductModel**](ProductModel.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ## getProduct
 
-> ProductsModel getProduct(id)
+> ProductModel getProduct(id)
 
 Gets the product by GUID.
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsModel**](ProductsModel.md)
+[**ProductModel**](ProductModel.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ## updateProduct
 
-> ProductsModel updateProduct(id, opts)
+> ProductModel updateProduct(id, opts)
 
 Updates the product by GUID.
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsModel**](ProductsModel.md)
+[**ProductModel**](ProductModel.md)
 
 ### Authorization
 

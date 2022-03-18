@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import LinksPagination from './LinksPagination';
 import PageListDto from './PageListDto';
-import ProductsModel from './ProductsModel';
+import ProductModel from './ProductModel';
 
 /**
  * The ProductsViewModel model module.
@@ -54,7 +54,7 @@ class ProductsViewModel {
                 obj['pagination'] = PageListDto.constructFromObject(data['pagination']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ProductsModel]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ProductModel]);
             }
             if (data.hasOwnProperty('__links')) {
                 obj['__links'] = LinksPagination.constructFromObject(data['__links']);
@@ -73,7 +73,7 @@ ProductsViewModel.prototype['pagination'] = undefined;
 
 /**
  * Contains the Results, this results will be a list of products.
- * @member {Array.<module:model/ProductsModel>} results
+ * @member {Array.<module:model/ProductModel>} results
  */
 ProductsViewModel.prototype['results'] = undefined;
 

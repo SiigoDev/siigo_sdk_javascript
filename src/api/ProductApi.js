@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import ProductCommand from '../model/ProductCommand';
 import ProductDeleteViewModel from '../model/ProductDeleteViewModel';
-import ProductsModel from '../model/ProductsModel';
+import ProductModel from '../model/ProductModel';
 import ProductsViewModel from '../model/ProductsViewModel';
 
 /**
@@ -42,7 +42,7 @@ export default class ProductApi {
      * Creates a product.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
     createProductWithHttpInfo(opts) {
       opts = opts || {};
@@ -60,7 +60,7 @@ export default class ProductApi {
       let authNames = ['Bearer'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProductsModel;
+      let returnType = ProductModel;
       return this.apiClient.callApi(
         '/v1/products', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -72,7 +72,7 @@ export default class ProductApi {
      * Creates a product.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
     createProduct(opts) {
       return this.createProductWithHttpInfo(opts)
@@ -131,7 +131,7 @@ export default class ProductApi {
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
     getProductWithHttpInfo(id) {
       let postBody = null;
@@ -153,7 +153,7 @@ export default class ProductApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProductsModel;
+      let returnType = ProductModel;
       return this.apiClient.callApi(
         '/v1/products/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -164,7 +164,7 @@ export default class ProductApi {
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
     getProduct(id) {
       return this.getProductWithHttpInfo(id)
@@ -263,7 +263,7 @@ export default class ProductApi {
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
     updateProductWithHttpInfo(id, opts) {
       opts = opts || {};
@@ -286,7 +286,7 @@ export default class ProductApi {
       let authNames = ['Bearer'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ProductsModel;
+      let returnType = ProductModel;
       return this.apiClient.callApi(
         '/v1/products/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -299,7 +299,7 @@ export default class ProductApi {
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
     updateProduct(id, opts) {
       return this.updateProductWithHttpInfo(id, opts)

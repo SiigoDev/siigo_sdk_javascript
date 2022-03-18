@@ -61,13 +61,11 @@ class UnitProductsViewModel {
 }
 
 /**
- * Represents the id of an unit of measurement, by default this field will be 94.
  * @member {String} code
  */
 UnitProductsViewModel.prototype['code'] = undefined;
 
 /**
- * Represents the name of an unit of measurement.
  * @member {String} name
  */
 UnitProductsViewModel.prototype['name'] = undefined;
