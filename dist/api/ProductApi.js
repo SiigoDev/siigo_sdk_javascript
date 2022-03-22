@@ -17,7 +17,7 @@ var _ProductCommand = _interopRequireDefault(require("../model/ProductCommand"))
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
 
-var _ProductsModel = _interopRequireDefault(require("../model/ProductsModel"));
+var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
 
 var _ProductsViewModel = _interopRequireDefault(require("../model/ProductsViewModel"));
 
