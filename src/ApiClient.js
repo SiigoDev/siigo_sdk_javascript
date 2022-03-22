@@ -43,6 +43,8 @@ class ApiClient {
 
         this.urlSignIn = urlSignIn.replace(/\/+$/, '');
 
+        // comment to generate new version 2
+
         /**
          * The authentication methods to be included for all API calls.
          * @type {Array.<String>}
