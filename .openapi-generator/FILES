@@ -114,8 +114,8 @@ docs/PricesProducts.md
 docs/ProductApi.md
 docs/ProductCommand.md
 docs/ProductDeleteViewModel.md
+docs/ProductModel.md
 docs/ProductTaxesCommand.md
-docs/ProductsModel.md
 docs/ProductsViewModel.md
 docs/PurchaseOrderCommand.md
 docs/PursacheOrderModel.md
@@ -263,8 +263,8 @@ src/model/PricesListProducts.js
 src/model/PricesProducts.js
 src/model/ProductCommand.js
 src/model/ProductDeleteViewModel.js
+src/model/ProductModel.js
 src/model/ProductTaxesCommand.js
-src/model/ProductsModel.js
 src/model/ProductsViewModel.js
 src/model/PurchaseOrderCommand.js
 src/model/PursacheOrderModel.js
@@ -287,9 +287,4 @@ src/model/VouchersViewModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
-test/model/DocumentTypeTaxModel.spec.js
-test/model/ErrorDetail.spec.js
-test/model/ErrorResponse.spec.js
-test/model/GlobalTaxCommand.spec.js
-test/model/GlobalTaxModel.spec.js
-test/model/SendInvoiceByEmailCommand.spec.js
+test/model/ProductModel.spec.js

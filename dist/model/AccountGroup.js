@@ -79,14 +79,12 @@ var AccountGroup = /*#__PURE__*/function () {
   return AccountGroup;
 }();
 /**
- * Represents the id of inventory classification.
  * @member {Number} id
  */
 
 
 AccountGroup.prototype['id'] = undefined;
 /**
- * Represents the name of inventory classification.
  * @member {String} name
  */
 

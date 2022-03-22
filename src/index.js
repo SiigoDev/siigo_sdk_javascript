@@ -114,8 +114,8 @@ import PricesListProducts from './model/PricesListProducts';
 import PricesProducts from './model/PricesProducts';
 import ProductCommand from './model/ProductCommand';
 import ProductDeleteViewModel from './model/ProductDeleteViewModel';
+import ProductModel from './model/ProductModel';
 import ProductTaxesCommand from './model/ProductTaxesCommand';
-import ProductsModel from './model/ProductsModel';
 import ProductsViewModel from './model/ProductsViewModel';
 import PurchaseOrderCommand from './model/PurchaseOrderCommand';
 import PursacheOrderModel from './model/PursacheOrderModel';
@@ -823,16 +823,16 @@ export {
     ProductDeleteViewModel,
 
     /**
+     * The ProductModel model constructor.
+     * @property {module:model/ProductModel}
+     */
+    ProductModel,
+
+    /**
      * The ProductTaxesCommand model constructor.
      * @property {module:model/ProductTaxesCommand}
      */
     ProductTaxesCommand,
-
-    /**
-     * The ProductsModel model constructor.
-     * @property {module:model/ProductsModel}
-     */
-    ProductsModel,
 
     /**
      * The ProductsViewModel model constructor.

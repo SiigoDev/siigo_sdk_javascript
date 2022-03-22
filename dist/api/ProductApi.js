@@ -17,7 +17,7 @@ var _ProductCommand = _interopRequireDefault(require("../model/ProductCommand"))
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
 
-var _ProductsModel = _interopRequireDefault(require("../model/ProductsModel"));
+var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
 
 var _ProductsViewModel = _interopRequireDefault(require("../model/ProductsViewModel"));
 
@@ -55,7 +55,7 @@ var ProductApi = /*#__PURE__*/function () {
    * Creates a product.
    * @param {Object} opts Optional parameters
    * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
    */
 
 
@@ -71,14 +71,14 @@ var ProductApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProductsModel["default"];
+      var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Creates a product.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
   }, {
@@ -131,7 +131,7 @@ var ProductApi = /*#__PURE__*/function () {
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
 
   }, {
@@ -152,13 +152,13 @@ var ProductApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProductsModel["default"];
+      var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
   }, {
@@ -250,7 +250,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
 
   }, {
@@ -272,7 +272,7 @@ var ProductApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProductsModel["default"];
+      var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -280,7 +280,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
   }, {
