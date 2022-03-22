@@ -20,5 +20,7 @@ Name | Type | Description | Notes
 **additionalFields** | [**AdditionalFieldsCommand**](AdditionalFieldsCommand.md) |  | [optional] 
 **stamp** | [**StampCommand**](StampCommand.md) |  | [optional] 
 **mail** | [**MailCommand**](MailCommand.md) |  | [optional] 
+**globalCharges** | [**[GlobalTaxCommand]**](GlobalTaxCommand.md) | Contains information about the global taxes charges associated to document type. | [optional] 
+**globalDiscounts** | [**[GlobalTaxCommand]**](GlobalTaxCommand.md) | Contains information about the global taxes discounts associated to document type. | [optional] 
 
 

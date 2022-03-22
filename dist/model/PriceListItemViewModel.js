@@ -83,20 +83,17 @@ var PriceListItemViewModel = /*#__PURE__*/function () {
   return PriceListItemViewModel;
 }();
 /**
- * Represents the unique id of price list.
  * @member {Number} position
  */
 
 
 PriceListItemViewModel.prototype['position'] = undefined;
 /**
- * Represents the name of price list.
  * @member {String} name
  */
 
 PriceListItemViewModel.prototype['name'] = undefined;
 /**
- * Represents product price
  * @member {Number} value
  */
 

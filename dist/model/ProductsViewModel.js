@@ -17,7 +17,7 @@ var _LinksPagination = _interopRequireDefault(require("./LinksPagination"));
 
 var _PageListDto = _interopRequireDefault(require("./PageListDto"));
 
-var _ProductsModel = _interopRequireDefault(require("./ProductsModel"));
+var _ProductModel = _interopRequireDefault(require("./ProductModel"));
 
 /**
  * Siigo API
@@ -75,7 +75,7 @@ var ProductsViewModel = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_ProductsModel["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_ProductModel["default"]]);
         }
 
         if (data.hasOwnProperty('__links')) {
@@ -96,7 +96,7 @@ var ProductsViewModel = /*#__PURE__*/function () {
 ProductsViewModel.prototype['pagination'] = undefined;
 /**
  * Contains the Results, this results will be a list of products.
- * @member {Array.<module:model/ProductsModel>} results
+ * @member {Array.<module:model/ProductModel>} results
  */
 
 ProductsViewModel.prototype['results'] = undefined;

@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 [**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 [**getInvoices**](InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+[**sendInvoiceByEmail**](InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
+[**updateInvoice**](InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 
 
 
@@ -360,5 +362,137 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sendInvoiceByEmail
+
+> MailViewModel sendInvoiceByEmail(id, opts)
+
+Send an invoice by email
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = "id_example"; // String | Represents the Guid of the Invoice.
+let opts = new SiigoApi.SendInvoiceByEmailCommand(); // SendInvoiceByEmailCommand | Contains the parameters for sending the Email.
+
+apiInstance.sendInvoiceByEmail(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = "id_example"; // String | Represents the Guid of the Invoice.
+    let opts = new SiigoApi.SendInvoiceByEmailCommand(); // SendInvoiceByEmailCommand | Contains the parameters for sending the Email.
+
+    const data = await apiInstance.sendInvoiceByEmail(id, opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the Guid of the Invoice. | 
+ **sendInvoiceByEmailCommand** | [**SendInvoiceByEmailCommand**](SendInvoiceByEmailCommand.md)| Contains the parameters for sending the Email. | [optional] 
+
+### Return type
+
+[**MailViewModel**](MailViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## updateInvoice
+
+> InvoiceViewModel updateInvoice(id, opts)
+
+Updates the Invoice by GUID.
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let opts = new SiigoApi.CreateInvoiceCommand(); // CreateInvoiceCommand | Represents the request with the invoice information.
+
+apiInstance.updateInvoice(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let opts = new SiigoApi.CreateInvoiceCommand(); // CreateInvoiceCommand | Represents the request with the invoice information.
+
+    const data = await apiInstance.updateInvoice(id, opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **createInvoiceCommand** | [**CreateInvoiceCommand**](CreateInvoiceCommand.md)| Represents the request with the invoice information. | [optional] 
+
+### Return type
+
+[**InvoiceViewModel**](InvoiceViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
 - **Accept**: text/plain, application/json, text/json
 

@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import AdditionalFieldsModel from './AdditionalFieldsModel';
 import CurrencyModel from './CurrencyModel';
 import DocumentModel from './DocumentModel';
+import GlobalTaxModel from './GlobalTaxModel';
 import InvoiceCustomerModel from './InvoiceCustomerModel';
 import ItemsModel from './ItemsModel';
 import MailViewModel from './MailViewModel';
@@ -102,6 +103,12 @@ class InvoiceViewModel {
             }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [ItemsModel]);
+            }
+            if (data.hasOwnProperty('global_charges')) {
+                obj['global_charges'] = ApiClient.convertToType(data['global_charges'], [GlobalTaxModel]);
+            }
+            if (data.hasOwnProperty('global_discounts')) {
+                obj['global_discounts'] = ApiClient.convertToType(data['global_discounts'], [GlobalTaxModel]);
             }
             if (data.hasOwnProperty('payments')) {
                 obj['payments'] = ApiClient.convertToType(data['payments'], [PaymentsModel]);
@@ -211,6 +218,18 @@ InvoiceViewModel.prototype['observations'] = undefined;
  * @member {Array.<module:model/ItemsModel>} items
  */
 InvoiceViewModel.prototype['items'] = undefined;
+
+/**
+ * Contains information about the global charges associated to invoice.
+ * @member {Array.<module:model/GlobalTaxModel>} global_charges
+ */
+InvoiceViewModel.prototype['global_charges'] = undefined;
+
+/**
+ * Contains information about the global discounts associated to invoice.
+ * @member {Array.<module:model/GlobalTaxModel>} global_discounts
+ */
+InvoiceViewModel.prototype['global_discounts'] = undefined;
 
 /**
  * Contains a list with payments types associated to invoice.
