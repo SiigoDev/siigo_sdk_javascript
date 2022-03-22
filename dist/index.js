@@ -701,6 +701,12 @@ Object.defineProperty(exports, "ProductsViewModel", {
     return _ProductsViewModel["default"];
   }
 });
+Object.defineProperty(exports, "ProductsViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _ProductsViewModel["default"];
+  }
+});
 Object.defineProperty(exports, "PurchaseOrderCommand", {
   enumerable: true,
   get: function get() {
@@ -1065,6 +1071,8 @@ var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDel
 var _ProductModel = _interopRequireDefault(require("./model/ProductModel"));
 
 var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
+
+var _ProductsViewModel = _interopRequireDefault(require("./model/ProductsViewModel"));
 
 var _ProductsViewModel = _interopRequireDefault(require("./model/ProductsViewModel"));
 

@@ -841,6 +841,12 @@ export {
     ProductsViewModel,
 
     /**
+     * The ProductsViewModel model constructor.
+     * @property {module:model/ProductsViewModel}
+     */
+    ProductsViewModel,
+
+    /**
      * The PurchaseOrderCommand model constructor.
      * @property {module:model/PurchaseOrderCommand}
      */
