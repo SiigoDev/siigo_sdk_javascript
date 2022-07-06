@@ -4,8 +4,8 @@
 README.md
 docs/Account.md
 docs/AccountGroup.md
+docs/AccountGroupApi.md
 docs/AccountGroupViewModel.md
-docs/AccountGroupsApi.md
 docs/AccountModel.md
 docs/AdditionalFields.md
 docs/AdditionalFieldsCommand.md
@@ -24,6 +24,8 @@ docs/CreateCreditNoteCommand.md
 docs/CreateCustomerCommand.md
 docs/CreateInvoiceCommand.md
 docs/CreateJournalEntryCommand.md
+docs/CreateProductCommand.md
+docs/CreateProductCountryCommand.md
 docs/CreateVoucherCommand.md
 docs/CreditNoteApi.md
 docs/CreditNotePdfViewModel.md
@@ -66,6 +68,7 @@ docs/GlobalTaxModel.md
 docs/IdTypeModel.md
 docs/InvoiceApi.md
 docs/InvoiceCustomerModel.md
+docs/InvoiceDeleteViewModel.md
 docs/InvoiceModel.md
 docs/InvoicePdfViewModel.md
 docs/InvoiceViewModel.md
@@ -89,6 +92,7 @@ docs/JournalEntryTaxModel.md
 docs/JournalEntryViewModel.md
 docs/JournalEntryWarehouseModel.md
 docs/JournalsEntryViewModel.md
+docs/KeysProductsViewModel.md
 docs/Link.md
 docs/LinksPagination.md
 docs/LiteCustomerCommand.md
@@ -99,20 +103,19 @@ docs/MetadataModel.md
 docs/PageListDto.md
 docs/PageListModel.md
 docs/Payment.md
-docs/PaymentTypesApi.md
-docs/PaymentTypesViewModel.md
+docs/PaymentTypeApi.md
+docs/PaymentTypeViewModel.md
 docs/PaymentsCommand.md
 docs/PaymentsModel.md
 docs/PhoneCommand.md
 docs/PhoneModel.md
+docs/PriceApi.md
 docs/PriceListItemViewModel.md
 docs/PriceListViewModel.md
-docs/PriceListsApi.md
 docs/PriceListsViewModel.md
 docs/PricesListProducts.md
 docs/PricesProducts.md
 docs/ProductApi.md
-docs/ProductCommand.md
 docs/ProductDeleteViewModel.md
 docs/ProductModel.md
 docs/ProductTaxesCommand.md
@@ -132,7 +135,8 @@ docs/TaxesApi.md
 docs/TaxesCommand.md
 docs/TaxesModel.md
 docs/UnitProductsViewModel.md
-docs/UsersApi.md
+docs/UpdateProductCommand.md
+docs/UserApi.md
 docs/UsersModel.md
 docs/UsersViewModel.md
 docs/VoucherApi.md
@@ -146,7 +150,7 @@ git_push.sh
 mocha.opts
 package.json
 src/ApiClient.js
-src/api/AccountGroupsApi.js
+src/api/AccountGroupApi.js
 src/api/CostCenterApi.js
 src/api/CreditNoteApi.js
 src/api/CustomerApi.js
@@ -154,11 +158,11 @@ src/api/DocumentTypeApi.js
 src/api/FixedAssetsApi.js
 src/api/InvoiceApi.js
 src/api/JournalEntryApi.js
-src/api/PaymentTypesApi.js
-src/api/PriceListsApi.js
+src/api/PaymentTypeApi.js
+src/api/PriceApi.js
 src/api/ProductApi.js
 src/api/TaxesApi.js
-src/api/UsersApi.js
+src/api/UserApi.js
 src/api/VoucherApi.js
 src/api/WarehousesApi.js
 src/index.js
@@ -182,6 +186,8 @@ src/model/CreateCreditNoteCommand.js
 src/model/CreateCustomerCommand.js
 src/model/CreateInvoiceCommand.js
 src/model/CreateJournalEntryCommand.js
+src/model/CreateProductCommand.js
+src/model/CreateProductCountryCommand.js
 src/model/CreateVoucherCommand.js
 src/model/CreditNotePdfViewModel.js
 src/model/CreditNoteViewModel.js
@@ -219,6 +225,7 @@ src/model/GlobalTaxCommand.js
 src/model/GlobalTaxModel.js
 src/model/IdTypeModel.js
 src/model/InvoiceCustomerModel.js
+src/model/InvoiceDeleteViewModel.js
 src/model/InvoiceModel.js
 src/model/InvoicePdfViewModel.js
 src/model/InvoiceViewModel.js
@@ -241,6 +248,7 @@ src/model/JournalEntryTaxModel.js
 src/model/JournalEntryViewModel.js
 src/model/JournalEntryWarehouseModel.js
 src/model/JournalsEntryViewModel.js
+src/model/KeysProductsViewModel.js
 src/model/Link.js
 src/model/LinksPagination.js
 src/model/LiteCustomerCommand.js
@@ -251,7 +259,7 @@ src/model/MetadataModel.js
 src/model/PageListDto.js
 src/model/PageListModel.js
 src/model/Payment.js
-src/model/PaymentTypesViewModel.js
+src/model/PaymentTypeViewModel.js
 src/model/PaymentsCommand.js
 src/model/PaymentsModel.js
 src/model/PhoneCommand.js
@@ -261,7 +269,6 @@ src/model/PriceListViewModel.js
 src/model/PriceListsViewModel.js
 src/model/PricesListProducts.js
 src/model/PricesProducts.js
-src/model/ProductCommand.js
 src/model/ProductDeleteViewModel.js
 src/model/ProductModel.js
 src/model/ProductTaxesCommand.js
@@ -280,6 +287,7 @@ src/model/TaxViewModel.js
 src/model/TaxesCommand.js
 src/model/TaxesModel.js
 src/model/UnitProductsViewModel.js
+src/model/UpdateProductCommand.js
 src/model/UsersModel.js
 src/model/UsersViewModel.js
 src/model/VoucherViewModel.js
@@ -287,4 +295,13 @@ src/model/VouchersViewModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
-test/model/ProductModel.spec.js
+test/api/AccountGroupApi.spec.js
+test/api/PaymentTypeApi.spec.js
+test/api/PriceApi.spec.js
+test/api/UserApi.spec.js
+test/model/CreateProductCommand.spec.js
+test/model/CreateProductCountryCommand.spec.js
+test/model/InvoiceDeleteViewModel.spec.js
+test/model/KeysProductsViewModel.spec.js
+test/model/PaymentTypeViewModel.spec.js
+test/model/UpdateProductCommand.spec.js

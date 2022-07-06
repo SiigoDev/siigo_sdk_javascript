@@ -67,7 +67,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _JournalEntryViewModel["default"];
       return this.apiClient.callApi('/v1/journals', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);

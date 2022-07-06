@@ -95,6 +95,10 @@ var InvoiceViewModel = /*#__PURE__*/function () {
           obj['document'] = _DocumentModel["default"].constructFromObject(data['document']);
         }
 
+        if (data.hasOwnProperty('prefix')) {
+          obj['prefix'] = _ApiClient["default"].convertToType(data['prefix'], 'String');
+        }
+
         if (data.hasOwnProperty('number')) {
           obj['number'] = _ApiClient["default"].convertToType(data['number'], 'Number');
         }
@@ -174,6 +178,10 @@ var InvoiceViewModel = /*#__PURE__*/function () {
         if (data.hasOwnProperty('metadata')) {
           obj['metadata'] = _Metadata["default"].constructFromObject(data['metadata']);
         }
+
+        if (data.hasOwnProperty('annulled')) {
+          obj['annulled'] = _ApiClient["default"].convertToType(data['annulled'], 'Boolean');
+        }
       }
 
       return obj;
@@ -193,6 +201,12 @@ InvoiceViewModel.prototype['id'] = undefined;
  */
 
 InvoiceViewModel.prototype['document'] = undefined;
+/**
+ * The use of prefix is to identify each invoice resolution that the company has
+ * @member {String} prefix
+ */
+
+InvoiceViewModel.prototype['prefix'] = undefined;
 /**
  * Represents the sequential number of the document,   this number is required depending of document type.
  * @member {Number} number
@@ -307,5 +321,10 @@ InvoiceViewModel.prototype['mail'] = undefined;
  */
 
 InvoiceViewModel.prototype['metadata'] = undefined;
+/**
+ * @member {Boolean} annulled
+ */
+
+InvoiceViewModel.prototype['annulled'] = undefined;
 var _default = InvoiceViewModel;
 exports["default"] = _default;

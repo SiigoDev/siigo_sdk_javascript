@@ -17,6 +17,8 @@ var _AccountGroup = _interopRequireDefault(require("./AccountGroup"));
 
 var _AdditionalFields = _interopRequireDefault(require("./AdditionalFields"));
 
+var _KeysProductsViewModel = _interopRequireDefault(require("./KeysProductsViewModel"));
+
 var _Metadata = _interopRequireDefault(require("./Metadata"));
 
 var _PriceListViewModel = _interopRequireDefault(require("./PriceListViewModel"));
@@ -130,6 +132,10 @@ var ProductModel = /*#__PURE__*/function () {
           obj['unit'] = _UnitProductsViewModel["default"].constructFromObject(data['unit']);
         }
 
+        if (data.hasOwnProperty('key')) {
+          obj['key'] = _KeysProductsViewModel["default"].constructFromObject(data['key']);
+        }
+
         if (data.hasOwnProperty('unit_label')) {
           obj['unit_label'] = _ApiClient["default"].convertToType(data['unit_label'], 'String');
         }
@@ -230,6 +236,11 @@ ProductModel.prototype['prices'] = undefined;
  */
 
 ProductModel.prototype['unit'] = undefined;
+/**
+ * @member {module:model/KeysProductsViewModel} key
+ */
+
+ProductModel.prototype['key'] = undefined;
 /**
  * @member {String} unit_label
  */

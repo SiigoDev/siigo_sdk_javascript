@@ -33,6 +33,8 @@ import CreateCreditNoteCommand from './model/CreateCreditNoteCommand';
 import CreateCustomerCommand from './model/CreateCustomerCommand';
 import CreateInvoiceCommand from './model/CreateInvoiceCommand';
 import CreateJournalEntryCommand from './model/CreateJournalEntryCommand';
+import CreateProductCommand from './model/CreateProductCommand';
+import CreateProductCountryCommand from './model/CreateProductCountryCommand';
 import CreateVoucherCommand from './model/CreateVoucherCommand';
 import CreditNotePdfViewModel from './model/CreditNotePdfViewModel';
 import CreditNoteViewModel from './model/CreditNoteViewModel';
@@ -70,6 +72,7 @@ import GlobalTaxCommand from './model/GlobalTaxCommand';
 import GlobalTaxModel from './model/GlobalTaxModel';
 import IdTypeModel from './model/IdTypeModel';
 import InvoiceCustomerModel from './model/InvoiceCustomerModel';
+import InvoiceDeleteViewModel from './model/InvoiceDeleteViewModel';
 import InvoiceModel from './model/InvoiceModel';
 import InvoicePdfViewModel from './model/InvoicePdfViewModel';
 import InvoiceViewModel from './model/InvoiceViewModel';
@@ -92,6 +95,7 @@ import JournalEntryTaxModel from './model/JournalEntryTaxModel';
 import JournalEntryViewModel from './model/JournalEntryViewModel';
 import JournalEntryWarehouseModel from './model/JournalEntryWarehouseModel';
 import JournalsEntryViewModel from './model/JournalsEntryViewModel';
+import KeysProductsViewModel from './model/KeysProductsViewModel';
 import Link from './model/Link';
 import LinksPagination from './model/LinksPagination';
 import LiteCustomerCommand from './model/LiteCustomerCommand';
@@ -102,7 +106,7 @@ import MetadataModel from './model/MetadataModel';
 import PageListDto from './model/PageListDto';
 import PageListModel from './model/PageListModel';
 import Payment from './model/Payment';
-import PaymentTypesViewModel from './model/PaymentTypesViewModel';
+import PaymentTypeViewModel from './model/PaymentTypeViewModel';
 import PaymentsCommand from './model/PaymentsCommand';
 import PaymentsModel from './model/PaymentsModel';
 import PhoneCommand from './model/PhoneCommand';
@@ -112,7 +116,6 @@ import PriceListViewModel from './model/PriceListViewModel';
 import PriceListsViewModel from './model/PriceListsViewModel';
 import PricesListProducts from './model/PricesListProducts';
 import PricesProducts from './model/PricesProducts';
-import ProductCommand from './model/ProductCommand';
 import ProductDeleteViewModel from './model/ProductDeleteViewModel';
 import ProductModel from './model/ProductModel';
 import ProductTaxesCommand from './model/ProductTaxesCommand';
@@ -131,6 +134,7 @@ import TaxViewModel from './model/TaxViewModel';
 import TaxesCommand from './model/TaxesCommand';
 import TaxesModel from './model/TaxesModel';
 import UnitProductsViewModel from './model/UnitProductsViewModel';
+import UpdateProductCommand from './model/UpdateProductCommand';
 import UsersModel from './model/UsersModel';
 import UsersViewModel from './model/UsersViewModel';
 import VoucherViewModel from './model/VoucherViewModel';
@@ -138,7 +142,7 @@ import VouchersViewModel from './model/VouchersViewModel';
 import Warehouse from './model/Warehouse';
 import WarehouseModel from './model/WarehouseModel';
 import WarehouseViewModel from './model/WarehouseViewModel';
-import AccountGroupsApi from './api/AccountGroupsApi';
+import AccountGroupApi from './api/AccountGroupApi';
 import CostCenterApi from './api/CostCenterApi';
 import CreditNoteApi from './api/CreditNoteApi';
 import CustomerApi from './api/CustomerApi';
@@ -146,11 +150,11 @@ import DocumentTypeApi from './api/DocumentTypeApi';
 import FixedAssetsApi from './api/FixedAssetsApi';
 import InvoiceApi from './api/InvoiceApi';
 import JournalEntryApi from './api/JournalEntryApi';
-import PaymentTypesApi from './api/PaymentTypesApi';
-import PriceListsApi from './api/PriceListsApi';
+import PaymentTypeApi from './api/PaymentTypeApi';
+import PriceApi from './api/PriceApi';
 import ProductApi from './api/ProductApi';
 import TaxesApi from './api/TaxesApi';
-import UsersApi from './api/UsersApi';
+import UserApi from './api/UserApi';
 import VoucherApi from './api/VoucherApi';
 import WarehousesApi from './api/WarehousesApi';
 
@@ -335,6 +339,18 @@ export {
      * @property {module:model/CreateJournalEntryCommand}
      */
     CreateJournalEntryCommand,
+
+    /**
+     * The CreateProductCommand model constructor.
+     * @property {module:model/CreateProductCommand}
+     */
+    CreateProductCommand,
+
+    /**
+     * The CreateProductCountryCommand model constructor.
+     * @property {module:model/CreateProductCountryCommand}
+     */
+    CreateProductCountryCommand,
 
     /**
      * The CreateVoucherCommand model constructor.
@@ -559,6 +575,12 @@ export {
     InvoiceCustomerModel,
 
     /**
+     * The InvoiceDeleteViewModel model constructor.
+     * @property {module:model/InvoiceDeleteViewModel}
+     */
+    InvoiceDeleteViewModel,
+
+    /**
      * The InvoiceModel model constructor.
      * @property {module:model/InvoiceModel}
      */
@@ -691,6 +713,12 @@ export {
     JournalsEntryViewModel,
 
     /**
+     * The KeysProductsViewModel model constructor.
+     * @property {module:model/KeysProductsViewModel}
+     */
+    KeysProductsViewModel,
+
+    /**
      * The Link model constructor.
      * @property {module:model/Link}
      */
@@ -751,10 +779,10 @@ export {
     Payment,
 
     /**
-     * The PaymentTypesViewModel model constructor.
-     * @property {module:model/PaymentTypesViewModel}
+     * The PaymentTypeViewModel model constructor.
+     * @property {module:model/PaymentTypeViewModel}
      */
-    PaymentTypesViewModel,
+    PaymentTypeViewModel,
 
     /**
      * The PaymentsCommand model constructor.
@@ -809,12 +837,6 @@ export {
      * @property {module:model/PricesProducts}
      */
     PricesProducts,
-
-    /**
-     * The ProductCommand model constructor.
-     * @property {module:model/ProductCommand}
-     */
-    ProductCommand,
 
     /**
      * The ProductDeleteViewModel model constructor.
@@ -925,6 +947,12 @@ export {
     UnitProductsViewModel,
 
     /**
+     * The UpdateProductCommand model constructor.
+     * @property {module:model/UpdateProductCommand}
+     */
+    UpdateProductCommand,
+
+    /**
      * The UsersModel model constructor.
      * @property {module:model/UsersModel}
      */
@@ -967,10 +995,10 @@ export {
     WarehouseViewModel,
 
     /**
-    * The AccountGroupsApi service constructor.
-    * @property {module:api/AccountGroupsApi}
+    * The AccountGroupApi service constructor.
+    * @property {module:api/AccountGroupApi}
     */
-    AccountGroupsApi,
+    AccountGroupApi,
 
     /**
     * The CostCenterApi service constructor.
@@ -1015,16 +1043,16 @@ export {
     JournalEntryApi,
 
     /**
-    * The PaymentTypesApi service constructor.
-    * @property {module:api/PaymentTypesApi}
+    * The PaymentTypeApi service constructor.
+    * @property {module:api/PaymentTypeApi}
     */
-    PaymentTypesApi,
+    PaymentTypeApi,
 
     /**
-    * The PriceListsApi service constructor.
-    * @property {module:api/PriceListsApi}
+    * The PriceApi service constructor.
+    * @property {module:api/PriceApi}
     */
-    PriceListsApi,
+    PriceApi,
 
     /**
     * The ProductApi service constructor.
@@ -1039,10 +1067,10 @@ export {
     TaxesApi,
 
     /**
-    * The UsersApi service constructor.
-    * @property {module:api/UsersApi}
+    * The UserApi service constructor.
+    * @property {module:api/UserApi}
     */
-    UsersApi,
+    UserApi,
 
     /**
     * The VoucherApi service constructor.

@@ -3,6 +3,7 @@
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProduct**](ProductApi.md#createProduct) | **POST** /v1/products | Creates a product.
+[**createProductByCountry**](ProductApi.md#createProductByCountry) | **POST** /v1/products/country-example | 
 [**deleteProduct**](ProductApi.md#deleteProduct) | **DELETE** /v1/products/{id} | Deletes the product by GUID.
 [**getProduct**](ProductApi.md#getProduct) | **GET** /v1/products/{id} | Gets the product by GUID.
 [**getProducts**](ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
@@ -26,7 +27,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
+let opts = new SiigoApi.CreateProductCommand(); // CreateProductCommand | Represents the request with the product information.
 
 apiInstance.createProduct(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +43,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
+    let opts = new SiigoApi.CreateProductCommand(); // CreateProductCommand | Represents the request with the product information.
 
     const data = await apiInstance.createProduct(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -58,7 +59,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productCommand** | [**ProductCommand**](ProductCommand.md)| Represents the request with the product information. | [optional] 
+ **createProductCommand** | [**CreateProductCommand**](CreateProductCommand.md)| Represents the request with the product information. | [optional] 
 
 ### Return type
 
@@ -70,7 +71,70 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## createProductByCountry
+
+> ProductModel createProductByCountry(opts)
+
+
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.ProductApi();
+
+let opts = new SiigoApi.CreateProductCountryCommand(); // CreateProductCountryCommand | 
+
+apiInstance.createProductByCountry(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.ProductApi();
+    let opts = new SiigoApi.CreateProductCountryCommand(); // CreateProductCountryCommand | 
+
+    const data = await apiInstance.createProductByCountry(opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createProductCountryCommand** | [**CreateProductCountryCommand**](CreateProductCountryCommand.md)|  | [optional] 
+
+### Return type
+
+[**ProductModel**](ProductModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 
 
@@ -322,7 +386,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.ProductApi();
 
 let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
+let opts = new SiigoApi.UpdateProductCommand(); // UpdateProductCommand | Represents the request with the product information to update.
 
 apiInstance.updateProduct(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -339,7 +403,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
     let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
+    let opts = new SiigoApi.UpdateProductCommand(); // UpdateProductCommand | Represents the request with the product information to update.
 
     const data = await apiInstance.updateProduct(id, opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -356,7 +420,7 @@ async function main(){
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
- **productCommand** | [**ProductCommand**](ProductCommand.md)| Represents the request with the product information to update. | [optional] 
+ **updateProductCommand** | [**UpdateProductCommand**](UpdateProductCommand.md)| Represents the request with the product information to update. | [optional] 
 
 ### Return type
 
@@ -368,6 +432,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 

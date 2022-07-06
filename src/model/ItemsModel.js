@@ -80,6 +80,9 @@ class ItemsModel {
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
+            if (data.hasOwnProperty('vat_excluded')) {
+                obj['vat_excluded'] = ApiClient.convertToType(data['vat_excluded'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -144,6 +147,11 @@ ItemsModel.prototype['warehouse'] = undefined;
  * @member {Number} total
  */
 ItemsModel.prototype['total'] = undefined;
+
+/**
+ * @member {Boolean} vat_excluded
+ */
+ItemsModel.prototype['vat_excluded'] = undefined;
 
 
 

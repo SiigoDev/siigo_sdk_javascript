@@ -13,13 +13,17 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ProductCommand = _interopRequireDefault(require("../model/ProductCommand"));
+var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand"));
+
+var _CreateProductCountryCommand = _interopRequireDefault(require("../model/CreateProductCountryCommand"));
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
 
 var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
 
 var _ProductsViewModel = _interopRequireDefault(require("../model/ProductsViewModel"));
+
+var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand"));
 
 /**
  * Siigo API
@@ -54,7 +58,7 @@ var ProductApi = /*#__PURE__*/function () {
   /**
    * Creates a product.
    * @param {Object} opts Optional parameters
-   * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
+   * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
    */
 
@@ -69,7 +73,7 @@ var ProductApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -77,7 +81,7 @@ var ProductApi = /*#__PURE__*/function () {
     /**
      * Creates a product.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
+     * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
@@ -85,6 +89,40 @@ var ProductApi = /*#__PURE__*/function () {
     key: "createProduct",
     value: function createProduct(opts) {
       return this.createProductWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateProductCountryCommand} opts.createProductCountryCommand 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
+     */
+
+  }, {
+    key: "createProductByCountryWithHttpInfo",
+    value: function createProductByCountryWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _ProductModel["default"];
+      return this.apiClient.callApi('/v1/products/country-example', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateProductCountryCommand} opts.createProductCountryCommand 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
+     */
+
+  }, {
+    key: "createProductByCountry",
+    value: function createProductByCountry(opts) {
+      return this.createProductByCountryWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -249,7 +287,7 @@ var ProductApi = /*#__PURE__*/function () {
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
+     * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
 
@@ -270,7 +308,7 @@ var ProductApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -279,7 +317,7 @@ var ProductApi = /*#__PURE__*/function () {
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
+     * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
