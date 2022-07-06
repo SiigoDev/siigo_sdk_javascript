@@ -19,6 +19,8 @@ var _EInvoiceErrorsViewModel = _interopRequireDefault(require("../model/EInvoice
 
 var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
 
+var _InvoiceDeleteViewModel = _interopRequireDefault(require("../model/InvoiceDeleteViewModel"));
+
 var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfViewModel"));
 
 var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel"));
@@ -60,14 +62,54 @@ var InvoiceApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Creates an invoice.
-   * @param {Object} opts Optional parameters
-   * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
+   * Annul the Invoice by GUID.
+   * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceDeleteViewModel} and HTTP response
    */
 
 
   (0, _createClass2["default"])(InvoiceApi, [{
+    key: "annulInvoiceWithHttpInfo",
+    value: function annulInvoiceWithHttpInfo(id) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling annulInvoice");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _InvoiceDeleteViewModel["default"];
+      return this.apiClient.callApi('/v1/invoices/{id}/annul', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Annul the Invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceDeleteViewModel}
+     */
+
+  }, {
+    key: "annulInvoice",
+    value: function annulInvoice(id) {
+      return this.annulInvoiceWithHttpInfo(id).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Creates an invoice.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
+     */
+
+  }, {
     key: "createInvoiceWithHttpInfo",
     value: function createInvoiceWithHttpInfo(opts) {
       opts = opts || {};
@@ -77,7 +119,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvoiceViewModel["default"];
       return this.apiClient.callApi('/v1/invoices', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -93,6 +135,46 @@ var InvoiceApi = /*#__PURE__*/function () {
     key: "createInvoice",
     value: function createInvoice(opts) {
       return this.createInvoiceWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Delete the Invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceDeleteViewModel} and HTTP response
+     */
+
+  }, {
+    key: "deleteInvoiceWithHttpInfo",
+    value: function deleteInvoiceWithHttpInfo(id) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling deleteInvoice");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = [];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _InvoiceDeleteViewModel["default"];
+      return this.apiClient.callApi('/v1/invoices/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Delete the Invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceDeleteViewModel}
+     */
+
+  }, {
+    key: "deleteInvoice",
+    value: function deleteInvoice(id) {
+      return this.deleteInvoiceWithHttpInfo(id).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -312,7 +394,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _MailViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}/mail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -357,7 +439,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _InvoiceViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);

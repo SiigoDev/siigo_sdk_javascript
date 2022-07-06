@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **taxes** | [**[TaxesModel]**](TaxesModel.md) | Contains a list of taxes associated to item. | [optional] 
 **warehouse** | [**WarehouseModel**](WarehouseModel.md) |  | [optional] 
 **total** | **Number** | Represents the price of item with the tax included. | [optional] 
+**vatExcluded** | **Boolean** |  | [optional] 
 
 

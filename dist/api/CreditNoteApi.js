@@ -69,7 +69,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _CreditNoteViewModel["default"];
       return this.apiClient.callApi('/v1/credit-notes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);

@@ -58,7 +58,7 @@ export default class CustomerApi {
       };
 
       let authNames = ['Bearer'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = CustomerViewModel;
       return this.apiClient.callApi(
@@ -281,7 +281,7 @@ export default class CustomerApi {
       };
 
       let authNames = ['Bearer'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = CustomerViewModel;
       return this.apiClient.callApi(
