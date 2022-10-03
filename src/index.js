@@ -30,15 +30,14 @@ import ContactCommand from './model/ContactCommand';
 import ContactModel from './model/ContactModel';
 import CostCentersViewModel from './model/CostCentersViewModel';
 import CreateCreditNoteCommand from './model/CreateCreditNoteCommand';
-import CreateCustomerCommand from './model/CreateCustomerCommand';
+import CreateCustomerCommandCountry from './model/CreateCustomerCommandCountry';
 import CreateInvoiceCommand from './model/CreateInvoiceCommand';
 import CreateJournalEntryCommand from './model/CreateJournalEntryCommand';
 import CreateProductCommand from './model/CreateProductCommand';
-import CreateProductCountryCommand from './model/CreateProductCountryCommand';
 import CreateVoucherCommand from './model/CreateVoucherCommand';
 import CreditNotePdfViewModel from './model/CreditNotePdfViewModel';
 import CreditNoteViewModel from './model/CreditNoteViewModel';
-import CreditNotesViewModel from './model/CreditNotesViewModel';
+import CreditNoteViewModelGetAllModel from './model/CreditNoteViewModelGetAllModel';
 import CurrencyCommand from './model/CurrencyCommand';
 import CurrencyModel from './model/CurrencyModel';
 import CustomFieldsCommand from './model/CustomFieldsCommand';
@@ -48,7 +47,6 @@ import CustomerCommand from './model/CustomerCommand';
 import CustomerDeleteViewModel from './model/CustomerDeleteViewModel';
 import CustomerViewModel from './model/CustomerViewModel';
 import CustomerVoucher from './model/CustomerVoucher';
-import CustomersViewModel from './model/CustomersViewModel';
 import DeliveryOrderCommand from './model/DeliveryOrderCommand';
 import DeliveryOrderModel from './model/DeliveryOrderModel';
 import DianReason from './model/DianReason';
@@ -68,6 +66,7 @@ import FiscalResponsibilitiesCommand from './model/FiscalResponsibilitiesCommand
 import FixedAssetCommand from './model/FixedAssetCommand';
 import FixedAssetModel from './model/FixedAssetModel';
 import FixedAssetsViewModel from './model/FixedAssetsViewModel';
+import GenericPageListModel from './model/GenericPageListModel';
 import GlobalTaxCommand from './model/GlobalTaxCommand';
 import GlobalTaxModel from './model/GlobalTaxModel';
 import IdTypeModel from './model/IdTypeModel';
@@ -76,7 +75,7 @@ import InvoiceDeleteViewModel from './model/InvoiceDeleteViewModel';
 import InvoiceModel from './model/InvoiceModel';
 import InvoicePdfViewModel from './model/InvoicePdfViewModel';
 import InvoiceViewModel from './model/InvoiceViewModel';
-import InvoicesViewModel from './model/InvoicesViewModel';
+import InvoiceViewModelGetAllModel from './model/InvoiceViewModelGetAllModel';
 import Item from './model/Item';
 import ItemDue from './model/ItemDue';
 import ItemDueCommand from './model/ItemDueCommand';
@@ -93,8 +92,8 @@ import JournalEntryProductCommand from './model/JournalEntryProductCommand';
 import JournalEntryProductModel from './model/JournalEntryProductModel';
 import JournalEntryTaxModel from './model/JournalEntryTaxModel';
 import JournalEntryViewModel from './model/JournalEntryViewModel';
+import JournalEntryViewModelGetAllModel from './model/JournalEntryViewModelGetAllModel';
 import JournalEntryWarehouseModel from './model/JournalEntryWarehouseModel';
-import JournalsEntryViewModel from './model/JournalsEntryViewModel';
 import KeysProductsViewModel from './model/KeysProductsViewModel';
 import Link from './model/Link';
 import LinksPagination from './model/LinksPagination';
@@ -103,7 +102,6 @@ import MailCommand from './model/MailCommand';
 import MailViewModel from './model/MailViewModel';
 import Metadata from './model/Metadata';
 import MetadataModel from './model/MetadataModel';
-import PageListDto from './model/PageListDto';
 import PageListModel from './model/PageListModel';
 import Payment from './model/Payment';
 import PaymentTypeViewModel from './model/PaymentTypeViewModel';
@@ -118,8 +116,8 @@ import PricesListProducts from './model/PricesListProducts';
 import PricesProducts from './model/PricesProducts';
 import ProductDeleteViewModel from './model/ProductDeleteViewModel';
 import ProductModel from './model/ProductModel';
+import ProductModelGetAllModel from './model/ProductModelGetAllModel';
 import ProductTaxesCommand from './model/ProductTaxesCommand';
-import ProductsViewModel from './model/ProductsViewModel';
 import PurchaseOrderCommand from './model/PurchaseOrderCommand';
 import PursacheOrderModel from './model/PursacheOrderModel';
 import RelatedUsersCommand from './model/RelatedUsersCommand';
@@ -134,11 +132,12 @@ import TaxViewModel from './model/TaxViewModel';
 import TaxesCommand from './model/TaxesCommand';
 import TaxesModel from './model/TaxesModel';
 import UnitProductsViewModel from './model/UnitProductsViewModel';
+import UpdateCustomerCommand from './model/UpdateCustomerCommand';
 import UpdateProductCommand from './model/UpdateProductCommand';
 import UsersModel from './model/UsersModel';
 import UsersViewModel from './model/UsersViewModel';
 import VoucherViewModel from './model/VoucherViewModel';
-import VouchersViewModel from './model/VouchersViewModel';
+import VoucherViewModelGetAllModel from './model/VoucherViewModelGetAllModel';
 import Warehouse from './model/Warehouse';
 import WarehouseModel from './model/WarehouseModel';
 import WarehouseViewModel from './model/WarehouseViewModel';
@@ -153,7 +152,7 @@ import JournalEntryApi from './api/JournalEntryApi';
 import PaymentTypeApi from './api/PaymentTypeApi';
 import PriceApi from './api/PriceApi';
 import ProductApi from './api/ProductApi';
-import TaxesApi from './api/TaxesApi';
+import TaxApi from './api/TaxApi';
 import UserApi from './api/UserApi';
 import VoucherApi from './api/VoucherApi';
 import WarehousesApi from './api/WarehousesApi';
@@ -183,7 +182,7 @@ export async function signIn({ userName, accessKey }) {
 
 
 /**
-* Siigo_Api_v1.<br>
+* Siigo Api v1.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -323,10 +322,10 @@ export {
     CreateCreditNoteCommand,
 
     /**
-     * The CreateCustomerCommand model constructor.
-     * @property {module:model/CreateCustomerCommand}
+     * The CreateCustomerCommandCountry model constructor.
+     * @property {module:model/CreateCustomerCommandCountry}
      */
-    CreateCustomerCommand,
+    CreateCustomerCommandCountry,
 
     /**
      * The CreateInvoiceCommand model constructor.
@@ -347,12 +346,6 @@ export {
     CreateProductCommand,
 
     /**
-     * The CreateProductCountryCommand model constructor.
-     * @property {module:model/CreateProductCountryCommand}
-     */
-    CreateProductCountryCommand,
-
-    /**
      * The CreateVoucherCommand model constructor.
      * @property {module:model/CreateVoucherCommand}
      */
@@ -371,10 +364,10 @@ export {
     CreditNoteViewModel,
 
     /**
-     * The CreditNotesViewModel model constructor.
-     * @property {module:model/CreditNotesViewModel}
+     * The CreditNoteViewModelGetAllModel model constructor.
+     * @property {module:model/CreditNoteViewModelGetAllModel}
      */
-    CreditNotesViewModel,
+    CreditNoteViewModelGetAllModel,
 
     /**
      * The CurrencyCommand model constructor.
@@ -429,12 +422,6 @@ export {
      * @property {module:model/CustomerVoucher}
      */
     CustomerVoucher,
-
-    /**
-     * The CustomersViewModel model constructor.
-     * @property {module:model/CustomersViewModel}
-     */
-    CustomersViewModel,
 
     /**
      * The DeliveryOrderCommand model constructor.
@@ -551,6 +538,12 @@ export {
     FixedAssetsViewModel,
 
     /**
+     * The GenericPageListModel model constructor.
+     * @property {module:model/GenericPageListModel}
+     */
+    GenericPageListModel,
+
+    /**
      * The GlobalTaxCommand model constructor.
      * @property {module:model/GlobalTaxCommand}
      */
@@ -599,10 +592,10 @@ export {
     InvoiceViewModel,
 
     /**
-     * The InvoicesViewModel model constructor.
-     * @property {module:model/InvoicesViewModel}
+     * The InvoiceViewModelGetAllModel model constructor.
+     * @property {module:model/InvoiceViewModelGetAllModel}
      */
-    InvoicesViewModel,
+    InvoiceViewModelGetAllModel,
 
     /**
      * The Item model constructor.
@@ -701,16 +694,16 @@ export {
     JournalEntryViewModel,
 
     /**
+     * The JournalEntryViewModelGetAllModel model constructor.
+     * @property {module:model/JournalEntryViewModelGetAllModel}
+     */
+    JournalEntryViewModelGetAllModel,
+
+    /**
      * The JournalEntryWarehouseModel model constructor.
      * @property {module:model/JournalEntryWarehouseModel}
      */
     JournalEntryWarehouseModel,
-
-    /**
-     * The JournalsEntryViewModel model constructor.
-     * @property {module:model/JournalsEntryViewModel}
-     */
-    JournalsEntryViewModel,
 
     /**
      * The KeysProductsViewModel model constructor.
@@ -759,12 +752,6 @@ export {
      * @property {module:model/MetadataModel}
      */
     MetadataModel,
-
-    /**
-     * The PageListDto model constructor.
-     * @property {module:model/PageListDto}
-     */
-    PageListDto,
 
     /**
      * The PageListModel model constructor.
@@ -851,16 +838,16 @@ export {
     ProductModel,
 
     /**
+     * The ProductModelGetAllModel model constructor.
+     * @property {module:model/ProductModelGetAllModel}
+     */
+    ProductModelGetAllModel,
+
+    /**
      * The ProductTaxesCommand model constructor.
      * @property {module:model/ProductTaxesCommand}
      */
     ProductTaxesCommand,
-
-    /**
-     * The ProductsViewModel model constructor.
-     * @property {module:model/ProductsViewModel}
-     */
-    ProductsViewModel,
 
     /**
      * The PurchaseOrderCommand model constructor.
@@ -947,6 +934,12 @@ export {
     UnitProductsViewModel,
 
     /**
+     * The UpdateCustomerCommand model constructor.
+     * @property {module:model/UpdateCustomerCommand}
+     */
+    UpdateCustomerCommand,
+
+    /**
      * The UpdateProductCommand model constructor.
      * @property {module:model/UpdateProductCommand}
      */
@@ -971,10 +964,10 @@ export {
     VoucherViewModel,
 
     /**
-     * The VouchersViewModel model constructor.
-     * @property {module:model/VouchersViewModel}
+     * The VoucherViewModelGetAllModel model constructor.
+     * @property {module:model/VoucherViewModelGetAllModel}
      */
-    VouchersViewModel,
+    VoucherViewModelGetAllModel,
 
     /**
      * The Warehouse model constructor.
@@ -1061,10 +1054,10 @@ export {
     ProductApi,
 
     /**
-    * The TaxesApi service constructor.
-    * @property {module:api/TaxesApi}
+    * The TaxApi service constructor.
+    * @property {module:api/TaxApi}
     */
-    TaxesApi,
+    TaxApi,
 
     /**
     * The UserApi service constructor.

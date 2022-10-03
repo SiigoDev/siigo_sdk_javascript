@@ -13,13 +13,15 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _CreateCustomerCommand = _interopRequireDefault(require("../model/CreateCustomerCommand"));
+var _CreateCustomerCommandCountry = _interopRequireDefault(require("../model/CreateCustomerCommandCountry"));
 
 var _CustomerDeleteViewModel = _interopRequireDefault(require("../model/CustomerDeleteViewModel"));
 
 var _CustomerViewModel = _interopRequireDefault(require("../model/CustomerViewModel"));
 
-var _CustomersViewModel = _interopRequireDefault(require("../model/CustomersViewModel"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
+
+var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCustomerCommand"));
 
 /**
  * Siigo API
@@ -54,7 +56,7 @@ var CustomerApi = /*#__PURE__*/function () {
   /**
    * Creates a customer.
    * @param {Object} opts Optional parameters
-   * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+   * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
    */
 
@@ -77,7 +79,7 @@ var CustomerApi = /*#__PURE__*/function () {
     /**
      * Creates a customer.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
 
@@ -184,7 +186,7 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomersViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
 
   }, {
@@ -213,7 +215,7 @@ var CustomerApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _CustomersViewModel["default"];
+      var returnType = _CustomerViewModel["default"];
       return this.apiClient.callApi('/v1/customers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -232,7 +234,7 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomersViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
 
   }, {
@@ -246,7 +248,7 @@ var CustomerApi = /*#__PURE__*/function () {
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
 
@@ -276,7 +278,7 @@ var CustomerApi = /*#__PURE__*/function () {
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
 

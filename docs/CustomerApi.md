@@ -26,7 +26,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.CustomerApi();
 
-let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
+let opts = new SiigoApi.CreateCustomerCommandCountry(); // CreateCustomerCommandCountry | Represents the request with the customer information.
 
 apiInstance.createCustomer(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +42,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
-    let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
+    let opts = new SiigoApi.CreateCustomerCommandCountry(); // CreateCustomerCommandCountry | Represents the request with the customer information.
 
     const data = await apiInstance.createCustomer(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -58,7 +58,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCustomerCommand** | [**CreateCustomerCommand**](CreateCustomerCommand.md)| Represents the request with the customer information. | [optional] 
+ **createCustomerCommandCountry** | [**CreateCustomerCommandCountry**](CreateCustomerCommandCountry.md)| Represents the request with the customer information. | [optional] 
 
 ### Return type
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## getCustomers
 
-> CustomersViewModel getCustomers(opts)
+> CustomerViewModel getCustomers(opts)
 
 Returns a paginated list of customers.
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomersViewModel**](CustomersViewModel.md)
+[**CustomerViewModel**](CustomerViewModel.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.CustomerApi();
 
 let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
+let opts = new SiigoApi.UpdateCustomerCommand(); // UpdateCustomerCommand | Represents the request with the customer information.
 
 apiInstance.updateCustomer(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -336,7 +336,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.CustomerApi();
     let id = "id_example"; // String | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-    let opts = new SiigoApi.CreateCustomerCommand(); // CreateCustomerCommand | Represents the request with the customer information.
+    let opts = new SiigoApi.UpdateCustomerCommand(); // UpdateCustomerCommand | Represents the request with the customer information.
 
     const data = await apiInstance.updateCustomer(id, opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -353,7 +353,7 @@ async function main(){
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
- **createCustomerCommand** | [**CreateCustomerCommand**](CreateCustomerCommand.md)| Represents the request with the customer information. | [optional] 
+ **updateCustomerCommand** | [**UpdateCustomerCommand**](UpdateCustomerCommand.md)| Represents the request with the customer information. | [optional] 
 
 ### Return type
 

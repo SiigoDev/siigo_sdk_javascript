@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ## getVouchers
 
-> VouchersViewModel getVouchers(opts)
+> VoucherViewModelGetAllModel getVouchers(opts)
 
 Returns a paginated list of vouchers.
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VouchersViewModel**](VouchersViewModel.md)
+[**VoucherViewModelGetAllModel**](VoucherViewModelGetAllModel.md)
 
 ### Authorization
 

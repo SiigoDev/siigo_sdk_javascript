@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ## getCreditNotes
 
-> CreditNotesViewModel getCreditNotes(opts)
+> CreditNoteViewModelGetAllModel getCreditNotes(opts)
 
 Returns a paginated list of credit notes.
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditNotesViewModel**](CreditNotesViewModel.md)
+[**CreditNoteViewModelGetAllModel**](CreditNoteViewModelGetAllModel.md)
 
 ### Authorization
 

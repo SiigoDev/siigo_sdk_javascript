@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ## getJournals
 
-> JournalsEntryViewModel getJournals(opts)
+> JournalEntryViewModelGetAllModel getJournals(opts)
 
 Returns a paginated list of journals entries.
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JournalsEntryViewModel**](JournalsEntryViewModel.md)
+[**JournalEntryViewModelGetAllModel**](JournalEntryViewModelGetAllModel.md)
 
 ### Authorization
 
