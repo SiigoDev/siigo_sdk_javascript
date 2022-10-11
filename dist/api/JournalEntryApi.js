@@ -17,7 +17,7 @@ var _CreateJournalEntryCommand = _interopRequireDefault(require("../model/Create
 
 var _JournalEntryViewModel = _interopRequireDefault(require("../model/JournalEntryViewModel"));
 
-var _JournalsEntryViewModel = _interopRequireDefault(require("../model/JournalsEntryViewModel"));
+var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("../model/JournalEntryViewModelGetAllModel"));
 
 /**
  * Siigo API
@@ -67,7 +67,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _JournalEntryViewModel["default"];
       return this.apiClient.callApi('/v1/journals', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -138,7 +138,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalsEntryViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModelGetAllModel} and HTTP response
      */
 
   }, {
@@ -163,7 +163,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _JournalsEntryViewModel["default"];
+      var returnType = _JournalEntryViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/journals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -178,7 +178,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalsEntryViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModelGetAllModel}
      */
 
   }, {

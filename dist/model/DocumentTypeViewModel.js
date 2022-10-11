@@ -51,7 +51,7 @@ var DocumentTypeViewModel = /*#__PURE__*/function () {
 
   (0, _createClass2["default"])(DocumentTypeViewModel, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj) { }
     /**
      * Constructs a <code>DocumentTypeViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -164,6 +164,10 @@ var DocumentTypeViewModel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('global_charges')) {
           obj['global_charges'] = _ApiClient["default"].convertToType(data['global_charges'], [_DocumentTypeTaxModel["default"]]);
+        }
+
+        if (data.hasOwnProperty('i_s_r')) {
+          obj['i_s_r'] = _ApiClient["default"].convertToType(data['i_s_r'], 'Boolean');
         }
       }
 
@@ -323,5 +327,11 @@ DocumentTypeViewModel.prototype['global_discounts'] = undefined;
  */
 
 DocumentTypeViewModel.prototype['global_charges'] = undefined;
+/**
+ * Represent if the document allows ISR. This field is only for Mexico.
+ * @member {Boolean} i_s_r
+ */
+
+DocumentTypeViewModel.prototype['i_s_r'] = undefined;
 var _default = DocumentTypeViewModel;
 exports["default"] = _default;

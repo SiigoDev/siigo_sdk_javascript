@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import CreateJournalEntryCommand from '../model/CreateJournalEntryCommand';
 import JournalEntryViewModel from '../model/JournalEntryViewModel';
-import JournalsEntryViewModel from '../model/JournalsEntryViewModel';
+import JournalEntryViewModelGetAllModel from '../model/JournalEntryViewModelGetAllModel';
 
 /**
 * JournalEntry service.
@@ -57,7 +57,7 @@ export default class JournalEntryApi {
       };
 
       let authNames = ['Bearer'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = JournalEntryViewModel;
       return this.apiClient.callApi(
@@ -139,7 +139,7 @@ export default class JournalEntryApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalsEntryViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModelGetAllModel} and HTTP response
      */
     getJournalsWithHttpInfo(opts) {
       opts = opts || {};
@@ -166,7 +166,7 @@ export default class JournalEntryApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = JournalsEntryViewModel;
+      let returnType = JournalEntryViewModelGetAllModel;
       return this.apiClient.callApi(
         '/v1/journals', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -186,7 +186,7 @@ export default class JournalEntryApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalsEntryViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModelGetAllModel}
      */
     getJournals(opts) {
       return this.getJournalsWithHttpInfo(opts)

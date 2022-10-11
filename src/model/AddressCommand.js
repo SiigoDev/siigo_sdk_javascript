@@ -57,6 +57,21 @@ class AddressCommand {
             if (data.hasOwnProperty('postal_code')) {
                 obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
             }
+            if (data.hasOwnProperty('street')) {
+                obj['street'] = ApiClient.convertToType(data['street'], 'String');
+            }
+            if (data.hasOwnProperty('interior_number')) {
+                obj['interior_number'] = ApiClient.convertToType(data['interior_number'], 'String');
+            }
+            if (data.hasOwnProperty('exterior_number')) {
+                obj['exterior_number'] = ApiClient.convertToType(data['exterior_number'], 'String');
+            }
+            if (data.hasOwnProperty('colony')) {
+                obj['colony'] = ApiClient.convertToType(data['colony'], 'String');
+            }
+            if (data.hasOwnProperty('locality')) {
+                obj['locality'] = ApiClient.convertToType(data['locality'], 'String');
+            }
         }
         return obj;
     }
@@ -80,6 +95,36 @@ AddressCommand.prototype['city'] = undefined;
  * @member {String} postal_code
  */
 AddressCommand.prototype['postal_code'] = undefined;
+
+/**
+ * Represents the street of customer.
+ * @member {String} street
+ */
+AddressCommand.prototype['street'] = undefined;
+
+/**
+ * Represents the interior number of customer.
+ * @member {String} interior_number
+ */
+AddressCommand.prototype['interior_number'] = undefined;
+
+/**
+ * Represents the exterior number of customer.
+ * @member {String} exterior_number
+ */
+AddressCommand.prototype['exterior_number'] = undefined;
+
+/**
+ * Represents the colony of customer.
+ * @member {String} colony
+ */
+AddressCommand.prototype['colony'] = undefined;
+
+/**
+ * Represents the locality of customer.
+ * @member {String} locality
+ */
+AddressCommand.prototype['locality'] = undefined;
 
 
 

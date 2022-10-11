@@ -13,13 +13,17 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ProductCommand = _interopRequireDefault(require("../model/ProductCommand"));
+var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand"));
+
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
 
 var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
 
 var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
 
-var _ProductsViewModel = _interopRequireDefault(require("../model/ProductsViewModel"));
+var _ProductModelGetAllModel = _interopRequireDefault(require("../model/ProductModelGetAllModel"));
+
+var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand"));
 
 /**
  * Siigo API
@@ -54,7 +58,7 @@ var ProductApi = /*#__PURE__*/function () {
   /**
    * Creates a product.
    * @param {Object} opts Optional parameters
-   * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
+   * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
    */
 
@@ -69,7 +73,7 @@ var ProductApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -77,7 +81,7 @@ var ProductApi = /*#__PURE__*/function () {
     /**
      * Creates a product.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information.
+     * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 
@@ -185,7 +189,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductsViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModelGetAllModel} and HTTP response
      */
 
   }, {
@@ -215,7 +219,7 @@ var ProductApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _ProductsViewModel["default"];
+      var returnType = _ProductModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/products', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -235,7 +239,7 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductsViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModelGetAllModel}
      */
 
   }, {
@@ -249,7 +253,7 @@ var ProductApi = /*#__PURE__*/function () {
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
+     * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
 
@@ -270,7 +274,7 @@ var ProductApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -279,7 +283,7 @@ var ProductApi = /*#__PURE__*/function () {
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProductCommand} opts.productCommand Represents the request with the product information to update.
+     * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
 

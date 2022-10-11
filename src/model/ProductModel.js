@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import AccountGroup from './AccountGroup';
 import AdditionalFields from './AdditionalFields';
+import KeysProductsViewModel from './KeysProductsViewModel';
 import Metadata from './Metadata';
 import PriceListViewModel from './PriceListViewModel';
 import Tax from './Tax';
@@ -30,8 +31,8 @@ class ProductModel {
      * Constructs a new <code>ProductModel</code>.
      * @alias module:model/ProductModel
      */
-    constructor() { 
-        
+    constructor() {
+
         ProductModel.initialize(this);
     }
 
@@ -40,7 +41,7 @@ class ProductModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj) {
     }
 
     /**
@@ -92,6 +93,9 @@ class ProductModel {
             }
             if (data.hasOwnProperty('unit')) {
                 obj['unit'] = UnitProductsViewModel.constructFromObject(data['unit']);
+            }
+            if (data.hasOwnProperty('key')) {
+                obj['key'] = KeysProductsViewModel.constructFromObject(data['key']);
             }
             if (data.hasOwnProperty('unit_label')) {
                 obj['unit_label'] = ApiClient.convertToType(data['unit_label'], 'String');
@@ -185,6 +189,11 @@ ProductModel.prototype['prices'] = undefined;
  * @member {module:model/UnitProductsViewModel} unit
  */
 ProductModel.prototype['unit'] = undefined;
+
+/**
+ * @member {module:model/KeysProductsViewModel} key
+ */
+ProductModel.prototype['key'] = undefined;
 
 /**
  * @member {String} unit_label

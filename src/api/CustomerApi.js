@@ -13,10 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
-import CreateCustomerCommand from '../model/CreateCustomerCommand';
+import CreateCustomerCommandCountry from '../model/CreateCustomerCommandCountry';
 import CustomerDeleteViewModel from '../model/CustomerDeleteViewModel';
 import CustomerViewModel from '../model/CustomerViewModel';
-import CustomersViewModel from '../model/CustomersViewModel';
+import ErrorResponse from '../model/ErrorResponse';
+import UpdateCustomerCommand from '../model/UpdateCustomerCommand';
 
 /**
 * Customer service.
@@ -41,7 +42,7 @@ export default class CustomerApi {
     /**
      * Creates a customer.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
     createCustomerWithHttpInfo(opts) {
@@ -58,7 +59,7 @@ export default class CustomerApi {
       };
 
       let authNames = ['Bearer'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = CustomerViewModel;
       return this.apiClient.callApi(
@@ -71,7 +72,7 @@ export default class CustomerApi {
     /**
      * Creates a customer.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
     createCustomer(opts) {
@@ -190,7 +191,7 @@ export default class CustomerApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomersViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
     getCustomersWithHttpInfo(opts) {
       opts = opts || {};
@@ -221,7 +222,7 @@ export default class CustomerApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = CustomersViewModel;
+      let returnType = CustomerViewModel;
       return this.apiClient.callApi(
         '/v1/customers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -245,7 +246,7 @@ export default class CustomerApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomersViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
     getCustomers(opts) {
       return this.getCustomersWithHttpInfo(opts)
@@ -259,7 +260,7 @@ export default class CustomerApi {
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
     updateCustomerWithHttpInfo(id, opts) {
@@ -281,7 +282,7 @@ export default class CustomerApi {
       };
 
       let authNames = ['Bearer'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = CustomerViewModel;
       return this.apiClient.callApi(
@@ -295,7 +296,7 @@ export default class CustomerApi {
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateCustomerCommand} opts.createCustomerCommand Represents the request with the customer information.
+     * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
     updateCustomer(id, opts) {

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | [optional] 
 **document** | [**DocumentModel**](DocumentModel.md) |  | [optional] 
+**prefix** | **String** | The use of prefix is to identify each invoice resolution that the company has | [optional] 
 **number** | **Number** | Represents the sequential number of the document,   this number is required depending of document type. | [optional] 
 **name** | **String** | Contains information about document type,   document type Id, and the sequential number of the document.  For example, &#39;FV-2-22&#39; indicates that its document type is an &#39;invoice&#39;,  its document type id is &#39;2&#39; and its sequential number is &#39;22&#39;. | [optional] 
 **date** | **String** | Represents the date of the document. This format must be &#39;yyyy-MM-dd&#39;.  For example, &#39;2021-10-10&#39; to indicate the date &#39;October 10th, 2021&#39;. | [optional] 
@@ -26,5 +27,6 @@ Name | Type | Description | Notes
 **stamp** | [**StampViewModel**](StampViewModel.md) |  | [optional] 
 **mail** | [**MailViewModel**](MailViewModel.md) |  | [optional] 
 **metadata** | [**Metadata**](Metadata.md) |  | [optional] 
+**annulled** | **Boolean** |  | [optional] 
 
 
