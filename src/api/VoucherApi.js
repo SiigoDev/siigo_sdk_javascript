@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import CreateVoucherCommand from '../model/CreateVoucherCommand';
 import VoucherViewModel from '../model/VoucherViewModel';
-import VouchersViewModel from '../model/VouchersViewModel';
+import VoucherViewModelGetAllModel from '../model/VoucherViewModelGetAllModel';
 
 /**
 * Voucher service.
@@ -139,7 +139,7 @@ export default class VoucherApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VouchersViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModelGetAllModel} and HTTP response
      */
     getVouchersWithHttpInfo(opts) {
       opts = opts || {};
@@ -166,7 +166,7 @@ export default class VoucherApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = VouchersViewModel;
+      let returnType = VoucherViewModelGetAllModel;
       return this.apiClient.callApi(
         '/v1/vouchers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -186,7 +186,7 @@ export default class VoucherApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VouchersViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModelGetAllModel}
      */
     getVouchers(opts) {
       return this.getVouchersWithHttpInfo(opts)

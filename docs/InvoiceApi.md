@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 
 ## getInvoices
 
-> InvoicesViewModel getInvoices(opts)
+> InvoiceViewModelGetAllModel getInvoices(opts)
 
 Returns a paginated list of invoices.
 
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicesViewModel**](InvoicesViewModel.md)
+[**InvoiceViewModelGetAllModel**](InvoiceViewModelGetAllModel.md)
 
 ### Authorization
 

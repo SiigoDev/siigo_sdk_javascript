@@ -19,7 +19,7 @@ var _CreditNotePdfViewModel = _interopRequireDefault(require("../model/CreditNot
 
 var _CreditNoteViewModel = _interopRequireDefault(require("../model/CreditNoteViewModel"));
 
-var _CreditNotesViewModel = _interopRequireDefault(require("../model/CreditNotesViewModel"));
+var _CreditNoteViewModelGetAllModel = _interopRequireDefault(require("../model/CreditNoteViewModelGetAllModel"));
 
 /**
  * Siigo API
@@ -180,7 +180,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNotesViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNoteViewModelGetAllModel} and HTTP response
      */
 
   }, {
@@ -205,7 +205,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _CreditNotesViewModel["default"];
+      var returnType = _CreditNoteViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/credit-notes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -220,7 +220,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNotesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNoteViewModelGetAllModel}
      */
 
   }, {

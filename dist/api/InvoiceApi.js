@@ -25,7 +25,7 @@ var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfVi
 
 var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel"));
 
-var _InvoicesViewModel = _interopRequireDefault(require("../model/InvoicesViewModel"));
+var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/InvoiceViewModelGetAllModel"));
 
 var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
 
@@ -313,7 +313,7 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoicesViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModelGetAllModel} and HTTP response
      */
 
   }, {
@@ -341,7 +341,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _InvoicesViewModel["default"];
+      var returnType = _InvoiceViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/invoices', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -359,7 +359,7 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoicesViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModelGetAllModel}
      */
 
   }, {
