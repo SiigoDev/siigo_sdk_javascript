@@ -2,7 +2,9 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**annulInvoice**](InvoiceApi.md#annulInvoice) | **POST** /v1/invoices/{id}/annul | Annul the Invoice by GUID.
 [**createInvoice**](InvoiceApi.md#createInvoice) | **POST** /v1/invoices | Creates an invoice.
+[**deleteInvoice**](InvoiceApi.md#deleteInvoice) | **DELETE** /v1/invoices/{id} | Delete the Invoice by GUID.
 [**getElectronicInvoiceErrors**](InvoiceApi.md#getElectronicInvoiceErrors) | **GET** /v1/invoices/{id}/stamp/errors | Returns the errors list for a rejected electronic invoice by GUID.
 [**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 [**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
@@ -11,6 +13,69 @@ Method | HTTP request | Description
 [**updateInvoice**](InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 
 
+
+
+## annulInvoice
+
+> InvoiceDeleteViewModel annulInvoice(id)
+
+Annul the Invoice by GUID.
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+apiInstance.annulInvoice(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+    const data = await apiInstance.annulInvoice(id);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+
+### Return type
+
+[**InvoiceDeleteViewModel**](InvoiceDeleteViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## createInvoice
@@ -72,7 +137,70 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## deleteInvoice
+
+> InvoiceDeleteViewModel deleteInvoice(id)
+
+Delete the Invoice by GUID.
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+apiInstance.deleteInvoice(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+
+    const data = await apiInstance.deleteInvoice(id);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+
+### Return type
+
+[**InvoiceDeleteViewModel**](InvoiceDeleteViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
 
@@ -267,7 +395,7 @@ Name | Type | Description  | Notes
 
 ## getInvoices
 
-> InvoicesViewModel getInvoices(opts)
+> InvoiceViewModelGetAllModel getInvoices(opts)
 
 Returns a paginated list of invoices.
 
@@ -353,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicesViewModel**](InvoicesViewModel.md)
+[**InvoiceViewModelGetAllModel**](InvoiceViewModelGetAllModel.md)
 
 ### Authorization
 
@@ -427,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 
 
@@ -493,6 +621,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 

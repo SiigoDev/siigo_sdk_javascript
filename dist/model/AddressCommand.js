@@ -77,6 +77,26 @@ var AddressCommand = /*#__PURE__*/function () {
         if (data.hasOwnProperty('postal_code')) {
           obj['postal_code'] = _ApiClient["default"].convertToType(data['postal_code'], 'String');
         }
+
+        if (data.hasOwnProperty('street')) {
+          obj['street'] = _ApiClient["default"].convertToType(data['street'], 'String');
+        }
+
+        if (data.hasOwnProperty('interior_number')) {
+          obj['interior_number'] = _ApiClient["default"].convertToType(data['interior_number'], 'String');
+        }
+
+        if (data.hasOwnProperty('exterior_number')) {
+          obj['exterior_number'] = _ApiClient["default"].convertToType(data['exterior_number'], 'String');
+        }
+
+        if (data.hasOwnProperty('colony')) {
+          obj['colony'] = _ApiClient["default"].convertToType(data['colony'], 'String');
+        }
+
+        if (data.hasOwnProperty('locality')) {
+          obj['locality'] = _ApiClient["default"].convertToType(data['locality'], 'String');
+        }
       }
 
       return obj;
@@ -102,5 +122,35 @@ AddressCommand.prototype['city'] = undefined;
  */
 
 AddressCommand.prototype['postal_code'] = undefined;
+/**
+ * Represents the street of customer.
+ * @member {String} street
+ */
+
+AddressCommand.prototype['street'] = undefined;
+/**
+ * Represents the interior number of customer.
+ * @member {String} interior_number
+ */
+
+AddressCommand.prototype['interior_number'] = undefined;
+/**
+ * Represents the exterior number of customer.
+ * @member {String} exterior_number
+ */
+
+AddressCommand.prototype['exterior_number'] = undefined;
+/**
+ * Represents the colony of customer.
+ * @member {String} colony
+ */
+
+AddressCommand.prototype['colony'] = undefined;
+/**
+ * Represents the locality of customer.
+ * @member {String} locality
+ */
+
+AddressCommand.prototype['locality'] = undefined;
 var _default = AddressCommand;
 exports["default"] = _default;

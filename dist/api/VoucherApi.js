@@ -17,7 +17,7 @@ var _CreateVoucherCommand = _interopRequireDefault(require("../model/CreateVouch
 
 var _VoucherViewModel = _interopRequireDefault(require("../model/VoucherViewModel"));
 
-var _VouchersViewModel = _interopRequireDefault(require("../model/VouchersViewModel"));
+var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/VoucherViewModelGetAllModel"));
 
 /**
  * Siigo API
@@ -67,7 +67,7 @@ var VoucherApi = /*#__PURE__*/function () {
       var headerParams = {};
       var formParams = {};
       var authNames = ['Bearer'];
-      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       var accepts = ['text/plain', 'application/json', 'text/json'];
       var returnType = _VoucherViewModel["default"];
       return this.apiClient.callApi('/v1/vouchers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
@@ -138,7 +138,7 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VouchersViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModelGetAllModel} and HTTP response
      */
 
   }, {
@@ -163,7 +163,7 @@ var VoucherApi = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _VouchersViewModel["default"];
+      var returnType = _VoucherViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/vouchers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -178,7 +178,7 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VouchersViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModelGetAllModel}
      */
 
   }, {

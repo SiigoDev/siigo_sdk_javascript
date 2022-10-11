@@ -24,8 +24,8 @@ class DocumentTypeViewModel {
      * Constructs a new <code>DocumentTypeViewModel</code>.
      * @alias module:model/DocumentTypeViewModel
      */
-    constructor() { 
-        
+    constructor() {
+
         DocumentTypeViewModel.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class DocumentTypeViewModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj) {
     }
 
     /**
@@ -122,6 +122,9 @@ class DocumentTypeViewModel {
             }
             if (data.hasOwnProperty('global_charges')) {
                 obj['global_charges'] = ApiClient.convertToType(data['global_charges'], [DocumentTypeTaxModel]);
+            }
+            if (data.hasOwnProperty('i_s_r')) {
+                obj['i_s_r'] = ApiClient.convertToType(data['i_s_r'], 'Boolean');
             }
         }
         return obj;
@@ -279,6 +282,12 @@ DocumentTypeViewModel.prototype['global_discounts'] = undefined;
  * @member {Array.<module:model/DocumentTypeTaxModel>} global_charges
  */
 DocumentTypeViewModel.prototype['global_charges'] = undefined;
+
+/**
+ * Represent if the document allows ISR. This field is only for Mexico.
+ * @member {Boolean} i_s_r
+ */
+DocumentTypeViewModel.prototype['i_s_r'] = undefined;
 
 
 

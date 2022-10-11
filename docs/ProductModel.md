@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **taxes** | [**[Tax]**](Tax.md) |  | [optional] 
 **prices** | [**[PriceListViewModel]**](PriceListViewModel.md) |  | [optional] 
 **unit** | [**UnitProductsViewModel**](UnitProductsViewModel.md) |  | [optional] 
+**key** | [**KeysProductsViewModel**](KeysProductsViewModel.md) |  | [optional] 
 **unitLabel** | **String** |  | [optional] 
 **reference** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 

@@ -26,7 +26,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.ProductApi();
 
-let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
+let opts = new SiigoApi.CreateProductCommand(); // CreateProductCommand | Represents the request with the product information.
 
 apiInstance.createProduct(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +42,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
-    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information.
+    let opts = new SiigoApi.CreateProductCommand(); // CreateProductCommand | Represents the request with the product information.
 
     const data = await apiInstance.createProduct(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -58,7 +58,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productCommand** | [**ProductCommand**](ProductCommand.md)| Represents the request with the product information. | [optional] 
+ **createProductCommand** | [**CreateProductCommand**](CreateProductCommand.md)| Represents the request with the product information. | [optional] 
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## getProducts
 
-> ProductsViewModel getProducts(opts)
+> ProductModelGetAllModel getProducts(opts)
 
 Returns a paginated list of products.
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductsViewModel**](ProductsViewModel.md)
+[**ProductModelGetAllModel**](ProductModelGetAllModel.md)
 
 ### Authorization
 
@@ -322,7 +322,7 @@ import * as SiigoApi from 'siigo_api';
 let apiInstance = new SiigoApi.ProductApi();
 
 let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
+let opts = new SiigoApi.UpdateProductCommand(); // UpdateProductCommand | Represents the request with the product information to update.
 
 apiInstance.updateProduct(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -339,7 +339,7 @@ async function main(){
   try {
     let apiInstance = new SiigoApi.ProductApi();
     let id = "id_example"; // String | Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
-    let opts = new SiigoApi.ProductCommand(); // ProductCommand | Represents the request with the product information to update.
+    let opts = new SiigoApi.UpdateProductCommand(); // UpdateProductCommand | Represents the request with the product information to update.
 
     const data = await apiInstance.updateProduct(id, opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -356,7 +356,7 @@ async function main(){
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
- **productCommand** | [**ProductCommand**](ProductCommand.md)| Represents the request with the product information to update. | [optional] 
+ **updateProductCommand** | [**UpdateProductCommand**](UpdateProductCommand.md)| Represents the request with the product information to update. | [optional] 
 
 ### Return type
 
@@ -368,6 +368,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 

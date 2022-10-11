@@ -17,6 +17,8 @@ var _AccountGroup = _interopRequireDefault(require("./AccountGroup"));
 
 var _AdditionalFields = _interopRequireDefault(require("./AdditionalFields"));
 
+var _KeysProductsViewModel = _interopRequireDefault(require("./KeysProductsViewModel"));
+
 var _Metadata = _interopRequireDefault(require("./Metadata"));
 
 var _PriceListViewModel = _interopRequireDefault(require("./PriceListViewModel"));
@@ -63,7 +65,7 @@ var ProductModel = /*#__PURE__*/function () {
 
   (0, _createClass2["default"])(ProductModel, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj) { }
     /**
      * Constructs a <code>ProductModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -128,6 +130,10 @@ var ProductModel = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('unit')) {
           obj['unit'] = _UnitProductsViewModel["default"].constructFromObject(data['unit']);
+        }
+
+        if (data.hasOwnProperty('key')) {
+          obj['key'] = _KeysProductsViewModel["default"].constructFromObject(data['key']);
         }
 
         if (data.hasOwnProperty('unit_label')) {
@@ -230,6 +236,11 @@ ProductModel.prototype['prices'] = undefined;
  */
 
 ProductModel.prototype['unit'] = undefined;
+/**
+ * @member {module:model/KeysProductsViewModel} key
+ */
+
+ProductModel.prototype['key'] = undefined;
 /**
  * @member {String} unit_label
  */

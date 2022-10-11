@@ -66,6 +66,9 @@ class ItemsCommand {
             if (data.hasOwnProperty('taxed_price')) {
                 obj['taxed_price'] = ApiClient.convertToType(data['taxed_price'], 'Number');
             }
+            if (data.hasOwnProperty('total_price')) {
+                obj['total_price'] = ApiClient.convertToType(data['total_price'], 'Number');
+            }
             if (data.hasOwnProperty('discount')) {
                 obj['discount'] = ApiClient.convertToType(data['discount'], 'Number');
             }
@@ -122,13 +125,19 @@ ItemsCommand.prototype['price'] = undefined;
 ItemsCommand.prototype['taxed_price'] = undefined;
 
 /**
+ * Represents the total price of item with the tax/disc included.
+ * @member {Number} total_price
+ */
+ItemsCommand.prototype['total_price'] = undefined;
+
+/**
  * Represents the numerical percentage of the discount.  For example, '13' represents 13%.
  * @member {Number} discount
  */
 ItemsCommand.prototype['discount'] = undefined;
 
 /**
- * Represents the Id of the seller associated with the invoice,   For example, the id '629' can represent a seller called 'Micke'.
+ * Represents the Id of the seller associated with the invoice,  For example, the id '629' can represent a seller called 'Micke'.
  * @member {Number} seller
  */
 ItemsCommand.prototype['seller'] = undefined;

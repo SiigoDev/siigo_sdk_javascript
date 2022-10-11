@@ -109,6 +109,10 @@ var ItemsModel = /*#__PURE__*/function () {
         if (data.hasOwnProperty('total')) {
           obj['total'] = _ApiClient["default"].convertToType(data['total'], 'Number');
         }
+
+        if (data.hasOwnProperty('vat_excluded')) {
+          obj['vat_excluded'] = _ApiClient["default"].convertToType(data['vat_excluded'], 'Boolean');
+        }
       }
 
       return obj;
@@ -175,5 +179,10 @@ ItemsModel.prototype['warehouse'] = undefined;
  */
 
 ItemsModel.prototype['total'] = undefined;
+/**
+ * @member {Boolean} vat_excluded
+ */
+
+ItemsModel.prototype['vat_excluded'] = undefined;
 var _default = ItemsModel;
 exports["default"] = _default;
