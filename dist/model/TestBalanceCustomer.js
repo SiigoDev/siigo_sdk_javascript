@@ -27,18 +27,18 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  */
 
 /**
- * The InvoiceCustomerModel model module.
- * @module model/InvoiceCustomerModel
+ * The TestBalanceCustomer model module.
+ * @module model/TestBalanceCustomer
  * @version v1
  */
-var InvoiceCustomerModel = /*#__PURE__*/function () {
+var TestBalanceCustomer = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>InvoiceCustomerModel</code>.
-   * @alias module:model/InvoiceCustomerModel
+   * Constructs a new <code>TestBalanceCustomer</code>.
+   * @alias module:model/TestBalanceCustomer
    */
-  function InvoiceCustomerModel() {
-    (0, _classCallCheck2["default"])(this, InvoiceCustomerModel);
-    InvoiceCustomerModel.initialize(this);
+  function TestBalanceCustomer() {
+    (0, _classCallCheck2["default"])(this, TestBalanceCustomer);
+    TestBalanceCustomer.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -47,33 +47,25 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
    */
 
 
-  (0, _createClass2["default"])(InvoiceCustomerModel, null, [{
+  (0, _createClass2["default"])(TestBalanceCustomer, null, [{
     key: "initialize",
     value: function initialize(obj) {}
     /**
-     * Constructs a <code>InvoiceCustomerModel</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TestBalanceCustomer</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InvoiceCustomerModel} obj Optional instance to populate.
-     * @return {module:model/InvoiceCustomerModel} The populated <code>InvoiceCustomerModel</code> instance.
+     * @param {module:model/TestBalanceCustomer} obj Optional instance to populate.
+     * @return {module:model/TestBalanceCustomer} The populated <code>TestBalanceCustomer</code> instance.
      */
 
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new InvoiceCustomerModel();
-
-        if (data.hasOwnProperty('id')) {
-          obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
-        }
+        obj = obj || new TestBalanceCustomer();
 
         if (data.hasOwnProperty('identification')) {
           obj['identification'] = _ApiClient["default"].convertToType(data['identification'], 'String');
-        }
-
-        if (data.hasOwnProperty('rfc_id')) {
-          obj['rfc_id'] = _ApiClient["default"].convertToType(data['rfc_id'], 'String');
         }
 
         if (data.hasOwnProperty('branch_office')) {
@@ -84,32 +76,18 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
       return obj;
     }
   }]);
-  return InvoiceCustomerModel;
+  return TestBalanceCustomer;
 }();
 /**
- * Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
- * @member {String} id
- */
-
-
-InvoiceCustomerModel.prototype['id'] = undefined;
-/**
- * Represents the identification number of customer.
  * @member {String} identification
  */
 
-InvoiceCustomerModel.prototype['identification'] = undefined;
-/**
- * Represents the identification number of customer for MX.
- * @member {String} rfc_id
- */
 
-InvoiceCustomerModel.prototype['rfc_id'] = undefined;
+TestBalanceCustomer.prototype['identification'] = undefined;
 /**
- * Represents the branch office number of the customer, default value will be 0.
  * @member {Number} branch_office
  */
 
-InvoiceCustomerModel.prototype['branch_office'] = undefined;
-var _default = InvoiceCustomerModel;
+TestBalanceCustomer.prototype['branch_office'] = undefined;
+var _default = TestBalanceCustomer;
 exports["default"] = _default;

@@ -25,6 +25,8 @@ docs/CreateCustomerCommandCountry.md
 docs/CreateInvoiceCommand.md
 docs/CreateJournalEntryCommand.md
 docs/CreateProductCommand.md
+docs/CreateTestBalanceByThirdpartyCommand.md
+docs/CreateTestBalanceCommand.md
 docs/CreateVoucherCommand.md
 docs/CreditNoteApi.md
 docs/CreditNotePdfViewModel.md
@@ -44,6 +46,8 @@ docs/DeliveryOrderCommand.md
 docs/DeliveryOrderModel.md
 docs/DianReason.md
 docs/DiscountModel.md
+docs/DocumentBalanceApi.md
+docs/DocumentBalanceViewModel.md
 docs/DocumentCommand.md
 docs/DocumentModel.md
 docs/DocumentTypeApi.md
@@ -132,6 +136,9 @@ docs/TaxApi.md
 docs/TaxViewModel.md
 docs/TaxesCommand.md
 docs/TaxesModel.md
+docs/TestBalanceApi.md
+docs/TestBalanceCustomer.md
+docs/TestBalanceResultModel.md
 docs/UnitProductsViewModel.md
 docs/UpdateCustomerCommand.md
 docs/UpdateProductCommand.md
@@ -153,6 +160,7 @@ src/api/AccountGroupApi.js
 src/api/CostCenterApi.js
 src/api/CreditNoteApi.js
 src/api/CustomerApi.js
+src/api/DocumentBalanceApi.js
 src/api/DocumentTypeApi.js
 src/api/FixedAssetsApi.js
 src/api/InvoiceApi.js
@@ -161,6 +169,7 @@ src/api/PaymentTypeApi.js
 src/api/PriceApi.js
 src/api/ProductApi.js
 src/api/TaxApi.js
+src/api/TestBalanceApi.js
 src/api/UserApi.js
 src/api/VoucherApi.js
 src/api/WarehousesApi.js
@@ -186,6 +195,8 @@ src/model/CreateCustomerCommandCountry.js
 src/model/CreateInvoiceCommand.js
 src/model/CreateJournalEntryCommand.js
 src/model/CreateProductCommand.js
+src/model/CreateTestBalanceByThirdpartyCommand.js
+src/model/CreateTestBalanceCommand.js
 src/model/CreateVoucherCommand.js
 src/model/CreditNotePdfViewModel.js
 src/model/CreditNoteViewModel.js
@@ -203,6 +214,7 @@ src/model/DeliveryOrderCommand.js
 src/model/DeliveryOrderModel.js
 src/model/DianReason.js
 src/model/DiscountModel.js
+src/model/DocumentBalanceViewModel.js
 src/model/DocumentCommand.js
 src/model/DocumentModel.js
 src/model/DocumentTypeTaxModel.js
@@ -283,6 +295,8 @@ src/model/Tax.js
 src/model/TaxViewModel.js
 src/model/TaxesCommand.js
 src/model/TaxesModel.js
+src/model/TestBalanceCustomer.js
+src/model/TestBalanceResultModel.js
 src/model/UnitProductsViewModel.js
 src/model/UpdateCustomerCommand.js
 src/model/UpdateProductCommand.js
@@ -293,12 +307,10 @@ src/model/VoucherViewModelGetAllModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
-test/api/TaxApi.spec.js
-test/model/CreateCustomerCommandCountry.spec.js
-test/model/CreditNoteViewModelGetAllModel.spec.js
-test/model/GenericPageListModel.spec.js
-test/model/InvoiceViewModelGetAllModel.spec.js
-test/model/JournalEntryViewModelGetAllModel.spec.js
-test/model/ProductModelGetAllModel.spec.js
-test/model/UpdateCustomerCommand.spec.js
-test/model/VoucherViewModelGetAllModel.spec.js
+test/api/DocumentBalanceApi.spec.js
+test/api/TestBalanceApi.spec.js
+test/model/CreateTestBalanceByThirdpartyCommand.spec.js
+test/model/CreateTestBalanceCommand.spec.js
+test/model/DocumentBalanceViewModel.spec.js
+test/model/TestBalanceCustomer.spec.js
+test/model/TestBalanceResultModel.spec.js

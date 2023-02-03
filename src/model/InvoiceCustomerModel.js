@@ -53,6 +53,9 @@ class InvoiceCustomerModel {
             if (data.hasOwnProperty('identification')) {
                 obj['identification'] = ApiClient.convertToType(data['identification'], 'String');
             }
+            if (data.hasOwnProperty('rfc_id')) {
+                obj['rfc_id'] = ApiClient.convertToType(data['rfc_id'], 'String');
+            }
             if (data.hasOwnProperty('branch_office')) {
                 obj['branch_office'] = ApiClient.convertToType(data['branch_office'], 'Number');
             }
@@ -74,6 +77,12 @@ InvoiceCustomerModel.prototype['id'] = undefined;
  * @member {String} identification
  */
 InvoiceCustomerModel.prototype['identification'] = undefined;
+
+/**
+ * Represents the identification number of customer for MX.
+ * @member {String} rfc_id
+ */
+InvoiceCustomerModel.prototype['rfc_id'] = undefined;
 
 /**
  * Represents the branch office number of the customer, default value will be 0.

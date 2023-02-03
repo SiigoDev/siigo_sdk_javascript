@@ -89,6 +89,8 @@ async function main(){
 
 
 
+
+
 ## Documentation for API Endpoints
 
 
@@ -105,6 +107,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.CustomerApi* | [**getCustomer**](docs/CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets the customer by GUID.
 *SiigoApi.CustomerApi* | [**getCustomers**](docs/CustomerApi.md#getCustomers) | **GET** /v1/customers | Returns a paginated list of customers.
 *SiigoApi.CustomerApi* | [**updateCustomer**](docs/CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates the customer by GUID.
+*SiigoApi.DocumentBalanceApi* | [**getDocumentBalances**](docs/DocumentBalanceApi.md#getDocumentBalances) | **GET** /v1/available-documents | 
 *SiigoApi.DocumentTypeApi* | [**getDocumentTypes**](docs/DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Returns a list of document types.
 *SiigoApi.FixedAssetsApi* | [**getAssetGroups**](docs/FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Returns a list of asset groups.
 *SiigoApi.FixedAssetsApi* | [**getFixedAssets**](docs/FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Returns a list of fixed assets.
@@ -128,6 +131,8 @@ Class | Method | HTTP request | Description
 *SiigoApi.ProductApi* | [**getProducts**](docs/ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
 *SiigoApi.ProductApi* | [**updateProduct**](docs/ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates the product by GUID.
 *SiigoApi.TaxApi* | [**getTaxes**](docs/TaxApi.md#getTaxes) | **GET** /v1/taxes | Returns a list of taxes.
+*SiigoApi.TestBalanceApi* | [**createTestBalance**](docs/TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | 
+*SiigoApi.TestBalanceApi* | [**createTestBalanceByThirdparty**](docs/TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | 
 *SiigoApi.UserApi* | [**getUsers**](docs/UserApi.md#getUsers) | **GET** /v1/users | Returns a paginated list of users.
 *SiigoApi.VoucherApi* | [**createVoucher**](docs/VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
 *SiigoApi.VoucherApi* | [**getVoucher**](docs/VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
@@ -158,6 +163,8 @@ Class | Method | HTTP request | Description
  - [SiigoApi.CreateInvoiceCommand](docs/CreateInvoiceCommand.md)
  - [SiigoApi.CreateJournalEntryCommand](docs/CreateJournalEntryCommand.md)
  - [SiigoApi.CreateProductCommand](docs/CreateProductCommand.md)
+ - [SiigoApi.CreateTestBalanceByThirdpartyCommand](docs/CreateTestBalanceByThirdpartyCommand.md)
+ - [SiigoApi.CreateTestBalanceCommand](docs/CreateTestBalanceCommand.md)
  - [SiigoApi.CreateVoucherCommand](docs/CreateVoucherCommand.md)
  - [SiigoApi.CreditNotePdfViewModel](docs/CreditNotePdfViewModel.md)
  - [SiigoApi.CreditNoteViewModel](docs/CreditNoteViewModel.md)
@@ -175,6 +182,7 @@ Class | Method | HTTP request | Description
  - [SiigoApi.DeliveryOrderModel](docs/DeliveryOrderModel.md)
  - [SiigoApi.DianReason](docs/DianReason.md)
  - [SiigoApi.DiscountModel](docs/DiscountModel.md)
+ - [SiigoApi.DocumentBalanceViewModel](docs/DocumentBalanceViewModel.md)
  - [SiigoApi.DocumentCommand](docs/DocumentCommand.md)
  - [SiigoApi.DocumentModel](docs/DocumentModel.md)
  - [SiigoApi.DocumentTypeTaxModel](docs/DocumentTypeTaxModel.md)
@@ -255,6 +263,8 @@ Class | Method | HTTP request | Description
  - [SiigoApi.TaxViewModel](docs/TaxViewModel.md)
  - [SiigoApi.TaxesCommand](docs/TaxesCommand.md)
  - [SiigoApi.TaxesModel](docs/TaxesModel.md)
+ - [SiigoApi.TestBalanceCustomer](docs/TestBalanceCustomer.md)
+ - [SiigoApi.TestBalanceResultModel](docs/TestBalanceResultModel.md)
  - [SiigoApi.UnitProductsViewModel](docs/UnitProductsViewModel.md)
  - [SiigoApi.UpdateCustomerCommand](docs/UpdateCustomerCommand.md)
  - [SiigoApi.UpdateProductCommand](docs/UpdateProductCommand.md)
