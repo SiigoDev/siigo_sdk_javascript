@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 [**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 [**getInvoices**](InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+[**sendElectronicInvoice**](InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | 
 [**sendInvoiceByEmail**](InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
 [**updateInvoice**](InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 
@@ -490,6 +491,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sendElectronicInvoice
+
+> SendElectronicInvoiceViewModel sendElectronicInvoice(id, opts)
+
+
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.InvoiceApi();
+
+let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let opts = new SiigoApi.SendElectronicInvoiceCommand(); // SendElectronicInvoiceCommand | Cotains the email (and copy to emails) to send the electronic invoice.
+
+apiInstance.sendElectronicInvoice(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.InvoiceApi();
+    let id = "id_example"; // String | Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let opts = new SiigoApi.SendElectronicInvoiceCommand(); // SendElectronicInvoiceCommand | Cotains the email (and copy to emails) to send the electronic invoice.
+
+    const data = await apiInstance.sendElectronicInvoice(id, opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **sendElectronicInvoiceCommand** | [**SendElectronicInvoiceCommand**](SendElectronicInvoiceCommand.md)| Cotains the email (and copy to emails) to send the electronic invoice. | [optional] 
+
+### Return type
+
+[**SendElectronicInvoiceViewModel**](SendElectronicInvoiceViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 
 

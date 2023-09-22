@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **seller** | **Number** | Represents the Id of the seller associated with the invoice,  For example, the id &#39;629&#39; can represent a seller called &#39;Micke&#39;. | [optional] 
 **vatExcluded** | **Boolean** | Represents whether this product is excluded or does not to pay VAT. | [optional] 
 **taxes** | [**[TaxesCommand]**](TaxesCommand.md) | Contains a list of Ids of taxes associated to invoice. | [optional] 
+**transport** | [**ItemTransportData**](ItemTransportData.md) |  | [optional] 
 
 

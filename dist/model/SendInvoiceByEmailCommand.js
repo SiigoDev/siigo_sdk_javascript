@@ -83,20 +83,20 @@ var SendInvoiceByEmailCommand = /*#__PURE__*/function () {
   return SendInvoiceByEmailCommand;
 }();
 /**
- * Guid of the invoice.
+ * Guid of the document.
  * @member {String} guid
  */
 
 
 SendInvoiceByEmailCommand.prototype['guid'] = undefined;
 /**
- * Email address to send the invoice.
+ * Email address to send the document.
  * @member {String} mail_to
  */
 
 SendInvoiceByEmailCommand.prototype['mail_to'] = undefined;
 /**
- * Email addresses to send copies of the invoice, maximum 5 email addresses are allowed.
+ * Email addresses to send copies of the document, maximum 5 email addresses are allowed.
  * @member {String} copy_to
  */
 

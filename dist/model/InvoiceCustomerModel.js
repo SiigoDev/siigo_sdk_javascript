@@ -72,6 +72,10 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
           obj['identification'] = _ApiClient["default"].convertToType(data['identification'], 'String');
         }
 
+        if (data.hasOwnProperty('rfc_id')) {
+          obj['rfc_id'] = _ApiClient["default"].convertToType(data['rfc_id'], 'String');
+        }
+
         if (data.hasOwnProperty('branch_office')) {
           obj['branch_office'] = _ApiClient["default"].convertToType(data['branch_office'], 'Number');
         }
@@ -95,6 +99,12 @@ InvoiceCustomerModel.prototype['id'] = undefined;
  */
 
 InvoiceCustomerModel.prototype['identification'] = undefined;
+/**
+ * Represents the identification number of customer for MX.
+ * @member {String} rfc_id
+ */
+
+InvoiceCustomerModel.prototype['rfc_id'] = undefined;
 /**
  * Represents the branch office number of the customer, default value will be 0.
  * @member {Number} branch_office

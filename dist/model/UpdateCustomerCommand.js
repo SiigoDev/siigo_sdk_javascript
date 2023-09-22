@@ -148,6 +148,10 @@ var UpdateCustomerCommand = /*#__PURE__*/function () {
           obj['custom_fields'] = _ApiClient["default"].convertToType(data['custom_fields'], [_CustomFieldsCommand["default"]]);
         }
 
+        if (data.hasOwnProperty('fiscal_regime')) {
+          obj['fiscal_regime'] = _ApiClient["default"].convertToType(data['fiscal_regime'], 'String');
+        }
+
         if (data.hasOwnProperty('guid')) {
           obj['guid'] = _ApiClient["default"].convertToType(data['guid'], 'String');
         }
@@ -265,6 +269,12 @@ UpdateCustomerCommand.prototype['related_users'] = undefined;
  */
 
 UpdateCustomerCommand.prototype['custom_fields'] = undefined;
+/**
+ * Represents fiscal Regime.
+ * @member {String} fiscal_regime
+ */
+
+UpdateCustomerCommand.prototype['fiscal_regime'] = undefined;
 /**
  * Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} guid

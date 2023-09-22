@@ -78,8 +78,8 @@ var InvoiceViewModelGetAllModel = /*#__PURE__*/function () {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_InvoiceViewModel["default"]]);
         }
 
-        if (data.hasOwnProperty('__links')) {
-          obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
+        if (data.hasOwnProperty('_links')) {
+          obj['_links'] = _LinksPagination["default"].constructFromObject(data['_links']);
         }
       }
 
@@ -101,9 +101,9 @@ InvoiceViewModelGetAllModel.prototype['pagination'] = undefined;
 
 InvoiceViewModelGetAllModel.prototype['results'] = undefined;
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
 
-InvoiceViewModelGetAllModel.prototype['__links'] = undefined;
+InvoiceViewModelGetAllModel.prototype['_links'] = undefined;
 var _default = InvoiceViewModelGetAllModel;
 exports["default"] = _default;

@@ -78,8 +78,8 @@ var JournalEntryViewModelGetAllModel = /*#__PURE__*/function () {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_JournalEntryViewModel["default"]]);
         }
 
-        if (data.hasOwnProperty('__links')) {
-          obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
+        if (data.hasOwnProperty('_links')) {
+          obj['_links'] = _LinksPagination["default"].constructFromObject(data['_links']);
         }
       }
 
@@ -101,9 +101,9 @@ JournalEntryViewModelGetAllModel.prototype['pagination'] = undefined;
 
 JournalEntryViewModelGetAllModel.prototype['results'] = undefined;
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
 
-JournalEntryViewModelGetAllModel.prototype['__links'] = undefined;
+JournalEntryViewModelGetAllModel.prototype['_links'] = undefined;
 var _default = JournalEntryViewModelGetAllModel;
 exports["default"] = _default;

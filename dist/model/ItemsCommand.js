@@ -13,6 +13,8 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ItemTransportData = _interopRequireDefault(require("./ItemTransportData"));
+
 var _TaxesCommand = _interopRequireDefault(require("./TaxesCommand"));
 
 /**
@@ -109,6 +111,10 @@ var ItemsCommand = /*#__PURE__*/function () {
         if (data.hasOwnProperty('taxes')) {
           obj['taxes'] = _ApiClient["default"].convertToType(data['taxes'], [_TaxesCommand["default"]]);
         }
+
+        if (data.hasOwnProperty('transport')) {
+          obj['transport'] = _ItemTransportData["default"].constructFromObject(data['transport']);
+        }
       }
 
       return obj;
@@ -183,5 +189,10 @@ ItemsCommand.prototype['vat_excluded'] = undefined;
  */
 
 ItemsCommand.prototype['taxes'] = undefined;
+/**
+ * @member {module:model/ItemTransportData} transport
+ */
+
+ItemsCommand.prototype['transport'] = undefined;
 var _default = ItemsCommand;
 exports["default"] = _default;

@@ -56,8 +56,8 @@ class ProductModelGetAllModel {
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [ProductModel]);
             }
-            if (data.hasOwnProperty('__links')) {
-                obj['__links'] = LinksPagination.constructFromObject(data['__links']);
+            if (data.hasOwnProperty('_links')) {
+                obj['_links'] = LinksPagination.constructFromObject(data['_links']);
             }
         }
         return obj;
@@ -78,9 +78,9 @@ ProductModelGetAllModel.prototype['pagination'] = undefined;
 ProductModelGetAllModel.prototype['results'] = undefined;
 
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
-ProductModelGetAllModel.prototype['__links'] = undefined;
+ProductModelGetAllModel.prototype['_links'] = undefined;
 
 
 

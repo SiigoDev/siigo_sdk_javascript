@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ItemTransportData from './ItemTransportData';
 import TaxesCommand from './TaxesCommand';
 
 /**
@@ -80,6 +81,9 @@ class ItemsCommand {
             }
             if (data.hasOwnProperty('taxes')) {
                 obj['taxes'] = ApiClient.convertToType(data['taxes'], [TaxesCommand]);
+            }
+            if (data.hasOwnProperty('transport')) {
+                obj['transport'] = ItemTransportData.constructFromObject(data['transport']);
             }
         }
         return obj;
@@ -153,6 +157,11 @@ ItemsCommand.prototype['vat_excluded'] = undefined;
  * @member {Array.<module:model/TaxesCommand>} taxes
  */
 ItemsCommand.prototype['taxes'] = undefined;
+
+/**
+ * @member {module:model/ItemTransportData} transport
+ */
+ItemsCommand.prototype['transport'] = undefined;
 
 
 

@@ -5,6 +5,8 @@ Method | HTTP request | Description
 [**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
 [**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
 [**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
+[**sendElectronicVoucher**](VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | 
+[**sendVoucherByEmail**](VoucherApi.md#sendVoucherByEmail) | **POST** /v1/vouchers/{id}/mail | Send an invoice by email
 
 
 
@@ -223,5 +225,137 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sendElectronicVoucher
+
+> SendElectronicVoucherViewModel sendElectronicVoucher(id, opts)
+
+
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.VoucherApi();
+
+let id = "id_example"; // String | 
+let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | 
+
+apiInstance.sendElectronicVoucher(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.VoucherApi();
+    let id = "id_example"; // String | 
+    let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | 
+
+    const data = await apiInstance.sendElectronicVoucher(id, opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **sendElectronicVoucherCommand** | [**SendElectronicVoucherCommand**](SendElectronicVoucherCommand.md)|  | [optional] 
+
+### Return type
+
+[**SendElectronicVoucherViewModel**](SendElectronicVoucherViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+
+## sendVoucherByEmail
+
+> MailViewModel sendVoucherByEmail(id, opts)
+
+Send an invoice by email
+
+### Example
+
+#### - calls with promises
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+let apiInstance = new SiigoApi.VoucherApi();
+
+let id = "id_example"; // String | Represents the Guid of the Invoice.
+let opts = new SiigoApi.SendVoucherByEmailCommand(); // SendVoucherByEmailCommand | Contains the parameters for sending the Email.
+
+apiInstance.sendVoucherByEmail(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+```
+#### - calls with async await
+
+```javascript
+import * as SiigoApi from 'siigo_api';
+
+async function main(){
+  try {
+    let apiInstance = new SiigoApi.VoucherApi();
+    let id = "id_example"; // String | Represents the Guid of the Invoice.
+    let opts = new SiigoApi.SendVoucherByEmailCommand(); // SendVoucherByEmailCommand | Contains the parameters for sending the Email.
+
+    const data = await apiInstance.sendVoucherByEmail(id, opts);
+    console.log('API called successfully. Returned data: ' + data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Represents the Guid of the Invoice. | 
+ **sendVoucherByEmailCommand** | [**SendVoucherByEmailCommand**](SendVoucherByEmailCommand.md)| Contains the parameters for sending the Email. | [optional] 
+
+### Return type
+
+[**MailViewModel**](MailViewModel.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: text/plain, application/json, text/json
 

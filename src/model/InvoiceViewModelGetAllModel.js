@@ -56,8 +56,8 @@ class InvoiceViewModelGetAllModel {
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [InvoiceViewModel]);
             }
-            if (data.hasOwnProperty('__links')) {
-                obj['__links'] = LinksPagination.constructFromObject(data['__links']);
+            if (data.hasOwnProperty('_links')) {
+                obj['_links'] = LinksPagination.constructFromObject(data['_links']);
             }
         }
         return obj;
@@ -78,9 +78,9 @@ InvoiceViewModelGetAllModel.prototype['pagination'] = undefined;
 InvoiceViewModelGetAllModel.prototype['results'] = undefined;
 
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
-InvoiceViewModelGetAllModel.prototype['__links'] = undefined;
+InvoiceViewModelGetAllModel.prototype['_links'] = undefined;
 
 
 

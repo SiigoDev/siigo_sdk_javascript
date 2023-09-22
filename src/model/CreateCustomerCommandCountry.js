@@ -107,6 +107,9 @@ class CreateCustomerCommandCountry {
             if (data.hasOwnProperty('custom_fields')) {
                 obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], [CustomFieldsCommand]);
             }
+            if (data.hasOwnProperty('fiscal_regime')) {
+                obj['fiscal_regime'] = ApiClient.convertToType(data['fiscal_regime'], 'String');
+            }
         }
         return obj;
     }
@@ -219,6 +222,12 @@ CreateCustomerCommandCountry.prototype['related_users'] = undefined;
  * @member {Array.<module:model/CustomFieldsCommand>} custom_fields
  */
 CreateCustomerCommandCountry.prototype['custom_fields'] = undefined;
+
+/**
+ * Represents fiscal Regime.
+ * @member {String} fiscal_regime
+ */
+CreateCustomerCommandCountry.prototype['fiscal_regime'] = undefined;
 
 
 
