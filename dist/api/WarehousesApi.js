@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _WarehouseViewModel = _interopRequireDefault(require("../model/WarehouseViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _WarehouseViewModel = _interopRequireDefault(require("../model/WarehouseView
  * Do not edit the class manually.
  *
  */
-
 /**
 * Warehouses service.
 * @module api/WarehousesApi
 * @version v1
 */
-var WarehousesApi = /*#__PURE__*/function () {
+var WarehousesApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new WarehousesApi. 
   * @alias module:api/WarehousesApi
@@ -45,12 +38,11 @@ var WarehousesApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, WarehousesApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of warehouse.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WarehouseViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(WarehousesApi, [{
     key: "getWarehouseWithHttpInfo",
     value: function getWarehouseWithHttpInfo() {
@@ -65,11 +57,11 @@ var WarehousesApi = /*#__PURE__*/function () {
       var returnType = [_WarehouseViewModel["default"]];
       return this.apiClient.callApi('/v1/warehouses', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of warehouse.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WarehouseViewModel>}
      */
-
   }, {
     key: "getWarehouse",
     value: function getWarehouse() {
@@ -80,5 +72,3 @@ var WarehousesApi = /*#__PURE__*/function () {
   }]);
   return WarehousesApi;
 }();
-
-exports["default"] = WarehousesApi;

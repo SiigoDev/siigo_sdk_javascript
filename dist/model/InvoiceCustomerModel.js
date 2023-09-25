@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The InvoiceCustomerModel model module.
  * @module model/InvoiceCustomerModel
@@ -40,16 +34,16 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, InvoiceCustomerModel);
     InvoiceCustomerModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(InvoiceCustomerModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>InvoiceCustomerModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +51,24 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
      * @param {module:model/InvoiceCustomerModel} obj Optional instance to populate.
      * @return {module:model/InvoiceCustomerModel} The populated <code>InvoiceCustomerModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new InvoiceCustomerModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
-
         if (data.hasOwnProperty('identification')) {
           obj['identification'] = _ApiClient["default"].convertToType(data['identification'], 'String');
         }
-
         if (data.hasOwnProperty('rfc_id')) {
           obj['rfc_id'] = _ApiClient["default"].convertToType(data['rfc_id'], 'String');
         }
-
         if (data.hasOwnProperty('branch_office')) {
           obj['branch_office'] = _ApiClient["default"].convertToType(data['branch_office'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -90,26 +78,23 @@ var InvoiceCustomerModel = /*#__PURE__*/function () {
  * Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
-
-
 InvoiceCustomerModel.prototype['id'] = undefined;
+
 /**
  * Represents the identification number of customer.
  * @member {String} identification
  */
-
 InvoiceCustomerModel.prototype['identification'] = undefined;
+
 /**
  * Represents the identification number of customer for MX.
  * @member {String} rfc_id
  */
-
 InvoiceCustomerModel.prototype['rfc_id'] = undefined;
+
 /**
  * Represents the branch office number of the customer, default value will be 0.
  * @member {Number} branch_office
  */
-
 InvoiceCustomerModel.prototype['branch_office'] = undefined;
-var _default = InvoiceCustomerModel;
-exports["default"] = _default;
+var _default = exports["default"] = InvoiceCustomerModel;

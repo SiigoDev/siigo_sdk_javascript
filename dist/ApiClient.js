@@ -1,26 +1,17 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
-
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-
 var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _superagent = _interopRequireDefault(require("superagent"));
-
 var _querystring = _interopRequireDefault(require("querystring"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -33,12 +24,10 @@ var _querystring = _interopRequireDefault(require("querystring"));
  * Do not edit the class manually.
  *
  */
-
 /**
 * @module ApiClient
 * @version v1
 */
-
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
 * application to use this class directly - the *Api and model classes provide the public API for the service. The
@@ -54,10 +43,9 @@ var ApiClient = /*#__PURE__*/function () {
    */
   function ApiClient(_ref) {
     var _ref$basePath = _ref.basePath,
-        basePath = _ref$basePath === void 0 ? 'http://localhost' : _ref$basePath,
-        urlSignIn = _ref.urlSignIn;
+      basePath = _ref$basePath === void 0 ? 'http://localhost' : _ref$basePath,
+      urlSignIn = _ref.urlSignIn;
     (0, _classCallCheck2["default"])(this, ApiClient);
-
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
@@ -65,97 +53,92 @@ var ApiClient = /*#__PURE__*/function () {
      */
     this.basePath = basePath.replace(/\/+$/, '');
     this.urlSignIn = urlSignIn.replace(/\/+$/, '');
+
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
-
     this.authentications = {
       'Bearer': {
         type: 'bearer'
       }
     };
+
     /**
      * The default HTTP headers to be included for all API calls.
      * @type {Array.<String>}
      * @default {}
      */
-
     this.defaultHeaders = {
       'User-Agent': 'OpenAPI-Generator/v1/Javascript'
     };
+
     /**
      * The default HTTP timeout for all API calls.
      * @type {Number}
      * @default 420000
      */
-
     this.timeout = 420000;
+
     /**
      * If set to false an additional timestamp parameter is added to all API GET calls to
      * prevent browser caching
      * @type {Boolean}
      * @default true
      */
-
     this.cache = true;
+
     /**
      * If set to true, the client will save the cookies from each server
      * response, and return them in the next request.
      * @default false
      */
-
     this.enableCookies = false;
+
     /*
      * Used to save and return cookies in a node.js (non-browser) setting,
      * if this.enableCookies is set to true.
      */
-
     if (typeof window === 'undefined') {
       this.agent = new _superagent["default"].agent();
     }
+
     /*
      * Allow user to override superagent agent
      */
-
-
     this.requestAgent = null;
+
     /*
      * Allow user to add superagent plugins
      */
-
     this.plugins = null;
   }
+
   /**
   * Returns a string representation for an actual parameter.
   * @param param The actual parameter.
   * @returns {String} The string representation of <code>param</code>.
   */
-
-
   (0, _createClass2["default"])(ApiClient, [{
     key: "paramToString",
     value: function paramToString(param) {
       if (param == undefined || param == null) {
         return '';
       }
-
       if (param instanceof Date) {
         return param.toJSON();
       }
-
       if (ApiClient.canBeJsonified(param)) {
         return JSON.stringify(param);
       }
-
       return param.toString();
     }
+
     /**
     * Returns a boolean indicating if the parameter could be JSON.stringified
     * @param param The actual parameter
     * @returns {Boolean} Flag indicating if <code>param</code> can be JSON.stringified
     */
-
   }, {
     key: "buildUrl",
     value:
@@ -169,30 +152,27 @@ var ApiClient = /*#__PURE__*/function () {
      */
     function buildUrl(path, pathParams, apiBasePath) {
       var _this = this;
-
       if (!path.match(/^\//)) {
         path = '/' + path;
       }
+      var url = this.basePath + path;
 
-      var url = this.basePath + path; // use API (operation, path) base path if defined
-
+      // use API (operation, path) base path if defined
       if (apiBasePath !== null && apiBasePath !== undefined) {
         url = apiBasePath + path;
       }
-
       url = url.replace(/\{([\w-\.]+)\}/g, function (fullMatch, key) {
         var value;
-
         if (pathParams.hasOwnProperty(key)) {
           value = _this.paramToString(pathParams[key]);
         } else {
           value = fullMatch;
         }
-
         return encodeURIComponent(value);
       });
       return url;
     }
+
     /**
     * Checks whether the given content type represents JSON.<br>
     * JSON content type examples:<br>
@@ -204,18 +184,17 @@ var ApiClient = /*#__PURE__*/function () {
     * @param {String} contentType The MIME content type to check.
     * @returns {Boolean} <code>true</code> if <code>contentType</code> represents JSON, otherwise <code>false</code>.
     */
-
   }, {
     key: "isJsonMime",
     value: function isJsonMime(contentType) {
       return Boolean(contentType != null && contentType.match(/^application\/json(;.*)?$/i));
     }
+
     /**
     * Chooses a content type from the given array, with JSON preferred; i.e. return JSON if included, otherwise return the first.
     * @param {Array.<String>} contentTypes
     * @returns {String} The chosen content type, preferring JSON.
     */
-
   }, {
     key: "jsonPreferredMime",
     value: function jsonPreferredMime(contentTypes) {
@@ -224,48 +203,45 @@ var ApiClient = /*#__PURE__*/function () {
           return contentTypes[i];
         }
       }
-
       return contentTypes[0];
     }
+
     /**
     * Checks whether the given parameter value represents file-like content.
     * @param param The parameter to check.
     * @returns {Boolean} <code>true</code> if <code>param</code> represents a file.
     */
-
   }, {
     key: "isFileParam",
     value: function isFileParam(param) {
       // fs.ReadStream in Node.js and Electron (but not in runtime like browserify)
       if (typeof require === 'function') {
         var fs;
-
         try {
           fs = require('fs');
         } catch (err) {}
-
         if (fs && fs.ReadStream && param instanceof fs.ReadStream) {
           return true;
         }
-      } // Buffer in Node.js
+      }
 
-
+      // Buffer in Node.js
       if (typeof Buffer === 'function' && param instanceof Buffer) {
-        return true;
-      } // Blob in browser
-
-
-      if (typeof Blob === 'function' && param instanceof Blob) {
-        return true;
-      } // File in browser (it seems File object is also instance of Blob, but keep this for safe)
-
-
-      if (typeof File === 'function' && param instanceof File) {
         return true;
       }
 
+      // Blob in browser
+      if (typeof Blob === 'function' && param instanceof Blob) {
+        return true;
+      }
+
+      // File in browser (it seems File object is also instance of Blob, but keep this for safe)
+      if (typeof File === 'function' && param instanceof File) {
+        return true;
+      }
       return false;
     }
+
     /**
     * Normalizes parameter values:
     * <ul>
@@ -276,16 +252,13 @@ var ApiClient = /*#__PURE__*/function () {
     * @param {Object.<String, Object>} params The parameters as object properties.
     * @returns {Object.<String, Object>} normalized parameters.
     */
-
   }, {
     key: "normalizeParams",
     value: function normalizeParams(params) {
       var newParams = {};
-
       for (var key in params) {
         if (params.hasOwnProperty(key) && params[key] != undefined && params[key] != null) {
           var value = params[key];
-
           if (this.isFileParam(value) || Array.isArray(value)) {
             newParams[key] = value;
           } else {
@@ -293,9 +266,9 @@ var ApiClient = /*#__PURE__*/function () {
           }
         }
       }
-
       return newParams;
     }
+
     /**
     * Builds a string representation of an array-type actual parameter, according to the given collection format.
     * @param {Array} param An array parameter.
@@ -303,60 +276,48 @@ var ApiClient = /*#__PURE__*/function () {
     * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
     * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
     */
-
   }, {
     key: "buildCollectionParam",
     value: function buildCollectionParam(param, collectionFormat) {
       if (param == null) {
         return null;
       }
-
       switch (collectionFormat) {
         case 'csv':
           return param.map(this.paramToString, this).join(',');
-
         case 'ssv':
           return param.map(this.paramToString, this).join(' ');
-
         case 'tsv':
           return param.map(this.paramToString, this).join('\t');
-
         case 'pipes':
           return param.map(this.paramToString, this).join('|');
-
         case 'multi':
           //return the array directly as SuperAgent will handle it as expected
           return param.map(this.paramToString, this);
-
         case 'passthrough':
           return param;
-
         default:
           throw new Error('Unknown collection format: ' + collectionFormat);
       }
     }
+
     /**
     * Applies authentication headers to the request.
     * @param {Object} request The request object created by a <code>superagent()</code> call.
     * @param {Array.<String>} authNames An array of authentication method names.
     */
-
   }, {
     key: "applyAuthToRequest",
     value: function applyAuthToRequest(request, authNames) {
       var _this2 = this;
-
       authNames.forEach(function (authName) {
         var auth = _this2.authentications[authName];
-
         switch (auth.type) {
           case 'basic':
             if (auth.username || auth.password) {
               request.auth(auth.username || '', auth.password || '');
             }
-
             break;
-
           case 'bearer':
             if (auth.accessToken) {
               var localVarBearerToken = typeof auth.accessToken === 'function' ? auth.accessToken() : auth.accessToken;
@@ -364,42 +325,35 @@ var ApiClient = /*#__PURE__*/function () {
                 'Authorization': 'Bearer ' + localVarBearerToken
               });
             }
-
             break;
-
           case 'apiKey':
             if (auth.apiKey) {
               var data = {};
-
               if (auth.apiKeyPrefix) {
                 data[auth.name] = auth.apiKeyPrefix + ' ' + auth.apiKey;
               } else {
                 data[auth.name] = auth.apiKey;
               }
-
               if (auth['in'] === 'header') {
                 request.set(data);
               } else {
                 request.query(data);
               }
             }
-
             break;
-
           case 'oauth2':
             if (auth.accessToken) {
               request.set({
                 'Authorization': 'Bearer ' + auth.accessToken
               });
             }
-
             break;
-
           default:
             throw new Error('Unknown authentication type: ' + auth.type);
         }
       });
     }
+
     /**
      * Deserializes an HTTP response body into a value of the specified type.
      * @param {Object} response A SuperAgent response object.
@@ -409,25 +363,23 @@ var ApiClient = /*#__PURE__*/function () {
      * all properties on <code>data<code> will be converted to this type.
      * @returns A value of the specified type.
      */
-
   }, {
     key: "deserialize",
     value: function deserialize(response, returnType) {
       if (response == null || returnType == null || response.status == 204) {
         return null;
-      } // Rely on SuperAgent for parsing response body.
+      }
+
+      // Rely on SuperAgent for parsing response body.
       // See http://visionmedia.github.io/superagent/#parsing-response-bodies
-
-
       var data = response.body;
-
       if (data == null || (0, _typeof2["default"])(data) === 'object' && typeof data.length === 'undefined' && !Object.keys(data).length) {
         // SuperAgent does not always produce a body; use the unparsed response as a fallback
         data = response.text;
       }
-
       return ApiClient.convertToType(data, returnType);
     }
+
     /**
      * Invokes the REST service using the supplied settings and parameters.
      * @param {String} path The base URL to invoke.
@@ -445,153 +397,133 @@ var ApiClient = /*#__PURE__*/function () {
      * @param {String} apiBasePath base path defined in the operation/path level to override the default one
      * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
      */
-
   }, {
     key: "callApi",
     value: function () {
       var _callApi = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(path, httpMethod, pathParams, queryParams, headerParams, formParams, bodyParam, authNames, contentTypes, accepts, returnType, apiBasePath) {
         var _this3 = this;
-
         var url, request, index, contentType, _formParams, key, _formParamsValue, accept;
-
         return _regenerator["default"].wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                url = this.buildUrl(path, pathParams, apiBasePath);
-                request = (0, _superagent["default"])(httpMethod, url);
-
-                if (this.plugins !== null) {
-                  for (index in this.plugins) {
-                    if (this.plugins.hasOwnProperty(index)) {
-                      request.use(this.plugins[index]);
-                    }
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              url = this.buildUrl(path, pathParams, apiBasePath);
+              request = (0, _superagent["default"])(httpMethod, url);
+              if (this.plugins !== null) {
+                for (index in this.plugins) {
+                  if (this.plugins.hasOwnProperty(index)) {
+                    request.use(this.plugins[index]);
                   }
                 }
+              }
+              this.authentications["Bearer"].accessToken = this.accessToken;
 
-                this.authentications["Bearer"].accessToken = this.accessToken; // apply authentications
+              // apply authentications
+              this.applyAuthToRequest(request, authNames);
 
-                this.applyAuthToRequest(request, authNames); // set query parameters
+              // set query parameters
+              if (httpMethod.toUpperCase() === 'GET' && this.cache === false) {
+                queryParams['_'] = new Date().getTime();
+              }
+              request.query(this.normalizeParams(queryParams));
 
-                if (httpMethod.toUpperCase() === 'GET' && this.cache === false) {
-                  queryParams['_'] = new Date().getTime();
+              // set header parameters
+              request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
+
+              // set requestAgent if it is set by user
+              if (this.requestAgent) {
+                request.agent(this.requestAgent);
+              }
+
+              // set request timeout
+              request.timeout(this.timeout);
+              contentType = this.jsonPreferredMime(contentTypes);
+              if (contentType) {
+                // Issue with superagent and multipart/form-data (https://github.com/visionmedia/superagent/issues/746)
+                if (contentType != 'multipart/form-data') {
+                  request.type(contentType);
                 }
-
-                request.query(this.normalizeParams(queryParams)); // set header parameters
-
-                request.set(this.defaultHeaders).set(this.normalizeParams(headerParams)); // set requestAgent if it is set by user
-
-                if (this.requestAgent) {
-                  request.agent(this.requestAgent);
-                } // set request timeout
-
-
-                request.timeout(this.timeout);
-                contentType = this.jsonPreferredMime(contentTypes);
-
-                if (contentType) {
-                  // Issue with superagent and multipart/form-data (https://github.com/visionmedia/superagent/issues/746)
-                  if (contentType != 'multipart/form-data') {
-                    request.type(contentType);
-                  }
-                }
-
-                if (contentType === 'application/x-www-form-urlencoded') {
-                  request.send(_querystring["default"].stringify(this.normalizeParams(formParams)));
-                } else if (contentType == 'multipart/form-data') {
-                  _formParams = this.normalizeParams(formParams);
-
-                  for (key in _formParams) {
-                    if (_formParams.hasOwnProperty(key)) {
-                      _formParamsValue = _formParams[key];
-
-                      if (this.isFileParam(_formParamsValue)) {
-                        // file field
-                        request.attach(key, _formParamsValue);
-                      } else if (Array.isArray(_formParamsValue) && _formParamsValue.length && this.isFileParam(_formParamsValue[0])) {
-                        // multiple files
-                        _formParamsValue.forEach(function (file) {
-                          return request.attach(key, file);
-                        });
-                      } else {
-                        request.field(key, _formParamsValue);
-                      }
-                    }
-                  }
-                } else if (bodyParam !== null && bodyParam !== undefined) {
-                  if (!request.header['Content-Type']) {
-                    request.type('application/json');
-                  }
-
-                  request.send(bodyParam);
-                }
-
-                accept = this.jsonPreferredMime(accepts);
-
-                if (accept) {
-                  request.accept(accept);
-                }
-
-                if (returnType === 'Blob') {
-                  request.responseType('blob');
-                } else if (returnType === 'String') {
-                  request.responseType('string');
-                } // Attach previously saved cookies, if enabled
-
-
-                if (this.enableCookies) {
-                  if (typeof window === 'undefined') {
-                    this.agent._attachCookies(request);
-                  } else {
-                    request.withCredentials();
-                  }
-                }
-
-                return _context.abrupt("return", new Promise(function (resolve, reject) {
-                  request.end(function (error, response) {
-                    if (error) {
-                      var err = {};
-
-                      if (response) {
-                        err.status = response.status;
-                        err.statusText = response.statusText;
-                        err.body = response.body;
-                        err.response = response;
-                      }
-
-                      err.error = error;
-                      reject(err);
+              }
+              if (contentType === 'application/x-www-form-urlencoded') {
+                request.send(_querystring["default"].stringify(this.normalizeParams(formParams)));
+              } else if (contentType == 'multipart/form-data') {
+                _formParams = this.normalizeParams(formParams);
+                for (key in _formParams) {
+                  if (_formParams.hasOwnProperty(key)) {
+                    _formParamsValue = _formParams[key];
+                    if (this.isFileParam(_formParamsValue)) {
+                      // file field
+                      request.attach(key, _formParamsValue);
+                    } else if (Array.isArray(_formParamsValue) && _formParamsValue.length && this.isFileParam(_formParamsValue[0])) {
+                      // multiple files
+                      _formParamsValue.forEach(function (file) {
+                        return request.attach(key, file);
+                      });
                     } else {
-                      try {
-                        var data = _this3.deserialize(response, returnType);
-
-                        if (_this3.enableCookies && typeof window === 'undefined') {
-                          _this3.agent._saveCookies(response);
-                        }
-
-                        resolve({
-                          data: data,
-                          response: response
-                        });
-                      } catch (err) {
-                        reject(err);
-                      }
+                      request.field(key, _formParamsValue);
                     }
-                  });
-                }));
+                  }
+                }
+              } else if (bodyParam !== null && bodyParam !== undefined) {
+                if (!request.header['Content-Type']) {
+                  request.type('application/json');
+                }
+                request.send(bodyParam);
+              }
+              accept = this.jsonPreferredMime(accepts);
+              if (accept) {
+                request.accept(accept);
+              }
+              if (returnType === 'Blob') {
+                request.responseType('blob');
+              } else if (returnType === 'String') {
+                request.responseType('string');
+              }
 
-              case 18:
-              case "end":
-                return _context.stop();
-            }
+              // Attach previously saved cookies, if enabled
+              if (this.enableCookies) {
+                if (typeof window === 'undefined') {
+                  this.agent._attachCookies(request);
+                } else {
+                  request.withCredentials();
+                }
+              }
+              return _context.abrupt("return", new Promise(function (resolve, reject) {
+                request.end(function (error, response) {
+                  if (error) {
+                    var err = {};
+                    if (response) {
+                      err.status = response.status;
+                      err.statusText = response.statusText;
+                      err.body = response.body;
+                      err.response = response;
+                    }
+                    err.error = error;
+                    reject(err);
+                  } else {
+                    try {
+                      var data = _this3.deserialize(response, returnType);
+                      if (_this3.enableCookies && typeof window === 'undefined') {
+                        _this3.agent._saveCookies(response);
+                      }
+                      resolve({
+                        data: data,
+                        response: response
+                      });
+                    } catch (err) {
+                      reject(err);
+                    }
+                  }
+                });
+              }));
+            case 18:
+            case "end":
+              return _context.stop();
           }
         }, _callee, this);
       }));
-
       function callApi(_x, _x2, _x3, _x4, _x5, _x6, _x7, _x8, _x9, _x10, _x11, _x12) {
         return _callApi.apply(this, arguments);
       }
-
       return callApi;
     }()
     /**
@@ -599,7 +531,6 @@ var ApiClient = /*#__PURE__*/function () {
     * @param {String} str The date value as a string.
     * @returns {Date} The parsed date object.
     */
-
   }, {
     key: "hostSettings",
     value:
@@ -617,19 +548,19 @@ var ApiClient = /*#__PURE__*/function () {
     key: "getBasePathFromSettings",
     value: function getBasePathFromSettings(index) {
       var variables = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var servers = this.hostSettings(); // check array index out of bound
+      var servers = this.hostSettings();
 
+      // check array index out of bound
       if (index < 0 || index >= servers.length) {
         throw new Error("Invalid index " + index + " when selecting the host settings. Must be less than " + servers.length);
       }
-
       var server = servers[index];
-      var url = server['url']; // go through variable and assign a value
+      var url = server['url'];
 
+      // go through variable and assign a value
       for (var variable_name in server['variables']) {
         if (variable_name in variables) {
           var variable = server['variables'][variable_name];
-
           if (!('enum_values' in variable) || variable['enum_values'].includes(variables[variable_name])) {
             url = url.replace("{" + variable_name + "}", variables[variable_name]);
           } else {
@@ -640,15 +571,14 @@ var ApiClient = /*#__PURE__*/function () {
           url = url.replace("{" + variable_name + "}", server['variables'][variable_name]['default_value']);
         }
       }
-
       return url;
     }
+
     /**
     * Constructs a new map or array model from REST data.
     * @param data {Object|Array} The REST data.
     * @param obj {Object|Array} The target object or array.
     */
-
   }, {
     key: "getAuthToken",
     value:
@@ -664,36 +594,31 @@ var ApiClient = /*#__PURE__*/function () {
         access_key: accessKey
       };
       var accepts = ["text/plain", "application/json", "text/json"];
-      var request = (0, _superagent["default"])("POST", url); // set requestAgent if it is set by user
+      var request = (0, _superagent["default"])("POST", url);
 
+      // set requestAgent if it is set by user
       if (this.requestAgent) {
         request.agent(this.requestAgent);
-      } // set request timeout
+      }
 
-
+      // set request timeout
       request.timeout(this.timeout);
-
       if (bodyParam !== null && bodyParam !== undefined) {
         if (!request.header["Content-Type"]) {
           request.type("application/json");
         }
-
         request.send(bodyParam);
       }
-
       var accept = this.jsonPreferredMime(accepts);
-
       if (accept) {
         request.accept(accept);
       }
-
       return new Promise(function (resolve, reject) {
         request.end(function (error, response) {
           if (response.ok) {
             try {
               var _JSON$parse = JSON.parse(response.text),
-                  access_token = _JSON$parse.access_token;
-
+                access_token = _JSON$parse.access_token;
               resolve({
                 access_token: access_token,
                 response: response
@@ -707,18 +632,17 @@ var ApiClient = /*#__PURE__*/function () {
         });
       });
     }
+
     /**
     * Initialization of the API client.
     * @param {Object} params - implicit object with params to initialize the class.
     * @param {string} params.basePath - The base URL against which to resolve every API call's path.
     * @param {string} params.urlSignIn - The url sign-in.
     */
-
   }], [{
     key: "canBeJsonified",
     value: function canBeJsonified(str) {
       if (typeof str !== 'string' && (0, _typeof2["default"])(str) !== 'object') return false;
-
       try {
         var type = str.toString();
         return type === '[object Object]' || type === '[object Array]';
@@ -732,9 +656,9 @@ var ApiClient = /*#__PURE__*/function () {
       if (isNaN(str)) {
         return new Date(str.replace(/(\d)(T)(\d)/i, '$1 $3'));
       }
-
       return new Date(+str);
     }
+
     /**
     * Converts a value to the specified type.
     * @param {(String|Object)} data The data to convert, as a string or object.
@@ -744,31 +668,23 @@ var ApiClient = /*#__PURE__*/function () {
     * all properties on <code>data<code> will be converted to this type.
     * @returns An instance of the specified type or null or undefined if data is null or undefined.
     */
-
   }, {
     key: "convertToType",
     value: function convertToType(data, type) {
       if (data === null || data === undefined) return data;
-
       switch (type) {
         case 'Boolean':
           return Boolean(data);
-
         case 'Integer':
           return parseInt(data, 10);
-
         case 'Number':
           return parseFloat(data);
-
         case 'String':
           return String(data);
-
         case 'Date':
           return ApiClient.parseDate(String(data));
-
         case 'Blob':
           return data;
-
         default:
           if (type === Object) {
             // generic object, return directly
@@ -785,7 +701,6 @@ var ApiClient = /*#__PURE__*/function () {
           } else if ((0, _typeof2["default"])(type) === 'object') {
             // for plain object type like: {'String': 'Integer'}
             var keyType, valueType;
-
             for (var k in type) {
               if (type.hasOwnProperty(k)) {
                 keyType = k;
@@ -793,9 +708,7 @@ var ApiClient = /*#__PURE__*/function () {
                 break;
               }
             }
-
             var result = {};
-
             for (var k in data) {
               if (data.hasOwnProperty(k)) {
                 var key = ApiClient.convertToType(k, keyType);
@@ -803,13 +716,11 @@ var ApiClient = /*#__PURE__*/function () {
                 result[key] = value;
               }
             }
-
             return result;
           } else {
             // for unknown type, return the data directly
             return data;
           }
-
       }
     }
   }, {
@@ -829,50 +740,43 @@ var ApiClient = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize(_ref2) {
       var basePath = _ref2.basePath,
-          urlSignIn = _ref2.urlSignIn;
+        urlSignIn = _ref2.urlSignIn;
       if (!ApiClient.instance) ApiClient.instance = new ApiClient({
         basePath: basePath,
         urlSignIn: urlSignIn
       });
     }
+
     /**
     * signIn in SiigoAPI to get Token.
     * @param {Object} params - implicit object with params to signIn
     * @param {string} params.userName - The user name to sign-in.
     * @param {string} params.accessKey - The access key to sign-in.
     */
-
   }, {
     key: "signIn",
     value: function () {
       var _signIn = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(_ref3) {
         var userName, accessKey, _yield$ApiClient$inst, access_token;
-
         return _regenerator["default"].wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                userName = _ref3.userName, accessKey = _ref3.accessKey;
-                _context2.next = 3;
-                return ApiClient.instance.getAuthToken(userName, accessKey);
-
-              case 3:
-                _yield$ApiClient$inst = _context2.sent;
-                access_token = _yield$ApiClient$inst.access_token;
-                ApiClient.instance.accessToken = access_token;
-
-              case 6:
-              case "end":
-                return _context2.stop();
-            }
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              userName = _ref3.userName, accessKey = _ref3.accessKey;
+              _context2.next = 3;
+              return ApiClient.instance.getAuthToken(userName, accessKey);
+            case 3:
+              _yield$ApiClient$inst = _context2.sent;
+              access_token = _yield$ApiClient$inst.access_token;
+              ApiClient.instance.accessToken = access_token;
+            case 6:
+            case "end":
+              return _context2.stop();
           }
         }, _callee2);
       }));
-
       function signIn(_x13) {
         return _signIn.apply(this, arguments);
       }
-
       return signIn;
     }()
   }]);
@@ -883,38 +787,31 @@ var ApiClient = /*#__PURE__*/function () {
  * @enum {String}
  * @readonly
  */
-
-
 ApiClient.CollectionFormatEnum = {
   /**
    * Comma-separated values. Value: <code>csv</code>
    * @const
    */
   CSV: ',',
-
   /**
    * Space-separated values. Value: <code>ssv</code>
    * @const
    */
   SSV: ' ',
-
   /**
    * Tab-separated values. Value: <code>tsv</code>
    * @const
    */
   TSV: '\t',
-
   /**
    * Pipe(|)-separated values. Value: <code>pipes</code>
    * @const
    */
   PIPES: '|',
-
   /**
    * Native array. Value: <code>multi</code>
    * @const
    */
   MULTI: 'multi'
 };
-var _default = ApiClient;
-exports["default"] = _default;
+var _default = exports["default"] = ApiClient;

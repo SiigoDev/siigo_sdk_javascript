@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _EInvoiceErrorViewModel = _interopRequireDefault(require("./EInvoiceErrorViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,7 +21,6 @@ var _EInvoiceErrorViewModel = _interopRequireDefault(require("./EInvoiceErrorVie
  * Do not edit the class manually.
  *
  */
-
 /**
  * The EInvoiceErrorsViewModel model module.
  * @module model/EInvoiceErrorsViewModel
@@ -42,16 +35,16 @@ var EInvoiceErrorsViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, EInvoiceErrorsViewModel);
     EInvoiceErrorsViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(EInvoiceErrorsViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>EInvoiceErrorsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -59,22 +52,18 @@ var EInvoiceErrorsViewModel = /*#__PURE__*/function () {
      * @param {module:model/EInvoiceErrorsViewModel} obj Optional instance to populate.
      * @return {module:model/EInvoiceErrorsViewModel} The populated <code>EInvoiceErrorsViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new EInvoiceErrorsViewModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
-
         if (data.hasOwnProperty('errors')) {
           obj['errors'] = _ApiClient["default"].convertToType(data['errors'], [_EInvoiceErrorViewModel["default"]]);
         }
       }
-
       return obj;
     }
   }]);
@@ -84,14 +73,11 @@ var EInvoiceErrorsViewModel = /*#__PURE__*/function () {
  * Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
-
-
 EInvoiceErrorsViewModel.prototype['id'] = undefined;
+
 /**
  * Contains a list of messages error.
  * @member {Array.<module:model/EInvoiceErrorViewModel>} errors
  */
-
 EInvoiceErrorsViewModel.prototype['errors'] = undefined;
-var _default = EInvoiceErrorsViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = EInvoiceErrorsViewModel;

@@ -1,28 +1,18 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _CreateCustomerCommandCountry = _interopRequireDefault(require("../model/CreateCustomerCommandCountry"));
-
 var _CustomerDeleteViewModel = _interopRequireDefault(require("../model/CustomerDeleteViewModel"));
-
 var _CustomerViewModel = _interopRequireDefault(require("../model/CustomerViewModel"));
-
 var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-
 var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCustomerCommand"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -35,13 +25,12 @@ var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCust
  * Do not edit the class manually.
  *
  */
-
 /**
 * Customer service.
 * @module api/CustomerApi
 * @version v1
 */
-var CustomerApi = /*#__PURE__*/function () {
+var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new CustomerApi. 
   * @alias module:api/CustomerApi
@@ -53,14 +42,13 @@ var CustomerApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CustomerApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Creates a customer.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(CustomerApi, [{
     key: "createCustomerWithHttpInfo",
     value: function createCustomerWithHttpInfo(opts) {
@@ -76,13 +64,13 @@ var CustomerApi = /*#__PURE__*/function () {
       var returnType = _CustomerViewModel["default"];
       return this.apiClient.callApi('/v1/customers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates a customer.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCustomerCommandCountry} opts.createCustomerCommandCountry Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
-
   }, {
     key: "createCustomer",
     value: function createCustomer(opts) {
@@ -90,21 +78,20 @@ var CustomerApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerDeleteViewModel} and HTTP response
      */
-
   }, {
     key: "deleteCustomerWithHttpInfo",
     value: function deleteCustomerWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling deleteCustomer");
       }
-
       var pathParams = {
         'id': id
       };
@@ -117,12 +104,12 @@ var CustomerApi = /*#__PURE__*/function () {
       var returnType = _CustomerDeleteViewModel["default"];
       return this.apiClient.callApi('/v1/customers/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Deletes the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerDeleteViewModel}
      */
-
   }, {
     key: "deleteCustomer",
     value: function deleteCustomer(id) {
@@ -130,21 +117,20 @@ var CustomerApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
-
   }, {
     key: "getCustomerWithHttpInfo",
     value: function getCustomerWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getCustomer");
       }
-
       var pathParams = {
         'id': id
       };
@@ -157,12 +143,12 @@ var CustomerApi = /*#__PURE__*/function () {
       var returnType = _CustomerViewModel["default"];
       return this.apiClient.callApi('/v1/customers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
-
   }, {
     key: "getCustomer",
     value: function getCustomer(id) {
@@ -170,6 +156,7 @@ var CustomerApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
@@ -188,7 +175,6 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
-
   }, {
     key: "getCustomersWithHttpInfo",
     value: function getCustomersWithHttpInfo(opts) {
@@ -218,6 +204,7 @@ var CustomerApi = /*#__PURE__*/function () {
       var returnType = _CustomerViewModel["default"];
       return this.apiClient.callApi('/v1/customers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of customers.
      * @param {Object} opts Optional parameters
@@ -236,7 +223,6 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
-
   }, {
     key: "getCustomers",
     value: function getCustomers(opts) {
@@ -244,6 +230,7 @@ var CustomerApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -251,17 +238,15 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
      */
-
   }, {
     key: "updateCustomerWithHttpInfo",
     value: function updateCustomerWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateCustomer");
       }
-
       var pathParams = {
         'id': id
       };
@@ -274,6 +259,7 @@ var CustomerApi = /*#__PURE__*/function () {
       var returnType = _CustomerViewModel["default"];
       return this.apiClient.callApi('/v1/customers/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Updates the customer by GUID.
      * @param {String} id Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -281,7 +267,6 @@ var CustomerApi = /*#__PURE__*/function () {
      * @param {module:model/UpdateCustomerCommand} opts.updateCustomerCommand Represents the request with the customer information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
      */
-
   }, {
     key: "updateCustomer",
     value: function updateCustomer(id, opts) {
@@ -292,5 +277,3 @@ var CustomerApi = /*#__PURE__*/function () {
   }]);
   return CustomerApi;
 }();
-
-exports["default"] = CustomerApi;

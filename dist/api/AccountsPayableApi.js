@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _AccountsPayableViewModelGetAllModel = _interopRequireDefault(require("../model/AccountsPayableViewModelGetAllModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _AccountsPayableViewModelGetAllModel = _interopRequireDefault(require("../mo
  * Do not edit the class manually.
  *
  */
-
 /**
 * AccountsPayable service.
 * @module api/AccountsPayableApi
 * @version v1
 */
-var AccountsPayableApi = /*#__PURE__*/function () {
+var AccountsPayableApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new AccountsPayableApi. 
   * @alias module:api/AccountsPayableApi
@@ -45,6 +38,7 @@ var AccountsPayableApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, AccountsPayableApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of document types.
    * @param {Object} opts Optional parameters
@@ -56,8 +50,6 @@ var AccountsPayableApi = /*#__PURE__*/function () {
    * @param {Date} opts.dueDateEnd 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AccountsPayableViewModelGetAllModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(AccountsPayableApi, [{
     key: "getAccountsPayableWithHttpInfo",
     value: function getAccountsPayableWithHttpInfo(opts) {
@@ -80,6 +72,7 @@ var AccountsPayableApi = /*#__PURE__*/function () {
       var returnType = _AccountsPayableViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/accounts-payable', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of document types.
      * @param {Object} opts Optional parameters
@@ -91,7 +84,6 @@ var AccountsPayableApi = /*#__PURE__*/function () {
      * @param {Date} opts.dueDateEnd 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AccountsPayableViewModelGetAllModel}
      */
-
   }, {
     key: "getAccountsPayable",
     value: function getAccountsPayable(opts) {
@@ -102,5 +94,3 @@ var AccountsPayableApi = /*#__PURE__*/function () {
   }]);
   return AccountsPayableApi;
 }();
-
-exports["default"] = AccountsPayableApi;

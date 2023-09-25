@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The InvoicePdfViewModel model module.
  * @module model/InvoicePdfViewModel
@@ -40,16 +34,16 @@ var InvoicePdfViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, InvoicePdfViewModel);
     InvoicePdfViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(InvoicePdfViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>InvoicePdfViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,26 +51,21 @@ var InvoicePdfViewModel = /*#__PURE__*/function () {
      * @param {module:model/InvoicePdfViewModel} obj Optional instance to populate.
      * @return {module:model/InvoicePdfViewModel} The populated <code>InvoicePdfViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new InvoicePdfViewModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
-
         if (data.hasOwnProperty('cufe')) {
           obj['cufe'] = _ApiClient["default"].convertToType(data['cufe'], 'String');
         }
-
         if (data.hasOwnProperty('base64')) {
           obj['base64'] = _ApiClient["default"].convertToType(data['base64'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -86,20 +75,17 @@ var InvoicePdfViewModel = /*#__PURE__*/function () {
  * Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
-
-
 InvoicePdfViewModel.prototype['id'] = undefined;
+
 /**
  * Represents the CUFE of credit note.
  * @member {String} cufe
  */
-
 InvoicePdfViewModel.prototype['cufe'] = undefined;
+
 /**
  * Represents the data of the invoice on base 64 to convert it to PDF.
  * @member {String} base64
  */
-
 InvoicePdfViewModel.prototype['base64'] = undefined;
-var _default = InvoicePdfViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = InvoicePdfViewModel;

@@ -1,30 +1,19 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _FixedAssetModel = _interopRequireDefault(require("./FixedAssetModel"));
-
 var _JournalDue = _interopRequireDefault(require("./JournalDue"));
-
 var _JournalEntryAccountModel = _interopRequireDefault(require("./JournalEntryAccountModel"));
-
 var _JournalEntryCustomerModel = _interopRequireDefault(require("./JournalEntryCustomerModel"));
-
 var _JournalEntryProductModel = _interopRequireDefault(require("./JournalEntryProductModel"));
-
 var _JournalEntryTaxModel = _interopRequireDefault(require("./JournalEntryTaxModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -37,7 +26,6 @@ var _JournalEntryTaxModel = _interopRequireDefault(require("./JournalEntryTaxMod
  * Do not edit the class manually.
  *
  */
-
 /**
  * The JournalEntryItemModel model module.
  * @module model/JournalEntryItemModel
@@ -52,16 +40,16 @@ var JournalEntryItemModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, JournalEntryItemModel);
     JournalEntryItemModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(JournalEntryItemModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>JournalEntryItemModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -69,50 +57,39 @@ var JournalEntryItemModel = /*#__PURE__*/function () {
      * @param {module:model/JournalEntryItemModel} obj Optional instance to populate.
      * @return {module:model/JournalEntryItemModel} The populated <code>JournalEntryItemModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new JournalEntryItemModel();
-
         if (data.hasOwnProperty('account')) {
           obj['account'] = _JournalEntryAccountModel["default"].constructFromObject(data['account']);
         }
-
         if (data.hasOwnProperty('customer')) {
           obj['customer'] = _JournalEntryCustomerModel["default"].constructFromObject(data['customer']);
         }
-
         if (data.hasOwnProperty('cost_center')) {
           obj['cost_center'] = _ApiClient["default"].convertToType(data['cost_center'], 'Number');
         }
-
         if (data.hasOwnProperty('due')) {
           obj['due'] = _JournalDue["default"].constructFromObject(data['due']);
         }
-
         if (data.hasOwnProperty('tax')) {
           obj['tax'] = _JournalEntryTaxModel["default"].constructFromObject(data['tax']);
         }
-
         if (data.hasOwnProperty('fixed_asset')) {
           obj['fixed_asset'] = _FixedAssetModel["default"].constructFromObject(data['fixed_asset']);
         }
-
         if (data.hasOwnProperty('product')) {
           obj['product'] = _JournalEntryProductModel["default"].constructFromObject(data['product']);
         }
-
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
-
         if (data.hasOwnProperty('value')) {
           obj['value'] = _ApiClient["default"].convertToType(data['value'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -121,51 +98,48 @@ var JournalEntryItemModel = /*#__PURE__*/function () {
 /**
  * @member {module:model/JournalEntryAccountModel} account
  */
-
-
 JournalEntryItemModel.prototype['account'] = undefined;
+
 /**
  * @member {module:model/JournalEntryCustomerModel} customer
  */
-
 JournalEntryItemModel.prototype['customer'] = undefined;
+
 /**
  * Represents the id of the cost center, the value of this field must be an integer  number that represents the unique id of the cost center.
  * @member {Number} cost_center
  */
-
 JournalEntryItemModel.prototype['cost_center'] = undefined;
+
 /**
  * @member {module:model/JournalDue} due
  */
-
 JournalEntryItemModel.prototype['due'] = undefined;
+
 /**
  * @member {module:model/JournalEntryTaxModel} tax
  */
-
 JournalEntryItemModel.prototype['tax'] = undefined;
+
 /**
  * @member {module:model/FixedAssetModel} fixed_asset
  */
-
 JournalEntryItemModel.prototype['fixed_asset'] = undefined;
+
 /**
  * @member {module:model/JournalEntryProductModel} product
  */
-
 JournalEntryItemModel.prototype['product'] = undefined;
+
 /**
  * Represents a description associated with the journal.
  * @member {String} description
  */
-
 JournalEntryItemModel.prototype['description'] = undefined;
+
 /**
  * Represents the price of item.  For example, '119000'.
  * @member {Number} value
  */
-
 JournalEntryItemModel.prototype['value'] = undefined;
-var _default = JournalEntryItemModel;
-exports["default"] = _default;
+var _default = exports["default"] = JournalEntryItemModel;

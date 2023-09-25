@@ -1,26 +1,17 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _AccountsPayableDue = _interopRequireDefault(require("./AccountsPayableDue"));
-
 var _CostCenter = _interopRequireDefault(require("./CostCenter"));
-
 var _Currency = _interopRequireDefault(require("./Currency"));
-
 var _Provider = _interopRequireDefault(require("./Provider"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -33,7 +24,6 @@ var _Provider = _interopRequireDefault(require("./Provider"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The AccountsPayableViewModel model module.
  * @module model/AccountsPayableViewModel
@@ -48,16 +38,16 @@ var AccountsPayableViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, AccountsPayableViewModel);
     AccountsPayableViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(AccountsPayableViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>AccountsPayableViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -65,30 +55,24 @@ var AccountsPayableViewModel = /*#__PURE__*/function () {
      * @param {module:model/AccountsPayableViewModel} obj Optional instance to populate.
      * @return {module:model/AccountsPayableViewModel} The populated <code>AccountsPayableViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AccountsPayableViewModel();
-
         if (data.hasOwnProperty('due')) {
           obj['due'] = _AccountsPayableDue["default"].constructFromObject(data['due']);
         }
-
         if (data.hasOwnProperty('provider')) {
           obj['provider'] = _Provider["default"].constructFromObject(data['provider']);
         }
-
         if (data.hasOwnProperty('cost_center')) {
           obj['cost_center'] = _CostCenter["default"].constructFromObject(data['cost_center']);
         }
-
         if (data.hasOwnProperty('currency')) {
           obj['currency'] = _Currency["default"].constructFromObject(data['currency']);
         }
       }
-
       return obj;
     }
   }]);
@@ -97,23 +81,20 @@ var AccountsPayableViewModel = /*#__PURE__*/function () {
 /**
  * @member {module:model/AccountsPayableDue} due
  */
-
-
 AccountsPayableViewModel.prototype['due'] = undefined;
+
 /**
  * @member {module:model/Provider} provider
  */
-
 AccountsPayableViewModel.prototype['provider'] = undefined;
+
 /**
  * @member {module:model/CostCenter} cost_center
  */
-
 AccountsPayableViewModel.prototype['cost_center'] = undefined;
+
 /**
  * @member {module:model/Currency} currency
  */
-
 AccountsPayableViewModel.prototype['currency'] = undefined;
-var _default = AccountsPayableViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = AccountsPayableViewModel;

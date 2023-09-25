@@ -1,26 +1,17 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _CreateCreditNoteCommand = _interopRequireDefault(require("../model/CreateCreditNoteCommand"));
-
 var _CreditNotePdfViewModel = _interopRequireDefault(require("../model/CreditNotePdfViewModel"));
-
 var _CreditNoteViewModel = _interopRequireDefault(require("../model/CreditNoteViewModel"));
-
 var _CreditNoteViewModelGetAllModel = _interopRequireDefault(require("../model/CreditNoteViewModelGetAllModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -33,13 +24,12 @@ var _CreditNoteViewModelGetAllModel = _interopRequireDefault(require("../model/C
  * Do not edit the class manually.
  *
  */
-
 /**
 * CreditNote service.
 * @module api/CreditNoteApi
 * @version v1
 */
-var CreditNoteApi = /*#__PURE__*/function () {
+var CreditNoteApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new CreditNoteApi. 
   * @alias module:api/CreditNoteApi
@@ -51,14 +41,13 @@ var CreditNoteApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CreditNoteApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Creates a credit note.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateCreditNoteCommand} opts.createCreditNoteCommand Represents the request with the credit note information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNoteViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(CreditNoteApi, [{
     key: "createCreditNoteWithHttpInfo",
     value: function createCreditNoteWithHttpInfo(opts) {
@@ -74,13 +63,13 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var returnType = _CreditNoteViewModel["default"];
       return this.apiClient.callApi('/v1/credit-notes', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates a credit note.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateCreditNoteCommand} opts.createCreditNoteCommand Represents the request with the credit note information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNoteViewModel}
      */
-
   }, {
     key: "createCreditNote",
     value: function createCreditNote(opts) {
@@ -88,21 +77,20 @@ var CreditNoteApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Gets the credit note by GUID.
      * @param {String} id Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNoteViewModel} and HTTP response
      */
-
   }, {
     key: "getCreditNoteWithHttpInfo",
     value: function getCreditNoteWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getCreditNote");
       }
-
       var pathParams = {
         'id': id
       };
@@ -115,12 +103,12 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var returnType = _CreditNoteViewModel["default"];
       return this.apiClient.callApi('/v1/credit-notes/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the credit note by GUID.
      * @param {String} id Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNoteViewModel}
      */
-
   }, {
     key: "getCreditNote",
     value: function getCreditNote(id) {
@@ -128,21 +116,20 @@ var CreditNoteApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Gets the credit note PDF by GUID.
      * @param {String} id Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNotePdfViewModel} and HTTP response
      */
-
   }, {
     key: "getCreditNotePDFWithHttpInfo",
     value: function getCreditNotePDFWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getCreditNotePDF");
       }
-
       var pathParams = {
         'id': id
       };
@@ -155,12 +142,12 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var returnType = _CreditNotePdfViewModel["default"];
       return this.apiClient.callApi('/v1/credit-notes/{id}/pdf', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the credit note PDF by GUID.
      * @param {String} id Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNotePdfViewModel}
      */
-
   }, {
     key: "getCreditNotePDF",
     value: function getCreditNotePDF(id) {
@@ -168,6 +155,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Returns a paginated list of credit notes.
      * @param {Object} opts Optional parameters
@@ -182,7 +170,6 @@ var CreditNoteApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditNoteViewModelGetAllModel} and HTTP response
      */
-
   }, {
     key: "getCreditNotesWithHttpInfo",
     value: function getCreditNotesWithHttpInfo(opts) {
@@ -208,6 +195,7 @@ var CreditNoteApi = /*#__PURE__*/function () {
       var returnType = _CreditNoteViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/credit-notes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of credit notes.
      * @param {Object} opts Optional parameters
@@ -222,7 +210,6 @@ var CreditNoteApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditNoteViewModelGetAllModel}
      */
-
   }, {
     key: "getCreditNotes",
     value: function getCreditNotes(opts) {
@@ -233,5 +220,3 @@ var CreditNoteApi = /*#__PURE__*/function () {
   }]);
   return CreditNoteApi;
 }();
-
-exports["default"] = CreditNoteApi;

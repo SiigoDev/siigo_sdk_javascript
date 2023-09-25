@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The FixedAssetsViewModel model module.
  * @module model/FixedAssetsViewModel
@@ -40,16 +34,16 @@ var FixedAssetsViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, FixedAssetsViewModel);
     FixedAssetsViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(FixedAssetsViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>FixedAssetsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +51,24 @@ var FixedAssetsViewModel = /*#__PURE__*/function () {
      * @param {module:model/FixedAssetsViewModel} obj Optional instance to populate.
      * @return {module:model/FixedAssetsViewModel} The populated <code>FixedAssetsViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new FixedAssetsViewModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'Number');
         }
-
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
-
         if (data.hasOwnProperty('group')) {
           obj['group'] = _ApiClient["default"].convertToType(data['group'], 'String');
         }
-
         if (data.hasOwnProperty('active')) {
           obj['active'] = _ApiClient["default"].convertToType(data['active'], 'Boolean');
         }
       }
-
       return obj;
     }
   }]);
@@ -90,26 +78,23 @@ var FixedAssetsViewModel = /*#__PURE__*/function () {
  * Represents the id of the fixed asset, the value of this field must be an integer  number that represents the unique id of the cost center.
  * @member {Number} id
  */
-
-
 FixedAssetsViewModel.prototype['id'] = undefined;
+
 /**
  * Represents the name of the fixed asset. This value can be an alphanumeric  name like 'Personal computer' or 'Furniture'.
  * @member {String} name
  */
-
 FixedAssetsViewModel.prototype['name'] = undefined;
+
 /**
  * Represents the Name of the fixed assets group.
  * @member {String} group
  */
-
 FixedAssetsViewModel.prototype['group'] = undefined;
+
 /**
  * Indicates if the fixed assets group is in use.  the value of this status will be true or false.  By default, this field will be active (true).
  * @member {Boolean} active
  */
-
 FixedAssetsViewModel.prototype['active'] = undefined;
-var _default = FixedAssetsViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = FixedAssetsViewModel;

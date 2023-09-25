@@ -1,24 +1,16 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _DiscountModel = _interopRequireDefault(require("./DiscountModel"));
-
 var _TaxesModel = _interopRequireDefault(require("./TaxesModel"));
-
 var _WarehouseModel = _interopRequireDefault(require("./WarehouseModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -31,7 +23,6 @@ var _WarehouseModel = _interopRequireDefault(require("./WarehouseModel"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The ItemsModel model module.
  * @module model/ItemsModel
@@ -46,16 +37,16 @@ var ItemsModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, ItemsModel);
     ItemsModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(ItemsModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>ItemsModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -63,58 +54,45 @@ var ItemsModel = /*#__PURE__*/function () {
      * @param {module:model/ItemsModel} obj Optional instance to populate.
      * @return {module:model/ItemsModel} The populated <code>ItemsModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ItemsModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
-
         if (data.hasOwnProperty('code')) {
           obj['code'] = _ApiClient["default"].convertToType(data['code'], 'String');
         }
-
         if (data.hasOwnProperty('quantity')) {
           obj['quantity'] = _ApiClient["default"].convertToType(data['quantity'], 'Number');
         }
-
         if (data.hasOwnProperty('price')) {
           obj['price'] = _ApiClient["default"].convertToType(data['price'], 'Number');
         }
-
         if (data.hasOwnProperty('seller')) {
           obj['seller'] = _ApiClient["default"].convertToType(data['seller'], 'Number');
         }
-
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
-
         if (data.hasOwnProperty('discount')) {
           obj['discount'] = _DiscountModel["default"].constructFromObject(data['discount']);
         }
-
         if (data.hasOwnProperty('taxes')) {
           obj['taxes'] = _ApiClient["default"].convertToType(data['taxes'], [_TaxesModel["default"]]);
         }
-
         if (data.hasOwnProperty('warehouse')) {
           obj['warehouse'] = _WarehouseModel["default"].constructFromObject(data['warehouse']);
         }
-
         if (data.hasOwnProperty('total')) {
           obj['total'] = _ApiClient["default"].convertToType(data['total'], 'Number');
         }
-
         if (data.hasOwnProperty('vat_excluded')) {
           obj['vat_excluded'] = _ApiClient["default"].convertToType(data['vat_excluded'], 'Boolean');
         }
       }
-
       return obj;
     }
   }]);
@@ -124,65 +102,62 @@ var ItemsModel = /*#__PURE__*/function () {
  * Represents the unique Id of item, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
-
-
 ItemsModel.prototype['id'] = undefined;
+
 /**
  * Represents the unique code of the item. This value can be an alphanumeric  code that will represent the code id of the item.  For example,'item-1' or 'toy-007'.
  * @member {String} code
  */
-
 ItemsModel.prototype['code'] = undefined;
+
 /**
  * Represents product quantity.  For example, '2' quantities of the 'item-01'.
  * @member {Number} quantity
  */
-
 ItemsModel.prototype['quantity'] = undefined;
+
 /**
  * Represents product price.  For example, '50', dollars.
  * @member {Number} price
  */
-
 ItemsModel.prototype['price'] = undefined;
+
 /**
  * Represents the Id of the seller associated with the invoice,   for example, the id '629' can represent a seller called 'Micke'.
  * @member {Number} seller
  */
-
 ItemsModel.prototype['seller'] = undefined;
+
 /**
  * Represents product description.
  * @member {String} description
  */
-
 ItemsModel.prototype['description'] = undefined;
+
 /**
  * @member {module:model/DiscountModel} discount
  */
-
 ItemsModel.prototype['discount'] = undefined;
+
 /**
  * Contains a list of taxes associated to item.
  * @member {Array.<module:model/TaxesModel>} taxes
  */
-
 ItemsModel.prototype['taxes'] = undefined;
+
 /**
  * @member {module:model/WarehouseModel} warehouse
  */
-
 ItemsModel.prototype['warehouse'] = undefined;
+
 /**
  * Represents the price of item with the tax included.
  * @member {Number} total
  */
-
 ItemsModel.prototype['total'] = undefined;
+
 /**
  * @member {Boolean} vat_excluded
  */
-
 ItemsModel.prototype['vat_excluded'] = undefined;
-var _default = ItemsModel;
-exports["default"] = _default;
+var _default = exports["default"] = ItemsModel;

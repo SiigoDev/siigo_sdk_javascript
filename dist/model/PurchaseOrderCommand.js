@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The PurchaseOrderCommand model module.
  * @module model/PurchaseOrderCommand
@@ -40,16 +34,16 @@ var PurchaseOrderCommand = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PurchaseOrderCommand);
     PurchaseOrderCommand.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(PurchaseOrderCommand, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>PurchaseOrderCommand</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,22 +51,18 @@ var PurchaseOrderCommand = /*#__PURE__*/function () {
      * @param {module:model/PurchaseOrderCommand} obj Optional instance to populate.
      * @return {module:model/PurchaseOrderCommand} The populated <code>PurchaseOrderCommand</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new PurchaseOrderCommand();
-
         if (data.hasOwnProperty('prefix')) {
           obj['prefix'] = _ApiClient["default"].convertToType(data['prefix'], 'String');
         }
-
         if (data.hasOwnProperty('number')) {
           obj['number'] = _ApiClient["default"].convertToType(data['number'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -82,14 +72,11 @@ var PurchaseOrderCommand = /*#__PURE__*/function () {
  * Represent the prefix of order type.
  * @member {String} prefix
  */
-
-
 PurchaseOrderCommand.prototype['prefix'] = undefined;
+
 /**
  * Represents the number of the purchase.
  * @member {String} number
  */
-
 PurchaseOrderCommand.prototype['number'] = undefined;
-var _default = PurchaseOrderCommand;
-exports["default"] = _default;
+var _default = exports["default"] = PurchaseOrderCommand;

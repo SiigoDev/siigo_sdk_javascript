@@ -1,24 +1,16 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _CreateTestBalanceByThirdpartyCommand = _interopRequireDefault(require("../model/CreateTestBalanceByThirdpartyCommand"));
-
 var _CreateTestBalanceCommand = _interopRequireDefault(require("../model/CreateTestBalanceCommand"));
-
 var _TestBalanceResultModel = _interopRequireDefault(require("../model/TestBalanceResultModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -31,13 +23,12 @@ var _TestBalanceResultModel = _interopRequireDefault(require("../model/TestBalan
  * Do not edit the class manually.
  *
  */
-
 /**
 * TestBalance service.
 * @module api/TestBalanceApi
 * @version v1
 */
-var TestBalanceApi = /*#__PURE__*/function () {
+var TestBalanceApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new TestBalanceApi. 
   * @alias module:api/TestBalanceApi
@@ -49,13 +40,12 @@ var TestBalanceApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, TestBalanceApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand 
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestBalanceResultModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(TestBalanceApi, [{
     key: "createTestBalanceWithHttpInfo",
     value: function createTestBalanceWithHttpInfo(opts) {
@@ -71,12 +61,12 @@ var TestBalanceApi = /*#__PURE__*/function () {
       var returnType = _TestBalanceResultModel["default"];
       return this.apiClient.callApi('/v1/test-balance-report', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestBalanceResultModel}
      */
-
   }, {
     key: "createTestBalance",
     value: function createTestBalance(opts) {
@@ -84,12 +74,12 @@ var TestBalanceApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestBalanceResultModel} and HTTP response
      */
-
   }, {
     key: "createTestBalanceByThirdpartyWithHttpInfo",
     value: function createTestBalanceByThirdpartyWithHttpInfo(opts) {
@@ -105,12 +95,12 @@ var TestBalanceApi = /*#__PURE__*/function () {
       var returnType = _TestBalanceResultModel["default"];
       return this.apiClient.callApi('/v1/test-balance-report-by-thirdparty', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestBalanceResultModel}
      */
-
   }, {
     key: "createTestBalanceByThirdparty",
     value: function createTestBalanceByThirdparty(opts) {
@@ -121,5 +111,3 @@ var TestBalanceApi = /*#__PURE__*/function () {
   }]);
   return TestBalanceApi;
 }();
-
-exports["default"] = TestBalanceApi;

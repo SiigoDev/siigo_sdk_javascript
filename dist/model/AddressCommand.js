@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _CityCommand = _interopRequireDefault(require("./CityCommand"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,7 +21,6 @@ var _CityCommand = _interopRequireDefault(require("./CityCommand"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The AddressCommand model module.
  * @module model/AddressCommand
@@ -42,16 +35,16 @@ var AddressCommand = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, AddressCommand);
     AddressCommand.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(AddressCommand, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>AddressCommand</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -59,46 +52,36 @@ var AddressCommand = /*#__PURE__*/function () {
      * @param {module:model/AddressCommand} obj Optional instance to populate.
      * @return {module:model/AddressCommand} The populated <code>AddressCommand</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AddressCommand();
-
         if (data.hasOwnProperty('address')) {
           obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
         }
-
         if (data.hasOwnProperty('city')) {
           obj['city'] = _CityCommand["default"].constructFromObject(data['city']);
         }
-
         if (data.hasOwnProperty('postal_code')) {
           obj['postal_code'] = _ApiClient["default"].convertToType(data['postal_code'], 'String');
         }
-
         if (data.hasOwnProperty('street')) {
           obj['street'] = _ApiClient["default"].convertToType(data['street'], 'String');
         }
-
         if (data.hasOwnProperty('interior_number')) {
           obj['interior_number'] = _ApiClient["default"].convertToType(data['interior_number'], 'String');
         }
-
         if (data.hasOwnProperty('exterior_number')) {
           obj['exterior_number'] = _ApiClient["default"].convertToType(data['exterior_number'], 'String');
         }
-
         if (data.hasOwnProperty('colony')) {
           obj['colony'] = _ApiClient["default"].convertToType(data['colony'], 'String');
         }
-
         if (data.hasOwnProperty('locality')) {
           obj['locality'] = _ApiClient["default"].convertToType(data['locality'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -108,49 +91,46 @@ var AddressCommand = /*#__PURE__*/function () {
  * Represents the address of customer.
  * @member {String} address
  */
-
-
 AddressCommand.prototype['address'] = undefined;
+
 /**
  * @member {module:model/CityCommand} city
  */
-
 AddressCommand.prototype['city'] = undefined;
+
 /**
  * Represent the Postal Code of customer.  For example, the code '110911'
  * @member {String} postal_code
  */
-
 AddressCommand.prototype['postal_code'] = undefined;
+
 /**
  * Represents the street of customer.
  * @member {String} street
  */
-
 AddressCommand.prototype['street'] = undefined;
+
 /**
  * Represents the interior number of customer.
  * @member {String} interior_number
  */
-
 AddressCommand.prototype['interior_number'] = undefined;
+
 /**
  * Represents the exterior number of customer.
  * @member {String} exterior_number
  */
-
 AddressCommand.prototype['exterior_number'] = undefined;
+
 /**
  * Represents the colony of customer.
  * @member {String} colony
  */
-
 AddressCommand.prototype['colony'] = undefined;
+
 /**
  * Represents the locality of customer.
  * @member {String} locality
  */
-
 AddressCommand.prototype['locality'] = undefined;
-var _default = AddressCommand;
-exports["default"] = _default;
+var _default = exports["default"] = AddressCommand;
