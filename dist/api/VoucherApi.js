@@ -1,34 +1,21 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _CreateVoucherCommand = _interopRequireDefault(require("../model/CreateVoucherCommand"));
-
 var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-
 var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
-
 var _SendElectronicVoucherCommand = _interopRequireDefault(require("../model/SendElectronicVoucherCommand"));
-
 var _SendElectronicVoucherViewModel = _interopRequireDefault(require("../model/SendElectronicVoucherViewModel"));
-
 var _SendVoucherByEmailCommand = _interopRequireDefault(require("../model/SendVoucherByEmailCommand"));
-
 var _VoucherViewModel = _interopRequireDefault(require("../model/VoucherViewModel"));
-
 var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/VoucherViewModelGetAllModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -41,13 +28,12 @@ var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/Vouc
  * Do not edit the class manually.
  *
  */
-
 /**
 * Voucher service.
 * @module api/VoucherApi
 * @version v1
 */
-var VoucherApi = /*#__PURE__*/function () {
+var VoucherApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new VoucherApi. 
   * @alias module:api/VoucherApi
@@ -59,14 +45,13 @@ var VoucherApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, VoucherApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Creates a voucher.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateVoucherCommand} opts.createVoucherCommand Represents the request with the voucher information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(VoucherApi, [{
     key: "createVoucherWithHttpInfo",
     value: function createVoucherWithHttpInfo(opts) {
@@ -82,13 +67,13 @@ var VoucherApi = /*#__PURE__*/function () {
       var returnType = _VoucherViewModel["default"];
       return this.apiClient.callApi('/v1/vouchers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates a voucher.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateVoucherCommand} opts.createVoucherCommand Represents the request with the voucher information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModel}
      */
-
   }, {
     key: "createVoucher",
     value: function createVoucher(opts) {
@@ -96,21 +81,20 @@ var VoucherApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Gets the voucher by GUID.
      * @param {String} id Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModel} and HTTP response
      */
-
   }, {
     key: "getVoucherWithHttpInfo",
     value: function getVoucherWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getVoucher");
       }
-
       var pathParams = {
         'id': id
       };
@@ -123,12 +107,12 @@ var VoucherApi = /*#__PURE__*/function () {
       var returnType = _VoucherViewModel["default"];
       return this.apiClient.callApi('/v1/vouchers/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the voucher by GUID.
      * @param {String} id Represents the unique Id of vocher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModel}
      */
-
   }, {
     key: "getVoucher",
     value: function getVoucher(id) {
@@ -136,6 +120,7 @@ var VoucherApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Returns a paginated list of vouchers.
      * @param {Object} opts Optional parameters
@@ -150,7 +135,6 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VoucherViewModelGetAllModel} and HTTP response
      */
-
   }, {
     key: "getVouchersWithHttpInfo",
     value: function getVouchersWithHttpInfo(opts) {
@@ -176,6 +160,7 @@ var VoucherApi = /*#__PURE__*/function () {
       var returnType = _VoucherViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/vouchers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of vouchers.
      * @param {Object} opts Optional parameters
@@ -190,7 +175,6 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VoucherViewModelGetAllModel}
      */
-
   }, {
     key: "getVouchers",
     value: function getVouchers(opts) {
@@ -198,23 +182,22 @@ var VoucherApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicVoucherViewModel} and HTTP response
      */
-
   }, {
     key: "sendElectronicVoucherWithHttpInfo",
     value: function sendElectronicVoucherWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling sendElectronicVoucher");
       }
-
       var pathParams = {
         'id': id
       };
@@ -227,13 +210,13 @@ var VoucherApi = /*#__PURE__*/function () {
       var returnType = _SendElectronicVoucherViewModel["default"];
       return this.apiClient.callApi('/v1/vouchers/{id}/stamp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicVoucherViewModel}
      */
-
   }, {
     key: "sendElectronicVoucher",
     value: function sendElectronicVoucher(id, opts) {
@@ -241,6 +224,7 @@ var VoucherApi = /*#__PURE__*/function () {
         return response_and_data.data;
       });
     }
+
     /**
      * Send an invoice by email
      * @param {String} id Represents the Guid of the Invoice.
@@ -248,17 +232,15 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailViewModel} and HTTP response
      */
-
   }, {
     key: "sendVoucherByEmailWithHttpInfo",
     value: function sendVoucherByEmailWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling sendVoucherByEmail");
       }
-
       var pathParams = {
         'id': id
       };
@@ -271,6 +253,7 @@ var VoucherApi = /*#__PURE__*/function () {
       var returnType = _MailViewModel["default"];
       return this.apiClient.callApi('/v1/vouchers/{id}/mail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Send an invoice by email
      * @param {String} id Represents the Guid of the Invoice.
@@ -278,7 +261,6 @@ var VoucherApi = /*#__PURE__*/function () {
      * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MailViewModel}
      */
-
   }, {
     key: "sendVoucherByEmail",
     value: function sendVoucherByEmail(id, opts) {
@@ -289,5 +271,3 @@ var VoucherApi = /*#__PURE__*/function () {
   }]);
   return VoucherApi;
 }();
-
-exports["default"] = VoucherApi;

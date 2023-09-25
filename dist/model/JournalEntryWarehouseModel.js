@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The JournalEntryWarehouseModel model module.
  * @module model/JournalEntryWarehouseModel
@@ -40,16 +34,16 @@ var JournalEntryWarehouseModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, JournalEntryWarehouseModel);
     JournalEntryWarehouseModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(JournalEntryWarehouseModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>JournalEntryWarehouseModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,22 +51,18 @@ var JournalEntryWarehouseModel = /*#__PURE__*/function () {
      * @param {module:model/JournalEntryWarehouseModel} obj Optional instance to populate.
      * @return {module:model/JournalEntryWarehouseModel} The populated <code>JournalEntryWarehouseModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new JournalEntryWarehouseModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'Number');
         }
-
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -82,14 +72,11 @@ var JournalEntryWarehouseModel = /*#__PURE__*/function () {
  * Represents the id of warehouse, by default this field will be null.
  * @member {Number} id
  */
-
-
 JournalEntryWarehouseModel.prototype['id'] = undefined;
+
 /**
  * Represents the name of warehouse.
  * @member {String} name
  */
-
 JournalEntryWarehouseModel.prototype['name'] = undefined;
-var _default = JournalEntryWarehouseModel;
-exports["default"] = _default;
+var _default = exports["default"] = JournalEntryWarehouseModel;

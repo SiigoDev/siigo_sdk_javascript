@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _UsersViewModel = _interopRequireDefault(require("../model/UsersViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _UsersViewModel = _interopRequireDefault(require("../model/UsersViewModel"))
  * Do not edit the class manually.
  *
  */
-
 /**
 * User service.
 * @module api/UserApi
 * @version v1
 */
-var UserApi = /*#__PURE__*/function () {
+var UserApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new UserApi. 
   * @alias module:api/UserApi
@@ -45,6 +38,7 @@ var UserApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, UserApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a paginated list of users.
    * @param {Object} opts Optional parameters
@@ -52,8 +46,6 @@ var UserApi = /*#__PURE__*/function () {
    * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UsersViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(UserApi, [{
     key: "getUsersWithHttpInfo",
     value: function getUsersWithHttpInfo(opts) {
@@ -72,6 +64,7 @@ var UserApi = /*#__PURE__*/function () {
       var returnType = _UsersViewModel["default"];
       return this.apiClient.callApi('/v1/users', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of users.
      * @param {Object} opts Optional parameters
@@ -79,7 +72,6 @@ var UserApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of users that you will get per page. For example, '20'.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UsersViewModel}
      */
-
   }, {
     key: "getUsers",
     value: function getUsers(opts) {
@@ -90,5 +82,3 @@ var UserApi = /*#__PURE__*/function () {
   }]);
   return UserApi;
 }();
-
-exports["default"] = UserApi;

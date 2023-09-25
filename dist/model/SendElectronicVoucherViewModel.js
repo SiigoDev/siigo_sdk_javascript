@@ -1,22 +1,15 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _MailViewModel = _interopRequireDefault(require("./MailViewModel"));
-
 var _VoucherStampModel = _interopRequireDefault(require("./VoucherStampModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -29,7 +22,6 @@ var _VoucherStampModel = _interopRequireDefault(require("./VoucherStampModel"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The SendElectronicVoucherViewModel model module.
  * @module model/SendElectronicVoucherViewModel
@@ -44,16 +36,16 @@ var SendElectronicVoucherViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, SendElectronicVoucherViewModel);
     SendElectronicVoucherViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(SendElectronicVoucherViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>SendElectronicVoucherViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -61,22 +53,18 @@ var SendElectronicVoucherViewModel = /*#__PURE__*/function () {
      * @param {module:model/SendElectronicVoucherViewModel} obj Optional instance to populate.
      * @return {module:model/SendElectronicVoucherViewModel} The populated <code>SendElectronicVoucherViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SendElectronicVoucherViewModel();
-
         if (data.hasOwnProperty('stamp')) {
           obj['stamp'] = _VoucherStampModel["default"].constructFromObject(data['stamp']);
         }
-
         if (data.hasOwnProperty('mail')) {
           obj['mail'] = _MailViewModel["default"].constructFromObject(data['mail']);
         }
       }
-
       return obj;
     }
   }]);
@@ -85,13 +73,10 @@ var SendElectronicVoucherViewModel = /*#__PURE__*/function () {
 /**
  * @member {module:model/VoucherStampModel} stamp
  */
-
-
 SendElectronicVoucherViewModel.prototype['stamp'] = undefined;
+
 /**
  * @member {module:model/MailViewModel} mail
  */
-
 SendElectronicVoucherViewModel.prototype['mail'] = undefined;
-var _default = SendElectronicVoucherViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = SendElectronicVoucherViewModel;

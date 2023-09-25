@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The CostCentersViewModel model module.
  * @module model/CostCentersViewModel
@@ -40,16 +34,16 @@ var CostCentersViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CostCentersViewModel);
     CostCentersViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(CostCentersViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>CostCentersViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +51,24 @@ var CostCentersViewModel = /*#__PURE__*/function () {
      * @param {module:model/CostCentersViewModel} obj Optional instance to populate.
      * @return {module:model/CostCentersViewModel} The populated <code>CostCentersViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new CostCentersViewModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'Number');
         }
-
         if (data.hasOwnProperty('code')) {
           obj['code'] = _ApiClient["default"].convertToType(data['code'], 'String');
         }
-
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
-
         if (data.hasOwnProperty('active')) {
           obj['active'] = _ApiClient["default"].convertToType(data['active'], 'Boolean');
         }
       }
-
       return obj;
     }
   }]);
@@ -90,26 +78,23 @@ var CostCentersViewModel = /*#__PURE__*/function () {
  * Represents the id of the cost center, the value of this field must be an integer  number that represents the unique id of the cost center.
  * @member {Number} id
  */
-
-
 CostCentersViewModel.prototype['id'] = undefined;
+
 /**
  * Represents the identification code of the cost center.   This code will represent the unique code id of the cost center.
  * @member {String} code
  */
-
 CostCentersViewModel.prototype['code'] = undefined;
+
 /**
  * Represents the name of the cost center. This value can be an alphanumeric  name like 'Main Cost Center' or 'Center-1'.
  * @member {String} name
  */
-
 CostCentersViewModel.prototype['name'] = undefined;
+
 /**
  * Represents if the status of a cost center is activated or disabled,   the value of this status will be true (for activated) or false (disabled).  By default, this field will be active.
  * @member {Boolean} active
  */
-
 CostCentersViewModel.prototype['active'] = undefined;
-var _default = CostCentersViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = CostCentersViewModel;

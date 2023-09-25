@@ -1,22 +1,15 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _PageListModel = _interopRequireDefault(require("./PageListModel"));
-
 var _UsersModel = _interopRequireDefault(require("./UsersModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -29,7 +22,6 @@ var _UsersModel = _interopRequireDefault(require("./UsersModel"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The UsersViewModel model module.
  * @module model/UsersViewModel
@@ -45,16 +37,16 @@ var UsersViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, UsersViewModel);
     UsersViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(UsersViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>UsersViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -62,22 +54,18 @@ var UsersViewModel = /*#__PURE__*/function () {
      * @param {module:model/UsersViewModel} obj Optional instance to populate.
      * @return {module:model/UsersViewModel} The populated <code>UsersViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new UsersViewModel();
-
         if (data.hasOwnProperty('pagination')) {
           obj['pagination'] = _PageListModel["default"].constructFromObject(data['pagination']);
         }
-
         if (data.hasOwnProperty('results')) {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_UsersModel["default"]]);
         }
       }
-
       return obj;
     }
   }]);
@@ -86,14 +74,11 @@ var UsersViewModel = /*#__PURE__*/function () {
 /**
  * @member {module:model/PageListModel} pagination
  */
-
-
 UsersViewModel.prototype['pagination'] = undefined;
+
 /**
  * Contains the Results, this results will be a list of users.
  * @member {Array.<module:model/UsersModel>} results
  */
-
 UsersViewModel.prototype['results'] = undefined;
-var _default = UsersViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = UsersViewModel;

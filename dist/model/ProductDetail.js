@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The ProductDetail model module.
  * @module model/ProductDetail
@@ -40,16 +34,16 @@ var ProductDetail = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, ProductDetail);
     ProductDetail.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(ProductDetail, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>ProductDetail</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +51,24 @@ var ProductDetail = /*#__PURE__*/function () {
      * @param {module:model/ProductDetail} obj Optional instance to populate.
      * @return {module:model/ProductDetail} The populated <code>ProductDetail</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ProductDetail();
-
         if (data.hasOwnProperty('detail_name')) {
           obj['detail_name'] = _ApiClient["default"].convertToType(data['detail_name'], 'String');
         }
-
         if (data.hasOwnProperty('detail_description')) {
           obj['detail_description'] = _ApiClient["default"].convertToType(data['detail_description'], 'String');
         }
-
         if (data.hasOwnProperty('definition_name')) {
           obj['definition_name'] = _ApiClient["default"].convertToType(data['definition_name'], 'String');
         }
-
         if (data.hasOwnProperty('definition_description')) {
           obj['definition_description'] = _ApiClient["default"].convertToType(data['definition_description'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -89,23 +77,20 @@ var ProductDetail = /*#__PURE__*/function () {
 /**
  * @member {String} detail_name
  */
-
-
 ProductDetail.prototype['detail_name'] = undefined;
+
 /**
  * @member {String} detail_description
  */
-
 ProductDetail.prototype['detail_description'] = undefined;
+
 /**
  * @member {String} definition_name
  */
-
 ProductDetail.prototype['definition_name'] = undefined;
+
 /**
  * @member {String} definition_description
  */
-
 ProductDetail.prototype['definition_description'] = undefined;
-var _default = ProductDetail;
-exports["default"] = _default;
+var _default = exports["default"] = ProductDetail;

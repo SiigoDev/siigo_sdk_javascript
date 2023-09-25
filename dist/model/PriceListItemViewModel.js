@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The PriceListItemViewModel model module.
  * @module model/PriceListItemViewModel
@@ -40,16 +34,16 @@ var PriceListItemViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PriceListItemViewModel);
     PriceListItemViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(PriceListItemViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>PriceListItemViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,26 +51,21 @@ var PriceListItemViewModel = /*#__PURE__*/function () {
      * @param {module:model/PriceListItemViewModel} obj Optional instance to populate.
      * @return {module:model/PriceListItemViewModel} The populated <code>PriceListItemViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new PriceListItemViewModel();
-
         if (data.hasOwnProperty('position')) {
           obj['position'] = _ApiClient["default"].convertToType(data['position'], 'Number');
         }
-
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
-
         if (data.hasOwnProperty('value')) {
           obj['value'] = _ApiClient["default"].convertToType(data['value'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -85,18 +74,15 @@ var PriceListItemViewModel = /*#__PURE__*/function () {
 /**
  * @member {Number} position
  */
-
-
 PriceListItemViewModel.prototype['position'] = undefined;
+
 /**
  * @member {String} name
  */
-
 PriceListItemViewModel.prototype['name'] = undefined;
+
 /**
  * @member {Number} value
  */
-
 PriceListItemViewModel.prototype['value'] = undefined;
-var _default = PriceListItemViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = PriceListItemViewModel;

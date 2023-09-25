@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _PaymentTypesViewModel = _interopRequireDefault(require("../model/PaymentTypesViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _PaymentTypesViewModel = _interopRequireDefault(require("../model/PaymentTyp
  * Do not edit the class manually.
  *
  */
-
 /**
 * PaymentTypes service.
 * @module api/PaymentTypesApi
 * @version v1
 */
-var PaymentTypesApi = /*#__PURE__*/function () {
+var PaymentTypesApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new PaymentTypesApi. 
   * @alias module:api/PaymentTypesApi
@@ -45,14 +38,13 @@ var PaymentTypesApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PaymentTypesApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of payment types.
    * @param {Object} opts Optional parameters
    * @param {String} opts.documentType Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/PaymentTypesViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(PaymentTypesApi, [{
     key: "getPaymentTypesWithHttpInfo",
     value: function getPaymentTypesWithHttpInfo(opts) {
@@ -70,13 +62,13 @@ var PaymentTypesApi = /*#__PURE__*/function () {
       var returnType = [_PaymentTypesViewModel["default"]];
       return this.apiClient.callApi('/v1/payment-types', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of payment types.
      * @param {Object} opts Optional parameters
      * @param {String} opts.documentType Returns the payment method by the document type associated. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/PaymentTypesViewModel>}
      */
-
   }, {
     key: "getPaymentTypes",
     value: function getPaymentTypes(opts) {
@@ -87,5 +79,3 @@ var PaymentTypesApi = /*#__PURE__*/function () {
   }]);
   return PaymentTypesApi;
 }();
-
-exports["default"] = PaymentTypesApi;

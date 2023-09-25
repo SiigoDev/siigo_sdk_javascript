@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _DocumentTypeViewModel = _interopRequireDefault(require("../model/DocumentTypeViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _DocumentTypeViewModel = _interopRequireDefault(require("../model/DocumentTy
  * Do not edit the class manually.
  *
  */
-
 /**
 * DocumentType service.
 * @module api/DocumentTypeApi
 * @version v1
 */
-var DocumentTypeApi = /*#__PURE__*/function () {
+var DocumentTypeApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new DocumentTypeApi. 
   * @alias module:api/DocumentTypeApi
@@ -45,14 +38,13 @@ var DocumentTypeApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, DocumentTypeApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of document types.
    * @param {Object} opts Optional parameters
    * @param {String} opts.type Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/DocumentTypeViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(DocumentTypeApi, [{
     key: "getDocumentTypesWithHttpInfo",
     value: function getDocumentTypesWithHttpInfo(opts) {
@@ -70,13 +62,13 @@ var DocumentTypeApi = /*#__PURE__*/function () {
       var returnType = [_DocumentTypeViewModel["default"]];
       return this.apiClient.callApi('/v1/document-types', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of document types.
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Represents the document type. For example, 'FV' to invoices, 'NC' to credit notes, or 'RC' to vouchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/DocumentTypeViewModel>}
      */
-
   }, {
     key: "getDocumentTypes",
     value: function getDocumentTypes(opts) {
@@ -87,5 +79,3 @@ var DocumentTypeApi = /*#__PURE__*/function () {
   }]);
   return DocumentTypeApi;
 }();
-
-exports["default"] = DocumentTypeApi;
