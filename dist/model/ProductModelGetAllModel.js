@@ -78,8 +78,8 @@ var ProductModelGetAllModel = /*#__PURE__*/function () {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_ProductModel["default"]]);
         }
 
-        if (data.hasOwnProperty('__links')) {
-          obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
+        if (data.hasOwnProperty('_links')) {
+          obj['_links'] = _LinksPagination["default"].constructFromObject(data['_links']);
         }
       }
 
@@ -101,9 +101,9 @@ ProductModelGetAllModel.prototype['pagination'] = undefined;
 
 ProductModelGetAllModel.prototype['results'] = undefined;
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
 
-ProductModelGetAllModel.prototype['__links'] = undefined;
+ProductModelGetAllModel.prototype['_links'] = undefined;
 var _default = ProductModelGetAllModel;
 exports["default"] = _default;

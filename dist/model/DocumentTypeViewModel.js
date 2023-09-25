@@ -166,6 +166,10 @@ var DocumentTypeViewModel = /*#__PURE__*/function () {
           obj['global_charges'] = _ApiClient["default"].convertToType(data['global_charges'], [_DocumentTypeTaxModel["default"]]);
         }
 
+        if (data.hasOwnProperty('cargo_transportation')) {
+          obj['cargo_transportation'] = _ApiClient["default"].convertToType(data['cargo_transportation'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('i_s_r')) {
           obj['i_s_r'] = _ApiClient["default"].convertToType(data['i_s_r'], 'Boolean');
         }
@@ -327,6 +331,11 @@ DocumentTypeViewModel.prototype['global_discounts'] = undefined;
  */
 
 DocumentTypeViewModel.prototype['global_charges'] = undefined;
+/**
+ * @member {Boolean} cargo_transportation
+ */
+
+DocumentTypeViewModel.prototype['cargo_transportation'] = undefined;
 /**
  * Represent if the document allows ISR. This field is only for Mexico.
  * @member {Boolean} i_s_r

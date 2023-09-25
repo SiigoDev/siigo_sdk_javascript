@@ -78,8 +78,8 @@ var CreditNoteViewModelGetAllModel = /*#__PURE__*/function () {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_CreditNoteViewModel["default"]]);
         }
 
-        if (data.hasOwnProperty('__links')) {
-          obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
+        if (data.hasOwnProperty('_links')) {
+          obj['_links'] = _LinksPagination["default"].constructFromObject(data['_links']);
         }
       }
 
@@ -101,9 +101,9 @@ CreditNoteViewModelGetAllModel.prototype['pagination'] = undefined;
 
 CreditNoteViewModelGetAllModel.prototype['results'] = undefined;
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
 
-CreditNoteViewModelGetAllModel.prototype['__links'] = undefined;
+CreditNoteViewModelGetAllModel.prototype['_links'] = undefined;
 var _default = CreditNoteViewModelGetAllModel;
 exports["default"] = _default;

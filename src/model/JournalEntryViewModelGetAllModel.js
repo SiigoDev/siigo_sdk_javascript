@@ -56,8 +56,8 @@ class JournalEntryViewModelGetAllModel {
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [JournalEntryViewModel]);
             }
-            if (data.hasOwnProperty('__links')) {
-                obj['__links'] = LinksPagination.constructFromObject(data['__links']);
+            if (data.hasOwnProperty('_links')) {
+                obj['_links'] = LinksPagination.constructFromObject(data['_links']);
             }
         }
         return obj;
@@ -78,9 +78,9 @@ JournalEntryViewModelGetAllModel.prototype['pagination'] = undefined;
 JournalEntryViewModelGetAllModel.prototype['results'] = undefined;
 
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
-JournalEntryViewModelGetAllModel.prototype['__links'] = undefined;
+JournalEntryViewModelGetAllModel.prototype['_links'] = undefined;
 
 
 

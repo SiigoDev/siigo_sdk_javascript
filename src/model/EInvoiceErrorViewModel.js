@@ -47,6 +47,9 @@ class EInvoiceErrorViewModel {
         if (data) {
             obj = obj || new EInvoiceErrorViewModel();
 
+            if (data.hasOwnProperty('code')) {
+                obj['code'] = ApiClient.convertToType(data['code'], 'String');
+            }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
@@ -56,6 +59,12 @@ class EInvoiceErrorViewModel {
 
 
 }
+
+/**
+ * Represents a code error that was sent by the tax regulatory entity.
+ * @member {String} code
+ */
+EInvoiceErrorViewModel.prototype['code'] = undefined;
 
 /**
  * Respresents a message error like 'Error 401: ...'.

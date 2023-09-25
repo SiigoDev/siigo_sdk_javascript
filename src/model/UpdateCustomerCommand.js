@@ -107,6 +107,9 @@ class UpdateCustomerCommand {
             if (data.hasOwnProperty('custom_fields')) {
                 obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], [CustomFieldsCommand]);
             }
+            if (data.hasOwnProperty('fiscal_regime')) {
+                obj['fiscal_regime'] = ApiClient.convertToType(data['fiscal_regime'], 'String');
+            }
             if (data.hasOwnProperty('guid')) {
                 obj['guid'] = ApiClient.convertToType(data['guid'], 'String');
             }
@@ -222,6 +225,12 @@ UpdateCustomerCommand.prototype['related_users'] = undefined;
  * @member {Array.<module:model/CustomFieldsCommand>} custom_fields
  */
 UpdateCustomerCommand.prototype['custom_fields'] = undefined;
+
+/**
+ * Represents fiscal Regime.
+ * @member {String} fiscal_regime
+ */
+UpdateCustomerCommand.prototype['fiscal_regime'] = undefined;
 
 /**
  * Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.

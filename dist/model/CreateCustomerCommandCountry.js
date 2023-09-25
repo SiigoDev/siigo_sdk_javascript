@@ -147,6 +147,10 @@ var CreateCustomerCommandCountry = /*#__PURE__*/function () {
         if (data.hasOwnProperty('custom_fields')) {
           obj['custom_fields'] = _ApiClient["default"].convertToType(data['custom_fields'], [_CustomFieldsCommand["default"]]);
         }
+
+        if (data.hasOwnProperty('fiscal_regime')) {
+          obj['fiscal_regime'] = _ApiClient["default"].convertToType(data['fiscal_regime'], 'String');
+        }
       }
 
       return obj;
@@ -261,5 +265,11 @@ CreateCustomerCommandCountry.prototype['related_users'] = undefined;
  */
 
 CreateCustomerCommandCountry.prototype['custom_fields'] = undefined;
+/**
+ * Represents fiscal Regime.
+ * @member {String} fiscal_regime
+ */
+
+CreateCustomerCommandCountry.prototype['fiscal_regime'] = undefined;
 var _default = CreateCustomerCommandCountry;
 exports["default"] = _default;

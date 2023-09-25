@@ -29,6 +29,10 @@ var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/Invo
 
 var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
 
+var _SendElectronicInvoiceCommand = _interopRequireDefault(require("../model/SendElectronicInvoiceCommand"));
+
+var _SendElectronicInvoiceViewModel = _interopRequireDefault(require("../model/SendElectronicInvoiceViewModel"));
+
 var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand"));
 
 /**
@@ -366,6 +370,49 @@ var InvoiceApi = /*#__PURE__*/function () {
     key: "getInvoices",
     value: function getInvoices(opts) {
       return this.getInvoicesWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicInvoiceViewModel} and HTTP response
+     */
+
+  }, {
+    key: "sendElectronicInvoiceWithHttpInfo",
+    value: function sendElectronicInvoiceWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = opts; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendElectronicInvoice");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SendElectronicInvoiceViewModel["default"];
+      return this.apiClient.callApi('/v1/invoices/{id}/stamp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicInvoiceViewModel}
+     */
+
+  }, {
+    key: "sendElectronicInvoice",
+    value: function sendElectronicInvoice(id, opts) {
+      return this.sendElectronicInvoiceWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

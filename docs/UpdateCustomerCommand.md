@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **comments** | **String** | Represents additional comments or observations. | [optional] 
 **relatedUsers** | [**RelatedUsersCommand**](RelatedUsersCommand.md) |  | [optional] 
 **customFields** | [**[CustomFieldsCommand]**](CustomFieldsCommand.md) | Allows you to send the purchase order and delivery order fields. | [optional] 
+**fiscalRegime** | **String** | Represents fiscal Regime. | [optional] 
 **guid** | **String** | Represents the unique Id of customer, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | [optional] 
 
 

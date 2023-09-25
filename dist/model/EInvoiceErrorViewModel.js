@@ -64,6 +64,10 @@ var EInvoiceErrorViewModel = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new EInvoiceErrorViewModel();
 
+        if (data.hasOwnProperty('code')) {
+          obj['code'] = _ApiClient["default"].convertToType(data['code'], 'String');
+        }
+
         if (data.hasOwnProperty('message')) {
           obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
         }
@@ -75,10 +79,16 @@ var EInvoiceErrorViewModel = /*#__PURE__*/function () {
   return EInvoiceErrorViewModel;
 }();
 /**
+ * Represents a code error that was sent by the tax regulatory entity.
+ * @member {String} code
+ */
+
+
+EInvoiceErrorViewModel.prototype['code'] = undefined;
+/**
  * Respresents a message error like 'Error 401: ...'.
  * @member {String} message
  */
-
 
 EInvoiceErrorViewModel.prototype['message'] = undefined;
 var _default = EInvoiceErrorViewModel;

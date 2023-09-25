@@ -78,8 +78,8 @@ var VoucherViewModelGetAllModel = /*#__PURE__*/function () {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_VoucherViewModel["default"]]);
         }
 
-        if (data.hasOwnProperty('__links')) {
-          obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
+        if (data.hasOwnProperty('_links')) {
+          obj['_links'] = _LinksPagination["default"].constructFromObject(data['_links']);
         }
       }
 
@@ -101,9 +101,9 @@ VoucherViewModelGetAllModel.prototype['pagination'] = undefined;
 
 VoucherViewModelGetAllModel.prototype['results'] = undefined;
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
 
-VoucherViewModelGetAllModel.prototype['__links'] = undefined;
+VoucherViewModelGetAllModel.prototype['_links'] = undefined;
 var _default = VoucherViewModelGetAllModel;
 exports["default"] = _default;

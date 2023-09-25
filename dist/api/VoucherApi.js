@@ -15,6 +15,16 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _CreateVoucherCommand = _interopRequireDefault(require("../model/CreateVoucherCommand"));
 
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
+
+var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
+
+var _SendElectronicVoucherCommand = _interopRequireDefault(require("../model/SendElectronicVoucherCommand"));
+
+var _SendElectronicVoucherViewModel = _interopRequireDefault(require("../model/SendElectronicVoucherViewModel"));
+
+var _SendVoucherByEmailCommand = _interopRequireDefault(require("../model/SendVoucherByEmailCommand"));
+
 var _VoucherViewModel = _interopRequireDefault(require("../model/VoucherViewModel"));
 
 var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/VoucherViewModelGetAllModel"));
@@ -185,6 +195,94 @@ var VoucherApi = /*#__PURE__*/function () {
     key: "getVouchers",
     value: function getVouchers(opts) {
       return this.getVouchersWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicVoucherViewModel} and HTTP response
+     */
+
+  }, {
+    key: "sendElectronicVoucherWithHttpInfo",
+    value: function sendElectronicVoucherWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = opts; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendElectronicVoucher");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SendElectronicVoucherViewModel["default"];
+      return this.apiClient.callApi('/v1/vouchers/{id}/stamp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicVoucherViewModel}
+     */
+
+  }, {
+    key: "sendElectronicVoucher",
+    value: function sendElectronicVoucher(id, opts) {
+      return this.sendElectronicVoucherWithHttpInfo(id, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Send an invoice by email
+     * @param {String} id Represents the Guid of the Invoice.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailViewModel} and HTTP response
+     */
+
+  }, {
+    key: "sendVoucherByEmailWithHttpInfo",
+    value: function sendVoucherByEmailWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = opts; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendVoucherByEmail");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _MailViewModel["default"];
+      return this.apiClient.callApi('/v1/vouchers/{id}/mail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Send an invoice by email
+     * @param {String} id Represents the Guid of the Invoice.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MailViewModel}
+     */
+
+  }, {
+    key: "sendVoucherByEmail",
+    value: function sendVoucherByEmail(id, opts) {
+      return this.sendVoucherByEmailWithHttpInfo(id, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
