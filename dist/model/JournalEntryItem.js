@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _Account = _interopRequireDefault(require("./Account"));
-var _FixedAssetCommand = _interopRequireDefault(require("./FixedAssetCommand"));
-var _ItemDueCommand = _interopRequireDefault(require("./ItemDueCommand"));
-var _JournalEntryProductCommand = _interopRequireDefault(require("./JournalEntryProductCommand"));
-var _LiteCustomerCommand = _interopRequireDefault(require("./LiteCustomerCommand"));
-var _TaxesCommand = _interopRequireDefault(require("./TaxesCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _Account = _interopRequireDefault(require("./Account.js"));
+var _FixedAssetCommand = _interopRequireDefault(require("./FixedAssetCommand.js"));
+var _ItemDueCommand = _interopRequireDefault(require("./ItemDueCommand.js"));
+var _JournalEntryProductCommand = _interopRequireDefault(require("./JournalEntryProductCommand.js"));
+var _LiteCustomerCommand = _interopRequireDefault(require("./LiteCustomerCommand.js"));
+var _TaxesCommand = _interopRequireDefault(require("./TaxesCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

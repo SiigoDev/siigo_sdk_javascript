@@ -7,15 +7,15 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AddressModel = _interopRequireDefault(require("./AddressModel"));
-var _ContactModel = _interopRequireDefault(require("./ContactModel"));
-var _CustomFieldsModel = _interopRequireDefault(require("./CustomFieldsModel"));
-var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./FiscalResponsabilitiesModel"));
-var _IdTypeModel = _interopRequireDefault(require("./IdTypeModel"));
-var _MetadataModel = _interopRequireDefault(require("./MetadataModel"));
-var _PhoneModel = _interopRequireDefault(require("./PhoneModel"));
-var _RelatedUsersModel = _interopRequireDefault(require("./RelatedUsersModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AddressModel = _interopRequireDefault(require("./AddressModel.js"));
+var _ContactModel = _interopRequireDefault(require("./ContactModel.js"));
+var _CustomFieldsModel = _interopRequireDefault(require("./CustomFieldsModel.js"));
+var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./FiscalResponsabilitiesModel.js"));
+var _IdTypeModel = _interopRequireDefault(require("./IdTypeModel.js"));
+var _MetadataModel = _interopRequireDefault(require("./MetadataModel.js"));
+var _PhoneModel = _interopRequireDefault(require("./PhoneModel.js"));
+var _RelatedUsersModel = _interopRequireDefault(require("./RelatedUsersModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

@@ -7,18 +7,18 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CreateInvoiceCommand = _interopRequireDefault(require("../model/CreateInvoiceCommand"));
-var _EInvoiceErrorsViewModel = _interopRequireDefault(require("../model/EInvoiceErrorsViewModel"));
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-var _InvoiceDeleteViewModel = _interopRequireDefault(require("../model/InvoiceDeleteViewModel"));
-var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfViewModel"));
-var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel"));
-var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/InvoiceViewModelGetAllModel"));
-var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
-var _SendElectronicInvoiceCommand = _interopRequireDefault(require("../model/SendElectronicInvoiceCommand"));
-var _SendElectronicInvoiceViewModel = _interopRequireDefault(require("../model/SendElectronicInvoiceViewModel"));
-var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateInvoiceCommand = _interopRequireDefault(require("../model/CreateInvoiceCommand.js"));
+var _EInvoiceErrorsViewModel = _interopRequireDefault(require("../model/EInvoiceErrorsViewModel.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _InvoiceDeleteViewModel = _interopRequireDefault(require("../model/InvoiceDeleteViewModel.js"));
+var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfViewModel.js"));
+var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel.js"));
+var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/InvoiceViewModelGetAllModel.js"));
+var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel.js"));
+var _SendElectronicInvoiceCommand = _interopRequireDefault(require("../model/SendElectronicInvoiceCommand.js"));
+var _SendElectronicInvoiceViewModel = _interopRequireDefault(require("../model/SendElectronicInvoiceViewModel.js"));
+var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

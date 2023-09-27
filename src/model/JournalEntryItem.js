@@ -11,13 +11,13 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Account from './Account';
-import FixedAssetCommand from './FixedAssetCommand';
-import ItemDueCommand from './ItemDueCommand';
-import JournalEntryProductCommand from './JournalEntryProductCommand';
-import LiteCustomerCommand from './LiteCustomerCommand';
-import TaxesCommand from './TaxesCommand';
+import ApiClient from '../ApiClient.js';
+import Account from './Account.js';
+import FixedAssetCommand from './FixedAssetCommand.js';
+import ItemDueCommand from './ItemDueCommand.js';
+import JournalEntryProductCommand from './JournalEntryProductCommand.js';
+import LiteCustomerCommand from './LiteCustomerCommand.js';
+import TaxesCommand from './TaxesCommand.js';
 
 /**
  * The JournalEntryItem model module.

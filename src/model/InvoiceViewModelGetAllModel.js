@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GenericPageListModel from './GenericPageListModel';
-import InvoiceViewModel from './InvoiceViewModel';
-import LinksPagination from './LinksPagination';
+import ApiClient from '../ApiClient.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import InvoiceViewModel from './InvoiceViewModel.js';
+import LinksPagination from './LinksPagination.js';
 
 /**
  * The InvoiceViewModelGetAllModel model module.

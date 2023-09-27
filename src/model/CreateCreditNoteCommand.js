@@ -11,13 +11,13 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyCommand from './CurrencyCommand';
-import DianReason from './DianReason';
-import DocumentCommand from './DocumentCommand';
-import ItemsCommand from './ItemsCommand';
-import PaymentsCommand from './PaymentsCommand';
-import RetentionsCommand from './RetentionsCommand';
+import ApiClient from '../ApiClient.js';
+import CurrencyCommand from './CurrencyCommand.js';
+import DianReason from './DianReason.js';
+import DocumentCommand from './DocumentCommand.js';
+import ItemsCommand from './ItemsCommand.js';
+import PaymentsCommand from './PaymentsCommand.js';
+import RetentionsCommand from './RetentionsCommand.js';
 
 /**
  * The CreateCreditNoteCommand model module.

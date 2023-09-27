@@ -11,11 +11,11 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AccountsPayableDue from './AccountsPayableDue';
-import CostCenter from './CostCenter';
-import Currency from './Currency';
-import Provider from './Provider';
+import ApiClient from '../ApiClient.js';
+import AccountsPayableDue from './AccountsPayableDue.js';
+import CostCenter from './CostCenter.js';
+import Currency from './Currency.js';
+import Provider from './Provider.js';
 
 /**
  * The AccountsPayableViewModel model module.

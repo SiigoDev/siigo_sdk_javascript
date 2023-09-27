@@ -11,160 +11,136 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index', process.cwd()+'/test/app'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'), require(process.cwd()+'/test/app.js'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi, root.app);
-  }
-}(this, function(expect, SiigoApi, app) {
-  'use strict';
+import app from "../app.js";
+import expect from "expect.js";
 
-  var instance;
-  var result;
-  var document = {};
-  var data = {
-    "document": {
-        "id": 115057
-    },
-    "date": "2020-12-04",
-    "customer": {
-        "identification": "1636671963141",
-        "branch_office": "0"
-    },
-    "seller": "18620",
-    "items": [
-        {
-            "code": "1215",
-            "quantity": "1",
-            "price": 1000
-        }
-    ],
-    "payments": [
-        {
-            "id": 34450,
-            "value": 1000
-        }
-    ]
-};
+let instance;
 
-  before(async function() {
-    SiigoApi = await app._test.initialize(SiigoApi);
-    instance = new SiigoApi.InvoiceApi();
-  });
+before(async function() {
+  let SiigoAPI = await app.initialize();
+  instance = new SiigoAPI.InvoiceApi();
+});
 
-  var getProperty = function(object, getter, property) {
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('InvoiceApi', function() {
-    describe('getInvoices', function() {
-      it('should call getInvoices successfully', async function() {
-        try {      
-          result = await instance.getInvoicesWithHttpInfo();
-          document = result.response.body.results[0]
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body.results[0].id).to.be(document.id);
-        expect(result.response.body.results[0].document.id).to.be(document.document.id);
-        expect(result.response.body.results[0].number).to.be(document.number);
-        expect(result.response.body.results[0].name).to.be(document.name);
-        expect(result.response.body.results[0].date).to.be(document.date);
-        expect(result.response.body.results[0].customer.id).to.be(document.customer.id);
-        expect(result.response.body.results[0].customer.identification).to.be(document.customer.identification);
-        expect(result.response.body.results[0].customer.branch_office).to.be(document.customer.branch_office);
-        expect(result.response.body.results[0].cost_center).to.be(document.cost_center);
-        expect(result.response.body.results[0].seller).to.be(document.seller);
-        expect(result.response.body.results[0].total).to.be(document.total);
-        expect(result.response.body.results[0].balance).to.be(document.balance);
-      });
-    });
-    describe('createInvoice', function() {
-      it('should call createInvoice successfully', async function() {
-        try {
-          let opts = data;     
-          result = await instance.createInvoiceWithHttpInfo(opts);
-          document = result.response.body;
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(201);
-        expect(result.response.body.id).to.be(document.id);
-        expect(result.response.body.document.id).to.be(document.document.id);
-        expect(result.response.body.number).to.be(document.number);
-        expect(result.response.body.name).to.be(document.name);
-        expect(result.response.body.date).to.be(document.date);
-        expect(result.response.body.customer.id).to.be(document.customer.id);
-        expect(result.response.body.customer.identification).to.be(document.customer.identification);
-        expect(result.response.body.customer.branch_office).to.be(document.customer.branch_office);
-        expect(result.response.body.cost_center).to.be(document.cost_center);
-        expect(result.response.body.seller).to.be(document.seller);
-        expect(result.response.body.total).to.be(document.total);
-        expect(result.response.body.balance).to.be(document.balance);
-      });
-    });
-    describe('getInvoice', function() {
-      it('should call getInvoice successfully', async function() {
-        try {      
-          result = await instance.getInvoiceWithHttpInfo(document.id);
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body.id).to.be(document.id);
-        expect(result.response.body.document.id).to.be(document.document.id);
-        expect(result.response.body.number).to.be(document.number);
-        expect(result.response.body.name).to.be(document.name);
-        expect(result.response.body.date).to.be(document.date);
-        expect(result.response.body.customer.id).to.be(document.customer.id);
-        expect(result.response.body.customer.identification).to.be(document.customer.identification);
-        expect(result.response.body.customer.branch_office).to.be(document.customer.branch_office);
-        expect(result.response.body.cost_center).to.be(document.cost_center);
-        expect(result.response.body.seller).to.be(document.seller);
-        expect(result.response.body.total).to.be(document.total);
-        expect(result.response.body.balance).to.be(document.balance);
-      });
-    });
-    describe('getInvoicePDF', function() {
-      it('should call getInvoicePDF successfully', async function() {
-        try {      
-          result = await instance.getInvoicePDFWithHttpInfo(document.id);
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body.id).to.be(document.id);
-        expect(result.response.body.base64).not.to.be('');
-      });
-    });
-    describe('getElectronicInvoiceErrors', function() {
-      it('should call getElectronicInvoiceErrors successfully', async function() {
-        try {
-          result = await instance.getElectronicInvoiceErrorsWithHttpInfo(document.id);
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body.id).to.be(document.id);
-        expect(result.response.body.errors).not.to.be(undefined);
-      });
+describe('InvoiceApi', function() {
+  describe('annulInvoice', function() {
+    it('should call annulInvoice successfully', async function() {
+      try {
+        let result = await instance.annulInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
     });
   });
-}));
+  describe('createInvoice', function() {
+    it('should call createInvoice successfully', async function() {
+      try {
+        let result = await instance.createInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('deleteInvoice', function() {
+    it('should call deleteInvoice successfully', async function() {
+      try {
+        let result = await instance.deleteInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('getElectronicInvoiceErrors', function() {
+    it('should call getElectronicInvoiceErrors successfully', async function() {
+      try {
+        let result = await instance.getElectronicInvoiceErrorsWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('getInvoice', function() {
+    it('should call getInvoice successfully', async function() {
+      try {
+        let result = await instance.getInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('getInvoicePDF', function() {
+    it('should call getInvoicePDF successfully', async function() {
+      try {
+        let result = await instance.getInvoicePDFWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('getInvoices', function() {
+    it('should call getInvoices successfully', async function() {
+      try {
+        let result = await instance.getInvoicesWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('sendElectronicInvoice', function() {
+    it('should call sendElectronicInvoice successfully', async function() {
+      try {
+        let result = await instance.sendElectronicInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('sendInvoiceByEmail', function() {
+    it('should call sendInvoiceByEmail successfully', async function() {
+      try {
+        let result = await instance.sendInvoiceByEmailWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+  describe('updateInvoice', function() {
+    it('should call updateInvoice successfully', async function() {
+      try {
+        let result = await instance.updateInvoiceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+});
+

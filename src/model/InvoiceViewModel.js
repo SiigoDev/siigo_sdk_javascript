@@ -11,18 +11,18 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AdditionalFieldsModel from './AdditionalFieldsModel';
-import CurrencyModel from './CurrencyModel';
-import DocumentModel from './DocumentModel';
-import GlobalTaxModel from './GlobalTaxModel';
-import InvoiceCustomerModel from './InvoiceCustomerModel';
-import ItemsModel from './ItemsModel';
-import MailViewModel from './MailViewModel';
-import Metadata from './Metadata';
-import PaymentsModel from './PaymentsModel';
-import RetentionsOutModel from './RetentionsOutModel';
-import StampViewModel from './StampViewModel';
+import ApiClient from '../ApiClient.js';
+import AdditionalFieldsModel from './AdditionalFieldsModel.js';
+import CurrencyModel from './CurrencyModel.js';
+import DocumentModel from './DocumentModel.js';
+import GlobalTaxModel from './GlobalTaxModel.js';
+import InvoiceCustomerModel from './InvoiceCustomerModel.js';
+import ItemsModel from './ItemsModel.js';
+import MailViewModel from './MailViewModel.js';
+import Metadata from './Metadata.js';
+import PaymentsModel from './PaymentsModel.js';
+import RetentionsOutModel from './RetentionsOutModel.js';
+import StampViewModel from './StampViewModel.js';
 
 /**
  * The InvoiceViewModel model module.

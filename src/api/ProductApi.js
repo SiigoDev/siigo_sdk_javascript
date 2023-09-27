@@ -12,13 +12,13 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateProductCommand from '../model/CreateProductCommand';
-import ErrorResponse from '../model/ErrorResponse';
-import ProductDeleteViewModel from '../model/ProductDeleteViewModel';
-import ProductModel from '../model/ProductModel';
-import ProductModelGetAllModel from '../model/ProductModelGetAllModel';
-import UpdateProductCommand from '../model/UpdateProductCommand';
+import ApiClient from "../ApiClient.js";
+import CreateProductCommand from '../model/CreateProductCommand.js';
+import ErrorResponse from '../model/ErrorResponse.js';
+import ProductDeleteViewModel from '../model/ProductDeleteViewModel.js';
+import ProductModel from '../model/ProductModel.js';
+import ProductModelGetAllModel from '../model/ProductModelGetAllModel.js';
+import UpdateProductCommand from '../model/UpdateProductCommand.js';
 
 /**
 * Product service.

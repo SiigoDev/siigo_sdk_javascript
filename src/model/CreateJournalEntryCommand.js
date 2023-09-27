@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyCommand from './CurrencyCommand';
-import DocumentCommand from './DocumentCommand';
-import JournalEntryItem from './JournalEntryItem';
+import ApiClient from '../ApiClient.js';
+import CurrencyCommand from './CurrencyCommand.js';
+import DocumentCommand from './DocumentCommand.js';
+import JournalEntryItem from './JournalEntryItem.js';
 
 /**
  * The CreateJournalEntryCommand model module.

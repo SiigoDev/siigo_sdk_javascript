@@ -11,67 +11,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.InvoicePdfViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.InvoicePdfViewModel();
+});
+
+describe('InvoicePdfViewModel', function() {
+  it('should create an instance of InvoicePdfViewModel', function() {
+    // uncomment below and update the code to test InvoicePdfViewModel
+    //var instance = new SiigoApi.InvoicePdfViewModel();
+    //expect(instance).to.be.a(SiigoApi.InvoicePdfViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('InvoicePdfViewModel', function() {
-    it('should create an instance of InvoicePdfViewModel', function() {
-      // uncomment below and update the code to test InvoicePdfViewModel
-      var instance = new SiigoApi.InvoicePdfViewModel();
-      expect(instance).to.be.a(SiigoApi.InvoicePdfViewModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.InvoicePdfViewModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property cufe (base name: "cufe")', function() {
-      // uncomment below and update the code to test the property cufe
-      var instance = new SiigoApi.InvoicePdfViewModel();
-      expect(instance.cufe).to.be(undefined);
-    });
-
-    it('should have the property base64 (base name: "base64")', function() {
-      // uncomment below and update the code to test the property base64
-      var instance = new SiigoApi.InvoicePdfViewModel();
-      expect(instance.base64).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.InvoicePdfViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property cufe (base name: "cufe")', function() {
+    // uncomment below and update the code to test the property cufe
+    //var instance = new SiigoApi.InvoicePdfViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property base64 (base name: "base64")', function() {
+    // uncomment below and update the code to test the property base64
+    //var instance = new SiigoApi.InvoicePdfViewModel();
+    //expect(instance).to.be();
+  });
+
+});

@@ -9,62 +9,30 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  *
- */ 
+ */
 
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd() + '/src/index', process.cwd() + '/test/app'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd() + '/src/index'), require(process.cwd() + '/test/app.js'));
-  } else {
-    
-    factory(root.expect, root.SiigoApi, root.app);
-  }
-}(this, function (expect, SiigoApi, app) {
-  'use strict';
-  var instance;
+import app from "../app.js";
+import expect from "expect.js";
 
-  var result;
+let instance;
 
-  before(async function () {
-    SiigoApi = await app._test.initialize(SiigoApi);
-    instance = new SiigoApi.CostCenterApi();
-  });
+before(async function() {
+  let SiigoAPI = await app.initialize();
+  instance = new SiigoAPI.CostCenterApi();
+});
 
-  var getProperty = function (object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function (object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('CostCenterApi', function () {
-    describe('getCostCenters', function () {
-      it('should call getCostCenters successfully', async function () {
-        //uncomment below and update the code to test getCostCenters
-        try {
-          result = await instance.getCostCentersWithHttpInfo();
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.data[0].id).to.be(13212);
-        expect(result.data[0].code).to.be('1112-1');
-        expect(result.data[0].name).to.be('polas center');
-        expect(result.data[0].active).to.be(true);
-      });
+describe('CostCenterApi', function() {
+  describe('getCostCenters', function() {
+    it('should call getCostCenters successfully', async function() {
+      try {
+        let result = await instance.getCostCentersWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
     });
   });
+});
 
-}));

@@ -7,10 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AccountModel = _interopRequireDefault(require("./AccountModel"));
-var _Due = _interopRequireDefault(require("./Due"));
-var _TaxesModel = _interopRequireDefault(require("./TaxesModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AccountModel = _interopRequireDefault(require("./AccountModel.js"));
+var _Due = _interopRequireDefault(require("./Due.js"));
+var _TaxesModel = _interopRequireDefault(require("./TaxesModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

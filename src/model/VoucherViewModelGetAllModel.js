@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GenericPageListModel from './GenericPageListModel';
-import LinksPagination from './LinksPagination';
-import VoucherViewModel from './VoucherViewModel';
+import ApiClient from '../ApiClient.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import LinksPagination from './LinksPagination.js';
+import VoucherViewModel from './VoucherViewModel.js';
 
 /**
  * The VoucherViewModelGetAllModel model module.

@@ -12,12 +12,12 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateCustomerCommandCountry from '../model/CreateCustomerCommandCountry';
-import CustomerDeleteViewModel from '../model/CustomerDeleteViewModel';
-import CustomerViewModel from '../model/CustomerViewModel';
-import ErrorResponse from '../model/ErrorResponse';
-import UpdateCustomerCommand from '../model/UpdateCustomerCommand';
+import ApiClient from "../ApiClient.js";
+import CreateCustomerCommandCountry from '../model/CreateCustomerCommandCountry.js';
+import CustomerDeleteViewModel from '../model/CustomerDeleteViewModel.js';
+import CustomerViewModel from '../model/CustomerViewModel.js';
+import ErrorResponse from '../model/ErrorResponse.js';
+import UpdateCustomerCommand from '../model/UpdateCustomerCommand.js';
 
 /**
 * Customer service.

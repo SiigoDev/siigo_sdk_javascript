@@ -11,17 +11,17 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AdditionalFieldsCommand from './AdditionalFieldsCommand';
-import CurrencyCommand from './CurrencyCommand';
-import CustomerCommand from './CustomerCommand';
-import DocumentCommand from './DocumentCommand';
-import GlobalTaxCommand from './GlobalTaxCommand';
-import ItemsCommand from './ItemsCommand';
-import MailCommand from './MailCommand';
-import PaymentsCommand from './PaymentsCommand';
-import RetentionsCommand from './RetentionsCommand';
-import StampCommand from './StampCommand';
+import ApiClient from '../ApiClient.js';
+import AdditionalFieldsCommand from './AdditionalFieldsCommand.js';
+import CurrencyCommand from './CurrencyCommand.js';
+import CustomerCommand from './CustomerCommand.js';
+import DocumentCommand from './DocumentCommand.js';
+import GlobalTaxCommand from './GlobalTaxCommand.js';
+import ItemsCommand from './ItemsCommand.js';
+import MailCommand from './MailCommand.js';
+import PaymentsCommand from './PaymentsCommand.js';
+import RetentionsCommand from './RetentionsCommand.js';
+import StampCommand from './StampCommand.js';
 
 /**
  * The CreateInvoiceCommand model module.

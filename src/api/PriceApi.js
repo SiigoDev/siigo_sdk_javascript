@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import PriceListsViewModel from '../model/PriceListsViewModel';
+import ApiClient from "../ApiClient.js";
+import PriceListsViewModel from '../model/PriceListsViewModel.js';
 
 /**
 * Price service.

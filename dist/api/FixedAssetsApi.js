@@ -7,9 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AssetGroupsViewModel = _interopRequireDefault(require("../model/AssetGroupsViewModel"));
-var _FixedAssetsViewModel = _interopRequireDefault(require("../model/FixedAssetsViewModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AssetGroupsViewModel = _interopRequireDefault(require("../model/AssetGroupsViewModel.js"));
+var _FixedAssetsViewModel = _interopRequireDefault(require("../model/FixedAssetsViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

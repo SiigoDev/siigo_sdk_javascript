@@ -7,15 +7,15 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AccountGroup = _interopRequireDefault(require("./AccountGroup"));
-var _AdditionalFields = _interopRequireDefault(require("./AdditionalFields"));
-var _KeysProductsViewModel = _interopRequireDefault(require("./KeysProductsViewModel"));
-var _Metadata = _interopRequireDefault(require("./Metadata"));
-var _PriceListViewModel = _interopRequireDefault(require("./PriceListViewModel"));
-var _Tax = _interopRequireDefault(require("./Tax"));
-var _UnitProductsViewModel = _interopRequireDefault(require("./UnitProductsViewModel"));
-var _Warehouse = _interopRequireDefault(require("./Warehouse"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AccountGroup = _interopRequireDefault(require("./AccountGroup.js"));
+var _AdditionalFields = _interopRequireDefault(require("./AdditionalFields.js"));
+var _KeysProductsViewModel = _interopRequireDefault(require("./KeysProductsViewModel.js"));
+var _Metadata = _interopRequireDefault(require("./Metadata.js"));
+var _PriceListViewModel = _interopRequireDefault(require("./PriceListViewModel.js"));
+var _Tax = _interopRequireDefault(require("./Tax.js"));
+var _UnitProductsViewModel = _interopRequireDefault(require("./UnitProductsViewModel.js"));
+var _Warehouse = _interopRequireDefault(require("./Warehouse.js"));
 /**
  * Siigo API
  * Siigo Api v1

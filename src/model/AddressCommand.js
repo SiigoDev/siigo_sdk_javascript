@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CityCommand from './CityCommand';
+import ApiClient from '../ApiClient.js';
+import CityCommand from './CityCommand.js';
 
 /**
  * The AddressCommand model module.

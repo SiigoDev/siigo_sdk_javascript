@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DeliveryOrderCommand from './DeliveryOrderCommand';
-import PurchaseOrderCommand from './PurchaseOrderCommand';
+import ApiClient from '../ApiClient.js';
+import DeliveryOrderCommand from './DeliveryOrderCommand.js';
+import PurchaseOrderCommand from './PurchaseOrderCommand.js';
 
 /**
  * The AdditionalFieldsCommand model module.

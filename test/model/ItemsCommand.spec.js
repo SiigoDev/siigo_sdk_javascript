@@ -11,109 +11,92 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.ItemsCommand();
+beforeEach(function() {
+  instance = new SiigoApi.ItemsCommand();
+});
+
+describe('ItemsCommand', function() {
+  it('should create an instance of ItemsCommand', function() {
+    // uncomment below and update the code to test ItemsCommand
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be.a(SiigoApi.ItemsCommand);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('ItemsCommand', function() {
-    it('should create an instance of ItemsCommand', function() {
-      // uncomment below and update the code to test ItemsCommand
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance).to.be.a(SiigoApi.ItemsCommand);
-    });
-
-    it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.code).to.be(undefined);
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.description).to.be(undefined);
-    });
-
-    it('should have the property warehouse (base name: "warehouse")', function() {
-      // uncomment below and update the code to test the property warehouse
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.warehouse).to.be(undefined);
-    });
-
-    it('should have the property quantity (base name: "quantity")', function() {
-      // uncomment below and update the code to test the property quantity
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.quantity).to.be(undefined);
-    });
-
-    it('should have the property price (base name: "price")', function() {
-      // uncomment below and update the code to test the property price
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.price).to.be(undefined);
-    });
-
-    it('should have the property taxedPrice (base name: "taxed_price")', function() {
-      // uncomment below and update the code to test the property taxedPrice
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.taxed_price).to.be(undefined);
-    });
-
-    it('should have the property discount (base name: "discount")', function() {
-      // uncomment below and update the code to test the property discount
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.discount).to.be(undefined);
-    });
-
-    it('should have the property seller (base name: "seller")', function() {
-      // uncomment below and update the code to test the property seller
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.seller).to.be(undefined);
-    });
-
-    it('should have the property vatExcluded (base name: "vat_excluded")', function() {
-      // uncomment below and update the code to test the property vatExcluded
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.vat_excluded).to.be(undefined);
-    });
-
-    it('should have the property taxes (base name: "taxes")', function() {
-      // uncomment below and update the code to test the property taxes
-      var instance = new SiigoApi.ItemsCommand();
-      expect(instance.taxes).to.be(undefined);
-    });
-
+  it('should have the property code (base name: "code")', function() {
+    // uncomment below and update the code to test the property code
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property description (base name: "description")', function() {
+    // uncomment below and update the code to test the property description
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property warehouse (base name: "warehouse")', function() {
+    // uncomment below and update the code to test the property warehouse
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property quantity (base name: "quantity")', function() {
+    // uncomment below and update the code to test the property quantity
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property price (base name: "price")', function() {
+    // uncomment below and update the code to test the property price
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property taxedPrice (base name: "taxed_price")', function() {
+    // uncomment below and update the code to test the property taxedPrice
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property totalPrice (base name: "total_price")', function() {
+    // uncomment below and update the code to test the property totalPrice
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property discount (base name: "discount")', function() {
+    // uncomment below and update the code to test the property discount
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property seller (base name: "seller")', function() {
+    // uncomment below and update the code to test the property seller
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property vatExcluded (base name: "vat_excluded")', function() {
+    // uncomment below and update the code to test the property vatExcluded
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property taxes (base name: "taxes")', function() {
+    // uncomment below and update the code to test the property taxes
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property transport (base name: "transport")', function() {
+    // uncomment below and update the code to test the property transport
+    //var instance = new SiigoApi.ItemsCommand();
+    //expect(instance).to.be();
+  });
+
+});

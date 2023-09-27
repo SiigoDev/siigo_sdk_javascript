@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _FixedAssetModel = _interopRequireDefault(require("./FixedAssetModel"));
-var _JournalDue = _interopRequireDefault(require("./JournalDue"));
-var _JournalEntryAccountModel = _interopRequireDefault(require("./JournalEntryAccountModel"));
-var _JournalEntryCustomerModel = _interopRequireDefault(require("./JournalEntryCustomerModel"));
-var _JournalEntryProductModel = _interopRequireDefault(require("./JournalEntryProductModel"));
-var _JournalEntryTaxModel = _interopRequireDefault(require("./JournalEntryTaxModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _FixedAssetModel = _interopRequireDefault(require("./FixedAssetModel.js"));
+var _JournalDue = _interopRequireDefault(require("./JournalDue.js"));
+var _JournalEntryAccountModel = _interopRequireDefault(require("./JournalEntryAccountModel.js"));
+var _JournalEntryCustomerModel = _interopRequireDefault(require("./JournalEntryCustomerModel.js"));
+var _JournalEntryProductModel = _interopRequireDefault(require("./JournalEntryProductModel.js"));
+var _JournalEntryTaxModel = _interopRequireDefault(require("./JournalEntryTaxModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

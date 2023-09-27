@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import WarehouseViewModel from '../model/WarehouseViewModel';
+import ApiClient from "../ApiClient.js";
+import WarehouseViewModel from '../model/WarehouseViewModel.js';
 
 /**
 * Warehouses service.

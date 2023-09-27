@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import TestBalanceCustomer from './TestBalanceCustomer';
+import ApiClient from '../ApiClient.js';
+import TestBalanceCustomer from './TestBalanceCustomer.js';
 
 /**
  * The CreateTestBalanceByThirdpartyCommand model module.

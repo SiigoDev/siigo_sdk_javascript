@@ -12,15 +12,15 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateVoucherCommand from '../model/CreateVoucherCommand';
-import ErrorResponse from '../model/ErrorResponse';
-import MailViewModel from '../model/MailViewModel';
-import SendElectronicVoucherCommand from '../model/SendElectronicVoucherCommand';
-import SendElectronicVoucherViewModel from '../model/SendElectronicVoucherViewModel';
-import SendVoucherByEmailCommand from '../model/SendVoucherByEmailCommand';
-import VoucherViewModel from '../model/VoucherViewModel';
-import VoucherViewModelGetAllModel from '../model/VoucherViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateVoucherCommand from '../model/CreateVoucherCommand.js';
+import ErrorResponse from '../model/ErrorResponse.js';
+import MailViewModel from '../model/MailViewModel.js';
+import SendElectronicVoucherCommand from '../model/SendElectronicVoucherCommand.js';
+import SendElectronicVoucherViewModel from '../model/SendElectronicVoucherViewModel.js';
+import SendVoucherByEmailCommand from '../model/SendVoucherByEmailCommand.js';
+import VoucherViewModel from '../model/VoucherViewModel.js';
+import VoucherViewModelGetAllModel from '../model/VoucherViewModelGetAllModel.js';
 
 /**
 * Voucher service.

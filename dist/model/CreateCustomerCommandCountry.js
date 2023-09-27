@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AddressCommand = _interopRequireDefault(require("./AddressCommand"));
-var _ContactCommand = _interopRequireDefault(require("./ContactCommand"));
-var _CustomFieldsCommand = _interopRequireDefault(require("./CustomFieldsCommand"));
-var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./FiscalResponsibilitiesCommand"));
-var _PhoneCommand = _interopRequireDefault(require("./PhoneCommand"));
-var _RelatedUsersCommand = _interopRequireDefault(require("./RelatedUsersCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AddressCommand = _interopRequireDefault(require("./AddressCommand.js"));
+var _ContactCommand = _interopRequireDefault(require("./ContactCommand.js"));
+var _CustomFieldsCommand = _interopRequireDefault(require("./CustomFieldsCommand.js"));
+var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./FiscalResponsibilitiesCommand.js"));
+var _PhoneCommand = _interopRequireDefault(require("./PhoneCommand.js"));
+var _RelatedUsersCommand = _interopRequireDefault(require("./RelatedUsersCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

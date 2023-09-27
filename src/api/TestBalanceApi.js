@@ -12,10 +12,10 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateTestBalanceByThirdpartyCommand from '../model/CreateTestBalanceByThirdpartyCommand';
-import CreateTestBalanceCommand from '../model/CreateTestBalanceCommand';
-import TestBalanceResultModel from '../model/TestBalanceResultModel';
+import ApiClient from "../ApiClient.js";
+import CreateTestBalanceByThirdpartyCommand from '../model/CreateTestBalanceByThirdpartyCommand.js';
+import CreateTestBalanceCommand from '../model/CreateTestBalanceCommand.js';
+import TestBalanceResultModel from '../model/TestBalanceResultModel.js';
 
 /**
 * TestBalance service.

@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import MailViewModel from './MailViewModel';
-import VoucherStampModel from './VoucherStampModel';
+import ApiClient from '../ApiClient.js';
+import MailViewModel from './MailViewModel.js';
+import VoucherStampModel from './VoucherStampModel.js';
 
 /**
  * The SendElectronicVoucherViewModel model module.

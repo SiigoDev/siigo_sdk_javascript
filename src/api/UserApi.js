@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import UsersViewModel from '../model/UsersViewModel';
+import ApiClient from "../ApiClient.js";
+import UsersViewModel from '../model/UsersViewModel.js';
 
 /**
 * User service.

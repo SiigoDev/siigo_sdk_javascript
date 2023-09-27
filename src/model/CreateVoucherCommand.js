@@ -11,12 +11,12 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyCommand from './CurrencyCommand';
-import Customer from './Customer';
-import DocumentCommand from './DocumentCommand';
-import Item from './Item';
-import Payment from './Payment';
+import ApiClient from '../ApiClient.js';
+import CurrencyCommand from './CurrencyCommand.js';
+import Customer from './Customer.js';
+import DocumentCommand from './DocumentCommand.js';
+import Item from './Item.js';
+import Payment from './Payment.js';
 
 /**
  * The CreateVoucherCommand model module.

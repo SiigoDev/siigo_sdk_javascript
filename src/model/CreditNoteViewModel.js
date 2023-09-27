@@ -11,16 +11,16 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyModel from './CurrencyModel';
-import DocumentModel from './DocumentModel';
-import InvoiceCustomerModel from './InvoiceCustomerModel';
-import InvoiceModel from './InvoiceModel';
-import ItemsModel from './ItemsModel';
-import Metadata from './Metadata';
-import PaymentsModel from './PaymentsModel';
-import RetentionsOutModel from './RetentionsOutModel';
-import StampViewModel from './StampViewModel';
+import ApiClient from '../ApiClient.js';
+import CurrencyModel from './CurrencyModel.js';
+import DocumentModel from './DocumentModel.js';
+import InvoiceCustomerModel from './InvoiceCustomerModel.js';
+import InvoiceModel from './InvoiceModel.js';
+import ItemsModel from './ItemsModel.js';
+import Metadata from './Metadata.js';
+import PaymentsModel from './PaymentsModel.js';
+import RetentionsOutModel from './RetentionsOutModel.js';
+import StampViewModel from './StampViewModel.js';
 
 /**
  * The CreditNoteViewModel model module.

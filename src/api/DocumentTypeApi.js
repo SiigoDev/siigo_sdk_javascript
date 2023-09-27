@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import DocumentTypeViewModel from '../model/DocumentTypeViewModel';
+import ApiClient from "../ApiClient.js";
+import DocumentTypeViewModel from '../model/DocumentTypeViewModel.js';
 
 /**
 * DocumentType service.

@@ -11,15 +11,15 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AddressModel from './AddressModel';
-import ContactModel from './ContactModel';
-import CustomFieldsModel from './CustomFieldsModel';
-import FiscalResponsabilitiesModel from './FiscalResponsabilitiesModel';
-import IdTypeModel from './IdTypeModel';
-import MetadataModel from './MetadataModel';
-import PhoneModel from './PhoneModel';
-import RelatedUsersModel from './RelatedUsersModel';
+import ApiClient from '../ApiClient.js';
+import AddressModel from './AddressModel.js';
+import ContactModel from './ContactModel.js';
+import CustomFieldsModel from './CustomFieldsModel.js';
+import FiscalResponsabilitiesModel from './FiscalResponsabilitiesModel.js';
+import IdTypeModel from './IdTypeModel.js';
+import MetadataModel from './MetadataModel.js';
+import PhoneModel from './PhoneModel.js';
+import RelatedUsersModel from './RelatedUsersModel.js';
 
 /**
  * The CustomerViewModel model module.

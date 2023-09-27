@@ -11,91 +11,62 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.ItemTransportData();
+beforeEach(function() {
+  instance = new SiigoApi.ItemTransportData();
+});
+
+describe('ItemTransportData', function() {
+  it('should create an instance of ItemTransportData', function() {
+    // uncomment below and update the code to test ItemTransportData
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be.a(SiigoApi.ItemTransportData);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('ItemTransportData', function() {
-    it('should create an instance of ItemTransportData', function() {
-      // uncomment below and update the code to test ItemTransportData
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be.a(SiigoApi.ItemTransportData);
-    });
-
-    it('should have the property fileNumber (base name: "file_number")', function() {
-      // uncomment below and update the code to test the property fileNumber
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property shipmentNumber (base name: "shipment_number")', function() {
-      // uncomment below and update the code to test the property shipmentNumber
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property transportedQuantity (base name: "transported_quantity")', function() {
-      // uncomment below and update the code to test the property transportedQuantity
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property measurementUnit (base name: "measurement_unit")', function() {
-      // uncomment below and update the code to test the property measurementUnit
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property freightValue (base name: "freight_value")', function() {
-      // uncomment below and update the code to test the property freightValue
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property purchaseOrder (base name: "purchase_order")', function() {
-      // uncomment below and update the code to test the property purchaseOrder
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property serviceType (base name: "service_type")', function() {
-      // uncomment below and update the code to test the property serviceType
-      //var instance = new SiigoApi.ItemTransportData();
-      //expect(instance).to.be();
-    });
-
+  it('should have the property fileNumber (base name: "file_number")', function() {
+    // uncomment below and update the code to test the property fileNumber
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property shipmentNumber (base name: "shipment_number")', function() {
+    // uncomment below and update the code to test the property shipmentNumber
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property transportedQuantity (base name: "transported_quantity")', function() {
+    // uncomment below and update the code to test the property transportedQuantity
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property measurementUnit (base name: "measurement_unit")', function() {
+    // uncomment below and update the code to test the property measurementUnit
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property freightValue (base name: "freight_value")', function() {
+    // uncomment below and update the code to test the property freightValue
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property purchaseOrder (base name: "purchase_order")', function() {
+    // uncomment below and update the code to test the property purchaseOrder
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property serviceType (base name: "service_type")', function() {
+    // uncomment below and update the code to test the property serviceType
+    //var instance = new SiigoApi.ItemTransportData();
+    //expect(instance).to.be();
+  });
+
+});

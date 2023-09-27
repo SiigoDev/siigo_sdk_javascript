@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DocumentTypeTaxModel from './DocumentTypeTaxModel';
+import ApiClient from '../ApiClient.js';
+import DocumentTypeTaxModel from './DocumentTypeTaxModel.js';
 
 /**
  * The DocumentTypeViewModel model module.

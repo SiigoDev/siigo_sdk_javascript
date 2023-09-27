@@ -11,13 +11,13 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyModel from './CurrencyModel';
-import CustomerVoucher from './CustomerVoucher';
-import DocumentVoucher from './DocumentVoucher';
-import ItemVoucher from './ItemVoucher';
-import Metadata from './Metadata';
-import PaymentsModel from './PaymentsModel';
+import ApiClient from '../ApiClient.js';
+import CurrencyModel from './CurrencyModel.js';
+import CustomerVoucher from './CustomerVoucher.js';
+import DocumentVoucher from './DocumentVoucher.js';
+import ItemVoucher from './ItemVoucher.js';
+import Metadata from './Metadata.js';
+import PaymentsModel from './PaymentsModel.js';
 
 /**
  * The VoucherViewModel model module.

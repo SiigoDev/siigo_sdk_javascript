@@ -11,67 +11,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.ProductModelGetAllModel();
+beforeEach(function() {
+  instance = new SiigoApi.ProductModelGetAllModel();
+});
+
+describe('ProductModelGetAllModel', function() {
+  it('should create an instance of ProductModelGetAllModel', function() {
+    // uncomment below and update the code to test ProductModelGetAllModel
+    //var instance = new SiigoApi.ProductModelGetAllModel();
+    //expect(instance).to.be.a(SiigoApi.ProductModelGetAllModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('ProductModelGetAllModel', function() {
-    it('should create an instance of ProductModelGetAllModel', function() {
-      // uncomment below and update the code to test ProductModelGetAllModel
-      //var instance = new SiigoApi.ProductModelGetAllModel();
-      //expect(instance).to.be.a(SiigoApi.ProductModelGetAllModel);
-    });
-
-    it('should have the property pagination (base name: "pagination")', function() {
-      // uncomment below and update the code to test the property pagination
-      //var instance = new SiigoApi.ProductModelGetAllModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new SiigoApi.ProductModelGetAllModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property links (base name: "__links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new SiigoApi.ProductModelGetAllModel();
-      //expect(instance).to.be();
-    });
-
+  it('should have the property pagination (base name: "pagination")', function() {
+    // uncomment below and update the code to test the property pagination
+    //var instance = new SiigoApi.ProductModelGetAllModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property results (base name: "results")', function() {
+    // uncomment below and update the code to test the property results
+    //var instance = new SiigoApi.ProductModelGetAllModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property links (base name: "_links")', function() {
+    // uncomment below and update the code to test the property links
+    //var instance = new SiigoApi.ProductModelGetAllModel();
+    //expect(instance).to.be();
+  });
+
+});

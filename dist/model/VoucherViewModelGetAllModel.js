@@ -7,10 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _GenericPageListModel = _interopRequireDefault(require("./GenericPageListModel"));
-var _LinksPagination = _interopRequireDefault(require("./LinksPagination"));
-var _VoucherViewModel = _interopRequireDefault(require("./VoucherViewModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _GenericPageListModel = _interopRequireDefault(require("./GenericPageListModel.js"));
+var _LinksPagination = _interopRequireDefault(require("./LinksPagination.js"));
+var _VoucherViewModel = _interopRequireDefault(require("./VoucherViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

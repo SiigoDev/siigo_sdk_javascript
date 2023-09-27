@@ -11,103 +11,74 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.JournalEntryViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.JournalEntryViewModel();
+});
+
+describe('JournalEntryViewModel', function() {
+  it('should create an instance of JournalEntryViewModel', function() {
+    // uncomment below and update the code to test JournalEntryViewModel
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be.a(SiigoApi.JournalEntryViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('JournalEntryViewModel', function() {
-    it('should create an instance of JournalEntryViewModel', function() {
-      // uncomment below and update the code to test JournalEntryViewModel
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance).to.be.a(SiigoApi.JournalEntryViewModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property document (base name: "document")', function() {
-      // uncomment below and update the code to test the property document
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.document).to.be(undefined);
-    });
-
-    it('should have the property number (base name: "number")', function() {
-      // uncomment below and update the code to test the property number
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.number).to.be(undefined);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.name).to.be(undefined);
-    });
-
-    it('should have the property date (base name: "date")', function() {
-      // uncomment below and update the code to test the property date
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.date).to.be(undefined);
-    });
-
-    it('should have the property currency (base name: "currency")', function() {
-      // uncomment below and update the code to test the property currency
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.currency).to.be(undefined);
-    });
-
-    it('should have the property items (base name: "items")', function() {
-      // uncomment below and update the code to test the property items
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.items).to.be(undefined);
-    });
-
-    it('should have the property observations (base name: "observations")', function() {
-      // uncomment below and update the code to test the property observations
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.observations).to.be(undefined);
-    });
-
-    it('should have the property metadata (base name: "metadata")', function() {
-      // uncomment below and update the code to test the property metadata
-      var instance = new SiigoApi.JournalEntryViewModel();
-      expect(instance.metadata).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property document (base name: "document")', function() {
+    // uncomment below and update the code to test the property document
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property number (base name: "number")', function() {
+    // uncomment below and update the code to test the property number
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property name (base name: "name")', function() {
+    // uncomment below and update the code to test the property name
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property date (base name: "date")', function() {
+    // uncomment below and update the code to test the property date
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property currency (base name: "currency")', function() {
+    // uncomment below and update the code to test the property currency
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property items (base name: "items")', function() {
+    // uncomment below and update the code to test the property items
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property observations (base name: "observations")', function() {
+    // uncomment below and update the code to test the property observations
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property metadata (base name: "metadata")', function() {
+    // uncomment below and update the code to test the property metadata
+    //var instance = new SiigoApi.JournalEntryViewModel();
+    //expect(instance).to.be();
+  });
+
+});

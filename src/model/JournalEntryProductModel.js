@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import JournalEntryWarehouseModel from './JournalEntryWarehouseModel';
+import ApiClient from '../ApiClient.js';
+import JournalEntryWarehouseModel from './JournalEntryWarehouseModel.js';
 
 /**
  * The JournalEntryProductModel model module.

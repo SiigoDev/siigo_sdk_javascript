@@ -7,12 +7,12 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CreateCustomerCommandCountry = _interopRequireDefault(require("../model/CreateCustomerCommandCountry"));
-var _CustomerDeleteViewModel = _interopRequireDefault(require("../model/CustomerDeleteViewModel"));
-var _CustomerViewModel = _interopRequireDefault(require("../model/CustomerViewModel"));
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCustomerCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateCustomerCommandCountry = _interopRequireDefault(require("../model/CreateCustomerCommandCountry.js"));
+var _CustomerDeleteViewModel = _interopRequireDefault(require("../model/CustomerDeleteViewModel.js"));
+var _CustomerViewModel = _interopRequireDefault(require("../model/CustomerViewModel.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCustomerCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

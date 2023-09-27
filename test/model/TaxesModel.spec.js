@@ -11,85 +11,56 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.TaxesModel();
+beforeEach(function() {
+  instance = new SiigoApi.TaxesModel();
+});
+
+describe('TaxesModel', function() {
+  it('should create an instance of TaxesModel', function() {
+    // uncomment below and update the code to test TaxesModel
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be.a(SiigoApi.TaxesModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('TaxesModel', function() {
-    it('should create an instance of TaxesModel', function() {
-      // uncomment below and update the code to test TaxesModel
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance).to.be.a(SiigoApi.TaxesModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.name).to.be(undefined);
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.type).to.be(undefined);
-    });
-
-    it('should have the property percentage (base name: "percentage")', function() {
-      // uncomment below and update the code to test the property percentage
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.percentage).to.be(undefined);
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.value).to.be(undefined);
-    });
-
-    it('should have the property baseValue (base name: "base_value")', function() {
-      // uncomment below and update the code to test the property baseValue
-      var instance = new SiigoApi.TaxesModel();
-      expect(instance.base_value).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property name (base name: "name")', function() {
+    // uncomment below and update the code to test the property name
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property type (base name: "type")', function() {
+    // uncomment below and update the code to test the property type
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property percentage (base name: "percentage")', function() {
+    // uncomment below and update the code to test the property percentage
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property value (base name: "value")', function() {
+    // uncomment below and update the code to test the property value
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property baseValue (base name: "base_value")', function() {
+    // uncomment below and update the code to test the property baseValue
+    //var instance = new SiigoApi.TaxesModel();
+    //expect(instance).to.be();
+  });
+
+});

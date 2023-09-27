@@ -11,15 +11,15 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AccountGroup from './AccountGroup';
-import AdditionalFields from './AdditionalFields';
-import KeysProductsViewModel from './KeysProductsViewModel';
-import Metadata from './Metadata';
-import PriceListViewModel from './PriceListViewModel';
-import Tax from './Tax';
-import UnitProductsViewModel from './UnitProductsViewModel';
-import Warehouse from './Warehouse';
+import ApiClient from '../ApiClient.js';
+import AccountGroup from './AccountGroup.js';
+import AdditionalFields from './AdditionalFields.js';
+import KeysProductsViewModel from './KeysProductsViewModel.js';
+import Metadata from './Metadata.js';
+import PriceListViewModel from './PriceListViewModel.js';
+import Tax from './Tax.js';
+import UnitProductsViewModel from './UnitProductsViewModel.js';
+import Warehouse from './Warehouse.js';
 
 /**
  * The ProductModel model module.

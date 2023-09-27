@@ -11,53 +11,28 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import app from "../app.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.AccountsPayableApi();
-  });
+before(async function() {
+  let SiigoAPI = await app.initialize();
+  instance = new SiigoAPI.AccountsPayableApi();
+});
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('AccountsPayableApi', function() {
-    describe('getAccountsPayable', function() {
-      it('should call getAccountsPayable successfully', function(done) {
-        //uncomment below and update the code to test getAccountsPayable
-        //instance.getAccountsPayable(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+describe('AccountsPayableApi', function() {
+  describe('getAccountsPayable', function() {
+    it('should call getAccountsPayable successfully', async function() {
+      try {
+        let result = await instance.getAccountsPayableWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
     });
   });
+});
 
-}));

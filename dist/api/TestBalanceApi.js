@@ -7,10 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CreateTestBalanceByThirdpartyCommand = _interopRequireDefault(require("../model/CreateTestBalanceByThirdpartyCommand"));
-var _CreateTestBalanceCommand = _interopRequireDefault(require("../model/CreateTestBalanceCommand"));
-var _TestBalanceResultModel = _interopRequireDefault(require("../model/TestBalanceResultModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateTestBalanceByThirdpartyCommand = _interopRequireDefault(require("../model/CreateTestBalanceByThirdpartyCommand.js"));
+var _CreateTestBalanceCommand = _interopRequireDefault(require("../model/CreateTestBalanceCommand.js"));
+var _TestBalanceResultModel = _interopRequireDefault(require("../model/TestBalanceResultModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

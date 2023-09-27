@@ -12,10 +12,10 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateJournalEntryCommand from '../model/CreateJournalEntryCommand';
-import JournalEntryViewModel from '../model/JournalEntryViewModel';
-import JournalEntryViewModelGetAllModel from '../model/JournalEntryViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateJournalEntryCommand from '../model/CreateJournalEntryCommand.js';
+import JournalEntryViewModel from '../model/JournalEntryViewModel.js';
+import JournalEntryViewModelGetAllModel from '../model/JournalEntryViewModelGetAllModel.js';
 
 /**
 * JournalEntry service.

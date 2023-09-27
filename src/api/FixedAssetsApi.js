@@ -12,9 +12,9 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AssetGroupsViewModel from '../model/AssetGroupsViewModel';
-import FixedAssetsViewModel from '../model/FixedAssetsViewModel';
+import ApiClient from "../ApiClient.js";
+import AssetGroupsViewModel from '../model/AssetGroupsViewModel.js';
+import FixedAssetsViewModel from '../model/FixedAssetsViewModel.js';
 
 /**
 * FixedAssets service.

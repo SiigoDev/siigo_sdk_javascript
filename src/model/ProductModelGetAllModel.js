@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GenericPageListModel from './GenericPageListModel';
-import LinksPagination from './LinksPagination';
-import ProductModel from './ProductModel';
+import ApiClient from '../ApiClient.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import LinksPagination from './LinksPagination.js';
+import ProductModel from './ProductModel.js';
 
 /**
  * The ProductModelGetAllModel model module.
