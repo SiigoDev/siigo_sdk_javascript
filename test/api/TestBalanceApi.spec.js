@@ -11,63 +11,40 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import app from "../app.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.TestBalanceApi();
-  });
+before(async function() {
+  let SiigoAPI = await app.initialize();
+  instance = new SiigoAPI.TestBalanceApi();
+});
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('TestBalanceApi', function() {
-    describe('createTestBalance', function() {
-      it('should call createTestBalance successfully', function(done) {
-        //uncomment below and update the code to test createTestBalance
-        //instance.createTestBalance(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('createTestBalanceByThirdparty', function() {
-      it('should call createTestBalanceByThirdparty successfully', function(done) {
-        //uncomment below and update the code to test createTestBalanceByThirdparty
-        //instance.createTestBalanceByThirdparty(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+describe('TestBalanceApi', function() {
+  describe('createTestBalance', function() {
+    it('should call createTestBalance successfully', async function() {
+      try {
+        let result = await instance.createTestBalanceWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
     });
   });
+  describe('createTestBalanceByThirdparty', function() {
+    it('should call createTestBalanceByThirdparty successfully', async function() {
+      try {
+        let result = await instance.createTestBalanceByThirdpartyWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+});
 
-}));

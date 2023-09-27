@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CityModel from './CityModel';
+import ApiClient from '../ApiClient.js';
+import CityModel from './CityModel.js';
 
 /**
  * The AddressModel model module.

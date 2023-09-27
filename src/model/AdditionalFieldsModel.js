@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DeliveryOrderModel from './DeliveryOrderModel';
-import PursacheOrderModel from './PursacheOrderModel';
+import ApiClient from '../ApiClient.js';
+import DeliveryOrderModel from './DeliveryOrderModel.js';
+import PursacheOrderModel from './PursacheOrderModel.js';
 
 /**
  * The AdditionalFieldsModel model module.

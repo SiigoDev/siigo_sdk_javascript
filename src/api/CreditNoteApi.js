@@ -12,11 +12,11 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateCreditNoteCommand from '../model/CreateCreditNoteCommand';
-import CreditNotePdfViewModel from '../model/CreditNotePdfViewModel';
-import CreditNoteViewModel from '../model/CreditNoteViewModel';
-import CreditNoteViewModelGetAllModel from '../model/CreditNoteViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateCreditNoteCommand from '../model/CreateCreditNoteCommand.js';
+import CreditNotePdfViewModel from '../model/CreditNotePdfViewModel.js';
+import CreditNoteViewModel from '../model/CreditNoteViewModel.js';
+import CreditNoteViewModelGetAllModel from '../model/CreditNoteViewModelGetAllModel.js';
 
 /**
 * CreditNote service.

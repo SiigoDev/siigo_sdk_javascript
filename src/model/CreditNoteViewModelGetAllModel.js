@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CreditNoteViewModel from './CreditNoteViewModel';
-import GenericPageListModel from './GenericPageListModel';
-import LinksPagination from './LinksPagination';
+import ApiClient from '../ApiClient.js';
+import CreditNoteViewModel from './CreditNoteViewModel.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import LinksPagination from './LinksPagination.js';
 
 /**
  * The CreditNoteViewModelGetAllModel model module.

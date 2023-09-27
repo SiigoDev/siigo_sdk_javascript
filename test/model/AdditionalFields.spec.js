@@ -11,73 +11,44 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.AdditionalFields();
+beforeEach(function() {
+  instance = new SiigoApi.AdditionalFields();
+});
+
+describe('AdditionalFields', function() {
+  it('should create an instance of AdditionalFields', function() {
+    // uncomment below and update the code to test AdditionalFields
+    //var instance = new SiigoApi.AdditionalFields();
+    //expect(instance).to.be.a(SiigoApi.AdditionalFields);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('AdditionalFields', function() {
-    it('should create an instance of AdditionalFields', function() {
-      // uncomment below and update the code to test AdditionalFields
-      var instance = new SiigoApi.AdditionalFields();
-      expect(instance).to.be.a(SiigoApi.AdditionalFields);
-    });
-
-    it('should have the property barcode (base name: "barcode")', function() {
-      // uncomment below and update the code to test the property barcode
-      var instance = new SiigoApi.AdditionalFields();
-      expect(instance.barcode).to.be(undefined);
-    });
-
-    it('should have the property brand (base name: "brand")', function() {
-      // uncomment below and update the code to test the property brand
-      var instance = new SiigoApi.AdditionalFields();
-      expect(instance.brand).to.be(undefined);
-    });
-
-    it('should have the property tariff (base name: "tariff")', function() {
-      // uncomment below and update the code to test the property tariff
-      var instance = new SiigoApi.AdditionalFields();
-      expect(instance.tariff).to.be(undefined);
-    });
-
-    it('should have the property model (base name: "model")', function() {
-      // uncomment below and update the code to test the property model
-      var instance = new SiigoApi.AdditionalFields();
-      expect(instance.model).to.be(undefined);
-    });
-
+  it('should have the property barcode (base name: "barcode")', function() {
+    // uncomment below and update the code to test the property barcode
+    //var instance = new SiigoApi.AdditionalFields();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property brand (base name: "brand")', function() {
+    // uncomment below and update the code to test the property brand
+    //var instance = new SiigoApi.AdditionalFields();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property tariff (base name: "tariff")', function() {
+    // uncomment below and update the code to test the property tariff
+    //var instance = new SiigoApi.AdditionalFields();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property model (base name: "model")', function() {
+    // uncomment below and update the code to test the property model
+    //var instance = new SiigoApi.AdditionalFields();
+    //expect(instance).to.be();
+  });
+
+});

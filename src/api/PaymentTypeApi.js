@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import PaymentTypeViewModel from '../model/PaymentTypeViewModel';
+import ApiClient from "../ApiClient.js";
+import PaymentTypeViewModel from '../model/PaymentTypeViewModel.js';
 
 /**
 * PaymentType service.

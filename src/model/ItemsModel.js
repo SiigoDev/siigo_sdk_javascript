@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DiscountModel from './DiscountModel';
-import TaxesModel from './TaxesModel';
-import WarehouseModel from './WarehouseModel';
+import ApiClient from '../ApiClient.js';
+import DiscountModel from './DiscountModel.js';
+import TaxesModel from './TaxesModel.js';
+import WarehouseModel from './WarehouseModel.js';
 
 /**
  * The ItemsModel model module.

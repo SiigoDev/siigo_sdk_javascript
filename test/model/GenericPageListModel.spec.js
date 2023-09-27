@@ -11,67 +11,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.GenericPageListModel();
+beforeEach(function() {
+  instance = new SiigoApi.GenericPageListModel();
+});
+
+describe('GenericPageListModel', function() {
+  it('should create an instance of GenericPageListModel', function() {
+    // uncomment below and update the code to test GenericPageListModel
+    //var instance = new SiigoApi.GenericPageListModel();
+    //expect(instance).to.be.a(SiigoApi.GenericPageListModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('GenericPageListModel', function() {
-    it('should create an instance of GenericPageListModel', function() {
-      // uncomment below and update the code to test GenericPageListModel
-      //var instance = new SiigoApi.GenericPageListModel();
-      //expect(instance).to.be.a(SiigoApi.GenericPageListModel);
-    });
-
-    it('should have the property page (base name: "page")', function() {
-      // uncomment below and update the code to test the property page
-      //var instance = new SiigoApi.GenericPageListModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property pageSize (base name: "page_size")', function() {
-      // uncomment below and update the code to test the property pageSize
-      //var instance = new SiigoApi.GenericPageListModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property totalResults (base name: "total_results")', function() {
-      // uncomment below and update the code to test the property totalResults
-      //var instance = new SiigoApi.GenericPageListModel();
-      //expect(instance).to.be();
-    });
-
+  it('should have the property page (base name: "page")', function() {
+    // uncomment below and update the code to test the property page
+    //var instance = new SiigoApi.GenericPageListModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property pageSize (base name: "page_size")', function() {
+    // uncomment below and update the code to test the property pageSize
+    //var instance = new SiigoApi.GenericPageListModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property totalResults (base name: "total_results")', function() {
+    // uncomment below and update the code to test the property totalResults
+    //var instance = new SiigoApi.GenericPageListModel();
+    //expect(instance).to.be();
+  });
+
+});

@@ -12,18 +12,18 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateInvoiceCommand from '../model/CreateInvoiceCommand';
-import EInvoiceErrorsViewModel from '../model/EInvoiceErrorsViewModel';
-import ErrorResponse from '../model/ErrorResponse';
-import InvoiceDeleteViewModel from '../model/InvoiceDeleteViewModel';
-import InvoicePdfViewModel from '../model/InvoicePdfViewModel';
-import InvoiceViewModel from '../model/InvoiceViewModel';
-import InvoiceViewModelGetAllModel from '../model/InvoiceViewModelGetAllModel';
-import MailViewModel from '../model/MailViewModel';
-import SendElectronicInvoiceCommand from '../model/SendElectronicInvoiceCommand';
-import SendElectronicInvoiceViewModel from '../model/SendElectronicInvoiceViewModel';
-import SendInvoiceByEmailCommand from '../model/SendInvoiceByEmailCommand';
+import ApiClient from "../ApiClient.js";
+import CreateInvoiceCommand from '../model/CreateInvoiceCommand.js';
+import EInvoiceErrorsViewModel from '../model/EInvoiceErrorsViewModel.js';
+import ErrorResponse from '../model/ErrorResponse.js';
+import InvoiceDeleteViewModel from '../model/InvoiceDeleteViewModel.js';
+import InvoicePdfViewModel from '../model/InvoicePdfViewModel.js';
+import InvoiceViewModel from '../model/InvoiceViewModel.js';
+import InvoiceViewModelGetAllModel from '../model/InvoiceViewModelGetAllModel.js';
+import MailViewModel from '../model/MailViewModel.js';
+import SendElectronicInvoiceCommand from '../model/SendElectronicInvoiceCommand.js';
+import SendElectronicInvoiceViewModel from '../model/SendElectronicInvoiceViewModel.js';
+import SendInvoiceByEmailCommand from '../model/SendInvoiceByEmailCommand.js';
 
 /**
 * Invoice service.

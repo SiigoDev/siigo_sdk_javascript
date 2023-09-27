@@ -7,17 +7,17 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _AdditionalFieldsCommand = _interopRequireDefault(require("./AdditionalFieldsCommand"));
-var _CurrencyCommand = _interopRequireDefault(require("./CurrencyCommand"));
-var _CustomerCommand = _interopRequireDefault(require("./CustomerCommand"));
-var _DocumentCommand = _interopRequireDefault(require("./DocumentCommand"));
-var _GlobalTaxCommand = _interopRequireDefault(require("./GlobalTaxCommand"));
-var _ItemsCommand = _interopRequireDefault(require("./ItemsCommand"));
-var _MailCommand = _interopRequireDefault(require("./MailCommand"));
-var _PaymentsCommand = _interopRequireDefault(require("./PaymentsCommand"));
-var _RetentionsCommand = _interopRequireDefault(require("./RetentionsCommand"));
-var _StampCommand = _interopRequireDefault(require("./StampCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _AdditionalFieldsCommand = _interopRequireDefault(require("./AdditionalFieldsCommand.js"));
+var _CurrencyCommand = _interopRequireDefault(require("./CurrencyCommand.js"));
+var _CustomerCommand = _interopRequireDefault(require("./CustomerCommand.js"));
+var _DocumentCommand = _interopRequireDefault(require("./DocumentCommand.js"));
+var _GlobalTaxCommand = _interopRequireDefault(require("./GlobalTaxCommand.js"));
+var _ItemsCommand = _interopRequireDefault(require("./ItemsCommand.js"));
+var _MailCommand = _interopRequireDefault(require("./MailCommand.js"));
+var _PaymentsCommand = _interopRequireDefault(require("./PaymentsCommand.js"));
+var _RetentionsCommand = _interopRequireDefault(require("./RetentionsCommand.js"));
+var _StampCommand = _interopRequireDefault(require("./StampCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

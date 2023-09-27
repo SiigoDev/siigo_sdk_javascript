@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AccountsPayableViewModelGetAllModel from '../model/AccountsPayableViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import AccountsPayableViewModelGetAllModel from '../model/AccountsPayableViewModelGetAllModel.js';
 
 /**
 * AccountsPayable service.

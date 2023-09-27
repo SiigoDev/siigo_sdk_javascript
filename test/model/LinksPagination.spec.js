@@ -11,67 +11,38 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.LinksPagination();
+beforeEach(function() {
+  instance = new SiigoApi.LinksPagination();
+});
+
+describe('LinksPagination', function() {
+  it('should create an instance of LinksPagination', function() {
+    // uncomment below and update the code to test LinksPagination
+    //var instance = new SiigoApi.LinksPagination();
+    //expect(instance).to.be.a(SiigoApi.LinksPagination);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('LinksPagination', function() {
-    it('should create an instance of LinksPagination', function() {
-      // uncomment below and update the code to test LinksPagination
-      var instance = new SiigoApi.LinksPagination();
-      expect(instance).to.be.a(SiigoApi.LinksPagination);
-    });
-
-    it('should have the property previous (base name: "previous")', function() {
-      // uncomment below and update the code to test the property previous
-      var instance = new SiigoApi.LinksPagination();
-      expect(instance.previous).to.be(undefined);
-    });
-
-    it('should have the property self (base name: "self")', function() {
-      // uncomment below and update the code to test the property self
-      var instance = new SiigoApi.LinksPagination();
-      expect(instance.self).to.be(undefined);
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
-      var instance = new SiigoApi.LinksPagination();
-      expect(instance.next).to.be(undefined);
-    });
-
+  it('should have the property previous (base name: "previous")', function() {
+    // uncomment below and update the code to test the property previous
+    //var instance = new SiigoApi.LinksPagination();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property self (base name: "self")', function() {
+    // uncomment below and update the code to test the property self
+    //var instance = new SiigoApi.LinksPagination();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property next (base name: "next")', function() {
+    // uncomment below and update the code to test the property next
+    //var instance = new SiigoApi.LinksPagination();
+    //expect(instance).to.be();
+  });
+
+});

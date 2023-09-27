@@ -11,73 +11,44 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.InvoiceStampViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.InvoiceStampViewModel();
+});
+
+describe('InvoiceStampViewModel', function() {
+  it('should create an instance of InvoiceStampViewModel', function() {
+    // uncomment below and update the code to test InvoiceStampViewModel
+    //var instance = new SiigoApi.InvoiceStampViewModel();
+    //expect(instance).to.be.a(SiigoApi.InvoiceStampViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('InvoiceStampViewModel', function() {
-    it('should create an instance of InvoiceStampViewModel', function() {
-      // uncomment below and update the code to test InvoiceStampViewModel
-      //var instance = new SiigoApi.InvoiceStampViewModel();
-      //expect(instance).to.be.a(SiigoApi.InvoiceStampViewModel);
-    });
-
-    it('should have the property uuid (base name: "uuid")', function() {
-      // uncomment below and update the code to test the property uuid
-      //var instance = new SiigoApi.InvoiceStampViewModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new SiigoApi.InvoiceStampViewModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property observations (base name: "observations")', function() {
-      // uncomment below and update the code to test the property observations
-      //var instance = new SiigoApi.InvoiceStampViewModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property errors (base name: "errors")', function() {
-      // uncomment below and update the code to test the property errors
-      //var instance = new SiigoApi.InvoiceStampViewModel();
-      //expect(instance).to.be();
-    });
-
+  it('should have the property uuid (base name: "uuid")', function() {
+    // uncomment below and update the code to test the property uuid
+    //var instance = new SiigoApi.InvoiceStampViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property status (base name: "status")', function() {
+    // uncomment below and update the code to test the property status
+    //var instance = new SiigoApi.InvoiceStampViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property observations (base name: "observations")', function() {
+    // uncomment below and update the code to test the property observations
+    //var instance = new SiigoApi.InvoiceStampViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property errors (base name: "errors")', function() {
+    // uncomment below and update the code to test the property errors
+    //var instance = new SiigoApi.InvoiceStampViewModel();
+    //expect(instance).to.be();
+  });
+
+});

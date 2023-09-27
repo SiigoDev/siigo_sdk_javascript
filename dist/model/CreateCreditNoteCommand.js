@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CurrencyCommand = _interopRequireDefault(require("./CurrencyCommand"));
-var _DianReason = _interopRequireDefault(require("./DianReason"));
-var _DocumentCommand = _interopRequireDefault(require("./DocumentCommand"));
-var _ItemsCommand = _interopRequireDefault(require("./ItemsCommand"));
-var _PaymentsCommand = _interopRequireDefault(require("./PaymentsCommand"));
-var _RetentionsCommand = _interopRequireDefault(require("./RetentionsCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CurrencyCommand = _interopRequireDefault(require("./CurrencyCommand.js"));
+var _DianReason = _interopRequireDefault(require("./DianReason.js"));
+var _DocumentCommand = _interopRequireDefault(require("./DocumentCommand.js"));
+var _ItemsCommand = _interopRequireDefault(require("./ItemsCommand.js"));
+var _PaymentsCommand = _interopRequireDefault(require("./PaymentsCommand.js"));
+var _RetentionsCommand = _interopRequireDefault(require("./RetentionsCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

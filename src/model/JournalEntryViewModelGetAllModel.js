@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GenericPageListModel from './GenericPageListModel';
-import JournalEntryViewModel from './JournalEntryViewModel';
-import LinksPagination from './LinksPagination';
+import ApiClient from '../ApiClient.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import JournalEntryViewModel from './JournalEntryViewModel.js';
+import LinksPagination from './LinksPagination.js';
 
 /**
  * The JournalEntryViewModelGetAllModel model module.

@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import DocumentBalanceViewModel from '../model/DocumentBalanceViewModel';
+import ApiClient from "../ApiClient.js";
+import DocumentBalanceViewModel from '../model/DocumentBalanceViewModel.js';
 
 /**
 * DocumentBalance service.

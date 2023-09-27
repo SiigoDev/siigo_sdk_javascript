@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ItemTransportData from './ItemTransportData';
-import TaxesCommand from './TaxesCommand';
+import ApiClient from '../ApiClient.js';
+import ItemTransportData from './ItemTransportData.js';
+import TaxesCommand from './TaxesCommand.js';
 
 /**
  * The ItemsCommand model module.

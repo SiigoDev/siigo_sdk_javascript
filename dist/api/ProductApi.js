@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand"));
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
-var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
-var _ProductModelGetAllModel = _interopRequireDefault(require("../model/ProductModelGetAllModel"));
-var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel.js"));
+var _ProductModel = _interopRequireDefault(require("../model/ProductModel.js"));
+var _ProductModelGetAllModel = _interopRequireDefault(require("../model/ProductModelGetAllModel.js"));
+var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1

@@ -11,91 +11,62 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.UsersModel();
+beforeEach(function() {
+  instance = new SiigoApi.UsersModel();
+});
+
+describe('UsersModel', function() {
+  it('should create an instance of UsersModel', function() {
+    // uncomment below and update the code to test UsersModel
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be.a(SiigoApi.UsersModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('UsersModel', function() {
-    it('should create an instance of UsersModel', function() {
-      // uncomment below and update the code to test UsersModel
-      var instance = new SiigoApi.UsersModel();
-      expect(instance).to.be.a(SiigoApi.UsersModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property username (base name: "username")', function() {
-      // uncomment below and update the code to test the property username
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.username).to.be(undefined);
-    });
-
-    it('should have the property firstName (base name: "first_name")', function() {
-      // uncomment below and update the code to test the property firstName
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.first_name).to.be(undefined);
-    });
-
-    it('should have the property lastName (base name: "last_name")', function() {
-      // uncomment below and update the code to test the property lastName
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.last_name).to.be(undefined);
-    });
-
-    it('should have the property email (base name: "email")', function() {
-      // uncomment below and update the code to test the property email
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.email).to.be(undefined);
-    });
-
-    it('should have the property active (base name: "active")', function() {
-      // uncomment below and update the code to test the property active
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.active).to.be(undefined);
-    });
-
-    it('should have the property identification (base name: "identification")', function() {
-      // uncomment below and update the code to test the property identification
-      var instance = new SiigoApi.UsersModel();
-      expect(instance.identification).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property username (base name: "username")', function() {
+    // uncomment below and update the code to test the property username
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property firstName (base name: "first_name")', function() {
+    // uncomment below and update the code to test the property firstName
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property lastName (base name: "last_name")', function() {
+    // uncomment below and update the code to test the property lastName
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property email (base name: "email")', function() {
+    // uncomment below and update the code to test the property email
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property active (base name: "active")', function() {
+    // uncomment below and update the code to test the property active
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property identification (base name: "identification")', function() {
+    // uncomment below and update the code to test the property identification
+    //var instance = new SiigoApi.UsersModel();
+    //expect(instance).to.be();
+  });
+
+});

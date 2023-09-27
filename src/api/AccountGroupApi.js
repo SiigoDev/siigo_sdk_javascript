@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AccountGroupViewModel from '../model/AccountGroupViewModel';
+import ApiClient from "../ApiClient.js";
+import AccountGroupViewModel from '../model/AccountGroupViewModel.js';
 
 /**
 * AccountGroup service.

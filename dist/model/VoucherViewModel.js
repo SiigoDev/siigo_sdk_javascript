@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CurrencyModel = _interopRequireDefault(require("./CurrencyModel"));
-var _CustomerVoucher = _interopRequireDefault(require("./CustomerVoucher"));
-var _DocumentVoucher = _interopRequireDefault(require("./DocumentVoucher"));
-var _ItemVoucher = _interopRequireDefault(require("./ItemVoucher"));
-var _Metadata = _interopRequireDefault(require("./Metadata"));
-var _PaymentsModel = _interopRequireDefault(require("./PaymentsModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CurrencyModel = _interopRequireDefault(require("./CurrencyModel.js"));
+var _CustomerVoucher = _interopRequireDefault(require("./CustomerVoucher.js"));
+var _DocumentVoucher = _interopRequireDefault(require("./DocumentVoucher.js"));
+var _ItemVoucher = _interopRequireDefault(require("./ItemVoucher.js"));
+var _Metadata = _interopRequireDefault(require("./Metadata.js"));
+var _PaymentsModel = _interopRequireDefault(require("./PaymentsModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import InvoiceStampViewModel from './InvoiceStampViewModel';
-import MailViewModel from './MailViewModel';
+import ApiClient from '../ApiClient.js';
+import InvoiceStampViewModel from './InvoiceStampViewModel.js';
+import MailViewModel from './MailViewModel.js';
 
 /**
  * The SendElectronicInvoiceViewModel model module.

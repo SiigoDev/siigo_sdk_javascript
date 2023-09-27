@@ -7,16 +7,16 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CurrencyModel = _interopRequireDefault(require("./CurrencyModel"));
-var _DocumentModel = _interopRequireDefault(require("./DocumentModel"));
-var _InvoiceCustomerModel = _interopRequireDefault(require("./InvoiceCustomerModel"));
-var _InvoiceModel = _interopRequireDefault(require("./InvoiceModel"));
-var _ItemsModel = _interopRequireDefault(require("./ItemsModel"));
-var _Metadata = _interopRequireDefault(require("./Metadata"));
-var _PaymentsModel = _interopRequireDefault(require("./PaymentsModel"));
-var _RetentionsOutModel = _interopRequireDefault(require("./RetentionsOutModel"));
-var _StampViewModel = _interopRequireDefault(require("./StampViewModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CurrencyModel = _interopRequireDefault(require("./CurrencyModel.js"));
+var _DocumentModel = _interopRequireDefault(require("./DocumentModel.js"));
+var _InvoiceCustomerModel = _interopRequireDefault(require("./InvoiceCustomerModel.js"));
+var _InvoiceModel = _interopRequireDefault(require("./InvoiceModel.js"));
+var _ItemsModel = _interopRequireDefault(require("./ItemsModel.js"));
+var _Metadata = _interopRequireDefault(require("./Metadata.js"));
+var _PaymentsModel = _interopRequireDefault(require("./PaymentsModel.js"));
+var _RetentionsOutModel = _interopRequireDefault(require("./RetentionsOutModel.js"));
+var _StampViewModel = _interopRequireDefault(require("./StampViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

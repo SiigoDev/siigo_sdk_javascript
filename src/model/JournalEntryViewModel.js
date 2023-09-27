@@ -11,11 +11,11 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyModel from './CurrencyModel';
-import JournalEntryDocumentModel from './JournalEntryDocumentModel';
-import JournalEntryItemModel from './JournalEntryItemModel';
-import Metadata from './Metadata';
+import ApiClient from '../ApiClient.js';
+import CurrencyModel from './CurrencyModel.js';
+import JournalEntryDocumentModel from './JournalEntryDocumentModel.js';
+import JournalEntryItemModel from './JournalEntryItemModel.js';
+import Metadata from './Metadata.js';
 
 /**
  * The JournalEntryViewModel model module.

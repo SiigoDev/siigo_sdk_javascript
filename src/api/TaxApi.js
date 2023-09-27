@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import TaxViewModel from '../model/TaxViewModel';
+import ApiClient from "../ApiClient.js";
+import TaxViewModel from '../model/TaxViewModel.js';
 
 /**
 * Tax service.

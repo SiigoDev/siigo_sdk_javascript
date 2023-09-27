@@ -7,15 +7,15 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-var _CreateVoucherCommand = _interopRequireDefault(require("../model/CreateVoucherCommand"));
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
-var _SendElectronicVoucherCommand = _interopRequireDefault(require("../model/SendElectronicVoucherCommand"));
-var _SendElectronicVoucherViewModel = _interopRequireDefault(require("../model/SendElectronicVoucherViewModel"));
-var _SendVoucherByEmailCommand = _interopRequireDefault(require("../model/SendVoucherByEmailCommand"));
-var _VoucherViewModel = _interopRequireDefault(require("../model/VoucherViewModel"));
-var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/VoucherViewModelGetAllModel"));
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateVoucherCommand = _interopRequireDefault(require("../model/CreateVoucherCommand.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel.js"));
+var _SendElectronicVoucherCommand = _interopRequireDefault(require("../model/SendElectronicVoucherCommand.js"));
+var _SendElectronicVoucherViewModel = _interopRequireDefault(require("../model/SendElectronicVoucherViewModel.js"));
+var _SendVoucherByEmailCommand = _interopRequireDefault(require("../model/SendVoucherByEmailCommand.js"));
+var _VoucherViewModel = _interopRequireDefault(require("../model/VoucherViewModel.js"));
+var _VoucherViewModelGetAllModel = _interopRequireDefault(require("../model/VoucherViewModelGetAllModel.js"));
 /**
  * Siigo API
  * Siigo Api v1

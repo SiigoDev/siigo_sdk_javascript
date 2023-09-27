@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PhoneModel from './PhoneModel';
+import ApiClient from '../ApiClient.js';
+import PhoneModel from './PhoneModel.js';
 
 /**
  * The ContactModel model module.

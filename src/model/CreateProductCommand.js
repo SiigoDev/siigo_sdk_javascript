@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AdditionalFieldsProducts from './AdditionalFieldsProducts';
-import PricesProducts from './PricesProducts';
-import ProductTaxesCommand from './ProductTaxesCommand';
+import ApiClient from '../ApiClient.js';
+import AdditionalFieldsProducts from './AdditionalFieldsProducts.js';
+import PricesProducts from './PricesProducts.js';
+import ProductTaxesCommand from './ProductTaxesCommand.js';
 
 /**
  * The CreateProductCommand model module.
