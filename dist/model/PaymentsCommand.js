@@ -78,7 +78,7 @@ var PaymentsCommand = /*#__PURE__*/function () {
 PaymentsCommand.prototype['id'] = undefined;
 
 /**
- * represents the amount to paid per installment,  this value will be associated to payment method
+ * represents the amount to paid per installment,  this value will be associated with payment method
  * @member {Number} value
  */
 PaymentsCommand.prototype['value'] = undefined;

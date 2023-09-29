@@ -96,7 +96,7 @@ StampViewModel.prototype['cufe'] = undefined;
 StampViewModel.prototype['cude'] = undefined;
 
 /**
- * Represents observations associated to an electronic document.
+ * Represents observations associated with an electronic document.
  * @member {String} observations
  */
 StampViewModel.prototype['observations'] = undefined;

@@ -175,7 +175,7 @@ CreditNoteViewModel.prototype['currency'] = undefined;
 CreditNoteViewModel.prototype['seller'] = undefined;
 
 /**
- * Contains a list of information about every Retention associated to the invoice.
+ * Contains a list of information about every Retention associated with the invoice.
  * @member {Array.<module:model/RetentionsOutModel>} retentions
  */
 CreditNoteViewModel.prototype['retentions'] = undefined;
@@ -199,13 +199,13 @@ CreditNoteViewModel.prototype['total'] = undefined;
 CreditNoteViewModel.prototype['observations'] = undefined;
 
 /**
- * Contains a list with items associated to invoice.
+ * Contains a list with items associated with invoice.
  * @member {Array.<module:model/ItemsModel>} items
  */
 CreditNoteViewModel.prototype['items'] = undefined;
 
 /**
- * Contains a list with payments types associated to invoice.
+ * Contains a list with payments types associated with invoice.
  * @member {Array.<module:model/PaymentsModel>} payments
  */
 CreditNoteViewModel.prototype['payments'] = undefined;

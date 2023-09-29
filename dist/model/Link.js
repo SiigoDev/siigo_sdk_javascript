@@ -66,6 +66,7 @@ var Link = /*#__PURE__*/function () {
   return Link;
 }();
 /**
+ * Represents the link's href.
  * @member {String} href
  */
 Link.prototype['href'] = undefined;

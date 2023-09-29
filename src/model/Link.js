@@ -58,6 +58,7 @@ class Link {
 }
 
 /**
+ * Represents the link's href.
  * @member {String} href
  */
 Link.prototype['href'] = undefined;

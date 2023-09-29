@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getInvoice**](InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 [**getInvoicePDF**](InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 [**getInvoices**](InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
-[**sendElectronicInvoice**](InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | 
+[**sendElectronicInvoice**](InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | Send electronic invoice by GUID.
 [**sendInvoiceByEmail**](InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
 [**updateInvoice**](InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 
@@ -411,8 +411,8 @@ let apiInstance = new SiigoApi.InvoiceApi();
 
 let opts = {
   'documentId': 24, // Number | Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-  'customerIdentification': 51874544, // String | Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-  'customerBranchOffice': 627, // Number | Represents the branch office id associated to customer.  For example, the branch office '627'.
+  'customerIdentification': 51874544, // String | Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+  'customerBranchOffice': 627, // Number | Represents the branch office id associated with customer.  For example, the branch office '627'.
   'name': FV-003-457, // String | Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
   'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
   'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
@@ -440,8 +440,8 @@ async function main(){
     let apiInstance = new SiigoApi.InvoiceApi();
     let opts = {
       'documentId': 24, // Number | Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-      'customerIdentification': 51874544, // String | Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-      'customerBranchOffice': 627, // Number | Represents the branch office id associated to customer.  For example, the branch office '627'.
+      'customerIdentification': 51874544, // String | Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+      'customerBranchOffice': 627, // Number | Represents the branch office id associated with customer.  For example, the branch office '627'.
       'name': FV-003-457, // String | Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
       'createdStart': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is greater or equal than the entered date
       'createdEnd': new Date("2013-10-20T19:20:30+01:00"), // Date | Returns results where the \"created\" field is less or equal than the entered date
@@ -468,8 +468,8 @@ async function main(){
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **Number**| Represents the document id of invoice.  For example, a document id can be like &#39;24&#39; or &#39;10&#39;. | [optional] 
- **customerIdentification** | **String**| Represents the customer id associated to invoice.  For example, the number &#39;51874544&#39; can be the id of the customer &#39;Jackson Smith&#39;. | [optional] 
- **customerBranchOffice** | **Number**| Represents the branch office id associated to customer.  For example, the branch office &#39;627&#39;. | [optional] 
+ **customerIdentification** | **String**| Represents the customer id associated with invoice.  For example, the number &#39;51874544&#39; can be the id of the customer &#39;Jackson Smith&#39;. | [optional] 
+ **customerBranchOffice** | **Number**| Represents the branch office id associated with customer.  For example, the branch office &#39;627&#39;. | [optional] 
  **name** | **String**| Represents the name of invoice.   For example, the name of an invoice can be like &#39;FV-003-457&#39;. | [optional] 
  **createdStart** | **Date**| Returns results where the \&quot;created\&quot; field is greater or equal than the entered date | [optional] 
  **createdEnd** | **Date**| Returns results where the \&quot;created\&quot; field is less or equal than the entered date | [optional] 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 > SendElectronicInvoiceViewModel sendElectronicInvoice(id, opts)
 
-
+Send electronic invoice by GUID.
 
 ### Example
 

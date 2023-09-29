@@ -161,7 +161,7 @@ ItemsCommand.prototype['seller'] = undefined;
 ItemsCommand.prototype['vat_excluded'] = undefined;
 
 /**
- * Contains a list of Ids of taxes associated to invoice.
+ * Contains a list of Ids of taxes associated with invoice.
  * @member {Array.<module:model/TaxesCommand>} taxes
  */
 ItemsCommand.prototype['taxes'] = undefined;

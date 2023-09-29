@@ -180,7 +180,7 @@ UpdateProductCommand.prototype['tax_included'] = undefined;
 UpdateProductCommand.prototype['tax_consumption_value'] = undefined;
 
 /**
- * Contains a list with ids of taxes associated to item.
+ * Contains a list with ids of taxes associated with item.
  * @member {Array.<module:model/ProductTaxesCommand>} taxes
  */
 UpdateProductCommand.prototype['taxes'] = undefined;

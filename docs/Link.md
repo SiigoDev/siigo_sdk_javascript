@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | **String** |  | [optional] 
+**href** | **String** | Represents the link&#39;s href. | [optional] 
 
 

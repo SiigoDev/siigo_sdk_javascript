@@ -204,7 +204,7 @@ InvoiceViewModel.prototype['currency'] = undefined;
 InvoiceViewModel.prototype['seller'] = undefined;
 
 /**
- * Contains a list information about every Retention associated to invoice.
+ * Contains a list information about every Retention associated with invoice.
  * @member {Array.<module:model/RetentionsOutModel>} retentions
  */
 InvoiceViewModel.prototype['retentions'] = undefined;
@@ -240,19 +240,19 @@ InvoiceViewModel.prototype['observations'] = undefined;
 InvoiceViewModel.prototype['items'] = undefined;
 
 /**
- * Contains information about the global charges associated to invoice.
+ * Contains information about the global charges associated with invoice.
  * @member {Array.<module:model/GlobalTaxModel>} global_charges
  */
 InvoiceViewModel.prototype['global_charges'] = undefined;
 
 /**
- * Contains information about the global discounts associated to invoice.
+ * Contains information about the global discounts associated with invoice.
  * @member {Array.<module:model/GlobalTaxModel>} global_discounts
  */
 InvoiceViewModel.prototype['global_discounts'] = undefined;
 
 /**
- * Contains a list with payments types associated to invoice.
+ * Contains a list with payments types associated with invoice.
  * @member {Array.<module:model/PaymentsModel>} payments
  */
 InvoiceViewModel.prototype['payments'] = undefined;
@@ -278,6 +278,7 @@ InvoiceViewModel.prototype['mail'] = undefined;
 InvoiceViewModel.prototype['metadata'] = undefined;
 
 /**
+ * Represents whether the document has been cancelled or not.
  * @member {Boolean} annulled
  */
 InvoiceViewModel.prototype['annulled'] = undefined;
