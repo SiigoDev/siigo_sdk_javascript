@@ -61,11 +61,13 @@ class Currency {
 }
 
 /**
+ * Represents the currecy's money code.
  * @member {String} money_code
  */
 Currency.prototype['money_code'] = undefined;
 
 /**
+ * Represents the currecy's balance value.
  * @member {Number} balance
  */
 Currency.prototype['balance'] = undefined;

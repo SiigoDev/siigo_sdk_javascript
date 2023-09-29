@@ -38,8 +38,9 @@ export default class TestBalanceApi {
 
 
     /**
+     * Generate a balance report.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand 
+     * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand Options needed to generate the report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestBalanceResultModel} and HTTP response
      */
     createTestBalanceWithHttpInfo(opts) {
@@ -67,8 +68,9 @@ export default class TestBalanceApi {
     }
 
     /**
+     * Generate a balance report.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand 
+     * @param {module:model/CreateTestBalanceCommand} opts.createTestBalanceCommand Options needed to generate the report
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestBalanceResultModel}
      */
     createTestBalance(opts) {
@@ -80,8 +82,9 @@ export default class TestBalanceApi {
 
 
     /**
+     * Generate a balance report by customer.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand 
+     * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand Options needed to generate the report by customer
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestBalanceResultModel} and HTTP response
      */
     createTestBalanceByThirdpartyWithHttpInfo(opts) {
@@ -109,8 +112,9 @@ export default class TestBalanceApi {
     }
 
     /**
+     * Generate a balance report by customer.
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand 
+     * @param {module:model/CreateTestBalanceByThirdpartyCommand} opts.createTestBalanceByThirdpartyCommand Options needed to generate the report by customer
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestBalanceResultModel}
      */
     createTestBalanceByThirdparty(opts) {

@@ -283,18 +283,19 @@ DocumentTypeViewModel.prototype['document_support'] = undefined;
 DocumentTypeViewModel.prototype['prefix'] = undefined;
 
 /**
- * Contains information about the global discounts associated to document type.
+ * Contains information about the global discounts associated with document type.
  * @member {Array.<module:model/DocumentTypeTaxModel>} global_discounts
  */
 DocumentTypeViewModel.prototype['global_discounts'] = undefined;
 
 /**
- * Contains information about the global charges associated to document type.
+ * Contains information about the global charges associated with document type.
  * @member {Array.<module:model/DocumentTypeTaxModel>} global_charges
  */
 DocumentTypeViewModel.prototype['global_charges'] = undefined;
 
 /**
+ * Represents whether the document type is available for cargo transport.
  * @member {Boolean} cargo_transportation
  */
 DocumentTypeViewModel.prototype['cargo_transportation'] = undefined;

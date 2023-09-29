@@ -5,7 +5,7 @@ Method | HTTP request | Description
 [**createVoucher**](VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
 [**getVoucher**](VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
 [**getVouchers**](VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
-[**sendElectronicVoucher**](VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | 
+[**sendElectronicVoucher**](VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | Send electronic voucher by GUID.
 [**sendVoucherByEmail**](VoucherApi.md#sendVoucherByEmail) | **POST** /v1/vouchers/{id}/mail | Send an invoice by email
 
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 > SendElectronicVoucherViewModel sendElectronicVoucher(id, opts)
 
-
+Send electronic voucher by GUID.
 
 ### Example
 
@@ -243,8 +243,8 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.VoucherApi();
 
-let id = "id_example"; // String | 
-let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | 
+let id = "id_example"; // String | Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | Cotains the email (and copy to emails) to send the electronic invoice.
 
 apiInstance.sendElectronicVoucher(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -260,8 +260,8 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.VoucherApi();
-    let id = "id_example"; // String | 
-    let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | 
+    let id = "id_example"; // String | Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+    let opts = new SiigoApi.SendElectronicVoucherCommand(); // SendElectronicVoucherCommand | Cotains the email (and copy to emails) to send the electronic invoice.
 
     const data = await apiInstance.sendElectronicVoucher(id, opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -277,8 +277,8 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **sendElectronicVoucherCommand** | [**SendElectronicVoucherCommand**](SendElectronicVoucherCommand.md)|  | [optional] 
+ **id** | **String**| Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000. | 
+ **sendElectronicVoucherCommand** | [**SendElectronicVoucherCommand**](SendElectronicVoucherCommand.md)| Cotains the email (and copy to emails) to send the electronic invoice. | [optional] 
 
 ### Return type
 

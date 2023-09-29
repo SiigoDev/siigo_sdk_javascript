@@ -69,11 +69,13 @@ var TestBalanceCustomer = /*#__PURE__*/function () {
   return TestBalanceCustomer;
 }();
 /**
+ * Represents the identification number of customer.
  * @member {String} identification
  */
 TestBalanceCustomer.prototype['identification'] = undefined;
 
 /**
+ * Represents the branch office number of the customer, default value will be 0.
  * @member {Number} branch_office
  */
 TestBalanceCustomer.prototype['branch_office'] = undefined;

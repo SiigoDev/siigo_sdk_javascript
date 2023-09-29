@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **seller** | **Number** | Represents the Id of the seller associated with the invoice,   for example, the id &#39;629&#39; can represent a seller called &#39;Micke&#39;. | [optional] 
 **description** | **String** | Represents product description. | [optional] 
 **discount** | [**DiscountModel**](DiscountModel.md) |  | [optional] 
-**taxes** | [**[TaxesModel]**](TaxesModel.md) | Contains a list of taxes associated to item. | [optional] 
+**taxes** | [**[TaxesModel]**](TaxesModel.md) | Contains a list of taxes associated with item. | [optional] 
 **warehouse** | [**WarehouseModel**](WarehouseModel.md) |  | [optional] 
 **total** | **Number** | Represents the price of item with the tax included. | [optional] 
-**vatExcluded** | **Boolean** |  | [optional] 
+**vatExcluded** | **Boolean** | Represents whether the document element has been excluded from taxation. | [optional] 
 
 

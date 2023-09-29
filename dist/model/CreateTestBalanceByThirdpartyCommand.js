@@ -85,31 +85,37 @@ var CreateTestBalanceByThirdpartyCommand = /*#__PURE__*/function () {
   return CreateTestBalanceByThirdpartyCommand;
 }();
 /**
+ * Represents the account's start value.
  * @member {String} account_start
  */
 CreateTestBalanceByThirdpartyCommand.prototype['account_start'] = undefined;
 
 /**
+ * Represents the account's end value.
  * @member {String} account_end
  */
 CreateTestBalanceByThirdpartyCommand.prototype['account_end'] = undefined;
 
 /**
+ * Represents the year of the balance.
  * @member {Number} year
  */
 CreateTestBalanceByThirdpartyCommand.prototype['year'] = undefined;
 
 /**
+ * Represents the initial month of the balance.
  * @member {Number} month_start
  */
 CreateTestBalanceByThirdpartyCommand.prototype['month_start'] = undefined;
 
 /**
+ * Represents the final month of the balance.
  * @member {Number} month_end
  */
 CreateTestBalanceByThirdpartyCommand.prototype['month_end'] = undefined;
 
 /**
+ * Represents whether the balance includes tax difference or not.
  * @member {Boolean} includes_tax_difference
  */
 CreateTestBalanceByThirdpartyCommand.prototype['includes_tax_difference'] = undefined;

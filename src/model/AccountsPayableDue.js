@@ -70,26 +70,31 @@ class AccountsPayableDue {
 }
 
 /**
+ * Prefix of the document associated with the account due.
  * @member {String} prefix
  */
 AccountsPayableDue.prototype['prefix'] = undefined;
 
 /**
+ * Consecutive of the document associated with the account due.
  * @member {Number} consecutive
  */
 AccountsPayableDue.prototype['consecutive'] = undefined;
 
 /**
+ * Quote of the document associated with the account due.
  * @member {Number} quote
  */
 AccountsPayableDue.prototype['quote'] = undefined;
 
 /**
+ * Date of the document associated with the account due.
  * @member {String} date
  */
 AccountsPayableDue.prototype['date'] = undefined;
 
 /**
+ * Represents the account's value.
  * @member {Number} balance
  */
 AccountsPayableDue.prototype['balance'] = undefined;

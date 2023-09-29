@@ -120,7 +120,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
-*SiigoApi.InvoiceApi* | [**sendElectronicInvoice**](docs/InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | 
+*SiigoApi.InvoiceApi* | [**sendElectronicInvoice**](docs/InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | Send electronic invoice by GUID.
 *SiigoApi.InvoiceApi* | [**sendInvoiceByEmail**](docs/InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
 *SiigoApi.InvoiceApi* | [**updateInvoice**](docs/InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 *SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
@@ -134,13 +134,13 @@ Class | Method | HTTP request | Description
 *SiigoApi.ProductApi* | [**getProducts**](docs/ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
 *SiigoApi.ProductApi* | [**updateProduct**](docs/ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates the product by GUID.
 *SiigoApi.TaxApi* | [**getTaxes**](docs/TaxApi.md#getTaxes) | **GET** /v1/taxes | Returns a list of taxes.
-*SiigoApi.TestBalanceApi* | [**createTestBalance**](docs/TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | 
-*SiigoApi.TestBalanceApi* | [**createTestBalanceByThirdparty**](docs/TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | 
+*SiigoApi.TestBalanceApi* | [**createTestBalance**](docs/TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | Generate a balance report.
+*SiigoApi.TestBalanceApi* | [**createTestBalanceByThirdparty**](docs/TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | Generate a balance report by customer.
 *SiigoApi.UserApi* | [**getUsers**](docs/UserApi.md#getUsers) | **GET** /v1/users | Returns a paginated list of users.
 *SiigoApi.VoucherApi* | [**createVoucher**](docs/VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
 *SiigoApi.VoucherApi* | [**getVoucher**](docs/VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
 *SiigoApi.VoucherApi* | [**getVouchers**](docs/VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
-*SiigoApi.VoucherApi* | [**sendElectronicVoucher**](docs/VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | 
+*SiigoApi.VoucherApi* | [**sendElectronicVoucher**](docs/VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | Send electronic voucher by GUID.
 *SiigoApi.VoucherApi* | [**sendVoucherByEmail**](docs/VoucherApi.md#sendVoucherByEmail) | **POST** /v1/vouchers/{id}/mail | Send an invoice by email
 *SiigoApi.WarehousesApi* | [**getWarehouse**](docs/WarehousesApi.md#getWarehouse) | **GET** /v1/warehouses | Returns a list of warehouse.
 

@@ -140,7 +140,7 @@ ItemsModel.prototype['description'] = undefined;
 ItemsModel.prototype['discount'] = undefined;
 
 /**
- * Contains a list of taxes associated to item.
+ * Contains a list of taxes associated with item.
  * @member {Array.<module:model/TaxesModel>} taxes
  */
 ItemsModel.prototype['taxes'] = undefined;
@@ -157,6 +157,7 @@ ItemsModel.prototype['warehouse'] = undefined;
 ItemsModel.prototype['total'] = undefined;
 
 /**
+ * Represents whether the document element has been excluded from taxation.
  * @member {Boolean} vat_excluded
  */
 ItemsModel.prototype['vat_excluded'] = undefined;

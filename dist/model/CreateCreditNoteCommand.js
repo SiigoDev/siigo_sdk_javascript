@@ -162,7 +162,7 @@ CreateCreditNoteCommand.prototype['cost_center'] = undefined;
 CreateCreditNoteCommand.prototype['currency'] = undefined;
 
 /**
- * Contains a list of information about every Retention associated to the invoice.
+ * Contains a list of information about every Retention associated with the invoice.
  * @member {Array.<module:model/RetentionsCommand>} retentions
  */
 CreateCreditNoteCommand.prototype['retentions'] = undefined;
@@ -180,13 +180,13 @@ CreateCreditNoteCommand.prototype['advance_payment'] = undefined;
 CreateCreditNoteCommand.prototype['observations'] = undefined;
 
 /**
- * Contains a list with items associated to invoice.
+ * Contains a list with items associated with invoice.
  * @member {Array.<module:model/ItemsCommand>} items
  */
 CreateCreditNoteCommand.prototype['items'] = undefined;
 
 /**
- * Contains a list with payments types associated to invoice.
+ * Contains a list with payments types associated with invoice.
  * @member {Array.<module:model/PaymentsCommand>} payments
  */
 CreateCreditNoteCommand.prototype['payments'] = undefined;

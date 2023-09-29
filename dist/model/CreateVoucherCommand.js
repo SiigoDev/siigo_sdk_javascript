@@ -146,7 +146,7 @@ CreateVoucherCommand.prototype['cost_center'] = undefined;
 CreateVoucherCommand.prototype['currency'] = undefined;
 
 /**
- * Contains a list with items associated to voucher.
+ * Contains a list with items associated withvoucher.
  * @member {Array.<module:model/Item>} items
  */
 CreateVoucherCommand.prototype['items'] = undefined;

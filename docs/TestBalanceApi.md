@@ -2,8 +2,8 @@
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createTestBalance**](TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | 
-[**createTestBalanceByThirdparty**](TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | 
+[**createTestBalance**](TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | Generate a balance report.
+[**createTestBalanceByThirdparty**](TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | Generate a balance report by customer.
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > TestBalanceResultModel createTestBalance(opts)
 
-
+Generate a balance report.
 
 ### Example
 
@@ -23,7 +23,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.TestBalanceApi();
 
-let opts = new SiigoApi.CreateTestBalanceCommand(); // CreateTestBalanceCommand | 
+let opts = new SiigoApi.CreateTestBalanceCommand(); // CreateTestBalanceCommand | Options needed to generate the report
 
 apiInstance.createTestBalance(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -39,7 +39,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.TestBalanceApi();
-    let opts = new SiigoApi.CreateTestBalanceCommand(); // CreateTestBalanceCommand | 
+    let opts = new SiigoApi.CreateTestBalanceCommand(); // CreateTestBalanceCommand | Options needed to generate the report
 
     const data = await apiInstance.createTestBalance(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -55,7 +55,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createTestBalanceCommand** | [**CreateTestBalanceCommand**](CreateTestBalanceCommand.md)|  | [optional] 
+ **createTestBalanceCommand** | [**CreateTestBalanceCommand**](CreateTestBalanceCommand.md)| Options needed to generate the report | [optional] 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 > TestBalanceResultModel createTestBalanceByThirdparty(opts)
 
-
+Generate a balance report by customer.
 
 ### Example
 
@@ -86,7 +86,7 @@ import * as SiigoApi from 'siigo_api';
 
 let apiInstance = new SiigoApi.TestBalanceApi();
 
-let opts = new SiigoApi.CreateTestBalanceByThirdpartyCommand(); // CreateTestBalanceByThirdpartyCommand | 
+let opts = new SiigoApi.CreateTestBalanceByThirdpartyCommand(); // CreateTestBalanceByThirdpartyCommand | Options needed to generate the report by customer
 
 apiInstance.createTestBalanceByThirdparty(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -102,7 +102,7 @@ import * as SiigoApi from 'siigo_api';
 async function main(){
   try {
     let apiInstance = new SiigoApi.TestBalanceApi();
-    let opts = new SiigoApi.CreateTestBalanceByThirdpartyCommand(); // CreateTestBalanceByThirdpartyCommand | 
+    let opts = new SiigoApi.CreateTestBalanceByThirdpartyCommand(); // CreateTestBalanceByThirdpartyCommand | Options needed to generate the report by customer
 
     const data = await apiInstance.createTestBalanceByThirdparty(opts);
     console.log('API called successfully. Returned data: ' + data);
@@ -118,7 +118,7 @@ async function main(){
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createTestBalanceByThirdpartyCommand** | [**CreateTestBalanceByThirdpartyCommand**](CreateTestBalanceByThirdpartyCommand.md)|  | [optional] 
+ **createTestBalanceByThirdpartyCommand** | [**CreateTestBalanceByThirdpartyCommand**](CreateTestBalanceByThirdpartyCommand.md)| Options needed to generate the report by customer | [optional] 
 
 ### Return type
 

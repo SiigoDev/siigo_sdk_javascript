@@ -67,21 +67,25 @@ class Provider {
 }
 
 /**
+ * Represents the supplier's unique identifier, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
 Provider.prototype['id'] = undefined;
 
 /**
+ * Represents the supplier's identification number.
  * @member {String} identification
  */
 Provider.prototype['identification'] = undefined;
 
 /**
+ * Represents the supplier's branch office number.
  * @member {Number} branch_office
  */
 Provider.prototype['branch_office'] = undefined;
 
 /**
+ * Represents the supplier's name.
  * @member {String} name
  */
 Provider.prototype['name'] = undefined;

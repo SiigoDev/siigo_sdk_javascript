@@ -159,7 +159,7 @@ VoucherViewModel.prototype['customer'] = undefined;
 VoucherViewModel.prototype['currency'] = undefined;
 
 /**
- * Contains a list with items associated to voucher.
+ * Contains a list with items associated with voucher.
  * @member {Array.<module:model/ItemVoucher>} items
  */
 VoucherViewModel.prototype['items'] = undefined;

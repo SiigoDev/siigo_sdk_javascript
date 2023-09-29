@@ -69,11 +69,13 @@ var TestBalanceResultModel = /*#__PURE__*/function () {
   return TestBalanceResultModel;
 }();
 /**
+ * Represents the file's identifier.
  * @member {String} file_id
  */
 TestBalanceResultModel.prototype['file_id'] = undefined;
 
 /**
+ * Represents the file's url.
  * @member {String} file_url
  */
 TestBalanceResultModel.prototype['file_url'] = undefined;

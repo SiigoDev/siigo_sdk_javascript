@@ -61,11 +61,13 @@ class CostCenter {
 }
 
 /**
+ * Represents the cost center code.
  * @member {Number} code
  */
 CostCenter.prototype['code'] = undefined;
 
 /**
+ * Represents the cost center name.
  * @member {String} name
  */
 CostCenter.prototype['name'] = undefined;

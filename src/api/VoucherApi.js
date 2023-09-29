@@ -202,9 +202,10 @@ export default class VoucherApi {
 
 
     /**
-     * @param {String} id 
+     * Send electronic voucher by GUID.
+     * @param {String} id Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand Cotains the email (and copy to emails) to send the electronic invoice.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicVoucherViewModel} and HTTP response
      */
     sendElectronicVoucherWithHttpInfo(id, opts) {
@@ -237,9 +238,10 @@ export default class VoucherApi {
     }
 
     /**
-     * @param {String} id 
+     * Send electronic voucher by GUID.
+     * @param {String} id Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
-     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand 
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand Cotains the email (and copy to emails) to send the electronic invoice.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicVoucherViewModel}
      */
     sendElectronicVoucher(id, opts) {

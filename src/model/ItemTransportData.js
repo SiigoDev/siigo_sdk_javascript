@@ -76,36 +76,43 @@ class ItemTransportData {
 }
 
 /**
+ * Represents the file number of the transport item.
  * @member {Number} file_number
  */
 ItemTransportData.prototype['file_number'] = undefined;
 
 /**
+ * Represents the shipment number of the transport item.
  * @member {String} shipment_number
  */
 ItemTransportData.prototype['shipment_number'] = undefined;
 
 /**
+ * Represents the transported quantity of the transport item.
  * @member {Number} transported_quantity
  */
 ItemTransportData.prototype['transported_quantity'] = undefined;
 
 /**
+ * Represents the measurement unit of the transport item.  It could be KGM or GLL.
  * @member {String} measurement_unit
  */
 ItemTransportData.prototype['measurement_unit'] = undefined;
 
 /**
+ * Represents the freight value of the transport item.
  * @member {Number} freight_value
  */
 ItemTransportData.prototype['freight_value'] = undefined;
 
 /**
+ * Represents the purchase order of the transport item.
  * @member {String} purchase_order
  */
 ItemTransportData.prototype['purchase_order'] = undefined;
 
 /**
+ * Represents the service type of the transport item.  It could be Shipment or AdditionalService
  * @member {String} service_type
  */
 ItemTransportData.prototype['service_type'] = undefined;

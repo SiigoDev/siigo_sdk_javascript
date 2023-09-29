@@ -323,8 +323,8 @@ export default class InvoiceApi {
      * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-     * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-     * @param {Number} opts.customerBranchOffice Represents the branch office id associated to customer.  For example, the branch office '627'.
+     * @param {String} opts.customerIdentification Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+     * @param {Number} opts.customerBranchOffice Represents the branch office id associated with customer.  For example, the branch office '627'.
      * @param {String} opts.name Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -376,8 +376,8 @@ export default class InvoiceApi {
      * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-     * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-     * @param {Number} opts.customerBranchOffice Represents the branch office id associated to customer.  For example, the branch office '627'.
+     * @param {String} opts.customerIdentification Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+     * @param {Number} opts.customerBranchOffice Represents the branch office id associated with customer.  For example, the branch office '627'.
      * @param {String} opts.name Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -398,6 +398,7 @@ export default class InvoiceApi {
 
 
     /**
+     * Send electronic invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
@@ -433,6 +434,7 @@ export default class InvoiceApi {
     }
 
     /**
+     * Send electronic invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @param {Object} opts Optional parameters
      * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
