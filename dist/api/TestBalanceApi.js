@@ -73,7 +73,8 @@ var TestBalanceApi = exports["default"] = /*#__PURE__*/function () {
     key: "createTestBalance",
     value: function createTestBalance(opts) {
       return this.createTestBalanceWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -109,7 +110,8 @@ var TestBalanceApi = exports["default"] = /*#__PURE__*/function () {
     key: "createTestBalanceByThirdparty",
     value: function createTestBalanceByThirdparty(opts) {
       return this.createTestBalanceByThirdpartyWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

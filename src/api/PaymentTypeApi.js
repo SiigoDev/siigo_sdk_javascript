@@ -75,7 +75,7 @@ export default class PaymentTypeApi {
     getPaymentTypes(opts) {
       return this.getPaymentTypesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

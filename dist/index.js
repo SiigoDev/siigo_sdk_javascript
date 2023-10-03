@@ -280,6 +280,12 @@ Object.defineProperty(exports, "CustomerViewModel", {
     return _CustomerViewModel["default"];
   }
 });
+Object.defineProperty(exports, "CustomerViewModelGetAllModel", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerViewModelGetAllModel["default"];
+  }
+});
 Object.defineProperty(exports, "CustomerVoucher", {
   enumerable: true,
   get: function get() {
@@ -388,16 +394,16 @@ Object.defineProperty(exports, "ErrorResponse", {
     return _ErrorResponse["default"];
   }
 });
-Object.defineProperty(exports, "FiscalResponsabilitiesModel", {
-  enumerable: true,
-  get: function get() {
-    return _FiscalResponsabilitiesModel["default"];
-  }
-});
 Object.defineProperty(exports, "FiscalResponsibilitiesCommand", {
   enumerable: true,
   get: function get() {
     return _FiscalResponsibilitiesCommand["default"];
+  }
+});
+Object.defineProperty(exports, "FiscalResponsibilitiesModel", {
+  enumerable: true,
+  get: function get() {
+    return _FiscalResponsibilitiesModel["default"];
   }
 });
 Object.defineProperty(exports, "FixedAssetCommand", {
@@ -796,16 +802,16 @@ Object.defineProperty(exports, "PursacheOrderModel", {
     return _PursacheOrderModel["default"];
   }
 });
+Object.defineProperty(exports, "RelatedUserModel", {
+  enumerable: true,
+  get: function get() {
+    return _RelatedUserModel["default"];
+  }
+});
 Object.defineProperty(exports, "RelatedUsersCommand", {
   enumerable: true,
   get: function get() {
     return _RelatedUsersCommand["default"];
-  }
-});
-Object.defineProperty(exports, "RelatedUsersModel", {
-  enumerable: true,
-  get: function get() {
-    return _RelatedUsersModel["default"];
   }
 });
 Object.defineProperty(exports, "RetentionsCommand", {
@@ -1045,6 +1051,7 @@ var _Customer = _interopRequireDefault(require("./model/Customer.js"));
 var _CustomerCommand = _interopRequireDefault(require("./model/CustomerCommand.js"));
 var _CustomerDeleteViewModel = _interopRequireDefault(require("./model/CustomerDeleteViewModel.js"));
 var _CustomerViewModel = _interopRequireDefault(require("./model/CustomerViewModel.js"));
+var _CustomerViewModelGetAllModel = _interopRequireDefault(require("./model/CustomerViewModelGetAllModel.js"));
 var _CustomerVoucher = _interopRequireDefault(require("./model/CustomerVoucher.js"));
 var _DeliveryOrderCommand = _interopRequireDefault(require("./model/DeliveryOrderCommand.js"));
 var _DeliveryOrderModel = _interopRequireDefault(require("./model/DeliveryOrderModel.js"));
@@ -1061,8 +1068,8 @@ var _EInvoiceErrorViewModel = _interopRequireDefault(require("./model/EInvoiceEr
 var _EInvoiceErrorsViewModel = _interopRequireDefault(require("./model/EInvoiceErrorsViewModel.js"));
 var _ErrorDetail = _interopRequireDefault(require("./model/ErrorDetail.js"));
 var _ErrorResponse = _interopRequireDefault(require("./model/ErrorResponse.js"));
-var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./model/FiscalResponsabilitiesModel.js"));
 var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./model/FiscalResponsibilitiesCommand.js"));
+var _FiscalResponsibilitiesModel = _interopRequireDefault(require("./model/FiscalResponsibilitiesModel.js"));
 var _FixedAssetCommand = _interopRequireDefault(require("./model/FixedAssetCommand.js"));
 var _FixedAssetModel = _interopRequireDefault(require("./model/FixedAssetModel.js"));
 var _FixedAssetsViewModel = _interopRequireDefault(require("./model/FixedAssetsViewModel.js"));
@@ -1123,8 +1130,8 @@ var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesC
 var _Provider = _interopRequireDefault(require("./model/Provider.js"));
 var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand.js"));
 var _PursacheOrderModel = _interopRequireDefault(require("./model/PursacheOrderModel.js"));
+var _RelatedUserModel = _interopRequireDefault(require("./model/RelatedUserModel.js"));
 var _RelatedUsersCommand = _interopRequireDefault(require("./model/RelatedUsersCommand.js"));
-var _RelatedUsersModel = _interopRequireDefault(require("./model/RelatedUsersModel.js"));
 var _RetentionsCommand = _interopRequireDefault(require("./model/RetentionsCommand.js"));
 var _RetentionsOutModel = _interopRequireDefault(require("./model/RetentionsOutModel.js"));
 var _SendElectronicInvoiceCommand = _interopRequireDefault(require("./model/SendElectronicInvoiceCommand.js"));

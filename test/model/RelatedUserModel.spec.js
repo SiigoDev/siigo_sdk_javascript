@@ -20,22 +20,22 @@ beforeEach(function() {
   instance = new SiigoApi.RelatedUserModel();
 });
 
-describe('RelatedUsersModel', function() {
+describe('RelatedUserModel', function() {
   it('should create an instance of RelatedUserModel', function() {
-    // uncomment below and update the code to test RelatedUsersModel
-    //var instance = new SiigoApi.RelatedUsersModel();
-    //expect(instance).to.be.a(SiigoApi.RelatedUsersModel);
+    // uncomment below and update the code to test RelatedUserModel
+    //var instance = new SiigoApi.RelatedUserModel();
+    //expect(instance).to.be.a(SiigoApi.RelatedUserModel);
   });
 
   it('should have the property sellerId (base name: "seller_id")', function() {
     // uncomment below and update the code to test the property sellerId
-    //var instance = new SiigoApi.RelatedUsersModel();
+    //var instance = new SiigoApi.RelatedUserModel();
     //expect(instance).to.be();
   });
 
   it('should have the property collectorId (base name: "collector_id")', function() {
     // uncomment below and update the code to test the property collectorId
-    //var instance = new SiigoApi.RelatedUsersModel();
+    //var instance = new SiigoApi.RelatedUserModel();
     //expect(instance).to.be();
   });
 

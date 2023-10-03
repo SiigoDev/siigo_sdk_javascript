@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient.js";
 import CreateCustomerCommandCountry from '../model/CreateCustomerCommandCountry.js';
 import CustomerDeleteViewModel from '../model/CustomerDeleteViewModel.js';
 import CustomerViewModel from '../model/CustomerViewModel.js';
+import CustomerViewModelGetAllModel from '../model/CustomerViewModelGetAllModel.js';
 import ErrorResponse from '../model/ErrorResponse.js';
 import UpdateCustomerCommand from '../model/UpdateCustomerCommand.js';
 
@@ -78,7 +79,7 @@ export default class CustomerApi {
     createCustomer(opts) {
       return this.createCustomerWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -124,7 +125,7 @@ export default class CustomerApi {
     deleteCustomer(id) {
       return this.deleteCustomerWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -170,7 +171,7 @@ export default class CustomerApi {
     getCustomer(id) {
       return this.getCustomerWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -191,7 +192,7 @@ export default class CustomerApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModelGetAllModel} and HTTP response
      */
     getCustomersWithHttpInfo(opts) {
       opts = opts || {};
@@ -222,7 +223,7 @@ export default class CustomerApi {
       let authNames = ['Bearer'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = CustomerViewModel;
+      let returnType = CustomerViewModelGetAllModel;
       return this.apiClient.callApi(
         '/v1/customers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -246,12 +247,12 @@ export default class CustomerApi {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModelGetAllModel}
      */
     getCustomers(opts) {
       return this.getCustomersWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -302,7 +303,7 @@ export default class CustomerApi {
     updateCustomer(id, opts) {
       return this.updateCustomerWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

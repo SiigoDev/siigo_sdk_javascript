@@ -84,7 +84,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "annulInvoice",
     value: function annulInvoice(id) {
       return this.annulInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -120,7 +121,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "createInvoice",
     value: function createInvoice(opts) {
       return this.createInvoiceWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -159,7 +161,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "deleteInvoice",
     value: function deleteInvoice(id) {
       return this.deleteInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -198,7 +201,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "getElectronicInvoiceErrors",
     value: function getElectronicInvoiceErrors(id) {
       return this.getElectronicInvoiceErrorsWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -237,7 +241,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "getInvoice",
     value: function getInvoice(id) {
       return this.getInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da5;
+        return (_response_and_data$da5 = response_and_data.data) !== null && _response_and_data$da5 !== void 0 ? _response_and_data$da5 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -276,7 +281,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "getInvoicePDF",
     value: function getInvoicePDF(id) {
       return this.getInvoicePDFWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da6;
+        return (_response_and_data$da6 = response_and_data.data) !== null && _response_and_data$da6 !== void 0 ? _response_and_data$da6 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -347,7 +353,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "getInvoices",
     value: function getInvoices(opts) {
       return this.getInvoicesWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da7;
+        return (_response_and_data$da7 = response_and_data.data) !== null && _response_and_data$da7 !== void 0 ? _response_and_data$da7 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -391,7 +398,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "sendElectronicInvoice",
     value: function sendElectronicInvoice(id, opts) {
       return this.sendElectronicInvoiceWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da8;
+        return (_response_and_data$da8 = response_and_data.data) !== null && _response_and_data$da8 !== void 0 ? _response_and_data$da8 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -435,7 +443,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "sendInvoiceByEmail",
     value: function sendInvoiceByEmail(id, opts) {
       return this.sendInvoiceByEmailWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da9;
+        return (_response_and_data$da9 = response_and_data.data) !== null && _response_and_data$da9 !== void 0 ? _response_and_data$da9 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -479,7 +488,8 @@ var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
     key: "updateInvoice",
     value: function updateInvoice(id, opts) {
       return this.updateInvoiceWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da10;
+        return (_response_and_data$da10 = response_and_data.data) !== null && _response_and_data$da10 !== void 0 ? _response_and_data$da10 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

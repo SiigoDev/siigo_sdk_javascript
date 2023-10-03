@@ -73,7 +73,8 @@ var DocumentTypeApi = exports["default"] = /*#__PURE__*/function () {
     key: "getDocumentTypes",
     value: function getDocumentTypes(opts) {
       return this.getDocumentTypesWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

@@ -75,7 +75,7 @@ export default class DocumentTypeApi {
     getDocumentTypes(opts) {
       return this.getDocumentTypesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

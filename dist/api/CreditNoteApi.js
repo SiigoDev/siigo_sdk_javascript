@@ -74,7 +74,8 @@ var CreditNoteApi = exports["default"] = /*#__PURE__*/function () {
     key: "createCreditNote",
     value: function createCreditNote(opts) {
       return this.createCreditNoteWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -113,7 +114,8 @@ var CreditNoteApi = exports["default"] = /*#__PURE__*/function () {
     key: "getCreditNote",
     value: function getCreditNote(id) {
       return this.getCreditNoteWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -152,7 +154,8 @@ var CreditNoteApi = exports["default"] = /*#__PURE__*/function () {
     key: "getCreditNotePDF",
     value: function getCreditNotePDF(id) {
       return this.getCreditNotePDFWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -214,7 +217,8 @@ var CreditNoteApi = exports["default"] = /*#__PURE__*/function () {
     key: "getCreditNotes",
     value: function getCreditNotes(opts) {
       return this.getCreditNotesWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
