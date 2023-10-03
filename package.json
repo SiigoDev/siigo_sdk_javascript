@@ -3,7 +3,6 @@
   "version": "0.0.0-semantic-release",
   "description": "Siigo Api v1",
   "license": "Unlicense",
-  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
