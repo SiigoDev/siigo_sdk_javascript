@@ -17,7 +17,7 @@ import expect from "expect.js";
 let instance;
 
 beforeEach(function() {
-  instance = new SiigoApi.FiscalResponsabilitiesModel();
+  instance = new SiigoApi.FiscalResponsibilitiesModel();
 });
 
 describe('FiscalResponsabilitiesModel', function() {

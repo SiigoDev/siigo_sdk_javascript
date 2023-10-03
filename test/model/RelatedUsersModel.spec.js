@@ -17,11 +17,11 @@ import expect from "expect.js";
 let instance;
 
 beforeEach(function() {
-  instance = new SiigoApi.RelatedUsersModel();
+  instance = new SiigoApi.RelatedUserModel();
 });
 
 describe('RelatedUsersModel', function() {
-  it('should create an instance of RelatedUsersModel', function() {
+  it('should create an instance of RelatedUserModel', function() {
     // uncomment below and update the code to test RelatedUsersModel
     //var instance = new SiigoApi.RelatedUsersModel();
     //expect(instance).to.be.a(SiigoApi.RelatedUsersModel);
