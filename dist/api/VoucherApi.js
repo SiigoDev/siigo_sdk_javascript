@@ -78,7 +78,8 @@ var VoucherApi = exports["default"] = /*#__PURE__*/function () {
     key: "createVoucher",
     value: function createVoucher(opts) {
       return this.createVoucherWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -117,7 +118,8 @@ var VoucherApi = exports["default"] = /*#__PURE__*/function () {
     key: "getVoucher",
     value: function getVoucher(id) {
       return this.getVoucherWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -179,7 +181,8 @@ var VoucherApi = exports["default"] = /*#__PURE__*/function () {
     key: "getVouchers",
     value: function getVouchers(opts) {
       return this.getVouchersWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -223,7 +226,8 @@ var VoucherApi = exports["default"] = /*#__PURE__*/function () {
     key: "sendElectronicVoucher",
     value: function sendElectronicVoucher(id, opts) {
       return this.sendElectronicVoucherWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -267,7 +271,8 @@ var VoucherApi = exports["default"] = /*#__PURE__*/function () {
     key: "sendVoucherByEmail",
     value: function sendVoucherByEmail(id, opts) {
       return this.sendVoucherByEmailWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da5;
+        return (_response_and_data$da5 = response_and_data.data) !== null && _response_and_data$da5 !== void 0 ? _response_and_data$da5 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

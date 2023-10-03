@@ -86,7 +86,7 @@ export default class InvoiceApi {
     annulInvoice(id) {
       return this.annulInvoiceWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -130,7 +130,7 @@ export default class InvoiceApi {
     createInvoice(opts) {
       return this.createInvoiceWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -176,7 +176,7 @@ export default class InvoiceApi {
     deleteInvoice(id) {
       return this.deleteInvoiceWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -222,7 +222,7 @@ export default class InvoiceApi {
     getElectronicInvoiceErrors(id) {
       return this.getElectronicInvoiceErrorsWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -268,7 +268,7 @@ export default class InvoiceApi {
     getInvoice(id) {
       return this.getInvoiceWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -314,7 +314,7 @@ export default class InvoiceApi {
     getInvoicePDF(id) {
       return this.getInvoicePDFWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -392,7 +392,7 @@ export default class InvoiceApi {
     getInvoices(opts) {
       return this.getInvoicesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -443,7 +443,7 @@ export default class InvoiceApi {
     sendElectronicInvoice(id, opts) {
       return this.sendElectronicInvoiceWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -494,7 +494,7 @@ export default class InvoiceApi {
     sendInvoiceByEmail(id, opts) {
       return this.sendInvoiceByEmailWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -545,7 +545,7 @@ export default class InvoiceApi {
     updateInvoice(id, opts) {
       return this.updateInvoiceWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

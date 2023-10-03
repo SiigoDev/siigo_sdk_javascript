@@ -81,7 +81,7 @@ export default class VoucherApi {
     createVoucher(opts) {
       return this.createVoucherWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -127,7 +127,7 @@ export default class VoucherApi {
     getVoucher(id) {
       return this.getVoucherWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -196,7 +196,7 @@ export default class VoucherApi {
     getVouchers(opts) {
       return this.getVouchersWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -247,7 +247,7 @@ export default class VoucherApi {
     sendElectronicVoucher(id, opts) {
       return this.sendElectronicVoucherWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -298,7 +298,7 @@ export default class VoucherApi {
     sendVoucherByEmail(id, opts) {
       return this.sendVoucherByEmailWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

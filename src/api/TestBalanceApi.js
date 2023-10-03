@@ -76,7 +76,7 @@ export default class TestBalanceApi {
     createTestBalance(opts) {
       return this.createTestBalanceWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -120,7 +120,7 @@ export default class TestBalanceApi {
     createTestBalanceByThirdparty(opts) {
       return this.createTestBalanceByThirdpartyWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

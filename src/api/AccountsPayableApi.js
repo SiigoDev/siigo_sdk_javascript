@@ -90,7 +90,7 @@ export default class AccountsPayableApi {
     getAccountsPayable(opts) {
       return this.getAccountsPayableWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

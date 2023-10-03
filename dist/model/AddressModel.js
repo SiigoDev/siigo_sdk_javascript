@@ -60,6 +60,21 @@ var AddressModel = /*#__PURE__*/function () {
         if (data.hasOwnProperty('address')) {
           obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
         }
+        if (data.hasOwnProperty('street')) {
+          obj['street'] = _ApiClient["default"].convertToType(data['street'], 'String');
+        }
+        if (data.hasOwnProperty('interior_number')) {
+          obj['interior_number'] = _ApiClient["default"].convertToType(data['interior_number'], 'String');
+        }
+        if (data.hasOwnProperty('exterior_number')) {
+          obj['exterior_number'] = _ApiClient["default"].convertToType(data['exterior_number'], 'String');
+        }
+        if (data.hasOwnProperty('colony')) {
+          obj['colony'] = _ApiClient["default"].convertToType(data['colony'], 'String');
+        }
+        if (data.hasOwnProperty('locality')) {
+          obj['locality'] = _ApiClient["default"].convertToType(data['locality'], 'String');
+        }
         if (data.hasOwnProperty('city')) {
           obj['city'] = _CityModel["default"].constructFromObject(data['city']);
         }
@@ -77,6 +92,36 @@ var AddressModel = /*#__PURE__*/function () {
  * @member {String} address
  */
 AddressModel.prototype['address'] = undefined;
+
+/**
+ * Represents the street of customer for Mexico.
+ * @member {String} street
+ */
+AddressModel.prototype['street'] = undefined;
+
+/**
+ * Represents the interior of customer for Mexico.
+ * @member {String} interior_number
+ */
+AddressModel.prototype['interior_number'] = undefined;
+
+/**
+ * Represents the address of exterior of customer for Mexico.
+ * @member {String} exterior_number
+ */
+AddressModel.prototype['exterior_number'] = undefined;
+
+/**
+ * Represents the address of colony of customer for Mexico.
+ * @member {String} colony
+ */
+AddressModel.prototype['colony'] = undefined;
+
+/**
+ * Represents the address of locality of customer for Mexico.
+ * @member {String} locality
+ */
+AddressModel.prototype['locality'] = undefined;
 
 /**
  * @member {module:model/CityModel} city

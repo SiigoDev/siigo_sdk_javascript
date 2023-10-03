@@ -73,7 +73,8 @@ var JournalEntryApi = exports["default"] = /*#__PURE__*/function () {
     key: "createJournal",
     value: function createJournal(opts) {
       return this.createJournalWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -112,7 +113,8 @@ var JournalEntryApi = exports["default"] = /*#__PURE__*/function () {
     key: "getJournal",
     value: function getJournal(id) {
       return this.getJournalWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -174,7 +176,8 @@ var JournalEntryApi = exports["default"] = /*#__PURE__*/function () {
     key: "getJournals",
     value: function getJournals(opts) {
       return this.getJournalsWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

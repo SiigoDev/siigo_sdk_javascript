@@ -69,7 +69,7 @@ export default class TaxApi {
     getTaxes() {
       return this.getTaxesWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

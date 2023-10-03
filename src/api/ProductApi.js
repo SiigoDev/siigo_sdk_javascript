@@ -79,7 +79,7 @@ export default class ProductApi {
     createProduct(opts) {
       return this.createProductWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -125,7 +125,7 @@ export default class ProductApi {
     deleteProduct(id) {
       return this.deleteProductWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -171,7 +171,7 @@ export default class ProductApi {
     getProduct(id) {
       return this.getProductWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -255,7 +255,7 @@ export default class ProductApi {
     getProducts(opts) {
       return this.getProductsWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -306,7 +306,7 @@ export default class ProductApi {
     updateProduct(id, opts) {
       return this.updateProductWithHttpInfo(id, opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

@@ -15,11 +15,11 @@ import ApiClient from '../ApiClient.js';
 import AddressModel from './AddressModel.js';
 import ContactModel from './ContactModel.js';
 import CustomFieldsModel from './CustomFieldsModel.js';
-import FiscalResponsabilitiesModel from './FiscalResponsabilitiesModel.js';
+import FiscalResponsibilitiesModel from './FiscalResponsibilitiesModel.js';
 import IdTypeModel from './IdTypeModel.js';
 import MetadataModel from './MetadataModel.js';
 import PhoneModel from './PhoneModel.js';
-import RelatedUsersModel from './RelatedUsersModel.js';
+import RelatedUserModel from './RelatedUserModel.js';
 
 /**
  * The CustomerViewModel model module.
@@ -70,8 +70,14 @@ class CustomerViewModel {
             if (data.hasOwnProperty('identification')) {
                 obj['identification'] = ApiClient.convertToType(data['identification'], 'String');
             }
+            if (data.hasOwnProperty('rfc_id')) {
+                obj['rfc_id'] = ApiClient.convertToType(data['rfc_id'], 'String');
+            }
             if (data.hasOwnProperty('branch_office')) {
                 obj['branch_office'] = ApiClient.convertToType(data['branch_office'], 'Number');
+            }
+            if (data.hasOwnProperty('fiscal_regime')) {
+                obj['fiscal_regime'] = ApiClient.convertToType(data['fiscal_regime'], 'String');
             }
             if (data.hasOwnProperty('check_digit')) {
                 obj['check_digit'] = ApiClient.convertToType(data['check_digit'], 'String');
@@ -89,7 +95,7 @@ class CustomerViewModel {
                 obj['vat_responsible'] = ApiClient.convertToType(data['vat_responsible'], 'Boolean');
             }
             if (data.hasOwnProperty('fiscal_responsibilities')) {
-                obj['fiscal_responsibilities'] = ApiClient.convertToType(data['fiscal_responsibilities'], [FiscalResponsabilitiesModel]);
+                obj['fiscal_responsibilities'] = ApiClient.convertToType(data['fiscal_responsibilities'], [FiscalResponsibilitiesModel]);
             }
             if (data.hasOwnProperty('address')) {
                 obj['address'] = AddressModel.constructFromObject(data['address']);
@@ -104,7 +110,7 @@ class CustomerViewModel {
                 obj['comments'] = ApiClient.convertToType(data['comments'], 'String');
             }
             if (data.hasOwnProperty('related_users')) {
-                obj['related_users'] = RelatedUsersModel.constructFromObject(data['related_users']);
+                obj['related_users'] = RelatedUserModel.constructFromObject(data['related_users']);
             }
             if (data.hasOwnProperty('custom_fields')) {
                 obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], [CustomFieldsModel]);
@@ -149,10 +155,22 @@ CustomerViewModel.prototype['id_type'] = undefined;
 CustomerViewModel.prototype['identification'] = undefined;
 
 /**
+ * Represents the identification number of customer for Mexico.  For example, the identifitication number 'MIN9203207K0'.
+ * @member {String} rfc_id
+ */
+CustomerViewModel.prototype['rfc_id'] = undefined;
+
+/**
  * Represents the branch office of customer, this value by default will be 0.
  * @member {Number} branch_office
  */
 CustomerViewModel.prototype['branch_office'] = undefined;
+
+/**
+ * Contains Fiscal Regime about the customer.
+ * @member {String} fiscal_regime
+ */
+CustomerViewModel.prototype['fiscal_regime'] = undefined;
 
 /**
  * Represents the check digit, this digit will be calculated automatically.
@@ -186,7 +204,7 @@ CustomerViewModel.prototype['vat_responsible'] = undefined;
 
 /**
  * Represents a list of tax responsibilities of a person, by default will be 'R-99-PN'.
- * @member {Array.<module:model/FiscalResponsabilitiesModel>} fiscal_responsibilities
+ * @member {Array.<module:model/FiscalResponsibilitiesModel>} fiscal_responsibilities
  */
 CustomerViewModel.prototype['fiscal_responsibilities'] = undefined;
 
@@ -214,7 +232,7 @@ CustomerViewModel.prototype['contacts'] = undefined;
 CustomerViewModel.prototype['comments'] = undefined;
 
 /**
- * @member {module:model/RelatedUsersModel} related_users
+ * @member {module:model/RelatedUserModel} related_users
  */
 CustomerViewModel.prototype['related_users'] = undefined;
 

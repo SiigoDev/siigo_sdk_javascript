@@ -69,7 +69,7 @@ export default class CostCenterApi {
     getCostCenters() {
       return this.getCostCentersWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

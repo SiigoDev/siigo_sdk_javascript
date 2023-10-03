@@ -11,11 +11,11 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 var _AddressModel = _interopRequireDefault(require("./AddressModel.js"));
 var _ContactModel = _interopRequireDefault(require("./ContactModel.js"));
 var _CustomFieldsModel = _interopRequireDefault(require("./CustomFieldsModel.js"));
-var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./FiscalResponsabilitiesModel.js"));
+var _FiscalResponsibilitiesModel = _interopRequireDefault(require("./FiscalResponsibilitiesModel.js"));
 var _IdTypeModel = _interopRequireDefault(require("./IdTypeModel.js"));
 var _MetadataModel = _interopRequireDefault(require("./MetadataModel.js"));
 var _PhoneModel = _interopRequireDefault(require("./PhoneModel.js"));
-var _RelatedUsersModel = _interopRequireDefault(require("./RelatedUsersModel.js"));
+var _RelatedUserModel = _interopRequireDefault(require("./RelatedUserModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -79,8 +79,14 @@ var CustomerViewModel = /*#__PURE__*/function () {
         if (data.hasOwnProperty('identification')) {
           obj['identification'] = _ApiClient["default"].convertToType(data['identification'], 'String');
         }
+        if (data.hasOwnProperty('rfc_id')) {
+          obj['rfc_id'] = _ApiClient["default"].convertToType(data['rfc_id'], 'String');
+        }
         if (data.hasOwnProperty('branch_office')) {
           obj['branch_office'] = _ApiClient["default"].convertToType(data['branch_office'], 'Number');
+        }
+        if (data.hasOwnProperty('fiscal_regime')) {
+          obj['fiscal_regime'] = _ApiClient["default"].convertToType(data['fiscal_regime'], 'String');
         }
         if (data.hasOwnProperty('check_digit')) {
           obj['check_digit'] = _ApiClient["default"].convertToType(data['check_digit'], 'String');
@@ -98,7 +104,7 @@ var CustomerViewModel = /*#__PURE__*/function () {
           obj['vat_responsible'] = _ApiClient["default"].convertToType(data['vat_responsible'], 'Boolean');
         }
         if (data.hasOwnProperty('fiscal_responsibilities')) {
-          obj['fiscal_responsibilities'] = _ApiClient["default"].convertToType(data['fiscal_responsibilities'], [_FiscalResponsabilitiesModel["default"]]);
+          obj['fiscal_responsibilities'] = _ApiClient["default"].convertToType(data['fiscal_responsibilities'], [_FiscalResponsibilitiesModel["default"]]);
         }
         if (data.hasOwnProperty('address')) {
           obj['address'] = _AddressModel["default"].constructFromObject(data['address']);
@@ -113,7 +119,7 @@ var CustomerViewModel = /*#__PURE__*/function () {
           obj['comments'] = _ApiClient["default"].convertToType(data['comments'], 'String');
         }
         if (data.hasOwnProperty('related_users')) {
-          obj['related_users'] = _RelatedUsersModel["default"].constructFromObject(data['related_users']);
+          obj['related_users'] = _RelatedUserModel["default"].constructFromObject(data['related_users']);
         }
         if (data.hasOwnProperty('custom_fields')) {
           obj['custom_fields'] = _ApiClient["default"].convertToType(data['custom_fields'], [_CustomFieldsModel["default"]]);
@@ -157,10 +163,22 @@ CustomerViewModel.prototype['id_type'] = undefined;
 CustomerViewModel.prototype['identification'] = undefined;
 
 /**
+ * Represents the identification number of customer for Mexico.  For example, the identifitication number 'MIN9203207K0'.
+ * @member {String} rfc_id
+ */
+CustomerViewModel.prototype['rfc_id'] = undefined;
+
+/**
  * Represents the branch office of customer, this value by default will be 0.
  * @member {Number} branch_office
  */
 CustomerViewModel.prototype['branch_office'] = undefined;
+
+/**
+ * Contains Fiscal Regime about the customer.
+ * @member {String} fiscal_regime
+ */
+CustomerViewModel.prototype['fiscal_regime'] = undefined;
 
 /**
  * Represents the check digit, this digit will be calculated automatically.
@@ -194,7 +212,7 @@ CustomerViewModel.prototype['vat_responsible'] = undefined;
 
 /**
  * Represents a list of tax responsibilities of a person, by default will be 'R-99-PN'.
- * @member {Array.<module:model/FiscalResponsabilitiesModel>} fiscal_responsibilities
+ * @member {Array.<module:model/FiscalResponsibilitiesModel>} fiscal_responsibilities
  */
 CustomerViewModel.prototype['fiscal_responsibilities'] = undefined;
 
@@ -222,7 +240,7 @@ CustomerViewModel.prototype['contacts'] = undefined;
 CustomerViewModel.prototype['comments'] = undefined;
 
 /**
- * @member {module:model/RelatedUsersModel} related_users
+ * @member {module:model/RelatedUserModel} related_users
  */
 CustomerViewModel.prototype['related_users'] = undefined;
 

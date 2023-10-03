@@ -47,6 +47,7 @@ docs/CustomerApi.md
 docs/CustomerCommand.md
 docs/CustomerDeleteViewModel.md
 docs/CustomerViewModel.md
+docs/CustomerViewModelGetAllModel.md
 docs/CustomerVoucher.md
 docs/DeliveryOrderCommand.md
 docs/DeliveryOrderModel.md
@@ -65,8 +66,8 @@ docs/EInvoiceErrorViewModel.md
 docs/EInvoiceErrorsViewModel.md
 docs/ErrorDetail.md
 docs/ErrorResponse.md
-docs/FiscalResponsabilitiesModel.md
 docs/FiscalResponsibilitiesCommand.md
+docs/FiscalResponsibilitiesModel.md
 docs/FixedAssetCommand.md
 docs/FixedAssetModel.md
 docs/FixedAssetsApi.md
@@ -133,8 +134,8 @@ docs/ProductTaxesCommand.md
 docs/Provider.md
 docs/PurchaseOrderCommand.md
 docs/PursacheOrderModel.md
+docs/RelatedUserModel.md
 docs/RelatedUsersCommand.md
-docs/RelatedUsersModel.md
 docs/RetentionsCommand.md
 docs/RetentionsOutModel.md
 docs/SendElectronicInvoiceCommand.md
@@ -230,6 +231,7 @@ src/model/Customer.js
 src/model/CustomerCommand.js
 src/model/CustomerDeleteViewModel.js
 src/model/CustomerViewModel.js
+src/model/CustomerViewModelGetAllModel.js
 src/model/CustomerVoucher.js
 src/model/DeliveryOrderCommand.js
 src/model/DeliveryOrderModel.js
@@ -246,8 +248,8 @@ src/model/EInvoiceErrorViewModel.js
 src/model/EInvoiceErrorsViewModel.js
 src/model/ErrorDetail.js
 src/model/ErrorResponse.js
-src/model/FiscalResponsabilitiesModel.js
 src/model/FiscalResponsibilitiesCommand.js
+src/model/FiscalResponsibilitiesModel.js
 src/model/FixedAssetCommand.js
 src/model/FixedAssetModel.js
 src/model/FixedAssetsViewModel.js
@@ -308,8 +310,8 @@ src/model/ProductTaxesCommand.js
 src/model/Provider.js
 src/model/PurchaseOrderCommand.js
 src/model/PursacheOrderModel.js
+src/model/RelatedUserModel.js
 src/model/RelatedUsersCommand.js
-src/model/RelatedUsersModel.js
 src/model/RetentionsCommand.js
 src/model/RetentionsOutModel.js
 src/model/SendElectronicInvoiceCommand.js
@@ -337,3 +339,6 @@ src/model/VoucherViewModelGetAllModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
+test/model/CustomerViewModelGetAllModel.spec.js
+test/model/FiscalResponsibilitiesModel.spec.js
+test/model/RelatedUserModel.spec.js

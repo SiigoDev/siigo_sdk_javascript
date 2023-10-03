@@ -53,6 +53,7 @@ import Customer from './model/Customer.js';
 import CustomerCommand from './model/CustomerCommand.js';
 import CustomerDeleteViewModel from './model/CustomerDeleteViewModel.js';
 import CustomerViewModel from './model/CustomerViewModel.js';
+import CustomerViewModelGetAllModel from './model/CustomerViewModelGetAllModel.js';
 import CustomerVoucher from './model/CustomerVoucher.js';
 import DeliveryOrderCommand from './model/DeliveryOrderCommand.js';
 import DeliveryOrderModel from './model/DeliveryOrderModel.js';
@@ -69,8 +70,8 @@ import EInvoiceErrorViewModel from './model/EInvoiceErrorViewModel.js';
 import EInvoiceErrorsViewModel from './model/EInvoiceErrorsViewModel.js';
 import ErrorDetail from './model/ErrorDetail.js';
 import ErrorResponse from './model/ErrorResponse.js';
-import FiscalResponsabilitiesModel from './model/FiscalResponsabilitiesModel.js';
 import FiscalResponsibilitiesCommand from './model/FiscalResponsibilitiesCommand.js';
+import FiscalResponsibilitiesModel from './model/FiscalResponsibilitiesModel.js';
 import FixedAssetCommand from './model/FixedAssetCommand.js';
 import FixedAssetModel from './model/FixedAssetModel.js';
 import FixedAssetsViewModel from './model/FixedAssetsViewModel.js';
@@ -131,8 +132,8 @@ import ProductTaxesCommand from './model/ProductTaxesCommand.js';
 import Provider from './model/Provider.js';
 import PurchaseOrderCommand from './model/PurchaseOrderCommand.js';
 import PursacheOrderModel from './model/PursacheOrderModel.js';
+import RelatedUserModel from './model/RelatedUserModel.js';
 import RelatedUsersCommand from './model/RelatedUsersCommand.js';
-import RelatedUsersModel from './model/RelatedUsersModel.js';
 import RetentionsCommand from './model/RetentionsCommand.js';
 import RetentionsOutModel from './model/RetentionsOutModel.js';
 import SendElectronicInvoiceCommand from './model/SendElectronicInvoiceCommand.js';
@@ -482,6 +483,12 @@ export {
     CustomerViewModel,
 
     /**
+     * The CustomerViewModelGetAllModel model constructor.
+     * @property {module:model/CustomerViewModelGetAllModel}
+     */
+    CustomerViewModelGetAllModel,
+
+    /**
      * The CustomerVoucher model constructor.
      * @property {module:model/CustomerVoucher}
      */
@@ -578,16 +585,16 @@ export {
     ErrorResponse,
 
     /**
-     * The FiscalResponsabilitiesModel model constructor.
-     * @property {module:model/FiscalResponsabilitiesModel}
-     */
-    FiscalResponsabilitiesModel,
-
-    /**
      * The FiscalResponsibilitiesCommand model constructor.
      * @property {module:model/FiscalResponsibilitiesCommand}
      */
     FiscalResponsibilitiesCommand,
+
+    /**
+     * The FiscalResponsibilitiesModel model constructor.
+     * @property {module:model/FiscalResponsibilitiesModel}
+     */
+    FiscalResponsibilitiesModel,
 
     /**
      * The FixedAssetCommand model constructor.
@@ -950,16 +957,16 @@ export {
     PursacheOrderModel,
 
     /**
+     * The RelatedUserModel model constructor.
+     * @property {module:model/RelatedUserModel}
+     */
+    RelatedUserModel,
+
+    /**
      * The RelatedUsersCommand model constructor.
      * @property {module:model/RelatedUsersCommand}
      */
     RelatedUsersCommand,
-
-    /**
-     * The RelatedUsersModel model constructor.
-     * @property {module:model/RelatedUsersModel}
-     */
-    RelatedUsersModel,
 
     /**
      * The RetentionsCommand model constructor.

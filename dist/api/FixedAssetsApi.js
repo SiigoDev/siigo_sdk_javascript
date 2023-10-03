@@ -67,7 +67,8 @@ var FixedAssetsApi = exports["default"] = /*#__PURE__*/function () {
     key: "getAssetGroups",
     value: function getAssetGroups() {
       return this.getAssetGroupsWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -98,7 +99,8 @@ var FixedAssetsApi = exports["default"] = /*#__PURE__*/function () {
     key: "getFixedAssets",
     value: function getFixedAssets() {
       return this.getFixedAssetsWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);

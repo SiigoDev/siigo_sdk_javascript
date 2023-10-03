@@ -11,6 +11,7 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 var _CreateCustomerCommandCountry = _interopRequireDefault(require("../model/CreateCustomerCommandCountry.js"));
 var _CustomerDeleteViewModel = _interopRequireDefault(require("../model/CustomerDeleteViewModel.js"));
 var _CustomerViewModel = _interopRequireDefault(require("../model/CustomerViewModel.js"));
+var _CustomerViewModelGetAllModel = _interopRequireDefault(require("../model/CustomerViewModelGetAllModel.js"));
 var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
 var _UpdateCustomerCommand = _interopRequireDefault(require("../model/UpdateCustomerCommand.js"));
 /**
@@ -75,7 +76,8 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
     key: "createCustomer",
     value: function createCustomer(opts) {
       return this.createCustomerWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -114,7 +116,8 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
     key: "deleteCustomer",
     value: function deleteCustomer(id) {
       return this.deleteCustomerWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -153,7 +156,8 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
     key: "getCustomer",
     value: function getCustomer(id) {
       return this.getCustomerWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -173,7 +177,7 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomerViewModelGetAllModel} and HTTP response
      */
   }, {
     key: "getCustomersWithHttpInfo",
@@ -201,7 +205,7 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var authNames = ['Bearer'];
       var contentTypes = [];
       var accepts = ['text/plain', 'application/json', 'text/json'];
-      var returnType = _CustomerViewModel["default"];
+      var returnType = _CustomerViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/customers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
 
@@ -221,13 +225,14 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
      * @param {Date} opts.updatedEnd Returns results where the \"last_updated\" field is less or equal than the entered date
      * @param {Number} opts.page Represents the current page
      * @param {Number} opts.pageSize Represents the number of results per page.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomerViewModelGetAllModel}
      */
   }, {
     key: "getCustomers",
     value: function getCustomers(opts) {
       return this.getCustomersWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
 
@@ -271,7 +276,8 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
     key: "updateCustomer",
     value: function updateCustomer(id, opts) {
       return this.updateCustomerWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da5;
+        return (_response_and_data$da5 = response_and_data.data) !== null && _response_and_data$da5 !== void 0 ? _response_and_data$da5 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
