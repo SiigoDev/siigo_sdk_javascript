@@ -57,8 +57,20 @@ describe('CustomerViewModel', function() {
     //expect(instance).to.be();
   });
 
+  it('should have the property rfcId (base name: "rfc_id")', function() {
+    // uncomment below and update the code to test the property rfcId
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
   it('should have the property branchOffice (base name: "branch_office")', function() {
     // uncomment below and update the code to test the property branchOffice
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property fiscalRegime (base name: "fiscal_regime")', function() {
+    // uncomment below and update the code to test the property fiscalRegime
     //var instance = new SiigoApi.CustomerViewModel();
     //expect(instance).to.be();
   });

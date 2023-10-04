@@ -69,13 +69,13 @@ var FiscalResponsibilitiesModel = /*#__PURE__*/function () {
   return FiscalResponsibilitiesModel;
 }();
 /**
- * Represents the fiscal Responsability code.  For example, the code 'R-99-PN'.
+ * Represents the fiscal responsibility code.  For example, the code 'R-99-PN'.
  * @member {String} code
  */
 FiscalResponsibilitiesModel.prototype['code'] = undefined;
 
 /**
- * Represents the fiscal Responsability name.
+ * Represents the fiscal responsibility name.
  * @member {String} name
  */
 FiscalResponsibilitiesModel.prototype['name'] = undefined;

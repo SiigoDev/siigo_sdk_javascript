@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **phones** | [**[PhoneModel]**](PhoneModel.md) | Represents the phones of the customer. | [optional] 
 **contacts** | [**[ContactModel]**](ContactModel.md) | Represents the associated contantacts of customer. | [optional] 
 **comments** | **String** | Represents additional comments or observations. | [optional] 
-**relatedUsers** | [**RelatedUserModel**](RelatedUserModel.md) |  | [optional] 
+**relatedUsers** | [**RelatedUsersModel**](RelatedUsersModel.md) |  | [optional] 
 **customFields** | [**[CustomFieldsModel]**](CustomFieldsModel.md) | Allows you to send the purchase order and delivery order fields. | [optional] 
 **metadata** | [**MetadataModel**](MetadataModel.md) |  | [optional] 
 

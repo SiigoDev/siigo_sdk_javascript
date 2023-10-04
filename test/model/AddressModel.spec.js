@@ -33,6 +33,36 @@ describe('AddressModel', function() {
     //expect(instance).to.be();
   });
 
+  it('should have the property street (base name: "street")', function() {
+    // uncomment below and update the code to test the property street
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property interiorNumber (base name: "interior_number")', function() {
+    // uncomment below and update the code to test the property interiorNumber
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property exteriorNumber (base name: "exterior_number")', function() {
+    // uncomment below and update the code to test the property exteriorNumber
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property colony (base name: "colony")', function() {
+    // uncomment below and update the code to test the property colony
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property locality (base name: "locality")', function() {
+    // uncomment below and update the code to test the property locality
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
   it('should have the property city (base name: "city")', function() {
     // uncomment below and update the code to test the property city
     //var instance = new SiigoApi.AddressModel();

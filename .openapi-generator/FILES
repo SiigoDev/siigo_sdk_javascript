@@ -134,8 +134,8 @@ docs/ProductTaxesCommand.md
 docs/Provider.md
 docs/PurchaseOrderCommand.md
 docs/PursacheOrderModel.md
-docs/RelatedUserModel.md
 docs/RelatedUsersCommand.md
+docs/RelatedUsersModel.md
 docs/RetentionsCommand.md
 docs/RetentionsOutModel.md
 docs/SendElectronicInvoiceCommand.md
@@ -310,8 +310,8 @@ src/model/ProductTaxesCommand.js
 src/model/Provider.js
 src/model/PurchaseOrderCommand.js
 src/model/PursacheOrderModel.js
-src/model/RelatedUserModel.js
 src/model/RelatedUsersCommand.js
+src/model/RelatedUsersModel.js
 src/model/RetentionsCommand.js
 src/model/RetentionsOutModel.js
 src/model/SendElectronicInvoiceCommand.js
@@ -339,6 +339,3 @@ src/model/VoucherViewModelGetAllModel.js
 src/model/Warehouse.js
 src/model/WarehouseModel.js
 src/model/WarehouseViewModel.js
-test/model/CustomerViewModelGetAllModel.spec.js
-test/model/FiscalResponsibilitiesModel.spec.js
-test/model/RelatedUserModel.spec.js
