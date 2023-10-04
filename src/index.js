@@ -132,8 +132,8 @@ import ProductTaxesCommand from './model/ProductTaxesCommand.js';
 import Provider from './model/Provider.js';
 import PurchaseOrderCommand from './model/PurchaseOrderCommand.js';
 import PursacheOrderModel from './model/PursacheOrderModel.js';
-import RelatedUserModel from './model/RelatedUserModel.js';
 import RelatedUsersCommand from './model/RelatedUsersCommand.js';
+import RelatedUsersModel from './model/RelatedUsersModel.js';
 import RetentionsCommand from './model/RetentionsCommand.js';
 import RetentionsOutModel from './model/RetentionsOutModel.js';
 import SendElectronicInvoiceCommand from './model/SendElectronicInvoiceCommand.js';
@@ -957,16 +957,16 @@ export {
     PursacheOrderModel,
 
     /**
-     * The RelatedUserModel model constructor.
-     * @property {module:model/RelatedUserModel}
-     */
-    RelatedUserModel,
-
-    /**
      * The RelatedUsersCommand model constructor.
      * @property {module:model/RelatedUsersCommand}
      */
     RelatedUsersCommand,
+
+    /**
+     * The RelatedUsersModel model constructor.
+     * @property {module:model/RelatedUsersModel}
+     */
+    RelatedUsersModel,
 
     /**
      * The RetentionsCommand model constructor.

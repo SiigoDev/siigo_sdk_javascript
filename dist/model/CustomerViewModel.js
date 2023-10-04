@@ -15,7 +15,7 @@ var _FiscalResponsibilitiesModel = _interopRequireDefault(require("./FiscalRespo
 var _IdTypeModel = _interopRequireDefault(require("./IdTypeModel.js"));
 var _MetadataModel = _interopRequireDefault(require("./MetadataModel.js"));
 var _PhoneModel = _interopRequireDefault(require("./PhoneModel.js"));
-var _RelatedUserModel = _interopRequireDefault(require("./RelatedUserModel.js"));
+var _RelatedUsersModel = _interopRequireDefault(require("./RelatedUsersModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -119,7 +119,7 @@ var CustomerViewModel = /*#__PURE__*/function () {
           obj['comments'] = _ApiClient["default"].convertToType(data['comments'], 'String');
         }
         if (data.hasOwnProperty('related_users')) {
-          obj['related_users'] = _RelatedUserModel["default"].constructFromObject(data['related_users']);
+          obj['related_users'] = _RelatedUsersModel["default"].constructFromObject(data['related_users']);
         }
         if (data.hasOwnProperty('custom_fields')) {
           obj['custom_fields'] = _ApiClient["default"].convertToType(data['custom_fields'], [_CustomFieldsModel["default"]]);
@@ -240,7 +240,7 @@ CustomerViewModel.prototype['contacts'] = undefined;
 CustomerViewModel.prototype['comments'] = undefined;
 
 /**
- * @member {module:model/RelatedUserModel} related_users
+ * @member {module:model/RelatedUsersModel} related_users
  */
 CustomerViewModel.prototype['related_users'] = undefined;
 

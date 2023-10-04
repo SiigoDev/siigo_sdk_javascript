@@ -802,16 +802,16 @@ Object.defineProperty(exports, "PursacheOrderModel", {
     return _PursacheOrderModel["default"];
   }
 });
-Object.defineProperty(exports, "RelatedUserModel", {
-  enumerable: true,
-  get: function get() {
-    return _RelatedUserModel["default"];
-  }
-});
 Object.defineProperty(exports, "RelatedUsersCommand", {
   enumerable: true,
   get: function get() {
     return _RelatedUsersCommand["default"];
+  }
+});
+Object.defineProperty(exports, "RelatedUsersModel", {
+  enumerable: true,
+  get: function get() {
+    return _RelatedUsersModel["default"];
   }
 });
 Object.defineProperty(exports, "RetentionsCommand", {
@@ -1130,8 +1130,8 @@ var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesC
 var _Provider = _interopRequireDefault(require("./model/Provider.js"));
 var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand.js"));
 var _PursacheOrderModel = _interopRequireDefault(require("./model/PursacheOrderModel.js"));
-var _RelatedUserModel = _interopRequireDefault(require("./model/RelatedUserModel.js"));
 var _RelatedUsersCommand = _interopRequireDefault(require("./model/RelatedUsersCommand.js"));
+var _RelatedUsersModel = _interopRequireDefault(require("./model/RelatedUsersModel.js"));
 var _RetentionsCommand = _interopRequireDefault(require("./model/RetentionsCommand.js"));
 var _RetentionsOutModel = _interopRequireDefault(require("./model/RetentionsOutModel.js"));
 var _SendElectronicInvoiceCommand = _interopRequireDefault(require("./model/SendElectronicInvoiceCommand.js"));

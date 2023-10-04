@@ -19,7 +19,7 @@ import FiscalResponsibilitiesModel from './FiscalResponsibilitiesModel.js';
 import IdTypeModel from './IdTypeModel.js';
 import MetadataModel from './MetadataModel.js';
 import PhoneModel from './PhoneModel.js';
-import RelatedUserModel from './RelatedUserModel.js';
+import RelatedUsersModel from './RelatedUsersModel.js';
 
 /**
  * The CustomerViewModel model module.
@@ -110,7 +110,7 @@ class CustomerViewModel {
                 obj['comments'] = ApiClient.convertToType(data['comments'], 'String');
             }
             if (data.hasOwnProperty('related_users')) {
-                obj['related_users'] = RelatedUserModel.constructFromObject(data['related_users']);
+                obj['related_users'] = RelatedUsersModel.constructFromObject(data['related_users']);
             }
             if (data.hasOwnProperty('custom_fields')) {
                 obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], [CustomFieldsModel]);
@@ -232,7 +232,7 @@ CustomerViewModel.prototype['contacts'] = undefined;
 CustomerViewModel.prototype['comments'] = undefined;
 
 /**
- * @member {module:model/RelatedUserModel} related_users
+ * @member {module:model/RelatedUsersModel} related_users
  */
 CustomerViewModel.prototype['related_users'] = undefined;
 
