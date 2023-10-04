@@ -38,6 +38,7 @@ var PriceApi = exports["default"] = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PriceApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of price lists.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/PriceListsViewModel>} and HTTP response
@@ -56,6 +57,7 @@ var PriceApi = exports["default"] = /*#__PURE__*/function () {
       var returnType = [_PriceListsViewModel["default"]];
       return this.apiClient.callApi('/v1/price-lists', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of price lists.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/PriceListsViewModel>}

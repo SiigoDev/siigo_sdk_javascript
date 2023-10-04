@@ -53,6 +53,7 @@ var ApiClient = /*#__PURE__*/function () {
      */
     this.basePath = basePath.replace(/\/+$/, '');
     this.urlSignIn = urlSignIn.replace(/\/+$/, '');
+
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
@@ -745,6 +746,7 @@ var ApiClient = /*#__PURE__*/function () {
         urlSignIn: urlSignIn
       });
     }
+
     /**
     * signIn in SiigoAPI to get Token.
     * @param {Object} params - implicit object with params to signIn

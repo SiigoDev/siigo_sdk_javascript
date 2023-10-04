@@ -103,6 +103,7 @@ AddressCommand.prototype['city'] = undefined;
  * @member {String} postal_code
  */
 AddressCommand.prototype['postal_code'] = undefined;
+
 /**
  * Represents the street of customer.
  * @member {String} street

@@ -38,6 +38,7 @@ var TaxApi = exports["default"] = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, TaxApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of taxes.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TaxViewModel>} and HTTP response
@@ -56,6 +57,7 @@ var TaxApi = exports["default"] = /*#__PURE__*/function () {
       var returnType = [_TaxViewModel["default"]];
       return this.apiClient.callApi('/v1/taxes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of taxes.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TaxViewModel>}

@@ -143,12 +143,6 @@ ItemsCommand.prototype['taxed_price'] = undefined;
 ItemsCommand.prototype['total_price'] = undefined;
 
 /**
- * Represents the total price of item with the tax/disc included.
- * @member {Number} total_price
- */
-
-ItemsCommand.prototype['total_price'] = undefined;
-/**
  * Represents the numerical percentage of the discount.  For example, '13' represents 13%.
  * @member {Number} discount
  */

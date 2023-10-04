@@ -164,12 +164,6 @@ InvoiceViewModel.prototype['document'] = undefined;
 InvoiceViewModel.prototype['prefix'] = undefined;
 
 /**
- * The use of prefix is to identify each invoice resolution that the company has
- * @member {String} prefix
- */
-
-InvoiceViewModel.prototype['prefix'] = undefined;
-/**
  * Represents the sequential number of the document,   this number is required depending of document type.
  * @member {Number} number
  */

@@ -670,12 +670,6 @@ Object.defineProperty(exports, "MetadataModel", {
     return _MetadataModel["default"];
   }
 });
-Object.defineProperty(exports, "PageListDto", {
-  enumerable: true,
-  get: function get() {
-    return _PageListDto["default"];
-  }
-});
 Object.defineProperty(exports, "PageListModel", {
   enumerable: true,
   get: function get() {

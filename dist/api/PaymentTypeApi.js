@@ -38,6 +38,7 @@ var PaymentTypeApi = exports["default"] = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PaymentTypeApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of payment types.
    * @param {Object} opts Optional parameters
@@ -61,6 +62,7 @@ var PaymentTypeApi = exports["default"] = /*#__PURE__*/function () {
       var returnType = [_PaymentTypeViewModel["default"]];
       return this.apiClient.callApi('/v1/payment-types', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of payment types.
      * @param {Object} opts Optional parameters

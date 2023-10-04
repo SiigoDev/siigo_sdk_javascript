@@ -34,6 +34,7 @@ var KeysProductsViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, KeysProductsViewModel);
     KeysProductsViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).

@@ -38,6 +38,7 @@ var UserApi = exports["default"] = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, UserApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a paginated list of users.
    * @param {Object} opts Optional parameters
@@ -63,6 +64,7 @@ var UserApi = exports["default"] = /*#__PURE__*/function () {
       var returnType = _UsersViewModel["default"];
       return this.apiClient.callApi('/v1/users', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of users.
      * @param {Object} opts Optional parameters
