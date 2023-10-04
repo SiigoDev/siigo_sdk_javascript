@@ -11,73 +11,44 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.WarehouseViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.WarehouseViewModel();
+});
+
+describe('WarehouseViewModel', function() {
+  it('should create an instance of WarehouseViewModel', function() {
+    // uncomment below and update the code to test WarehouseViewModel
+    //var instance = new SiigoApi.WarehouseViewModel();
+    //expect(instance).to.be.a(SiigoApi.WarehouseViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('WarehouseViewModel', function() {
-    it('should create an instance of WarehouseViewModel', function() {
-      // uncomment below and update the code to test WarehouseViewModel
-      var instance = new SiigoApi.WarehouseViewModel();
-      expect(instance).to.be.a(SiigoApi.WarehouseViewModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.WarehouseViewModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      var instance = new SiigoApi.WarehouseViewModel();
-      expect(instance.name).to.be(undefined);
-    });
-
-    it('should have the property active (base name: "active")', function() {
-      // uncomment below and update the code to test the property active
-      var instance = new SiigoApi.WarehouseViewModel();
-      expect(instance.active).to.be(undefined);
-    });
-
-    it('should have the property hasMovements (base name: "has_movements")', function() {
-      // uncomment below and update the code to test the property hasMovements
-      var instance = new SiigoApi.WarehouseViewModel();
-      expect(instance.has_movements).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.WarehouseViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property name (base name: "name")', function() {
+    // uncomment below and update the code to test the property name
+    //var instance = new SiigoApi.WarehouseViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property active (base name: "active")', function() {
+    // uncomment below and update the code to test the property active
+    //var instance = new SiigoApi.WarehouseViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property hasMovements (base name: "has_movements")', function() {
+    // uncomment below and update the code to test the property hasMovements
+    //var instance = new SiigoApi.WarehouseViewModel();
+    //expect(instance).to.be();
+  });
+
+});

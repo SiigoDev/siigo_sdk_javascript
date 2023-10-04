@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PriceListItemViewModel from './PriceListItemViewModel';
+import ApiClient from '../ApiClient.js';
+import PriceListItemViewModel from './PriceListItemViewModel.js';
 
 /**
  * The PriceListViewModel model module.

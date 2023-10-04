@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PricesListProducts from './PricesListProducts';
+import ApiClient from '../ApiClient.js';
+import PricesListProducts from './PricesListProducts.js';
 
 /**
  * The PricesProducts model module.

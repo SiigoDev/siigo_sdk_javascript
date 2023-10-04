@@ -11,17 +11,17 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AdditionalFieldsCommand from './AdditionalFieldsCommand';
-import CurrencyCommand from './CurrencyCommand';
-import CustomerCommand from './CustomerCommand';
-import DocumentCommand from './DocumentCommand';
-import GlobalTaxCommand from './GlobalTaxCommand';
-import ItemsCommand from './ItemsCommand';
-import MailCommand from './MailCommand';
-import PaymentsCommand from './PaymentsCommand';
-import RetentionsCommand from './RetentionsCommand';
-import StampCommand from './StampCommand';
+import ApiClient from '../ApiClient.js';
+import AdditionalFieldsCommand from './AdditionalFieldsCommand.js';
+import CurrencyCommand from './CurrencyCommand.js';
+import CustomerCommand from './CustomerCommand.js';
+import DocumentCommand from './DocumentCommand.js';
+import GlobalTaxCommand from './GlobalTaxCommand.js';
+import ItemsCommand from './ItemsCommand.js';
+import MailCommand from './MailCommand.js';
+import PaymentsCommand from './PaymentsCommand.js';
+import RetentionsCommand from './RetentionsCommand.js';
+import StampCommand from './StampCommand.js';
 
 /**
  * The CreateInvoiceCommand model module.
@@ -164,7 +164,7 @@ CreateInvoiceCommand.prototype['currency'] = undefined;
 CreateInvoiceCommand.prototype['seller'] = undefined;
 
 /**
- * Contains a list information about every Retention associated to invoice.
+ * Contains a list information about every Retention associated with invoice.
  * @member {Array.<module:model/RetentionsCommand>} retentions
  */
 CreateInvoiceCommand.prototype['retentions'] = undefined;
@@ -188,7 +188,7 @@ CreateInvoiceCommand.prototype['observations'] = undefined;
 CreateInvoiceCommand.prototype['items'] = undefined;
 
 /**
- * Contains a list with payments types associated to invoice.
+ * Contains a list with payments types associated with invoice.
  * @member {Array.<module:model/PaymentsCommand>} payments
  */
 CreateInvoiceCommand.prototype['payments'] = undefined;
@@ -209,13 +209,13 @@ CreateInvoiceCommand.prototype['stamp'] = undefined;
 CreateInvoiceCommand.prototype['mail'] = undefined;
 
 /**
- * Contains information about the global taxes charges associated to document type.
+ * Contains information about the global taxes charges associated with document type.
  * @member {Array.<module:model/GlobalTaxCommand>} global_charges
  */
 CreateInvoiceCommand.prototype['global_charges'] = undefined;
 
 /**
- * Contains information about the global taxes discounts associated to document type.
+ * Contains information about the global taxes discounts associated with document type.
  * @member {Array.<module:model/GlobalTaxCommand>} global_discounts
  */
 CreateInvoiceCommand.prototype['global_discounts'] = undefined;

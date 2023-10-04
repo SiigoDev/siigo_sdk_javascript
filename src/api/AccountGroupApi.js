@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AccountGroupViewModel from '../model/AccountGroupViewModel';
+import ApiClient from "../ApiClient.js";
+import AccountGroupViewModel from '../model/AccountGroupViewModel.js';
 
 /**
 * AccountGroup service.
@@ -69,7 +69,7 @@ export default class AccountGroupApi {
     getAccountGroups() {
       return this.getAccountGroupsWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

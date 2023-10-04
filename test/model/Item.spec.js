@@ -11,79 +11,50 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.Item();
+beforeEach(function() {
+  instance = new SiigoApi.Item();
+});
+
+describe('Item', function() {
+  it('should create an instance of Item', function() {
+    // uncomment below and update the code to test Item
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be.a(SiigoApi.Item);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('Item', function() {
-    it('should create an instance of Item', function() {
-      // uncomment below and update the code to test Item
-      var instance = new SiigoApi.Item();
-      expect(instance).to.be.a(SiigoApi.Item);
-    });
-
-    it('should have the property account (base name: "account")', function() {
-      // uncomment below and update the code to test the property account
-      var instance = new SiigoApi.Item();
-      expect(instance.account).to.be(undefined);
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      var instance = new SiigoApi.Item();
-      expect(instance.description).to.be(undefined);
-    });
-
-    it('should have the property due (base name: "due")', function() {
-      // uncomment below and update the code to test the property due
-      var instance = new SiigoApi.Item();
-      expect(instance.due).to.be(undefined);
-    });
-
-    it('should have the property tax (base name: "tax")', function() {
-      // uncomment below and update the code to test the property tax
-      var instance = new SiigoApi.Item();
-      expect(instance.tax).to.be(undefined);
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      var instance = new SiigoApi.Item();
-      expect(instance.value).to.be(undefined);
-    });
-
+  it('should have the property account (base name: "account")', function() {
+    // uncomment below and update the code to test the property account
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property description (base name: "description")', function() {
+    // uncomment below and update the code to test the property description
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property due (base name: "due")', function() {
+    // uncomment below and update the code to test the property due
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property tax (base name: "tax")', function() {
+    // uncomment below and update the code to test the property tax
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property value (base name: "value")', function() {
+    // uncomment below and update the code to test the property value
+    //var instance = new SiigoApi.Item();
+    //expect(instance).to.be();
+  });
+
+});

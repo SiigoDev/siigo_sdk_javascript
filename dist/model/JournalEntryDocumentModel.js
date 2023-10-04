@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The JournalEntryDocumentModel model module.
  * @module model/JournalEntryDocumentModel
@@ -40,16 +34,16 @@ var JournalEntryDocumentModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, JournalEntryDocumentModel);
     JournalEntryDocumentModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(JournalEntryDocumentModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>JournalEntryDocumentModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,18 +51,15 @@ var JournalEntryDocumentModel = /*#__PURE__*/function () {
      * @param {module:model/JournalEntryDocumentModel} obj Optional instance to populate.
      * @return {module:model/JournalEntryDocumentModel} The populated <code>JournalEntryDocumentModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new JournalEntryDocumentModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -78,8 +69,5 @@ var JournalEntryDocumentModel = /*#__PURE__*/function () {
  * Represents the id of the journal.  For example, the number id '27441'.
  * @member {Number} id
  */
-
-
 JournalEntryDocumentModel.prototype['id'] = undefined;
-var _default = JournalEntryDocumentModel;
-exports["default"] = _default;
+var _default = exports["default"] = JournalEntryDocumentModel;

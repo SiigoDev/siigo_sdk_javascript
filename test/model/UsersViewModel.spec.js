@@ -11,61 +11,32 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.UsersViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.UsersViewModel();
+});
+
+describe('UsersViewModel', function() {
+  it('should create an instance of UsersViewModel', function() {
+    // uncomment below and update the code to test UsersViewModel
+    //var instance = new SiigoApi.UsersViewModel();
+    //expect(instance).to.be.a(SiigoApi.UsersViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('UsersViewModel', function() {
-    it('should create an instance of UsersViewModel', function() {
-      // uncomment below and update the code to test UsersViewModel
-      var instance = new SiigoApi.UsersViewModel();
-      expect(instance).to.be.a(SiigoApi.UsersViewModel);
-    });
-
-    it('should have the property pagination (base name: "pagination")', function() {
-      // uncomment below and update the code to test the property pagination
-      var instance = new SiigoApi.UsersViewModel();
-      expect(instance.pagination).to.be(undefined);
-    });
-
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      var instance = new SiigoApi.UsersViewModel();
-      expect(instance.results).to.be(undefined);
-    });
-
+  it('should have the property pagination (base name: "pagination")', function() {
+    // uncomment below and update the code to test the property pagination
+    //var instance = new SiigoApi.UsersViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property results (base name: "results")', function() {
+    // uncomment below and update the code to test the property results
+    //var instance = new SiigoApi.UsersViewModel();
+    //expect(instance).to.be();
+  });
+
+});

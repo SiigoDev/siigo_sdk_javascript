@@ -12,10 +12,10 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateJournalEntryCommand from '../model/CreateJournalEntryCommand';
-import JournalEntryViewModel from '../model/JournalEntryViewModel';
-import JournalEntryViewModelGetAllModel from '../model/JournalEntryViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateJournalEntryCommand from '../model/CreateJournalEntryCommand.js';
+import JournalEntryViewModel from '../model/JournalEntryViewModel.js';
+import JournalEntryViewModelGetAllModel from '../model/JournalEntryViewModelGetAllModel.js';
 
 /**
 * JournalEntry service.
@@ -76,7 +76,7 @@ export default class JournalEntryApi {
     createJournal(opts) {
       return this.createJournalWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -122,7 +122,7 @@ export default class JournalEntryApi {
     getJournal(id) {
       return this.getJournalWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -191,7 +191,7 @@ export default class JournalEntryApi {
     getJournals(opts) {
       return this.getJournalsWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

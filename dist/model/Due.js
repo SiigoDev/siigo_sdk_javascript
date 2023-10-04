@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The Due model module.
  * @module model/Due
@@ -40,16 +34,16 @@ var Due = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, Due);
     Due.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(Due, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>Due</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +51,24 @@ var Due = /*#__PURE__*/function () {
      * @param {module:model/Due} obj Optional instance to populate.
      * @return {module:model/Due} The populated <code>Due</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new Due();
-
         if (data.hasOwnProperty('prefix')) {
           obj['prefix'] = _ApiClient["default"].convertToType(data['prefix'], 'String');
         }
-
         if (data.hasOwnProperty('consecutive')) {
           obj['consecutive'] = _ApiClient["default"].convertToType(data['consecutive'], 'Number');
         }
-
         if (data.hasOwnProperty('quote')) {
           obj['quote'] = _ApiClient["default"].convertToType(data['quote'], 'Number');
         }
-
         if (data.hasOwnProperty('date')) {
           obj['date'] = _ApiClient["default"].convertToType(data['date'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -90,26 +78,23 @@ var Due = /*#__PURE__*/function () {
  * Represents the prefix of the invoice to which the credit or payment will be applied.
  * @member {String} prefix
  */
-
-
 Due.prototype['prefix'] = undefined;
+
 /**
  * Represents the consecutive of the invoice to which the credit or payment will be applied.
  * @member {Number} consecutive
  */
-
 Due.prototype['consecutive'] = undefined;
+
 /**
  * Represents the quota number of the credit or payment.
  * @member {Number} quote
  */
-
 Due.prototype['quote'] = undefined;
+
 /**
  * Represents the payment date of the fee.
  * @member {String} date
  */
-
 Due.prototype['date'] = undefined;
-var _default = Due;
-exports["default"] = _default;
+var _default = exports["default"] = Due;

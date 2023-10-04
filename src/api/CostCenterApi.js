@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CostCentersViewModel from '../model/CostCentersViewModel';
+import ApiClient from "../ApiClient.js";
+import CostCentersViewModel from '../model/CostCentersViewModel.js';
 
 /**
 * CostCenter service.
@@ -69,7 +69,7 @@ export default class CostCenterApi {
     getCostCenters() {
       return this.getCostCentersWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

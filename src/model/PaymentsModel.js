@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient.js';
 
 /**
  * The PaymentsModel model module.
@@ -79,7 +79,7 @@ PaymentsModel.prototype['id'] = undefined;
 PaymentsModel.prototype['name'] = undefined;
 
 /**
- * represents the amount to paid per installment,  this value will be associated to payment method.
+ * represents the amount to paid per installment,  this value will be associated with payment method.
  * @member {Number} value
  */
 PaymentsModel.prototype['value'] = undefined;

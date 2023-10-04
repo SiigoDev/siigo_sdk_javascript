@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _CostCentersViewModel = _interopRequireDefault(require("../model/CostCentersViewModel"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CostCentersViewModel = _interopRequireDefault(require("../model/CostCentersViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _CostCentersViewModel = _interopRequireDefault(require("../model/CostCenters
  * Do not edit the class manually.
  *
  */
-
 /**
 * CostCenter service.
 * @module api/CostCenterApi
 * @version v1
 */
-var CostCenterApi = /*#__PURE__*/function () {
+var CostCenterApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new CostCenterApi. 
   * @alias module:api/CostCenterApi
@@ -45,12 +38,11 @@ var CostCenterApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CostCenterApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of cost centers.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CostCentersViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(CostCenterApi, [{
     key: "getCostCentersWithHttpInfo",
     value: function getCostCentersWithHttpInfo() {
@@ -65,20 +57,19 @@ var CostCenterApi = /*#__PURE__*/function () {
       var returnType = [_CostCentersViewModel["default"]];
       return this.apiClient.callApi('/v1/cost-centers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of cost centers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CostCentersViewModel>}
      */
-
   }, {
     key: "getCostCenters",
     value: function getCostCenters() {
       return this.getCostCentersWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return CostCenterApi;
 }();
-
-exports["default"] = CostCenterApi;

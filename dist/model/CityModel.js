@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The CityModel model module.
  * @module model/CityModel
@@ -40,16 +34,16 @@ var CityModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CityModel);
     CityModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(CityModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>CityModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,38 +51,30 @@ var CityModel = /*#__PURE__*/function () {
      * @param {module:model/CityModel} obj Optional instance to populate.
      * @return {module:model/CityModel} The populated <code>CityModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new CityModel();
-
         if (data.hasOwnProperty('country_code')) {
           obj['country_code'] = _ApiClient["default"].convertToType(data['country_code'], 'String');
         }
-
         if (data.hasOwnProperty('country_name')) {
           obj['country_name'] = _ApiClient["default"].convertToType(data['country_name'], 'String');
         }
-
         if (data.hasOwnProperty('state_code')) {
           obj['state_code'] = _ApiClient["default"].convertToType(data['state_code'], 'String');
         }
-
         if (data.hasOwnProperty('state_name')) {
           obj['state_name'] = _ApiClient["default"].convertToType(data['state_name'], 'String');
         }
-
         if (data.hasOwnProperty('city_code')) {
           obj['city_code'] = _ApiClient["default"].convertToType(data['city_code'], 'String');
         }
-
         if (data.hasOwnProperty('city_name')) {
           obj['city_name'] = _ApiClient["default"].convertToType(data['city_name'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -98,38 +84,35 @@ var CityModel = /*#__PURE__*/function () {
  * Represents the country Code.  For example, the code 'Co' to Colombia.
  * @member {String} country_code
  */
-
-
 CityModel.prototype['country_code'] = undefined;
+
 /**
  * Represents the city name.  For example, the name 'Colombia'.
  * @member {String} country_name
  */
-
 CityModel.prototype['country_name'] = undefined;
+
 /**
  * Represents the state code.  For example, the state code '19' to 'Cauca'.
  * @member {String} state_code
  */
-
 CityModel.prototype['state_code'] = undefined;
+
 /**
  * Represents the state name.  For example, the state name 'Cauca'.
  * @member {String} state_name
  */
-
 CityModel.prototype['state_name'] = undefined;
+
 /**
  * Represents the city code  For example, the code '19001' to 'Popayán'.
  * @member {String} city_code
  */
-
 CityModel.prototype['city_code'] = undefined;
+
 /**
  * Represents the city name.  For example, the name 'Popayán'.
  * @member {String} city_name
  */
-
 CityModel.prototype['city_name'] = undefined;
-var _default = CityModel;
-exports["default"] = _default;
+var _default = exports["default"] = CityModel;

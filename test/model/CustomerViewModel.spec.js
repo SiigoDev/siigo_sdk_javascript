@@ -11,163 +11,146 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.CustomerViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.CustomerViewModel();
+});
+
+describe('CustomerViewModel', function() {
+  it('should create an instance of CustomerViewModel', function() {
+    // uncomment below and update the code to test CustomerViewModel
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be.a(SiigoApi.CustomerViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('CustomerViewModel', function() {
-    it('should create an instance of CustomerViewModel', function() {
-      // uncomment below and update the code to test CustomerViewModel
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance).to.be.a(SiigoApi.CustomerViewModel);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.id).to.be(undefined);
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.type).to.be(undefined);
-    });
-
-    it('should have the property personType (base name: "person_type")', function() {
-      // uncomment below and update the code to test the property personType
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.person_type).to.be(undefined);
-    });
-
-    it('should have the property idType (base name: "id_type")', function() {
-      // uncomment below and update the code to test the property idType
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.id_type).to.be(undefined);
-    });
-
-    it('should have the property identification (base name: "identification")', function() {
-      // uncomment below and update the code to test the property identification
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.identificaiton).to.be(undefined);
-    });
-
-    it('should have the property branchOffice (base name: "branch_office")', function() {
-      // uncomment below and update the code to test the property branchOffice
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.branch_office).to.be(undefined);
-    });
-
-    it('should have the property checkDigit (base name: "check_digit")', function() {
-      // uncomment below and update the code to test the property checkDigit
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.check_digit).to.be(undefined);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.name).to.be(undefined);
-    });
-
-    it('should have the property commercialName (base name: "commercial_name")', function() {
-      // uncomment below and update the code to test the property commercialName
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.comercial_name).to.be(undefined);
-    });
-
-    it('should have the property active (base name: "active")', function() {
-      // uncomment below and update the code to test the property active
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.active).to.be(undefined);
-    });
-
-    it('should have the property vatResponsible (base name: "vat_responsible")', function() {
-      // uncomment below and update the code to test the property vatResponsible
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.vat_responsible).to.be(undefined);
-    });
-
-    it('should have the property fiscalResponsibilities (base name: "fiscal_responsibilities")', function() {
-      // uncomment below and update the code to test the property fiscalResponsibilities
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.fiscal_responsibilities).to.be(undefined);
-    });
-
-    it('should have the property address (base name: "address")', function() {
-      // uncomment below and update the code to test the property address
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.address).to.be(undefined);
-    });
-
-    it('should have the property phones (base name: "phones")', function() {
-      // uncomment below and update the code to test the property phones
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.phones).to.be(undefined);
-    });
-
-    it('should have the property contacts (base name: "contacts")', function() {
-      // uncomment below and update the code to test the property contacts
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.contacts).to.be(undefined);
-    });
-
-    it('should have the property comments (base name: "comments")', function() {
-      // uncomment below and update the code to test the property comments
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.comments).to.be(undefined);
-    });
-
-    it('should have the property relatedUsers (base name: "related_users")', function() {
-      // uncomment below and update the code to test the property relatedUsers
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.related_users).to.be(undefined);
-    });
-
-    it('should have the property customFields (base name: "custom_fields")', function() {
-      // uncomment below and update the code to test the property customFields
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.custom_fields).to.be(undefined);
-    });
-
-    it('should have the property metadata (base name: "metadata")', function() {
-      // uncomment below and update the code to test the property metadata
-      var instance = new SiigoApi.CustomerViewModel();
-      expect(instance.metadata).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property type (base name: "type")', function() {
+    // uncomment below and update the code to test the property type
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property personType (base name: "person_type")', function() {
+    // uncomment below and update the code to test the property personType
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property idType (base name: "id_type")', function() {
+    // uncomment below and update the code to test the property idType
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property identification (base name: "identification")', function() {
+    // uncomment below and update the code to test the property identification
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property rfcId (base name: "rfc_id")', function() {
+    // uncomment below and update the code to test the property rfcId
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property branchOffice (base name: "branch_office")', function() {
+    // uncomment below and update the code to test the property branchOffice
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property fiscalRegime (base name: "fiscal_regime")', function() {
+    // uncomment below and update the code to test the property fiscalRegime
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property checkDigit (base name: "check_digit")', function() {
+    // uncomment below and update the code to test the property checkDigit
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property name (base name: "name")', function() {
+    // uncomment below and update the code to test the property name
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property commercialName (base name: "commercial_name")', function() {
+    // uncomment below and update the code to test the property commercialName
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property active (base name: "active")', function() {
+    // uncomment below and update the code to test the property active
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property vatResponsible (base name: "vat_responsible")', function() {
+    // uncomment below and update the code to test the property vatResponsible
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property fiscalResponsibilities (base name: "fiscal_responsibilities")', function() {
+    // uncomment below and update the code to test the property fiscalResponsibilities
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property address (base name: "address")', function() {
+    // uncomment below and update the code to test the property address
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property phones (base name: "phones")', function() {
+    // uncomment below and update the code to test the property phones
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property contacts (base name: "contacts")', function() {
+    // uncomment below and update the code to test the property contacts
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property comments (base name: "comments")', function() {
+    // uncomment below and update the code to test the property comments
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property relatedUsers (base name: "related_users")', function() {
+    // uncomment below and update the code to test the property relatedUsers
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property customFields (base name: "custom_fields")', function() {
+    // uncomment below and update the code to test the property customFields
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property metadata (base name: "metadata")', function() {
+    // uncomment below and update the code to test the property metadata
+    //var instance = new SiigoApi.CustomerViewModel();
+    //expect(instance).to.be();
+  });
+
+});

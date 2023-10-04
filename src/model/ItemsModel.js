@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DiscountModel from './DiscountModel';
-import TaxesModel from './TaxesModel';
-import WarehouseModel from './WarehouseModel';
+import ApiClient from '../ApiClient.js';
+import DiscountModel from './DiscountModel.js';
+import TaxesModel from './TaxesModel.js';
+import WarehouseModel from './WarehouseModel.js';
 
 /**
  * The ItemsModel model module.
@@ -132,7 +132,7 @@ ItemsModel.prototype['description'] = undefined;
 ItemsModel.prototype['discount'] = undefined;
 
 /**
- * Contains a list of taxes associated to item.
+ * Contains a list of taxes associated with item.
  * @member {Array.<module:model/TaxesModel>} taxes
  */
 ItemsModel.prototype['taxes'] = undefined;
@@ -149,6 +149,7 @@ ItemsModel.prototype['warehouse'] = undefined;
 ItemsModel.prototype['total'] = undefined;
 
 /**
+ * Represents whether the document element has been excluded from taxation.
  * @member {Boolean} vat_excluded
  */
 ItemsModel.prototype['vat_excluded'] = undefined;

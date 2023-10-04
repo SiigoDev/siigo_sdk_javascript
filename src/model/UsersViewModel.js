@@ -11,9 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PageListModel from './PageListModel';
-import UsersModel from './UsersModel';
+import ApiClient from '../ApiClient.js';
+import PageListModel from './PageListModel.js';
+import UsersModel from './UsersModel.js';
 
 /**
  * The UsersViewModel model module.

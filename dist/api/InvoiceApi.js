@@ -1,40 +1,24 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _CreateInvoiceCommand = _interopRequireDefault(require("../model/CreateInvoiceCommand"));
-
-var _EInvoiceErrorsViewModel = _interopRequireDefault(require("../model/EInvoiceErrorsViewModel"));
-
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-
-var _InvoiceDeleteViewModel = _interopRequireDefault(require("../model/InvoiceDeleteViewModel"));
-
-var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfViewModel"));
-
-var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel"));
-
-var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/InvoiceViewModelGetAllModel"));
-
-var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
-
-var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand"));
-
-var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel"));
-
-var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateInvoiceCommand = _interopRequireDefault(require("../model/CreateInvoiceCommand.js"));
+var _EInvoiceErrorsViewModel = _interopRequireDefault(require("../model/EInvoiceErrorsViewModel.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _InvoiceDeleteViewModel = _interopRequireDefault(require("../model/InvoiceDeleteViewModel.js"));
+var _InvoicePdfViewModel = _interopRequireDefault(require("../model/InvoicePdfViewModel.js"));
+var _InvoiceViewModel = _interopRequireDefault(require("../model/InvoiceViewModel.js"));
+var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("../model/InvoiceViewModelGetAllModel.js"));
+var _MailViewModel = _interopRequireDefault(require("../model/MailViewModel.js"));
+var _SendElectronicInvoiceCommand = _interopRequireDefault(require("../model/SendElectronicInvoiceCommand.js"));
+var _SendElectronicInvoiceViewModel = _interopRequireDefault(require("../model/SendElectronicInvoiceViewModel.js"));
+var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendInvoiceByEmailCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -47,13 +31,12 @@ var _SendInvoiceByEmailCommand = _interopRequireDefault(require("../model/SendIn
  * Do not edit the class manually.
  *
  */
-
 /**
 * Invoice service.
 * @module api/InvoiceApi
 * @version v1
 */
-var InvoiceApi = /*#__PURE__*/function () {
+var InvoiceApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new InvoiceApi. 
   * @alias module:api/InvoiceApi
@@ -65,22 +48,20 @@ var InvoiceApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, InvoiceApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Annul the Invoice by GUID.
    * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceDeleteViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(InvoiceApi, [{
     key: "annulInvoiceWithHttpInfo",
     value: function annulInvoiceWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling annulInvoice");
       }
-
       var pathParams = {
         'id': id
       };
@@ -93,26 +74,27 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceDeleteViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}/annul', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Annul the Invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceDeleteViewModel}
      */
-
   }, {
     key: "annulInvoice",
     value: function annulInvoice(id) {
       return this.annulInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Creates an invoice.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
      */
-
   }, {
     key: "createInvoiceWithHttpInfo",
     value: function createInvoiceWithHttpInfo(opts) {
@@ -128,35 +110,35 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceViewModel["default"];
       return this.apiClient.callApi('/v1/invoices', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates an invoice.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
      */
-
   }, {
     key: "createInvoice",
     value: function createInvoice(opts) {
       return this.createInvoiceWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Delete the Invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceDeleteViewModel} and HTTP response
      */
-
   }, {
     key: "deleteInvoiceWithHttpInfo",
     value: function deleteInvoiceWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling deleteInvoice");
       }
-
       var pathParams = {
         'id': id
       };
@@ -169,34 +151,34 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceDeleteViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Delete the Invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceDeleteViewModel}
      */
-
   }, {
     key: "deleteInvoice",
     value: function deleteInvoice(id) {
       return this.deleteInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Returns the errors list for a rejected electronic invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EInvoiceErrorsViewModel} and HTTP response
      */
-
   }, {
     key: "getElectronicInvoiceErrorsWithHttpInfo",
     value: function getElectronicInvoiceErrorsWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getElectronicInvoiceErrors");
       }
-
       var pathParams = {
         'id': id
       };
@@ -209,34 +191,34 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _EInvoiceErrorsViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}/stamp/errors', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns the errors list for a rejected electronic invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EInvoiceErrorsViewModel}
      */
-
   }, {
     key: "getElectronicInvoiceErrors",
     value: function getElectronicInvoiceErrors(id) {
       return this.getElectronicInvoiceErrorsWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Gets the invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
      */
-
   }, {
     key: "getInvoiceWithHttpInfo",
     value: function getInvoiceWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getInvoice");
       }
-
       var pathParams = {
         'id': id
       };
@@ -249,34 +231,34 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
      */
-
   }, {
     key: "getInvoice",
     value: function getInvoice(id) {
       return this.getInvoiceWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da5;
+        return (_response_and_data$da5 = response_and_data.data) !== null && _response_and_data$da5 !== void 0 ? _response_and_data$da5 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Gets the invoice PDF by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoicePdfViewModel} and HTTP response
      */
-
   }, {
     key: "getInvoicePDFWithHttpInfo",
     value: function getInvoicePDFWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getInvoicePDF");
       }
-
       var pathParams = {
         'id': id
       };
@@ -289,25 +271,27 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoicePdfViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}/pdf', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the invoice PDF by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoicePdfViewModel}
      */
-
   }, {
     key: "getInvoicePDF",
     value: function getInvoicePDF(id) {
       return this.getInvoicePDFWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da6;
+        return (_response_and_data$da6 = response_and_data.data) !== null && _response_and_data$da6 !== void 0 ? _response_and_data$da6 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-     * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-     * @param {Number} opts.customerBranchOffice Represents the branch office id associated to customer.  For example, the branch office '627'.
+     * @param {String} opts.customerIdentification Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+     * @param {Number} opts.customerBranchOffice Represents the branch office id associated with customer.  For example, the branch office '627'.
      * @param {String} opts.name Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -319,7 +303,6 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModelGetAllModel} and HTTP response
      */
-
   }, {
     key: "getInvoicesWithHttpInfo",
     value: function getInvoicesWithHttpInfo(opts) {
@@ -348,12 +331,13 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/invoices', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of invoices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.documentId Represents the document id of invoice.  For example, a document id can be like '24' or '10'.
-     * @param {String} opts.customerIdentification Represents the customer id associated to invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
-     * @param {Number} opts.customerBranchOffice Represents the branch office id associated to customer.  For example, the branch office '627'.
+     * @param {String} opts.customerIdentification Represents the customer id associated with invoice.  For example, the number '51874544' can be the id of the customer 'Jackson Smith'.
+     * @param {Number} opts.customerBranchOffice Represents the branch office id associated with customer.  For example, the branch office '627'.
      * @param {String} opts.name Represents the name of invoice.   For example, the name of an invoice can be like 'FV-003-457'.
      * @param {Date} opts.createdStart Returns results where the \"created\" field is greater or equal than the entered date
      * @param {Date} opts.createdEnd Returns results where the \"created\" field is less or equal than the entered date
@@ -365,14 +349,60 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModelGetAllModel}
      */
-
   }, {
     key: "getInvoices",
     value: function getInvoices(opts) {
       return this.getInvoicesWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da7;
+        return (_response_and_data$da7 = response_and_data.data) !== null && _response_and_data$da7 !== void 0 ? _response_and_data$da7 : JSON.parse(response_and_data.response.text);
       });
     }
+
+    /**
+     * Send electronic invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicInvoiceViewModel} and HTTP response
+     */
+  }, {
+    key: "sendElectronicInvoiceWithHttpInfo",
+    value: function sendElectronicInvoiceWithHttpInfo(id, opts) {
+      opts = opts || {};
+      var postBody = opts;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendElectronicInvoice");
+      }
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['Bearer'];
+      var contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      var accepts = ['text/plain', 'application/json', 'text/json'];
+      var returnType = _SendElectronicInvoiceViewModel["default"];
+      return this.apiClient.callApi('/v1/invoices/{id}/stamp', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+
+    /**
+     * Send electronic invoice by GUID.
+     * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicInvoiceCommand} opts.sendElectronicInvoiceCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicInvoiceViewModel}
+     */
+  }, {
+    key: "sendElectronicInvoice",
+    value: function sendElectronicInvoice(id, opts) {
+      return this.sendElectronicInvoiceWithHttpInfo(id, opts).then(function (response_and_data) {
+        var _response_and_data$da8;
+        return (_response_and_data$da8 = response_and_data.data) !== null && _response_and_data$da8 !== void 0 ? _response_and_data$da8 : JSON.parse(response_and_data.response.text);
+      });
+    }
+
     /**
      * Send an invoice by email
      * @param {String} id Represents the Guid of the Invoice.
@@ -380,17 +410,15 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {module:model/SendInvoiceByEmailCommand} opts.sendInvoiceByEmailCommand Contains the parameters for sending the Email.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailViewModel} and HTTP response
      */
-
   }, {
     key: "sendInvoiceByEmailWithHttpInfo",
     value: function sendInvoiceByEmailWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling sendInvoiceByEmail");
       }
-
       var pathParams = {
         'id': id
       };
@@ -403,6 +431,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _MailViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}/mail', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Send an invoice by email
      * @param {String} id Represents the Guid of the Invoice.
@@ -410,14 +439,15 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {module:model/SendInvoiceByEmailCommand} opts.sendInvoiceByEmailCommand Contains the parameters for sending the Email.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MailViewModel}
      */
-
   }, {
     key: "sendInvoiceByEmail",
     value: function sendInvoiceByEmail(id, opts) {
       return this.sendInvoiceByEmailWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da9;
+        return (_response_and_data$da9 = response_and_data.data) !== null && _response_and_data$da9 !== void 0 ? _response_and_data$da9 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Updates the Invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -425,17 +455,15 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceViewModel} and HTTP response
      */
-
   }, {
     key: "updateInvoiceWithHttpInfo",
     value: function updateInvoiceWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateInvoice");
       }
-
       var pathParams = {
         'id': id
       };
@@ -448,6 +476,7 @@ var InvoiceApi = /*#__PURE__*/function () {
       var returnType = _InvoiceViewModel["default"];
       return this.apiClient.callApi('/v1/invoices/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Updates the Invoice by GUID.
      * @param {String} id Represents the unique Id of invoice, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -455,16 +484,14 @@ var InvoiceApi = /*#__PURE__*/function () {
      * @param {module:model/CreateInvoiceCommand} opts.createInvoiceCommand Represents the request with the invoice information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceViewModel}
      */
-
   }, {
     key: "updateInvoice",
     value: function updateInvoice(id, opts) {
       return this.updateInvoiceWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da10;
+        return (_response_and_data$da10 = response_and_data.data) !== null && _response_and_data$da10 !== void 0 ? _response_and_data$da10 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return InvoiceApi;
 }();
-
-exports["default"] = InvoiceApi;

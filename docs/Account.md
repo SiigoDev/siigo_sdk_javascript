@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **movement** | **String** | Represents the type of movement, this movement will be &#39;Debit&#39; or &#39;Credit&#39;. | [optional] 
 
 
-

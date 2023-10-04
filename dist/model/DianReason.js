@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,23 +21,45 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
 * Enum class DianReason.
 * @enum {}
 * @readonly
 */
-var DianReason = /*#__PURE__*/function () {
+var DianReason = exports["default"] = /*#__PURE__*/function () {
   function DianReason() {
     (0, _classCallCheck2["default"])(this, DianReason);
+    /**
+     * value: 1
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "1", 1);
+    /**
+     * value: 2
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "2", 2);
+    /**
+     * value: 3
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "3", 3);
+    /**
+     * value: 4
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "4", 4);
+    /**
+     * value: 5
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "5", 5);
+    /**
+     * value: 6
+     * @const
+     */
     (0, _defineProperty2["default"])(this, "6", 6);
   }
-
   (0, _createClass2["default"])(DianReason, null, [{
     key: "constructFromObject",
     value:
@@ -58,5 +74,3 @@ var DianReason = /*#__PURE__*/function () {
   }]);
   return DianReason;
 }();
-
-exports["default"] = DianReason;

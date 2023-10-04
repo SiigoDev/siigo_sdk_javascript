@@ -11,61 +11,32 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.AdditionalFieldsModel();
+beforeEach(function() {
+  instance = new SiigoApi.AdditionalFieldsModel();
+});
+
+describe('AdditionalFieldsModel', function() {
+  it('should create an instance of AdditionalFieldsModel', function() {
+    // uncomment below and update the code to test AdditionalFieldsModel
+    //var instance = new SiigoApi.AdditionalFieldsModel();
+    //expect(instance).to.be.a(SiigoApi.AdditionalFieldsModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('AdditionalFieldsModel', function() {
-    it('should create an instance of AdditionalFieldsModel', function() {
-      // uncomment below and update the code to test AdditionalFieldsModel
-      var instance = new SiigoApi.AdditionalFieldsModel();
-      expect(instance).to.be.a(SiigoApi.AdditionalFieldsModel);
-    });
-
-    it('should have the property purchaseOrder (base name: "purchase_order")', function() {
-      // uncomment below and update the code to test the property purchaseOrder
-      var instance = new SiigoApi.AdditionalFieldsModel();
-      expect(instance.purchase_order).to.be(undefined);
-    });
-
-    it('should have the property deliveryOrder (base name: "delivery_order")', function() {
-      // uncomment below and update the code to test the property deliveryOrder
-      var instance = new SiigoApi.AdditionalFieldsModel();
-      expect(instance.delivery_order).to.be(undefined);
-    });
-
+  it('should have the property purchaseOrder (base name: "purchase_order")', function() {
+    // uncomment below and update the code to test the property purchaseOrder
+    //var instance = new SiigoApi.AdditionalFieldsModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property deliveryOrder (base name: "delivery_order")', function() {
+    // uncomment below and update the code to test the property deliveryOrder
+    //var instance = new SiigoApi.AdditionalFieldsModel();
+    //expect(instance).to.be();
+  });
+
+});

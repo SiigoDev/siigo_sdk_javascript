@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import PriceListsViewModel from '../model/PriceListsViewModel';
+import ApiClient from "../ApiClient.js";
+import PriceListsViewModel from '../model/PriceListsViewModel.js';
 
 /**
 * Price service.
@@ -69,7 +69,7 @@ export default class PriceApi {
     getPriceList() {
       return this.getPriceListWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

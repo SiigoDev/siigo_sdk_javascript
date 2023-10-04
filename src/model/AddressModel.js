@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CityModel from './CityModel';
+import ApiClient from '../ApiClient.js';
+import CityModel from './CityModel.js';
 
 /**
  * The AddressModel model module.
@@ -51,6 +51,21 @@ class AddressModel {
             if (data.hasOwnProperty('address')) {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
             }
+            if (data.hasOwnProperty('street')) {
+                obj['street'] = ApiClient.convertToType(data['street'], 'String');
+            }
+            if (data.hasOwnProperty('interior_number')) {
+                obj['interior_number'] = ApiClient.convertToType(data['interior_number'], 'String');
+            }
+            if (data.hasOwnProperty('exterior_number')) {
+                obj['exterior_number'] = ApiClient.convertToType(data['exterior_number'], 'String');
+            }
+            if (data.hasOwnProperty('colony')) {
+                obj['colony'] = ApiClient.convertToType(data['colony'], 'String');
+            }
+            if (data.hasOwnProperty('locality')) {
+                obj['locality'] = ApiClient.convertToType(data['locality'], 'String');
+            }
             if (data.hasOwnProperty('city')) {
                 obj['city'] = CityModel.constructFromObject(data['city']);
             }
@@ -69,6 +84,36 @@ class AddressModel {
  * @member {String} address
  */
 AddressModel.prototype['address'] = undefined;
+
+/**
+ * Represents the street of customer for Mexico.
+ * @member {String} street
+ */
+AddressModel.prototype['street'] = undefined;
+
+/**
+ * Represents the interior of customer for Mexico.
+ * @member {String} interior_number
+ */
+AddressModel.prototype['interior_number'] = undefined;
+
+/**
+ * Represents the address of exterior of customer for Mexico.
+ * @member {String} exterior_number
+ */
+AddressModel.prototype['exterior_number'] = undefined;
+
+/**
+ * Represents the address of colony of customer for Mexico.
+ * @member {String} colony
+ */
+AddressModel.prototype['colony'] = undefined;
+
+/**
+ * Represents the address of locality of customer for Mexico.
+ * @member {String} locality
+ */
+AddressModel.prototype['locality'] = undefined;
 
 /**
  * @member {module:model/CityModel} city

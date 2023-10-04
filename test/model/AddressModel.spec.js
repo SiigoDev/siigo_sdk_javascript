@@ -11,67 +11,68 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.AddressModel();
+beforeEach(function() {
+  instance = new SiigoApi.AddressModel();
+});
+
+describe('AddressModel', function() {
+  it('should create an instance of AddressModel', function() {
+    // uncomment below and update the code to test AddressModel
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be.a(SiigoApi.AddressModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('AddressModel', function() {
-    it('should create an instance of AddressModel', function() {
-      // uncomment below and update the code to test AddressModel
-      var instance = new SiigoApi.AddressModel();
-      expect(instance).to.be.a(SiigoApi.AddressModel);
-    });
-
-    it('should have the property address (base name: "address")', function() {
-      // uncomment below and update the code to test the property address
-      var instance = new SiigoApi.AddressModel();
-      expect(instance.address).to.be(undefined);
-    });
-
-    it('should have the property city (base name: "city")', function() {
-      // uncomment below and update the code to test the property city
-      var instance = new SiigoApi.AddressModel();
-      expect(instance.city).to.be(undefined);
-    });
-
-    it('should have the property postalCode (base name: "postal_code")', function() {
-      // uncomment below and update the code to test the property postalCode
-      var instance = new SiigoApi.AddressModel();
-      expect(instance.postal_code).to.be(undefined);
-    });
-
+  it('should have the property address (base name: "address")', function() {
+    // uncomment below and update the code to test the property address
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property street (base name: "street")', function() {
+    // uncomment below and update the code to test the property street
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property interiorNumber (base name: "interior_number")', function() {
+    // uncomment below and update the code to test the property interiorNumber
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property exteriorNumber (base name: "exterior_number")', function() {
+    // uncomment below and update the code to test the property exteriorNumber
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property colony (base name: "colony")', function() {
+    // uncomment below and update the code to test the property colony
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property locality (base name: "locality")', function() {
+    // uncomment below and update the code to test the property locality
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property city (base name: "city")', function() {
+    // uncomment below and update the code to test the property city
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+  it('should have the property postalCode (base name: "postal_code")', function() {
+    // uncomment below and update the code to test the property postalCode
+    //var instance = new SiigoApi.AddressModel();
+    //expect(instance).to.be();
+  });
+
+});

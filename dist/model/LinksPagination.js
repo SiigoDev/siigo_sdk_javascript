@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _Link = _interopRequireDefault(require("./Link"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _Link = _interopRequireDefault(require("./Link.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,7 +21,6 @@ var _Link = _interopRequireDefault(require("./Link"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The LinksPagination model module.
  * @module model/LinksPagination
@@ -42,16 +35,16 @@ var LinksPagination = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, LinksPagination);
     LinksPagination.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(LinksPagination, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>LinksPagination</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -59,26 +52,21 @@ var LinksPagination = /*#__PURE__*/function () {
      * @param {module:model/LinksPagination} obj Optional instance to populate.
      * @return {module:model/LinksPagination} The populated <code>LinksPagination</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new LinksPagination();
-
         if (data.hasOwnProperty('previous')) {
           obj['previous'] = _Link["default"].constructFromObject(data['previous']);
         }
-
         if (data.hasOwnProperty('self')) {
           obj['self'] = _Link["default"].constructFromObject(data['self']);
         }
-
         if (data.hasOwnProperty('next')) {
           obj['next'] = _Link["default"].constructFromObject(data['next']);
         }
       }
-
       return obj;
     }
   }]);
@@ -87,18 +75,15 @@ var LinksPagination = /*#__PURE__*/function () {
 /**
  * @member {module:model/Link} previous
  */
-
-
 LinksPagination.prototype['previous'] = undefined;
+
 /**
  * @member {module:model/Link} self
  */
-
 LinksPagination.prototype['self'] = undefined;
+
 /**
  * @member {module:model/Link} next
  */
-
 LinksPagination.prototype['next'] = undefined;
-var _default = LinksPagination;
-exports["default"] = _default;
+var _default = exports["default"] = LinksPagination;

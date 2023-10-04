@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import PaymentTypeViewModel from '../model/PaymentTypeViewModel';
+import ApiClient from "../ApiClient.js";
+import PaymentTypeViewModel from '../model/PaymentTypeViewModel.js';
 
 /**
 * PaymentType service.
@@ -75,7 +75,7 @@ export default class PaymentTypeApi {
     getPaymentTypes(opts) {
       return this.getPaymentTypesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

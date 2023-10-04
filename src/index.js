@@ -12,153 +12,173 @@
  */
 
 
-
-
-import ApiClient from './ApiClient';
-import Account from './model/Account';
-import AccountGroup from './model/AccountGroup';
-import AccountGroupViewModel from './model/AccountGroupViewModel';
-import AccountModel from './model/AccountModel';
-import AdditionalFields from './model/AdditionalFields';
-import AdditionalFieldsCommand from './model/AdditionalFieldsCommand';
-import AdditionalFieldsModel from './model/AdditionalFieldsModel';
-import AdditionalFieldsProducts from './model/AdditionalFieldsProducts';
-import AddressCommand from './model/AddressCommand';
-import AddressModel from './model/AddressModel';
-import AssetGroupsViewModel from './model/AssetGroupsViewModel';
-import CityCommand from './model/CityCommand';
-import CityModel from './model/CityModel';
-import ContactCommand from './model/ContactCommand';
-import ContactModel from './model/ContactModel';
-import CostCentersViewModel from './model/CostCentersViewModel';
-import CreateCreditNoteCommand from './model/CreateCreditNoteCommand';
-import CreateCustomerCommandCountry from './model/CreateCustomerCommandCountry';
-import CreateInvoiceCommand from './model/CreateInvoiceCommand';
-import CreateJournalEntryCommand from './model/CreateJournalEntryCommand';
-import CreateProductCommand from './model/CreateProductCommand';
-import CreateVoucherCommand from './model/CreateVoucherCommand';
-import CreditNotePdfViewModel from './model/CreditNotePdfViewModel';
-import CreditNoteViewModel from './model/CreditNoteViewModel';
-import CreditNoteViewModelGetAllModel from './model/CreditNoteViewModelGetAllModel';
-import CurrencyCommand from './model/CurrencyCommand';
-import CurrencyModel from './model/CurrencyModel';
-import CustomFieldsCommand from './model/CustomFieldsCommand';
-import CustomFieldsModel from './model/CustomFieldsModel';
-import Customer from './model/Customer';
-import CustomerCommand from './model/CustomerCommand';
-import CustomerDeleteViewModel from './model/CustomerDeleteViewModel';
-import CustomerViewModel from './model/CustomerViewModel';
-import CustomerVoucher from './model/CustomerVoucher';
-import DeliveryOrderCommand from './model/DeliveryOrderCommand';
-import DeliveryOrderModel from './model/DeliveryOrderModel';
-import DianReason from './model/DianReason';
-import DiscountModel from './model/DiscountModel';
-import DocumentCommand from './model/DocumentCommand';
-import DocumentModel from './model/DocumentModel';
-import DocumentTypeTaxModel from './model/DocumentTypeTaxModel';
-import DocumentTypeViewModel from './model/DocumentTypeViewModel';
-import DocumentVoucher from './model/DocumentVoucher';
-import Due from './model/Due';
-import EInvoiceErrorViewModel from './model/EInvoiceErrorViewModel';
-import EInvoiceErrorsViewModel from './model/EInvoiceErrorsViewModel';
-import ErrorDetail from './model/ErrorDetail';
-import ErrorResponse from './model/ErrorResponse';
-import FiscalResponsabilitiesModel from './model/FiscalResponsabilitiesModel';
-import FiscalResponsibilitiesCommand from './model/FiscalResponsibilitiesCommand';
-import FixedAssetCommand from './model/FixedAssetCommand';
-import FixedAssetModel from './model/FixedAssetModel';
-import FixedAssetsViewModel from './model/FixedAssetsViewModel';
-import GenericPageListModel from './model/GenericPageListModel';
-import GlobalTaxCommand from './model/GlobalTaxCommand';
-import GlobalTaxModel from './model/GlobalTaxModel';
-import IdTypeModel from './model/IdTypeModel';
-import InvoiceCustomerModel from './model/InvoiceCustomerModel';
-import InvoiceDeleteViewModel from './model/InvoiceDeleteViewModel';
-import InvoiceModel from './model/InvoiceModel';
-import InvoicePdfViewModel from './model/InvoicePdfViewModel';
-import InvoiceViewModel from './model/InvoiceViewModel';
-import InvoiceViewModelGetAllModel from './model/InvoiceViewModelGetAllModel';
-import Item from './model/Item';
-import ItemDue from './model/ItemDue';
-import ItemDueCommand from './model/ItemDueCommand';
-import ItemVoucher from './model/ItemVoucher';
-import ItemsCommand from './model/ItemsCommand';
-import ItemsModel from './model/ItemsModel';
-import JournalDue from './model/JournalDue';
-import JournalEntryAccountModel from './model/JournalEntryAccountModel';
-import JournalEntryCustomerModel from './model/JournalEntryCustomerModel';
-import JournalEntryDocumentModel from './model/JournalEntryDocumentModel';
-import JournalEntryItem from './model/JournalEntryItem';
-import JournalEntryItemModel from './model/JournalEntryItemModel';
-import JournalEntryProductCommand from './model/JournalEntryProductCommand';
-import JournalEntryProductModel from './model/JournalEntryProductModel';
-import JournalEntryTaxModel from './model/JournalEntryTaxModel';
-import JournalEntryViewModel from './model/JournalEntryViewModel';
-import JournalEntryViewModelGetAllModel from './model/JournalEntryViewModelGetAllModel';
-import JournalEntryWarehouseModel from './model/JournalEntryWarehouseModel';
-import KeysProductsViewModel from './model/KeysProductsViewModel';
-import Link from './model/Link';
-import LinksPagination from './model/LinksPagination';
-import LiteCustomerCommand from './model/LiteCustomerCommand';
-import MailCommand from './model/MailCommand';
-import MailViewModel from './model/MailViewModel';
-import Metadata from './model/Metadata';
-import MetadataModel from './model/MetadataModel';
-import PageListDto from './model/PageListDto';
-import PageListModel from './model/PageListModel';
-import Payment from './model/Payment';
-import PaymentTypeViewModel from './model/PaymentTypeViewModel';
-import PaymentsCommand from './model/PaymentsCommand';
-import PaymentsModel from './model/PaymentsModel';
-import PhoneCommand from './model/PhoneCommand';
-import PhoneModel from './model/PhoneModel';
-import PriceListItemViewModel from './model/PriceListItemViewModel';
-import PriceListViewModel from './model/PriceListViewModel';
-import PriceListsViewModel from './model/PriceListsViewModel';
-import PricesListProducts from './model/PricesListProducts';
-import PricesProducts from './model/PricesProducts';
-import ProductDeleteViewModel from './model/ProductDeleteViewModel';
-import ProductModel from './model/ProductModel';
-import ProductModelGetAllModel from './model/ProductModelGetAllModel';
-import ProductTaxesCommand from './model/ProductTaxesCommand';
-import PurchaseOrderCommand from './model/PurchaseOrderCommand';
-import PursacheOrderModel from './model/PursacheOrderModel';
-import RelatedUsersCommand from './model/RelatedUsersCommand';
-import RelatedUsersModel from './model/RelatedUsersModel';
-import RetentionsCommand from './model/RetentionsCommand';
-import RetentionsOutModel from './model/RetentionsOutModel';
-import SendInvoiceByEmailCommand from './model/SendInvoiceByEmailCommand';
-import StampCommand from './model/StampCommand';
-import StampViewModel from './model/StampViewModel';
-import Tax from './model/Tax';
-import TaxViewModel from './model/TaxViewModel';
-import TaxesCommand from './model/TaxesCommand';
-import TaxesModel from './model/TaxesModel';
-import UnitProductsViewModel from './model/UnitProductsViewModel';
-import UpdateCustomerCommand from './model/UpdateCustomerCommand';
-import UpdateProductCommand from './model/UpdateProductCommand';
-import UsersModel from './model/UsersModel';
-import UsersViewModel from './model/UsersViewModel';
-import VoucherViewModel from './model/VoucherViewModel';
-import VoucherViewModelGetAllModel from './model/VoucherViewModelGetAllModel';
-import Warehouse from './model/Warehouse';
-import WarehouseModel from './model/WarehouseModel';
-import WarehouseViewModel from './model/WarehouseViewModel';
-import AccountGroupApi from './api/AccountGroupApi';
-import CostCenterApi from './api/CostCenterApi';
-import CreditNoteApi from './api/CreditNoteApi';
-import CustomerApi from './api/CustomerApi';
-import DocumentTypeApi from './api/DocumentTypeApi';
-import FixedAssetsApi from './api/FixedAssetsApi';
-import InvoiceApi from './api/InvoiceApi';
-import JournalEntryApi from './api/JournalEntryApi';
-import PaymentTypeApi from './api/PaymentTypeApi';
-import PriceApi from './api/PriceApi';
-import ProductApi from './api/ProductApi';
-import TaxApi from './api/TaxApi';
-import UserApi from './api/UserApi';
-import VoucherApi from './api/VoucherApi';
-import WarehousesApi from './api/WarehousesApi';
+import ApiClient from './ApiClient.js';
+import Account from './model/Account.js';
+import AccountGroup from './model/AccountGroup.js';
+import AccountGroupViewModel from './model/AccountGroupViewModel.js';
+import AccountModel from './model/AccountModel.js';
+import AccountsPayableDue from './model/AccountsPayableDue.js';
+import AccountsPayableViewModel from './model/AccountsPayableViewModel.js';
+import AccountsPayableViewModelGetAllModel from './model/AccountsPayableViewModelGetAllModel.js';
+import AdditionalFields from './model/AdditionalFields.js';
+import AdditionalFieldsCommand from './model/AdditionalFieldsCommand.js';
+import AdditionalFieldsModel from './model/AdditionalFieldsModel.js';
+import AdditionalFieldsProducts from './model/AdditionalFieldsProducts.js';
+import AddressCommand from './model/AddressCommand.js';
+import AddressModel from './model/AddressModel.js';
+import AssetGroupsViewModel from './model/AssetGroupsViewModel.js';
+import CityCommand from './model/CityCommand.js';
+import CityModel from './model/CityModel.js';
+import ContactCommand from './model/ContactCommand.js';
+import ContactModel from './model/ContactModel.js';
+import CostCenter from './model/CostCenter.js';
+import CostCentersViewModel from './model/CostCentersViewModel.js';
+import CreateCreditNoteCommand from './model/CreateCreditNoteCommand.js';
+import CreateCustomerCommandCountry from './model/CreateCustomerCommandCountry.js';
+import CreateInvoiceCommand from './model/CreateInvoiceCommand.js';
+import CreateJournalEntryCommand from './model/CreateJournalEntryCommand.js';
+import CreateProductCommand from './model/CreateProductCommand.js';
+import CreateTestBalanceByThirdpartyCommand from './model/CreateTestBalanceByThirdpartyCommand.js';
+import CreateTestBalanceCommand from './model/CreateTestBalanceCommand.js';
+import CreateVoucherCommand from './model/CreateVoucherCommand.js';
+import CreditNotePdfViewModel from './model/CreditNotePdfViewModel.js';
+import CreditNoteViewModel from './model/CreditNoteViewModel.js';
+import CreditNoteViewModelGetAllModel from './model/CreditNoteViewModelGetAllModel.js';
+import Currency from './model/Currency.js';
+import CurrencyCommand from './model/CurrencyCommand.js';
+import CurrencyModel from './model/CurrencyModel.js';
+import CustomFieldsCommand from './model/CustomFieldsCommand.js';
+import CustomFieldsModel from './model/CustomFieldsModel.js';
+import Customer from './model/Customer.js';
+import CustomerCommand from './model/CustomerCommand.js';
+import CustomerDeleteViewModel from './model/CustomerDeleteViewModel.js';
+import CustomerViewModel from './model/CustomerViewModel.js';
+import CustomerViewModelGetAllModel from './model/CustomerViewModelGetAllModel.js';
+import CustomerVoucher from './model/CustomerVoucher.js';
+import DeliveryOrderCommand from './model/DeliveryOrderCommand.js';
+import DeliveryOrderModel from './model/DeliveryOrderModel.js';
+import DianReason from './model/DianReason.js';
+import DiscountModel from './model/DiscountModel.js';
+import DocumentBalanceViewModel from './model/DocumentBalanceViewModel.js';
+import DocumentCommand from './model/DocumentCommand.js';
+import DocumentModel from './model/DocumentModel.js';
+import DocumentTypeTaxModel from './model/DocumentTypeTaxModel.js';
+import DocumentTypeViewModel from './model/DocumentTypeViewModel.js';
+import DocumentVoucher from './model/DocumentVoucher.js';
+import Due from './model/Due.js';
+import EInvoiceErrorViewModel from './model/EInvoiceErrorViewModel.js';
+import EInvoiceErrorsViewModel from './model/EInvoiceErrorsViewModel.js';
+import ErrorDetail from './model/ErrorDetail.js';
+import ErrorResponse from './model/ErrorResponse.js';
+import FiscalResponsibilitiesCommand from './model/FiscalResponsibilitiesCommand.js';
+import FiscalResponsibilitiesModel from './model/FiscalResponsibilitiesModel.js';
+import FixedAssetCommand from './model/FixedAssetCommand.js';
+import FixedAssetModel from './model/FixedAssetModel.js';
+import FixedAssetsViewModel from './model/FixedAssetsViewModel.js';
+import GenericPageListModel from './model/GenericPageListModel.js';
+import GlobalTaxCommand from './model/GlobalTaxCommand.js';
+import GlobalTaxModel from './model/GlobalTaxModel.js';
+import IdTypeModel from './model/IdTypeModel.js';
+import InvoiceCustomerModel from './model/InvoiceCustomerModel.js';
+import InvoiceDeleteViewModel from './model/InvoiceDeleteViewModel.js';
+import InvoiceModel from './model/InvoiceModel.js';
+import InvoicePdfViewModel from './model/InvoicePdfViewModel.js';
+import InvoiceStampViewModel from './model/InvoiceStampViewModel.js';
+import InvoiceViewModel from './model/InvoiceViewModel.js';
+import InvoiceViewModelGetAllModel from './model/InvoiceViewModelGetAllModel.js';
+import Item from './model/Item.js';
+import ItemDue from './model/ItemDue.js';
+import ItemDueCommand from './model/ItemDueCommand.js';
+import ItemTransportData from './model/ItemTransportData.js';
+import ItemVoucher from './model/ItemVoucher.js';
+import ItemsCommand from './model/ItemsCommand.js';
+import ItemsModel from './model/ItemsModel.js';
+import JournalDue from './model/JournalDue.js';
+import JournalEntryAccountModel from './model/JournalEntryAccountModel.js';
+import JournalEntryCustomerModel from './model/JournalEntryCustomerModel.js';
+import JournalEntryDocumentModel from './model/JournalEntryDocumentModel.js';
+import JournalEntryItem from './model/JournalEntryItem.js';
+import JournalEntryItemModel from './model/JournalEntryItemModel.js';
+import JournalEntryProductCommand from './model/JournalEntryProductCommand.js';
+import JournalEntryProductModel from './model/JournalEntryProductModel.js';
+import JournalEntryTaxModel from './model/JournalEntryTaxModel.js';
+import JournalEntryViewModel from './model/JournalEntryViewModel.js';
+import JournalEntryViewModelGetAllModel from './model/JournalEntryViewModelGetAllModel.js';
+import JournalEntryWarehouseModel from './model/JournalEntryWarehouseModel.js';
+import KeysProductsViewModel from './model/KeysProductsViewModel.js';
+import Link from './model/Link.js';
+import LinksPagination from './model/LinksPagination.js';
+import LiteCustomerCommand from './model/LiteCustomerCommand.js';
+import MailCommand from './model/MailCommand.js';
+import MailViewModel from './model/MailViewModel.js';
+import Metadata from './model/Metadata.js';
+import MetadataModel from './model/MetadataModel.js';
+import PageListModel from './model/PageListModel.js';
+import Payment from './model/Payment.js';
+import PaymentTypeViewModel from './model/PaymentTypeViewModel.js';
+import PaymentsCommand from './model/PaymentsCommand.js';
+import PaymentsModel from './model/PaymentsModel.js';
+import PhoneCommand from './model/PhoneCommand.js';
+import PhoneModel from './model/PhoneModel.js';
+import PriceListItemViewModel from './model/PriceListItemViewModel.js';
+import PriceListViewModel from './model/PriceListViewModel.js';
+import PriceListsViewModel from './model/PriceListsViewModel.js';
+import PricesListProducts from './model/PricesListProducts.js';
+import PricesProducts from './model/PricesProducts.js';
+import ProductDeleteViewModel from './model/ProductDeleteViewModel.js';
+import ProductModel from './model/ProductModel.js';
+import ProductModelGetAllModel from './model/ProductModelGetAllModel.js';
+import ProductTaxesCommand from './model/ProductTaxesCommand.js';
+import Provider from './model/Provider.js';
+import PurchaseOrderCommand from './model/PurchaseOrderCommand.js';
+import PursacheOrderModel from './model/PursacheOrderModel.js';
+import RelatedUsersCommand from './model/RelatedUsersCommand.js';
+import RelatedUsersModel from './model/RelatedUsersModel.js';
+import RetentionsCommand from './model/RetentionsCommand.js';
+import RetentionsOutModel from './model/RetentionsOutModel.js';
+import SendElectronicInvoiceCommand from './model/SendElectronicInvoiceCommand.js';
+import SendElectronicInvoiceViewModel from './model/SendElectronicInvoiceViewModel.js';
+import SendElectronicVoucherCommand from './model/SendElectronicVoucherCommand.js';
+import SendElectronicVoucherViewModel from './model/SendElectronicVoucherViewModel.js';
+import SendInvoiceByEmailCommand from './model/SendInvoiceByEmailCommand.js';
+import SendVoucherByEmailCommand from './model/SendVoucherByEmailCommand.js';
+import StampCommand from './model/StampCommand.js';
+import StampViewModel from './model/StampViewModel.js';
+import Tax from './model/Tax.js';
+import TaxViewModel from './model/TaxViewModel.js';
+import TaxesCommand from './model/TaxesCommand.js';
+import TaxesModel from './model/TaxesModel.js';
+import TestBalanceCustomer from './model/TestBalanceCustomer.js';
+import TestBalanceResultModel from './model/TestBalanceResultModel.js';
+import UnitProductsViewModel from './model/UnitProductsViewModel.js';
+import UpdateCustomerCommand from './model/UpdateCustomerCommand.js';
+import UpdateProductCommand from './model/UpdateProductCommand.js';
+import UsersModel from './model/UsersModel.js';
+import UsersViewModel from './model/UsersViewModel.js';
+import VoucherStampModel from './model/VoucherStampModel.js';
+import VoucherViewModel from './model/VoucherViewModel.js';
+import VoucherViewModelGetAllModel from './model/VoucherViewModelGetAllModel.js';
+import Warehouse from './model/Warehouse.js';
+import WarehouseModel from './model/WarehouseModel.js';
+import WarehouseViewModel from './model/WarehouseViewModel.js';
+import AccountGroupApi from './api/AccountGroupApi.js';
+import AccountsPayableApi from './api/AccountsPayableApi.js';
+import CostCenterApi from './api/CostCenterApi.js';
+import CreditNoteApi from './api/CreditNoteApi.js';
+import CustomerApi from './api/CustomerApi.js';
+import DocumentBalanceApi from './api/DocumentBalanceApi.js';
+import DocumentTypeApi from './api/DocumentTypeApi.js';
+import FixedAssetsApi from './api/FixedAssetsApi.js';
+import InvoiceApi from './api/InvoiceApi.js';
+import JournalEntryApi from './api/JournalEntryApi.js';
+import PaymentTypeApi from './api/PaymentTypeApi.js';
+import PriceApi from './api/PriceApi.js';
+import ProductApi from './api/ProductApi.js';
+import TaxApi from './api/TaxApi.js';
+import TestBalanceApi from './api/TestBalanceApi.js';
+import UserApi from './api/UserApi.js';
+import VoucherApi from './api/VoucherApi.js';
+import WarehousesApi from './api/WarehousesApi.js';
 
 
 /**
@@ -216,867 +236,1005 @@ export async function signIn({ userName, accessKey }) {
 * @version v1
 */
 export {
-  /**
-   * The ApiClient constructor.
-   * @property {module:ApiClient}
-   */
-  ApiClient,
-
-  /**
-   * The Account model constructor.
-   * @property {module:model/Account}
-   */
-  Account,
-
-  /**
-   * The AccountGroup model constructor.
-   * @property {module:model/AccountGroup}
-   */
-  AccountGroup,
-
-  /**
-   * The AccountGroupViewModel model constructor.
-   * @property {module:model/AccountGroupViewModel}
-   */
-  AccountGroupViewModel,
-
-  /**
-   * The AccountModel model constructor.
-   * @property {module:model/AccountModel}
-   */
-  AccountModel,
-
-  /**
-   * The AdditionalFields model constructor.
-   * @property {module:model/AdditionalFields}
-   */
-  AdditionalFields,
-
-  /**
-   * The AdditionalFieldsCommand model constructor.
-   * @property {module:model/AdditionalFieldsCommand}
-   */
-  AdditionalFieldsCommand,
-
-  /**
-   * The AdditionalFieldsModel model constructor.
-   * @property {module:model/AdditionalFieldsModel}
-   */
-  AdditionalFieldsModel,
-
-  /**
-   * The AdditionalFieldsProducts model constructor.
-   * @property {module:model/AdditionalFieldsProducts}
-   */
-  AdditionalFieldsProducts,
-
-  /**
-   * The AddressCommand model constructor.
-   * @property {module:model/AddressCommand}
-   */
-  AddressCommand,
-
-  /**
-   * The AddressModel model constructor.
-   * @property {module:model/AddressModel}
-   */
-  AddressModel,
-
-  /**
-   * The AssetGroupsViewModel model constructor.
-   * @property {module:model/AssetGroupsViewModel}
-   */
-  AssetGroupsViewModel,
-
-  /**
-   * The CityCommand model constructor.
-   * @property {module:model/CityCommand}
-   */
-  CityCommand,
-
-  /**
-   * The CityModel model constructor.
-   * @property {module:model/CityModel}
-   */
-  CityModel,
-
-  /**
-   * The ContactCommand model constructor.
-   * @property {module:model/ContactCommand}
-   */
-  ContactCommand,
-
-  /**
-   * The ContactModel model constructor.
-   * @property {module:model/ContactModel}
-   */
-  ContactModel,
-
-  /**
-   * The CostCentersViewModel model constructor.
-   * @property {module:model/CostCentersViewModel}
-   */
-  CostCentersViewModel,
-
-  /**
-   * The CreateCreditNoteCommand model constructor.
-   * @property {module:model/CreateCreditNoteCommand}
-   */
-  CreateCreditNoteCommand,
-
-  /**
-   * The CreateCustomerCommandCountry model constructor.
-   * @property {module:model/CreateCustomerCommandCountry}
-   */
-  CreateCustomerCommandCountry,
-
-  /**
-   * The CreateInvoiceCommand model constructor.
-   * @property {module:model/CreateInvoiceCommand}
-   */
-  CreateInvoiceCommand,
-
-  /**
-   * The CreateJournalEntryCommand model constructor.
-   * @property {module:model/CreateJournalEntryCommand}
-   */
-  CreateJournalEntryCommand,
-
-  /**
-   * The CreateProductCommand model constructor.
-   * @property {module:model/CreateProductCommand}
-   */
-  CreateProductCommand,
-
-  /**
-   * The CreateVoucherCommand model constructor.
-   * @property {module:model/CreateVoucherCommand}
-   */
-  CreateVoucherCommand,
-
-  /**
-   * The CreditNotePdfViewModel model constructor.
-   * @property {module:model/CreditNotePdfViewModel}
-   */
-  CreditNotePdfViewModel,
-
-  /**
-   * The CreditNoteViewModel model constructor.
-   * @property {module:model/CreditNoteViewModel}
-   */
-  CreditNoteViewModel,
-
-  /**
-   * The CreditNoteViewModelGetAllModel model constructor.
-   * @property {module:model/CreditNoteViewModelGetAllModel}
-   */
-  CreditNoteViewModelGetAllModel,
-
-  /**
-   * The CurrencyCommand model constructor.
-   * @property {module:model/CurrencyCommand}
-   */
-  CurrencyCommand,
-
-  /**
-   * The CurrencyModel model constructor.
-   * @property {module:model/CurrencyModel}
-   */
-  CurrencyModel,
-
-  /**
-   * The CustomFieldsCommand model constructor.
-   * @property {module:model/CustomFieldsCommand}
-   */
-  CustomFieldsCommand,
-
-  /**
-   * The CustomFieldsModel model constructor.
-   * @property {module:model/CustomFieldsModel}
-   */
-  CustomFieldsModel,
-
-  /**
-   * The Customer model constructor.
-   * @property {module:model/Customer}
-   */
-  Customer,
-
-  /**
-   * The CustomerCommand model constructor.
-   * @property {module:model/CustomerCommand}
-   */
-  CustomerCommand,
-
-  /**
-   * The CustomerDeleteViewModel model constructor.
-   * @property {module:model/CustomerDeleteViewModel}
-   */
-  CustomerDeleteViewModel,
-
-  /**
-   * The CustomerViewModel model constructor.
-   * @property {module:model/CustomerViewModel}
-   */
-  CustomerViewModel,
-
-  /**
-   * The CustomerVoucher model constructor.
-   * @property {module:model/CustomerVoucher}
-   */
-  CustomerVoucher,
-
-  /**
-   * The DeliveryOrderCommand model constructor.
-   * @property {module:model/DeliveryOrderCommand}
-   */
-  DeliveryOrderCommand,
-
-  /**
-   * The DeliveryOrderModel model constructor.
-   * @property {module:model/DeliveryOrderModel}
-   */
-  DeliveryOrderModel,
-
-  /**
-   * The DianReason model constructor.
-   * @property {module:model/DianReason}
-   */
-  DianReason,
-
-  /**
-   * The DiscountModel model constructor.
-   * @property {module:model/DiscountModel}
-   */
-  DiscountModel,
-
-  /**
-   * The DocumentCommand model constructor.
-   * @property {module:model/DocumentCommand}
-   */
-  DocumentCommand,
-
-  /**
-   * The DocumentModel model constructor.
-   * @property {module:model/DocumentModel}
-   */
-  DocumentModel,
-
-  /**
-   * The DocumentTypeTaxModel model constructor.
-   * @property {module:model/DocumentTypeTaxModel}
-   */
-  DocumentTypeTaxModel,
-
-  /**
-   * The DocumentTypeViewModel model constructor.
-   * @property {module:model/DocumentTypeViewModel}
-   */
-  DocumentTypeViewModel,
-
-  /**
-   * The DocumentVoucher model constructor.
-   * @property {module:model/DocumentVoucher}
-   */
-  DocumentVoucher,
-
-  /**
-   * The Due model constructor.
-   * @property {module:model/Due}
-   */
-  Due,
-
-  /**
-   * The EInvoiceErrorViewModel model constructor.
-   * @property {module:model/EInvoiceErrorViewModel}
-   */
-  EInvoiceErrorViewModel,
-
-  /**
-   * The EInvoiceErrorsViewModel model constructor.
-   * @property {module:model/EInvoiceErrorsViewModel}
-   */
-  EInvoiceErrorsViewModel,
-
-  /**
-   * The ErrorDetail model constructor.
-   * @property {module:model/ErrorDetail}
-   */
-  ErrorDetail,
-
-  /**
-   * The ErrorResponse model constructor.
-   * @property {module:model/ErrorResponse}
-   */
-  ErrorResponse,
-
-  /**
-   * The FiscalResponsabilitiesModel model constructor.
-   * @property {module:model/FiscalResponsabilitiesModel}
-   */
-  FiscalResponsabilitiesModel,
-
-  /**
-   * The FiscalResponsibilitiesCommand model constructor.
-   * @property {module:model/FiscalResponsibilitiesCommand}
-   */
-  FiscalResponsibilitiesCommand,
-
-  /**
-   * The FixedAssetCommand model constructor.
-   * @property {module:model/FixedAssetCommand}
-   */
-  FixedAssetCommand,
-
-  /**
-   * The FixedAssetModel model constructor.
-   * @property {module:model/FixedAssetModel}
-   */
-  FixedAssetModel,
-
-  /**
-   * The FixedAssetsViewModel model constructor.
-   * @property {module:model/FixedAssetsViewModel}
-   */
-  FixedAssetsViewModel,
-
-  /**
-   * The GenericPageListModel model constructor.
-   * @property {module:model/GenericPageListModel}
-   */
-  GenericPageListModel,
-
-  /**
-   * The GlobalTaxCommand model constructor.
-   * @property {module:model/GlobalTaxCommand}
-   */
-  GlobalTaxCommand,
-
-  /**
-   * The GlobalTaxModel model constructor.
-   * @property {module:model/GlobalTaxModel}
-   */
-  GlobalTaxModel,
-
-  /**
-   * The IdTypeModel model constructor.
-   * @property {module:model/IdTypeModel}
-   */
-  IdTypeModel,
-
-  /**
-   * The InvoiceCustomerModel model constructor.
-   * @property {module:model/InvoiceCustomerModel}
-   */
-  InvoiceCustomerModel,
-
-  /**
-   * The InvoiceDeleteViewModel model constructor.
-   * @property {module:model/InvoiceDeleteViewModel}
-   */
-  InvoiceDeleteViewModel,
-
-  /**
-   * The InvoiceModel model constructor.
-   * @property {module:model/InvoiceModel}
-   */
-  InvoiceModel,
-
-  /**
-   * The InvoicePdfViewModel model constructor.
-   * @property {module:model/InvoicePdfViewModel}
-   */
-  InvoicePdfViewModel,
-
-  /**
-   * The InvoiceViewModel model constructor.
-   * @property {module:model/InvoiceViewModel}
-   */
-  InvoiceViewModel,
-
-  /**
-   * The InvoiceViewModelGetAllModel model constructor.
-   * @property {module:model/InvoiceViewModelGetAllModel}
-   */
-  InvoiceViewModelGetAllModel,
-
-  /**
-   * The Item model constructor.
-   * @property {module:model/Item}
-   */
-  Item,
-
-  /**
-   * The ItemDue model constructor.
-   * @property {module:model/ItemDue}
-   */
-  ItemDue,
-
-  /**
-   * The ItemDueCommand model constructor.
-   * @property {module:model/ItemDueCommand}
-   */
-  ItemDueCommand,
-
-  /**
-   * The ItemVoucher model constructor.
-   * @property {module:model/ItemVoucher}
-   */
-  ItemVoucher,
-
-  /**
-   * The ItemsCommand model constructor.
-   * @property {module:model/ItemsCommand}
-   */
-  ItemsCommand,
-
-  /**
-   * The ItemsModel model constructor.
-   * @property {module:model/ItemsModel}
-   */
-  ItemsModel,
-
-  /**
-   * The JournalDue model constructor.
-   * @property {module:model/JournalDue}
-   */
-  JournalDue,
-
-  /**
-   * The JournalEntryAccountModel model constructor.
-   * @property {module:model/JournalEntryAccountModel}
-   */
-  JournalEntryAccountModel,
-
-  /**
-   * The JournalEntryCustomerModel model constructor.
-   * @property {module:model/JournalEntryCustomerModel}
-   */
-  JournalEntryCustomerModel,
-
-  /**
-   * The JournalEntryDocumentModel model constructor.
-   * @property {module:model/JournalEntryDocumentModel}
-   */
-  JournalEntryDocumentModel,
-
-  /**
-   * The JournalEntryItem model constructor.
-   * @property {module:model/JournalEntryItem}
-   */
-  JournalEntryItem,
-
-  /**
-   * The JournalEntryItemModel model constructor.
-   * @property {module:model/JournalEntryItemModel}
-   */
-  JournalEntryItemModel,
-
-  /**
-   * The JournalEntryProductCommand model constructor.
-   * @property {module:model/JournalEntryProductCommand}
-   */
-  JournalEntryProductCommand,
-
-  /**
-   * The JournalEntryProductModel model constructor.
-   * @property {module:model/JournalEntryProductModel}
-   */
-  JournalEntryProductModel,
-
-  /**
-   * The JournalEntryTaxModel model constructor.
-   * @property {module:model/JournalEntryTaxModel}
-   */
-  JournalEntryTaxModel,
-
-  /**
-   * The JournalEntryViewModel model constructor.
-   * @property {module:model/JournalEntryViewModel}
-   */
-  JournalEntryViewModel,
-
-  /**
-   * The JournalEntryViewModelGetAllModel model constructor.
-   * @property {module:model/JournalEntryViewModelGetAllModel}
-   */
-  JournalEntryViewModelGetAllModel,
-
-  /**
-   * The JournalEntryWarehouseModel model constructor.
-   * @property {module:model/JournalEntryWarehouseModel}
-   */
-  JournalEntryWarehouseModel,
-
-  /**
-   * The KeysProductsViewModel model constructor.
-   * @property {module:model/KeysProductsViewModel}
-   */
-  KeysProductsViewModel,
-
-  /**
-   * The Link model constructor.
-   * @property {module:model/Link}
-   */
-  Link,
-
-  /**
-   * The LinksPagination model constructor.
-   * @property {module:model/LinksPagination}
-   */
-  LinksPagination,
-
-  /**
-   * The LiteCustomerCommand model constructor.
-   * @property {module:model/LiteCustomerCommand}
-   */
-  LiteCustomerCommand,
-
-  /**
-   * The MailCommand model constructor.
-   * @property {module:model/MailCommand}
-   */
-  MailCommand,
-
-  /**
-   * The MailViewModel model constructor.
-   * @property {module:model/MailViewModel}
-   */
-  MailViewModel,
-
-  /**
-   * The Metadata model constructor.
-   * @property {module:model/Metadata}
-   */
-  Metadata,
-
-  /**
-   * The MetadataModel model constructor.
-   * @property {module:model/MetadataModel}
-   */
-  MetadataModel,
-
-  /**
-   * The PageListModel model constructor.
-   * @property {module:model/PageListModel}
-   */
-  PageListModel,
-
-  /**
-   * The Payment model constructor.
-   * @property {module:model/Payment}
-   */
-  Payment,
-
-  /**
-   * The PaymentTypeViewModel model constructor.
-   * @property {module:model/PaymentTypeViewModel}
-   */
-  PaymentTypeViewModel,
-
-  /**
-   * The PaymentsCommand model constructor.
-   * @property {module:model/PaymentsCommand}
-   */
-  PaymentsCommand,
-
-  /**
-   * The PaymentsModel model constructor.
-   * @property {module:model/PaymentsModel}
-   */
-  PaymentsModel,
-
-  /**
-   * The PhoneCommand model constructor.
-   * @property {module:model/PhoneCommand}
-   */
-  PhoneCommand,
-
-  /**
-   * The PhoneModel model constructor.
-   * @property {module:model/PhoneModel}
-   */
-  PhoneModel,
-
-  /**
-   * The PriceListItemViewModel model constructor.
-   * @property {module:model/PriceListItemViewModel}
-   */
-  PriceListItemViewModel,
-
-  /**
-   * The PriceListViewModel model constructor.
-   * @property {module:model/PriceListViewModel}
-   */
-  PriceListViewModel,
-
-  /**
-   * The PriceListsViewModel model constructor.
-   * @property {module:model/PriceListsViewModel}
-   */
-  PriceListsViewModel,
-
-  /**
-   * The PricesListProducts model constructor.
-   * @property {module:model/PricesListProducts}
-   */
-  PricesListProducts,
-
-  /**
-   * The PricesProducts model constructor.
-   * @property {module:model/PricesProducts}
-   */
-  PricesProducts,
-
-  /**
-   * The ProductDeleteViewModel model constructor.
-   * @property {module:model/ProductDeleteViewModel}
-   */
-  ProductDeleteViewModel,
-
-  /**
-   * The ProductModel model constructor.
-   * @property {module:model/ProductModel}
-   */
-  ProductModel,
-
-  /**
-   * The ProductModelGetAllModel model constructor.
-   * @property {module:model/ProductModelGetAllModel}
-   */
-  ProductModelGetAllModel,
-
-  /**
-   * The ProductTaxesCommand model constructor.
-   * @property {module:model/ProductTaxesCommand}
-   */
-  ProductTaxesCommand,
-
-  /**
-   * The PurchaseOrderCommand model constructor.
-   * @property {module:model/PurchaseOrderCommand}
-   */
-  PurchaseOrderCommand,
-
-  /**
-   * The PursacheOrderModel model constructor.
-   * @property {module:model/PursacheOrderModel}
-   */
-  PursacheOrderModel,
-
-  /**
-   * The RelatedUsersCommand model constructor.
-   * @property {module:model/RelatedUsersCommand}
-   */
-  RelatedUsersCommand,
-
-  /**
-   * The RelatedUsersModel model constructor.
-   * @property {module:model/RelatedUsersModel}
-   */
-  RelatedUsersModel,
-
-  /**
-   * The RetentionsCommand model constructor.
-   * @property {module:model/RetentionsCommand}
-   */
-  RetentionsCommand,
-
-  /**
-   * The RetentionsOutModel model constructor.
-   * @property {module:model/RetentionsOutModel}
-   */
-  RetentionsOutModel,
-
-  /**
-   * The SendInvoiceByEmailCommand model constructor.
-   * @property {module:model/SendInvoiceByEmailCommand}
-   */
-  SendInvoiceByEmailCommand,
-
-  /**
-   * The StampCommand model constructor.
-   * @property {module:model/StampCommand}
-   */
-  StampCommand,
-
-  /**
-   * The StampViewModel model constructor.
-   * @property {module:model/StampViewModel}
-   */
-  StampViewModel,
-
-  /**
-   * The Tax model constructor.
-   * @property {module:model/Tax}
-   */
-  Tax,
-
-  /**
-   * The TaxViewModel model constructor.
-   * @property {module:model/TaxViewModel}
-   */
-  TaxViewModel,
-
-  /**
-   * The TaxesCommand model constructor.
-   * @property {module:model/TaxesCommand}
-   */
-  TaxesCommand,
-
-  /**
-   * The TaxesModel model constructor.
-   * @property {module:model/TaxesModel}
-   */
-  TaxesModel,
-
-  /**
-   * The UnitProductsViewModel model constructor.
-   * @property {module:model/UnitProductsViewModel}
-   */
-  UnitProductsViewModel,
-
-  /**
-   * The UpdateCustomerCommand model constructor.
-   * @property {module:model/UpdateCustomerCommand}
-   */
-  UpdateCustomerCommand,
-
-  /**
-   * The UpdateProductCommand model constructor.
-   * @property {module:model/UpdateProductCommand}
-   */
-  UpdateProductCommand,
-
-  /**
-   * The UsersModel model constructor.
-   * @property {module:model/UsersModel}
-   */
-  UsersModel,
-
-  /**
-   * The UsersViewModel model constructor.
-   * @property {module:model/UsersViewModel}
-   */
-  UsersViewModel,
-
-  /**
-   * The VoucherViewModel model constructor.
-   * @property {module:model/VoucherViewModel}
-   */
-  VoucherViewModel,
-
-  /**
-   * The VoucherViewModelGetAllModel model constructor.
-   * @property {module:model/VoucherViewModelGetAllModel}
-   */
-  VoucherViewModelGetAllModel,
-
-  /**
-   * The Warehouse model constructor.
-   * @property {module:model/Warehouse}
-   */
-  Warehouse,
-
-  /**
-   * The WarehouseModel model constructor.
-   * @property {module:model/WarehouseModel}
-   */
-  WarehouseModel,
-
-  /**
-   * The WarehouseViewModel model constructor.
-   * @property {module:model/WarehouseViewModel}
-   */
-  WarehouseViewModel,
-
-  /**
-  * The AccountGroupApi service constructor.
-  * @property {module:api/AccountGroupApi}
-  */
-  AccountGroupApi,
-
-  /**
-  * The CostCenterApi service constructor.
-  * @property {module:api/CostCenterApi}
-  */
-  CostCenterApi,
-
-  /**
-  * The CreditNoteApi service constructor.
-  * @property {module:api/CreditNoteApi}
-  */
-  CreditNoteApi,
-
-  /**
-  * The CustomerApi service constructor.
-  * @property {module:api/CustomerApi}
-  */
-  CustomerApi,
-
-  /**
-  * The DocumentTypeApi service constructor.
-  * @property {module:api/DocumentTypeApi}
-  */
-  DocumentTypeApi,
-
-  /**
-  * The FixedAssetsApi service constructor.
-  * @property {module:api/FixedAssetsApi}
-  */
-  FixedAssetsApi,
-
-  /**
-  * The InvoiceApi service constructor.
-  * @property {module:api/InvoiceApi}
-  */
-  InvoiceApi,
-
-  /**
-  * The JournalEntryApi service constructor.
-  * @property {module:api/JournalEntryApi}
-  */
-  JournalEntryApi,
-
-  /**
-  * The PaymentTypeApi service constructor.
-  * @property {module:api/PaymentTypeApi}
-  */
-  PaymentTypeApi,
-
-  /**
-  * The PriceApi service constructor.
-  * @property {module:api/PriceApi}
-  */
-  PriceApi,
-
-  /**
-  * The ProductApi service constructor.
-  * @property {module:api/ProductApi}
-  */
-  ProductApi,
-
-  /**
-  * The TaxApi service constructor.
-  * @property {module:api/TaxApi}
-  */
-  TaxApi,
-
-  /**
-  * The UserApi service constructor.
-  * @property {module:api/UserApi}
-  */
-  UserApi,
-
-  /**
-  * The VoucherApi service constructor.
-  * @property {module:api/VoucherApi}
-  */
-  VoucherApi,
-
-  /**
-  * The WarehousesApi service constructor.
-  * @property {module:api/WarehousesApi}
-  */
-  WarehousesApi
+    /**
+     * The ApiClient constructor.
+     * @property {module:ApiClient}
+     */
+    ApiClient,
+
+    /**
+     * The Account model constructor.
+     * @property {module:model/Account}
+     */
+    Account,
+
+    /**
+     * The AccountGroup model constructor.
+     * @property {module:model/AccountGroup}
+     */
+    AccountGroup,
+
+    /**
+     * The AccountGroupViewModel model constructor.
+     * @property {module:model/AccountGroupViewModel}
+     */
+    AccountGroupViewModel,
+
+    /**
+     * The AccountModel model constructor.
+     * @property {module:model/AccountModel}
+     */
+    AccountModel,
+
+    /**
+     * The AccountsPayableDue model constructor.
+     * @property {module:model/AccountsPayableDue}
+     */
+    AccountsPayableDue,
+
+    /**
+     * The AccountsPayableViewModel model constructor.
+     * @property {module:model/AccountsPayableViewModel}
+     */
+    AccountsPayableViewModel,
+
+    /**
+     * The AccountsPayableViewModelGetAllModel model constructor.
+     * @property {module:model/AccountsPayableViewModelGetAllModel}
+     */
+    AccountsPayableViewModelGetAllModel,
+
+    /**
+     * The AdditionalFields model constructor.
+     * @property {module:model/AdditionalFields}
+     */
+    AdditionalFields,
+
+    /**
+     * The AdditionalFieldsCommand model constructor.
+     * @property {module:model/AdditionalFieldsCommand}
+     */
+    AdditionalFieldsCommand,
+
+    /**
+     * The AdditionalFieldsModel model constructor.
+     * @property {module:model/AdditionalFieldsModel}
+     */
+    AdditionalFieldsModel,
+
+    /**
+     * The AdditionalFieldsProducts model constructor.
+     * @property {module:model/AdditionalFieldsProducts}
+     */
+    AdditionalFieldsProducts,
+
+    /**
+     * The AddressCommand model constructor.
+     * @property {module:model/AddressCommand}
+     */
+    AddressCommand,
+
+    /**
+     * The AddressModel model constructor.
+     * @property {module:model/AddressModel}
+     */
+    AddressModel,
+
+    /**
+     * The AssetGroupsViewModel model constructor.
+     * @property {module:model/AssetGroupsViewModel}
+     */
+    AssetGroupsViewModel,
+
+    /**
+     * The CityCommand model constructor.
+     * @property {module:model/CityCommand}
+     */
+    CityCommand,
+
+    /**
+     * The CityModel model constructor.
+     * @property {module:model/CityModel}
+     */
+    CityModel,
+
+    /**
+     * The ContactCommand model constructor.
+     * @property {module:model/ContactCommand}
+     */
+    ContactCommand,
+
+    /**
+     * The ContactModel model constructor.
+     * @property {module:model/ContactModel}
+     */
+    ContactModel,
+
+    /**
+     * The CostCenter model constructor.
+     * @property {module:model/CostCenter}
+     */
+    CostCenter,
+
+    /**
+     * The CostCentersViewModel model constructor.
+     * @property {module:model/CostCentersViewModel}
+     */
+    CostCentersViewModel,
+
+    /**
+     * The CreateCreditNoteCommand model constructor.
+     * @property {module:model/CreateCreditNoteCommand}
+     */
+    CreateCreditNoteCommand,
+
+    /**
+     * The CreateCustomerCommandCountry model constructor.
+     * @property {module:model/CreateCustomerCommandCountry}
+     */
+    CreateCustomerCommandCountry,
+
+    /**
+     * The CreateInvoiceCommand model constructor.
+     * @property {module:model/CreateInvoiceCommand}
+     */
+    CreateInvoiceCommand,
+
+    /**
+     * The CreateJournalEntryCommand model constructor.
+     * @property {module:model/CreateJournalEntryCommand}
+     */
+    CreateJournalEntryCommand,
+
+    /**
+     * The CreateProductCommand model constructor.
+     * @property {module:model/CreateProductCommand}
+     */
+    CreateProductCommand,
+
+    /**
+     * The CreateTestBalanceByThirdpartyCommand model constructor.
+     * @property {module:model/CreateTestBalanceByThirdpartyCommand}
+     */
+    CreateTestBalanceByThirdpartyCommand,
+
+    /**
+     * The CreateTestBalanceCommand model constructor.
+     * @property {module:model/CreateTestBalanceCommand}
+     */
+    CreateTestBalanceCommand,
+
+    /**
+     * The CreateVoucherCommand model constructor.
+     * @property {module:model/CreateVoucherCommand}
+     */
+    CreateVoucherCommand,
+
+    /**
+     * The CreditNotePdfViewModel model constructor.
+     * @property {module:model/CreditNotePdfViewModel}
+     */
+    CreditNotePdfViewModel,
+
+    /**
+     * The CreditNoteViewModel model constructor.
+     * @property {module:model/CreditNoteViewModel}
+     */
+    CreditNoteViewModel,
+
+    /**
+     * The CreditNoteViewModelGetAllModel model constructor.
+     * @property {module:model/CreditNoteViewModelGetAllModel}
+     */
+    CreditNoteViewModelGetAllModel,
+
+    /**
+     * The Currency model constructor.
+     * @property {module:model/Currency}
+     */
+    Currency,
+
+    /**
+     * The CurrencyCommand model constructor.
+     * @property {module:model/CurrencyCommand}
+     */
+    CurrencyCommand,
+
+    /**
+     * The CurrencyModel model constructor.
+     * @property {module:model/CurrencyModel}
+     */
+    CurrencyModel,
+
+    /**
+     * The CustomFieldsCommand model constructor.
+     * @property {module:model/CustomFieldsCommand}
+     */
+    CustomFieldsCommand,
+
+    /**
+     * The CustomFieldsModel model constructor.
+     * @property {module:model/CustomFieldsModel}
+     */
+    CustomFieldsModel,
+
+    /**
+     * The Customer model constructor.
+     * @property {module:model/Customer}
+     */
+    Customer,
+
+    /**
+     * The CustomerCommand model constructor.
+     * @property {module:model/CustomerCommand}
+     */
+    CustomerCommand,
+
+    /**
+     * The CustomerDeleteViewModel model constructor.
+     * @property {module:model/CustomerDeleteViewModel}
+     */
+    CustomerDeleteViewModel,
+
+    /**
+     * The CustomerViewModel model constructor.
+     * @property {module:model/CustomerViewModel}
+     */
+    CustomerViewModel,
+
+    /**
+     * The CustomerViewModelGetAllModel model constructor.
+     * @property {module:model/CustomerViewModelGetAllModel}
+     */
+    CustomerViewModelGetAllModel,
+
+    /**
+     * The CustomerVoucher model constructor.
+     * @property {module:model/CustomerVoucher}
+     */
+    CustomerVoucher,
+
+    /**
+     * The DeliveryOrderCommand model constructor.
+     * @property {module:model/DeliveryOrderCommand}
+     */
+    DeliveryOrderCommand,
+
+    /**
+     * The DeliveryOrderModel model constructor.
+     * @property {module:model/DeliveryOrderModel}
+     */
+    DeliveryOrderModel,
+
+    /**
+     * The DianReason model constructor.
+     * @property {module:model/DianReason}
+     */
+    DianReason,
+
+    /**
+     * The DiscountModel model constructor.
+     * @property {module:model/DiscountModel}
+     */
+    DiscountModel,
+
+    /**
+     * The DocumentBalanceViewModel model constructor.
+     * @property {module:model/DocumentBalanceViewModel}
+     */
+    DocumentBalanceViewModel,
+
+    /**
+     * The DocumentCommand model constructor.
+     * @property {module:model/DocumentCommand}
+     */
+    DocumentCommand,
+
+    /**
+     * The DocumentModel model constructor.
+     * @property {module:model/DocumentModel}
+     */
+    DocumentModel,
+
+    /**
+     * The DocumentTypeTaxModel model constructor.
+     * @property {module:model/DocumentTypeTaxModel}
+     */
+    DocumentTypeTaxModel,
+
+    /**
+     * The DocumentTypeViewModel model constructor.
+     * @property {module:model/DocumentTypeViewModel}
+     */
+    DocumentTypeViewModel,
+
+    /**
+     * The DocumentVoucher model constructor.
+     * @property {module:model/DocumentVoucher}
+     */
+    DocumentVoucher,
+
+    /**
+     * The Due model constructor.
+     * @property {module:model/Due}
+     */
+    Due,
+
+    /**
+     * The EInvoiceErrorViewModel model constructor.
+     * @property {module:model/EInvoiceErrorViewModel}
+     */
+    EInvoiceErrorViewModel,
+
+    /**
+     * The EInvoiceErrorsViewModel model constructor.
+     * @property {module:model/EInvoiceErrorsViewModel}
+     */
+    EInvoiceErrorsViewModel,
+
+    /**
+     * The ErrorDetail model constructor.
+     * @property {module:model/ErrorDetail}
+     */
+    ErrorDetail,
+
+    /**
+     * The ErrorResponse model constructor.
+     * @property {module:model/ErrorResponse}
+     */
+    ErrorResponse,
+
+    /**
+     * The FiscalResponsibilitiesCommand model constructor.
+     * @property {module:model/FiscalResponsibilitiesCommand}
+     */
+    FiscalResponsibilitiesCommand,
+
+    /**
+     * The FiscalResponsibilitiesModel model constructor.
+     * @property {module:model/FiscalResponsibilitiesModel}
+     */
+    FiscalResponsibilitiesModel,
+
+    /**
+     * The FixedAssetCommand model constructor.
+     * @property {module:model/FixedAssetCommand}
+     */
+    FixedAssetCommand,
+
+    /**
+     * The FixedAssetModel model constructor.
+     * @property {module:model/FixedAssetModel}
+     */
+    FixedAssetModel,
+
+    /**
+     * The FixedAssetsViewModel model constructor.
+     * @property {module:model/FixedAssetsViewModel}
+     */
+    FixedAssetsViewModel,
+
+    /**
+     * The GenericPageListModel model constructor.
+     * @property {module:model/GenericPageListModel}
+     */
+    GenericPageListModel,
+
+    /**
+     * The GlobalTaxCommand model constructor.
+     * @property {module:model/GlobalTaxCommand}
+     */
+    GlobalTaxCommand,
+
+    /**
+     * The GlobalTaxModel model constructor.
+     * @property {module:model/GlobalTaxModel}
+     */
+    GlobalTaxModel,
+
+    /**
+     * The IdTypeModel model constructor.
+     * @property {module:model/IdTypeModel}
+     */
+    IdTypeModel,
+
+    /**
+     * The InvoiceCustomerModel model constructor.
+     * @property {module:model/InvoiceCustomerModel}
+     */
+    InvoiceCustomerModel,
+
+    /**
+     * The InvoiceDeleteViewModel model constructor.
+     * @property {module:model/InvoiceDeleteViewModel}
+     */
+    InvoiceDeleteViewModel,
+
+    /**
+     * The InvoiceModel model constructor.
+     * @property {module:model/InvoiceModel}
+     */
+    InvoiceModel,
+
+    /**
+     * The InvoicePdfViewModel model constructor.
+     * @property {module:model/InvoicePdfViewModel}
+     */
+    InvoicePdfViewModel,
+
+    /**
+     * The InvoiceStampViewModel model constructor.
+     * @property {module:model/InvoiceStampViewModel}
+     */
+    InvoiceStampViewModel,
+
+    /**
+     * The InvoiceViewModel model constructor.
+     * @property {module:model/InvoiceViewModel}
+     */
+    InvoiceViewModel,
+
+    /**
+     * The InvoiceViewModelGetAllModel model constructor.
+     * @property {module:model/InvoiceViewModelGetAllModel}
+     */
+    InvoiceViewModelGetAllModel,
+
+    /**
+     * The Item model constructor.
+     * @property {module:model/Item}
+     */
+    Item,
+
+    /**
+     * The ItemDue model constructor.
+     * @property {module:model/ItemDue}
+     */
+    ItemDue,
+
+    /**
+     * The ItemDueCommand model constructor.
+     * @property {module:model/ItemDueCommand}
+     */
+    ItemDueCommand,
+
+    /**
+     * The ItemTransportData model constructor.
+     * @property {module:model/ItemTransportData}
+     */
+    ItemTransportData,
+
+    /**
+     * The ItemVoucher model constructor.
+     * @property {module:model/ItemVoucher}
+     */
+    ItemVoucher,
+
+    /**
+     * The ItemsCommand model constructor.
+     * @property {module:model/ItemsCommand}
+     */
+    ItemsCommand,
+
+    /**
+     * The ItemsModel model constructor.
+     * @property {module:model/ItemsModel}
+     */
+    ItemsModel,
+
+    /**
+     * The JournalDue model constructor.
+     * @property {module:model/JournalDue}
+     */
+    JournalDue,
+
+    /**
+     * The JournalEntryAccountModel model constructor.
+     * @property {module:model/JournalEntryAccountModel}
+     */
+    JournalEntryAccountModel,
+
+    /**
+     * The JournalEntryCustomerModel model constructor.
+     * @property {module:model/JournalEntryCustomerModel}
+     */
+    JournalEntryCustomerModel,
+
+    /**
+     * The JournalEntryDocumentModel model constructor.
+     * @property {module:model/JournalEntryDocumentModel}
+     */
+    JournalEntryDocumentModel,
+
+    /**
+     * The JournalEntryItem model constructor.
+     * @property {module:model/JournalEntryItem}
+     */
+    JournalEntryItem,
+
+    /**
+     * The JournalEntryItemModel model constructor.
+     * @property {module:model/JournalEntryItemModel}
+     */
+    JournalEntryItemModel,
+
+    /**
+     * The JournalEntryProductCommand model constructor.
+     * @property {module:model/JournalEntryProductCommand}
+     */
+    JournalEntryProductCommand,
+
+    /**
+     * The JournalEntryProductModel model constructor.
+     * @property {module:model/JournalEntryProductModel}
+     */
+    JournalEntryProductModel,
+
+    /**
+     * The JournalEntryTaxModel model constructor.
+     * @property {module:model/JournalEntryTaxModel}
+     */
+    JournalEntryTaxModel,
+
+    /**
+     * The JournalEntryViewModel model constructor.
+     * @property {module:model/JournalEntryViewModel}
+     */
+    JournalEntryViewModel,
+
+    /**
+     * The JournalEntryViewModelGetAllModel model constructor.
+     * @property {module:model/JournalEntryViewModelGetAllModel}
+     */
+    JournalEntryViewModelGetAllModel,
+
+    /**
+     * The JournalEntryWarehouseModel model constructor.
+     * @property {module:model/JournalEntryWarehouseModel}
+     */
+    JournalEntryWarehouseModel,
+
+    /**
+     * The KeysProductsViewModel model constructor.
+     * @property {module:model/KeysProductsViewModel}
+     */
+    KeysProductsViewModel,
+
+    /**
+     * The Link model constructor.
+     * @property {module:model/Link}
+     */
+    Link,
+
+    /**
+     * The LinksPagination model constructor.
+     * @property {module:model/LinksPagination}
+     */
+    LinksPagination,
+
+    /**
+     * The LiteCustomerCommand model constructor.
+     * @property {module:model/LiteCustomerCommand}
+     */
+    LiteCustomerCommand,
+
+    /**
+     * The MailCommand model constructor.
+     * @property {module:model/MailCommand}
+     */
+    MailCommand,
+
+    /**
+     * The MailViewModel model constructor.
+     * @property {module:model/MailViewModel}
+     */
+    MailViewModel,
+
+    /**
+     * The Metadata model constructor.
+     * @property {module:model/Metadata}
+     */
+    Metadata,
+
+    /**
+     * The MetadataModel model constructor.
+     * @property {module:model/MetadataModel}
+     */
+    MetadataModel,
+
+    /**
+     * The PageListModel model constructor.
+     * @property {module:model/PageListModel}
+     */
+    PageListModel,
+
+    /**
+     * The Payment model constructor.
+     * @property {module:model/Payment}
+     */
+    Payment,
+
+    /**
+     * The PaymentTypeViewModel model constructor.
+     * @property {module:model/PaymentTypeViewModel}
+     */
+    PaymentTypeViewModel,
+
+    /**
+     * The PaymentsCommand model constructor.
+     * @property {module:model/PaymentsCommand}
+     */
+    PaymentsCommand,
+
+    /**
+     * The PaymentsModel model constructor.
+     * @property {module:model/PaymentsModel}
+     */
+    PaymentsModel,
+
+    /**
+     * The PhoneCommand model constructor.
+     * @property {module:model/PhoneCommand}
+     */
+    PhoneCommand,
+
+    /**
+     * The PhoneModel model constructor.
+     * @property {module:model/PhoneModel}
+     */
+    PhoneModel,
+
+    /**
+     * The PriceListItemViewModel model constructor.
+     * @property {module:model/PriceListItemViewModel}
+     */
+    PriceListItemViewModel,
+
+    /**
+     * The PriceListViewModel model constructor.
+     * @property {module:model/PriceListViewModel}
+     */
+    PriceListViewModel,
+
+    /**
+     * The PriceListsViewModel model constructor.
+     * @property {module:model/PriceListsViewModel}
+     */
+    PriceListsViewModel,
+
+    /**
+     * The PricesListProducts model constructor.
+     * @property {module:model/PricesListProducts}
+     */
+    PricesListProducts,
+
+    /**
+     * The PricesProducts model constructor.
+     * @property {module:model/PricesProducts}
+     */
+    PricesProducts,
+
+    /**
+     * The ProductDeleteViewModel model constructor.
+     * @property {module:model/ProductDeleteViewModel}
+     */
+    ProductDeleteViewModel,
+
+    /**
+     * The ProductModel model constructor.
+     * @property {module:model/ProductModel}
+     */
+    ProductModel,
+
+    /**
+     * The ProductModelGetAllModel model constructor.
+     * @property {module:model/ProductModelGetAllModel}
+     */
+    ProductModelGetAllModel,
+
+    /**
+     * The ProductTaxesCommand model constructor.
+     * @property {module:model/ProductTaxesCommand}
+     */
+    ProductTaxesCommand,
+
+    /**
+     * The Provider model constructor.
+     * @property {module:model/Provider}
+     */
+    Provider,
+
+    /**
+     * The PurchaseOrderCommand model constructor.
+     * @property {module:model/PurchaseOrderCommand}
+     */
+    PurchaseOrderCommand,
+
+    /**
+     * The PursacheOrderModel model constructor.
+     * @property {module:model/PursacheOrderModel}
+     */
+    PursacheOrderModel,
+
+    /**
+     * The RelatedUsersCommand model constructor.
+     * @property {module:model/RelatedUsersCommand}
+     */
+    RelatedUsersCommand,
+
+    /**
+     * The RelatedUsersModel model constructor.
+     * @property {module:model/RelatedUsersModel}
+     */
+    RelatedUsersModel,
+
+    /**
+     * The RetentionsCommand model constructor.
+     * @property {module:model/RetentionsCommand}
+     */
+    RetentionsCommand,
+
+    /**
+     * The RetentionsOutModel model constructor.
+     * @property {module:model/RetentionsOutModel}
+     */
+    RetentionsOutModel,
+
+    /**
+     * The SendElectronicInvoiceCommand model constructor.
+     * @property {module:model/SendElectronicInvoiceCommand}
+     */
+    SendElectronicInvoiceCommand,
+
+    /**
+     * The SendElectronicInvoiceViewModel model constructor.
+     * @property {module:model/SendElectronicInvoiceViewModel}
+     */
+    SendElectronicInvoiceViewModel,
+
+    /**
+     * The SendElectronicVoucherCommand model constructor.
+     * @property {module:model/SendElectronicVoucherCommand}
+     */
+    SendElectronicVoucherCommand,
+
+    /**
+     * The SendElectronicVoucherViewModel model constructor.
+     * @property {module:model/SendElectronicVoucherViewModel}
+     */
+    SendElectronicVoucherViewModel,
+
+    /**
+     * The SendInvoiceByEmailCommand model constructor.
+     * @property {module:model/SendInvoiceByEmailCommand}
+     */
+    SendInvoiceByEmailCommand,
+
+    /**
+     * The SendVoucherByEmailCommand model constructor.
+     * @property {module:model/SendVoucherByEmailCommand}
+     */
+    SendVoucherByEmailCommand,
+
+    /**
+     * The StampCommand model constructor.
+     * @property {module:model/StampCommand}
+     */
+    StampCommand,
+
+    /**
+     * The StampViewModel model constructor.
+     * @property {module:model/StampViewModel}
+     */
+    StampViewModel,
+
+    /**
+     * The Tax model constructor.
+     * @property {module:model/Tax}
+     */
+    Tax,
+
+    /**
+     * The TaxViewModel model constructor.
+     * @property {module:model/TaxViewModel}
+     */
+    TaxViewModel,
+
+    /**
+     * The TaxesCommand model constructor.
+     * @property {module:model/TaxesCommand}
+     */
+    TaxesCommand,
+
+    /**
+     * The TaxesModel model constructor.
+     * @property {module:model/TaxesModel}
+     */
+    TaxesModel,
+
+    /**
+     * The TestBalanceCustomer model constructor.
+     * @property {module:model/TestBalanceCustomer}
+     */
+    TestBalanceCustomer,
+
+    /**
+     * The TestBalanceResultModel model constructor.
+     * @property {module:model/TestBalanceResultModel}
+     */
+    TestBalanceResultModel,
+
+    /**
+     * The UnitProductsViewModel model constructor.
+     * @property {module:model/UnitProductsViewModel}
+     */
+    UnitProductsViewModel,
+
+    /**
+     * The UpdateCustomerCommand model constructor.
+     * @property {module:model/UpdateCustomerCommand}
+     */
+    UpdateCustomerCommand,
+
+    /**
+     * The UpdateProductCommand model constructor.
+     * @property {module:model/UpdateProductCommand}
+     */
+    UpdateProductCommand,
+
+    /**
+     * The UsersModel model constructor.
+     * @property {module:model/UsersModel}
+     */
+    UsersModel,
+
+    /**
+     * The UsersViewModel model constructor.
+     * @property {module:model/UsersViewModel}
+     */
+    UsersViewModel,
+
+    /**
+     * The VoucherStampModel model constructor.
+     * @property {module:model/VoucherStampModel}
+     */
+    VoucherStampModel,
+
+    /**
+     * The VoucherViewModel model constructor.
+     * @property {module:model/VoucherViewModel}
+     */
+    VoucherViewModel,
+
+    /**
+     * The VoucherViewModelGetAllModel model constructor.
+     * @property {module:model/VoucherViewModelGetAllModel}
+     */
+    VoucherViewModelGetAllModel,
+
+    /**
+     * The Warehouse model constructor.
+     * @property {module:model/Warehouse}
+     */
+    Warehouse,
+
+    /**
+     * The WarehouseModel model constructor.
+     * @property {module:model/WarehouseModel}
+     */
+    WarehouseModel,
+
+    /**
+     * The WarehouseViewModel model constructor.
+     * @property {module:model/WarehouseViewModel}
+     */
+    WarehouseViewModel,
+
+    /**
+    * The AccountGroupApi service constructor.
+    * @property {module:api/AccountGroupApi}
+    */
+    AccountGroupApi,
+
+    /**
+    * The AccountsPayableApi service constructor.
+    * @property {module:api/AccountsPayableApi}
+    */
+    AccountsPayableApi,
+
+    /**
+    * The CostCenterApi service constructor.
+    * @property {module:api/CostCenterApi}
+    */
+    CostCenterApi,
+
+    /**
+    * The CreditNoteApi service constructor.
+    * @property {module:api/CreditNoteApi}
+    */
+    CreditNoteApi,
+
+    /**
+    * The CustomerApi service constructor.
+    * @property {module:api/CustomerApi}
+    */
+    CustomerApi,
+
+    /**
+    * The DocumentBalanceApi service constructor.
+    * @property {module:api/DocumentBalanceApi}
+    */
+    DocumentBalanceApi,
+
+    /**
+    * The DocumentTypeApi service constructor.
+    * @property {module:api/DocumentTypeApi}
+    */
+    DocumentTypeApi,
+
+    /**
+    * The FixedAssetsApi service constructor.
+    * @property {module:api/FixedAssetsApi}
+    */
+    FixedAssetsApi,
+
+    /**
+    * The InvoiceApi service constructor.
+    * @property {module:api/InvoiceApi}
+    */
+    InvoiceApi,
+
+    /**
+    * The JournalEntryApi service constructor.
+    * @property {module:api/JournalEntryApi}
+    */
+    JournalEntryApi,
+
+    /**
+    * The PaymentTypeApi service constructor.
+    * @property {module:api/PaymentTypeApi}
+    */
+    PaymentTypeApi,
+
+    /**
+    * The PriceApi service constructor.
+    * @property {module:api/PriceApi}
+    */
+    PriceApi,
+
+    /**
+    * The ProductApi service constructor.
+    * @property {module:api/ProductApi}
+    */
+    ProductApi,
+
+    /**
+    * The TaxApi service constructor.
+    * @property {module:api/TaxApi}
+    */
+    TaxApi,
+
+    /**
+    * The TestBalanceApi service constructor.
+    * @property {module:api/TestBalanceApi}
+    */
+    TestBalanceApi,
+
+    /**
+    * The UserApi service constructor.
+    * @property {module:api/UserApi}
+    */
+    UserApi,
+
+    /**
+    * The VoucherApi service constructor.
+    * @property {module:api/VoucherApi}
+    */
+    VoucherApi,
+
+    /**
+    * The WarehousesApi service constructor.
+    * @property {module:api/WarehousesApi}
+    */
+    WarehousesApi
 };

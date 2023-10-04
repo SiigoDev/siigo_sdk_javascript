@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import EInvoiceErrorViewModel from './EInvoiceErrorViewModel';
+import ApiClient from '../ApiClient.js';
+import EInvoiceErrorViewModel from './EInvoiceErrorViewModel.js';
 
 /**
  * The EInvoiceErrorsViewModel model module.

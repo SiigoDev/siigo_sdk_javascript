@@ -11,8 +11,9 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import TaxesCommand from './TaxesCommand';
+import ApiClient from '../ApiClient.js';
+import ItemTransportData from './ItemTransportData.js';
+import TaxesCommand from './TaxesCommand.js';
 
 /**
  * The ItemsCommand model module.
@@ -80,6 +81,9 @@ class ItemsCommand {
             }
             if (data.hasOwnProperty('taxes')) {
                 obj['taxes'] = ApiClient.convertToType(data['taxes'], [TaxesCommand]);
+            }
+            if (data.hasOwnProperty('transport')) {
+                obj['transport'] = ItemTransportData.constructFromObject(data['transport']);
             }
         }
         return obj;
@@ -149,10 +153,15 @@ ItemsCommand.prototype['seller'] = undefined;
 ItemsCommand.prototype['vat_excluded'] = undefined;
 
 /**
- * Contains a list of Ids of taxes associated to invoice.
+ * Contains a list of Ids of taxes associated with invoice.
  * @member {Array.<module:model/TaxesCommand>} taxes
  */
 ItemsCommand.prototype['taxes'] = undefined;
+
+/**
+ * @member {module:model/ItemTransportData} transport
+ */
+ItemsCommand.prototype['transport'] = undefined;
 
 
 

@@ -11,13 +11,13 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import FixedAssetModel from './FixedAssetModel';
-import JournalDue from './JournalDue';
-import JournalEntryAccountModel from './JournalEntryAccountModel';
-import JournalEntryCustomerModel from './JournalEntryCustomerModel';
-import JournalEntryProductModel from './JournalEntryProductModel';
-import JournalEntryTaxModel from './JournalEntryTaxModel';
+import ApiClient from '../ApiClient.js';
+import FixedAssetModel from './FixedAssetModel.js';
+import JournalDue from './JournalDue.js';
+import JournalEntryAccountModel from './JournalEntryAccountModel.js';
+import JournalEntryCustomerModel from './JournalEntryCustomerModel.js';
+import JournalEntryProductModel from './JournalEntryProductModel.js';
+import JournalEntryTaxModel from './JournalEntryTaxModel.js';
 
 /**
  * The JournalEntryItemModel model module.

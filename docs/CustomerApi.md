@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## getCustomers
 
-> CustomerViewModel getCustomers(opts)
+> CustomerViewModelGetAllModel getCustomers(opts)
 
 Returns a paginated list of customers.
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomerViewModel**](CustomerViewModel.md)
+[**CustomerViewModelGetAllModel**](CustomerViewModelGetAllModel.md)
 
 ### Authorization
 

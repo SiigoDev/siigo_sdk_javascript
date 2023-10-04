@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The StampCommand model module.
  * @module model/StampCommand
@@ -40,16 +34,16 @@ var StampCommand = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, StampCommand);
     StampCommand.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(StampCommand, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>StampCommand</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,18 +51,15 @@ var StampCommand = /*#__PURE__*/function () {
      * @param {module:model/StampCommand} obj Optional instance to populate.
      * @return {module:model/StampCommand} The populated <code>StampCommand</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new StampCommand();
-
         if (data.hasOwnProperty('send')) {
           obj['send'] = _ApiClient["default"].convertToType(data['send'], 'Boolean');
         }
       }
-
       return obj;
     }
   }]);
@@ -78,8 +69,5 @@ var StampCommand = /*#__PURE__*/function () {
  * Represents the status of document.
  * @member {Boolean} send
  */
-
-
 StampCommand.prototype['send'] = undefined;
-var _default = StampCommand;
-exports["default"] = _default;
+var _default = exports["default"] = StampCommand;

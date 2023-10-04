@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import WarehouseViewModel from '../model/WarehouseViewModel';
+import ApiClient from "../ApiClient.js";
+import WarehouseViewModel from '../model/WarehouseViewModel.js';
 
 /**
 * Warehouses service.
@@ -69,7 +69,7 @@ export default class WarehousesApi {
     getWarehouse() {
       return this.getWarehouseWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

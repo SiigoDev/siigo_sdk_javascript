@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import GenericPageListModel from './GenericPageListModel';
-import LinksPagination from './LinksPagination';
-import VoucherViewModel from './VoucherViewModel';
+import ApiClient from '../ApiClient.js';
+import GenericPageListModel from './GenericPageListModel.js';
+import LinksPagination from './LinksPagination.js';
+import VoucherViewModel from './VoucherViewModel.js';
 
 /**
  * The VoucherViewModelGetAllModel model module.
@@ -56,8 +56,8 @@ class VoucherViewModelGetAllModel {
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [VoucherViewModel]);
             }
-            if (data.hasOwnProperty('__links')) {
-                obj['__links'] = LinksPagination.constructFromObject(data['__links']);
+            if (data.hasOwnProperty('_links')) {
+                obj['_links'] = LinksPagination.constructFromObject(data['_links']);
             }
         }
         return obj;
@@ -78,9 +78,9 @@ VoucherViewModelGetAllModel.prototype['pagination'] = undefined;
 VoucherViewModelGetAllModel.prototype['results'] = undefined;
 
 /**
- * @member {module:model/LinksPagination} __links
+ * @member {module:model/LinksPagination} _links
  */
-VoucherViewModelGetAllModel.prototype['__links'] = undefined;
+VoucherViewModelGetAllModel.prototype['_links'] = undefined;
 
 
 
