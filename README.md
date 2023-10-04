@@ -89,12 +89,16 @@ async function main(){
 
 
 
+
+
+
 ## Documentation for API Endpoints
 
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SiigoApi.AccountGroupApi* | [**getAccountGroups**](docs/AccountGroupApi.md#getAccountGroups) | **GET** /v1/account-groups | Returns a list of account groups.
+*SiigoApi.AccountsPayableApi* | [**getAccountsPayable**](docs/AccountsPayableApi.md#getAccountsPayable) | **GET** /v1/accounts-payable | Returns a list of document types.
 *SiigoApi.CostCenterApi* | [**getCostCenters**](docs/CostCenterApi.md#getCostCenters) | **GET** /v1/cost-centers | Returns a list of cost centers.
 *SiigoApi.CreditNoteApi* | [**createCreditNote**](docs/CreditNoteApi.md#createCreditNote) | **POST** /v1/credit-notes | Creates a credit note.
 *SiigoApi.CreditNoteApi* | [**getCreditNote**](docs/CreditNoteApi.md#getCreditNote) | **GET** /v1/credit-notes/{id} | Gets the credit note by GUID.
@@ -105,6 +109,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.CustomerApi* | [**getCustomer**](docs/CustomerApi.md#getCustomer) | **GET** /v1/customers/{id} | Gets the customer by GUID.
 *SiigoApi.CustomerApi* | [**getCustomers**](docs/CustomerApi.md#getCustomers) | **GET** /v1/customers | Returns a paginated list of customers.
 *SiigoApi.CustomerApi* | [**updateCustomer**](docs/CustomerApi.md#updateCustomer) | **PUT** /v1/customers/{id} | Updates the customer by GUID.
+*SiigoApi.DocumentBalanceApi* | [**getDocumentBalances**](docs/DocumentBalanceApi.md#getDocumentBalances) | **GET** /v1/available-documents | Returns client document balance.
 *SiigoApi.DocumentTypeApi* | [**getDocumentTypes**](docs/DocumentTypeApi.md#getDocumentTypes) | **GET** /v1/document-types | Returns a list of document types.
 *SiigoApi.FixedAssetsApi* | [**getAssetGroups**](docs/FixedAssetsApi.md#getAssetGroups) | **GET** /v1/asset-groups | Returns a list of asset groups.
 *SiigoApi.FixedAssetsApi* | [**getFixedAssets**](docs/FixedAssetsApi.md#getFixedAssets) | **GET** /v1/fixed-assets | Returns a list of fixed assets.
@@ -115,6 +120,7 @@ Class | Method | HTTP request | Description
 *SiigoApi.InvoiceApi* | [**getInvoice**](docs/InvoiceApi.md#getInvoice) | **GET** /v1/invoices/{id} | Gets the invoice by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoicePDF**](docs/InvoiceApi.md#getInvoicePDF) | **GET** /v1/invoices/{id}/pdf | Gets the invoice PDF by GUID.
 *SiigoApi.InvoiceApi* | [**getInvoices**](docs/InvoiceApi.md#getInvoices) | **GET** /v1/invoices | Returns a paginated list of invoices.
+*SiigoApi.InvoiceApi* | [**sendElectronicInvoice**](docs/InvoiceApi.md#sendElectronicInvoice) | **POST** /v1/invoices/{id}/stamp | Send electronic invoice by GUID.
 *SiigoApi.InvoiceApi* | [**sendInvoiceByEmail**](docs/InvoiceApi.md#sendInvoiceByEmail) | **POST** /v1/invoices/{id}/mail | Send an invoice by email
 *SiigoApi.InvoiceApi* | [**updateInvoice**](docs/InvoiceApi.md#updateInvoice) | **PUT** /v1/invoices/{id} | Updates the Invoice by GUID.
 *SiigoApi.JournalEntryApi* | [**createJournal**](docs/JournalEntryApi.md#createJournal) | **POST** /v1/journals | Creates a journal entry.
@@ -128,10 +134,14 @@ Class | Method | HTTP request | Description
 *SiigoApi.ProductApi* | [**getProducts**](docs/ProductApi.md#getProducts) | **GET** /v1/products | Returns a paginated list of products.
 *SiigoApi.ProductApi* | [**updateProduct**](docs/ProductApi.md#updateProduct) | **PUT** /v1/products/{id} | Updates the product by GUID.
 *SiigoApi.TaxApi* | [**getTaxes**](docs/TaxApi.md#getTaxes) | **GET** /v1/taxes | Returns a list of taxes.
+*SiigoApi.TestBalanceApi* | [**createTestBalance**](docs/TestBalanceApi.md#createTestBalance) | **POST** /v1/test-balance-report | Generate a balance report.
+*SiigoApi.TestBalanceApi* | [**createTestBalanceByThirdparty**](docs/TestBalanceApi.md#createTestBalanceByThirdparty) | **POST** /v1/test-balance-report-by-thirdparty | Generate a balance report by customer.
 *SiigoApi.UserApi* | [**getUsers**](docs/UserApi.md#getUsers) | **GET** /v1/users | Returns a paginated list of users.
 *SiigoApi.VoucherApi* | [**createVoucher**](docs/VoucherApi.md#createVoucher) | **POST** /v1/vouchers | Creates a voucher.
 *SiigoApi.VoucherApi* | [**getVoucher**](docs/VoucherApi.md#getVoucher) | **GET** /v1/vouchers/{id} | Gets the voucher by GUID.
 *SiigoApi.VoucherApi* | [**getVouchers**](docs/VoucherApi.md#getVouchers) | **GET** /v1/vouchers | Returns a paginated list of vouchers.
+*SiigoApi.VoucherApi* | [**sendElectronicVoucher**](docs/VoucherApi.md#sendElectronicVoucher) | **POST** /v1/vouchers/{id}/stamp | Send electronic voucher by GUID.
+*SiigoApi.VoucherApi* | [**sendVoucherByEmail**](docs/VoucherApi.md#sendVoucherByEmail) | **POST** /v1/vouchers/{id}/mail | Send an invoice by email
 *SiigoApi.WarehousesApi* | [**getWarehouse**](docs/WarehousesApi.md#getWarehouse) | **GET** /v1/warehouses | Returns a list of warehouse.
 
 
@@ -141,6 +151,9 @@ Class | Method | HTTP request | Description
  - [SiigoApi.AccountGroup](docs/AccountGroup.md)
  - [SiigoApi.AccountGroupViewModel](docs/AccountGroupViewModel.md)
  - [SiigoApi.AccountModel](docs/AccountModel.md)
+ - [SiigoApi.AccountsPayableDue](docs/AccountsPayableDue.md)
+ - [SiigoApi.AccountsPayableViewModel](docs/AccountsPayableViewModel.md)
+ - [SiigoApi.AccountsPayableViewModelGetAllModel](docs/AccountsPayableViewModelGetAllModel.md)
  - [SiigoApi.AdditionalFields](docs/AdditionalFields.md)
  - [SiigoApi.AdditionalFieldsCommand](docs/AdditionalFieldsCommand.md)
  - [SiigoApi.AdditionalFieldsModel](docs/AdditionalFieldsModel.md)
@@ -152,16 +165,20 @@ Class | Method | HTTP request | Description
  - [SiigoApi.CityModel](docs/CityModel.md)
  - [SiigoApi.ContactCommand](docs/ContactCommand.md)
  - [SiigoApi.ContactModel](docs/ContactModel.md)
+ - [SiigoApi.CostCenter](docs/CostCenter.md)
  - [SiigoApi.CostCentersViewModel](docs/CostCentersViewModel.md)
  - [SiigoApi.CreateCreditNoteCommand](docs/CreateCreditNoteCommand.md)
  - [SiigoApi.CreateCustomerCommandCountry](docs/CreateCustomerCommandCountry.md)
  - [SiigoApi.CreateInvoiceCommand](docs/CreateInvoiceCommand.md)
  - [SiigoApi.CreateJournalEntryCommand](docs/CreateJournalEntryCommand.md)
  - [SiigoApi.CreateProductCommand](docs/CreateProductCommand.md)
+ - [SiigoApi.CreateTestBalanceByThirdpartyCommand](docs/CreateTestBalanceByThirdpartyCommand.md)
+ - [SiigoApi.CreateTestBalanceCommand](docs/CreateTestBalanceCommand.md)
  - [SiigoApi.CreateVoucherCommand](docs/CreateVoucherCommand.md)
  - [SiigoApi.CreditNotePdfViewModel](docs/CreditNotePdfViewModel.md)
  - [SiigoApi.CreditNoteViewModel](docs/CreditNoteViewModel.md)
  - [SiigoApi.CreditNoteViewModelGetAllModel](docs/CreditNoteViewModelGetAllModel.md)
+ - [SiigoApi.Currency](docs/Currency.md)
  - [SiigoApi.CurrencyCommand](docs/CurrencyCommand.md)
  - [SiigoApi.CurrencyModel](docs/CurrencyModel.md)
  - [SiigoApi.CustomFieldsCommand](docs/CustomFieldsCommand.md)
@@ -170,11 +187,13 @@ Class | Method | HTTP request | Description
  - [SiigoApi.CustomerCommand](docs/CustomerCommand.md)
  - [SiigoApi.CustomerDeleteViewModel](docs/CustomerDeleteViewModel.md)
  - [SiigoApi.CustomerViewModel](docs/CustomerViewModel.md)
+ - [SiigoApi.CustomerViewModelGetAllModel](docs/CustomerViewModelGetAllModel.md)
  - [SiigoApi.CustomerVoucher](docs/CustomerVoucher.md)
  - [SiigoApi.DeliveryOrderCommand](docs/DeliveryOrderCommand.md)
  - [SiigoApi.DeliveryOrderModel](docs/DeliveryOrderModel.md)
  - [SiigoApi.DianReason](docs/DianReason.md)
  - [SiigoApi.DiscountModel](docs/DiscountModel.md)
+ - [SiigoApi.DocumentBalanceViewModel](docs/DocumentBalanceViewModel.md)
  - [SiigoApi.DocumentCommand](docs/DocumentCommand.md)
  - [SiigoApi.DocumentModel](docs/DocumentModel.md)
  - [SiigoApi.DocumentTypeTaxModel](docs/DocumentTypeTaxModel.md)
@@ -185,8 +204,8 @@ Class | Method | HTTP request | Description
  - [SiigoApi.EInvoiceErrorsViewModel](docs/EInvoiceErrorsViewModel.md)
  - [SiigoApi.ErrorDetail](docs/ErrorDetail.md)
  - [SiigoApi.ErrorResponse](docs/ErrorResponse.md)
- - [SiigoApi.FiscalResponsabilitiesModel](docs/FiscalResponsabilitiesModel.md)
  - [SiigoApi.FiscalResponsibilitiesCommand](docs/FiscalResponsibilitiesCommand.md)
+ - [SiigoApi.FiscalResponsibilitiesModel](docs/FiscalResponsibilitiesModel.md)
  - [SiigoApi.FixedAssetCommand](docs/FixedAssetCommand.md)
  - [SiigoApi.FixedAssetModel](docs/FixedAssetModel.md)
  - [SiigoApi.FixedAssetsViewModel](docs/FixedAssetsViewModel.md)
@@ -198,11 +217,13 @@ Class | Method | HTTP request | Description
  - [SiigoApi.InvoiceDeleteViewModel](docs/InvoiceDeleteViewModel.md)
  - [SiigoApi.InvoiceModel](docs/InvoiceModel.md)
  - [SiigoApi.InvoicePdfViewModel](docs/InvoicePdfViewModel.md)
+ - [SiigoApi.InvoiceStampViewModel](docs/InvoiceStampViewModel.md)
  - [SiigoApi.InvoiceViewModel](docs/InvoiceViewModel.md)
  - [SiigoApi.InvoiceViewModelGetAllModel](docs/InvoiceViewModelGetAllModel.md)
  - [SiigoApi.Item](docs/Item.md)
  - [SiigoApi.ItemDue](docs/ItemDue.md)
  - [SiigoApi.ItemDueCommand](docs/ItemDueCommand.md)
+ - [SiigoApi.ItemTransportData](docs/ItemTransportData.md)
  - [SiigoApi.ItemVoucher](docs/ItemVoucher.md)
  - [SiigoApi.ItemsCommand](docs/ItemsCommand.md)
  - [SiigoApi.ItemsModel](docs/ItemsModel.md)
@@ -243,24 +264,33 @@ Class | Method | HTTP request | Description
  - [SiigoApi.ProductModel](docs/ProductModel.md)
  - [SiigoApi.ProductModelGetAllModel](docs/ProductModelGetAllModel.md)
  - [SiigoApi.ProductTaxesCommand](docs/ProductTaxesCommand.md)
+ - [SiigoApi.Provider](docs/Provider.md)
  - [SiigoApi.PurchaseOrderCommand](docs/PurchaseOrderCommand.md)
  - [SiigoApi.PursacheOrderModel](docs/PursacheOrderModel.md)
  - [SiigoApi.RelatedUsersCommand](docs/RelatedUsersCommand.md)
  - [SiigoApi.RelatedUsersModel](docs/RelatedUsersModel.md)
  - [SiigoApi.RetentionsCommand](docs/RetentionsCommand.md)
  - [SiigoApi.RetentionsOutModel](docs/RetentionsOutModel.md)
+ - [SiigoApi.SendElectronicInvoiceCommand](docs/SendElectronicInvoiceCommand.md)
+ - [SiigoApi.SendElectronicInvoiceViewModel](docs/SendElectronicInvoiceViewModel.md)
+ - [SiigoApi.SendElectronicVoucherCommand](docs/SendElectronicVoucherCommand.md)
+ - [SiigoApi.SendElectronicVoucherViewModel](docs/SendElectronicVoucherViewModel.md)
  - [SiigoApi.SendInvoiceByEmailCommand](docs/SendInvoiceByEmailCommand.md)
+ - [SiigoApi.SendVoucherByEmailCommand](docs/SendVoucherByEmailCommand.md)
  - [SiigoApi.StampCommand](docs/StampCommand.md)
  - [SiigoApi.StampViewModel](docs/StampViewModel.md)
  - [SiigoApi.Tax](docs/Tax.md)
  - [SiigoApi.TaxViewModel](docs/TaxViewModel.md)
  - [SiigoApi.TaxesCommand](docs/TaxesCommand.md)
  - [SiigoApi.TaxesModel](docs/TaxesModel.md)
+ - [SiigoApi.TestBalanceCustomer](docs/TestBalanceCustomer.md)
+ - [SiigoApi.TestBalanceResultModel](docs/TestBalanceResultModel.md)
  - [SiigoApi.UnitProductsViewModel](docs/UnitProductsViewModel.md)
  - [SiigoApi.UpdateCustomerCommand](docs/UpdateCustomerCommand.md)
  - [SiigoApi.UpdateProductCommand](docs/UpdateProductCommand.md)
  - [SiigoApi.UsersModel](docs/UsersModel.md)
  - [SiigoApi.UsersViewModel](docs/UsersViewModel.md)
+ - [SiigoApi.VoucherStampModel](docs/VoucherStampModel.md)
  - [SiigoApi.VoucherViewModel](docs/VoucherViewModel.md)
  - [SiigoApi.VoucherViewModelGetAllModel](docs/VoucherViewModelGetAllModel.md)
  - [SiigoApi.Warehouse](docs/Warehouse.md)

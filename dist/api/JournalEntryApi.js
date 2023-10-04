@@ -1,24 +1,16 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _CreateJournalEntryCommand = _interopRequireDefault(require("../model/CreateJournalEntryCommand"));
-
-var _JournalEntryViewModel = _interopRequireDefault(require("../model/JournalEntryViewModel"));
-
-var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("../model/JournalEntryViewModelGetAllModel"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateJournalEntryCommand = _interopRequireDefault(require("../model/CreateJournalEntryCommand.js"));
+var _JournalEntryViewModel = _interopRequireDefault(require("../model/JournalEntryViewModel.js"));
+var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("../model/JournalEntryViewModelGetAllModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -31,13 +23,12 @@ var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("../model
  * Do not edit the class manually.
  *
  */
-
 /**
 * JournalEntry service.
 * @module api/JournalEntryApi
 * @version v1
 */
-var JournalEntryApi = /*#__PURE__*/function () {
+var JournalEntryApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new JournalEntryApi. 
   * @alias module:api/JournalEntryApi
@@ -49,14 +40,13 @@ var JournalEntryApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, JournalEntryApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Creates a journal entry.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(JournalEntryApi, [{
     key: "createJournalWithHttpInfo",
     value: function createJournalWithHttpInfo(opts) {
@@ -72,35 +62,35 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var returnType = _JournalEntryViewModel["default"];
       return this.apiClient.callApi('/v1/journals', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates a journal entry.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateJournalEntryCommand} opts.createJournalEntryCommand Represents the request with the journal entry information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
      */
-
   }, {
     key: "createJournal",
     value: function createJournal(opts) {
       return this.createJournalWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModel} and HTTP response
      */
-
   }, {
     key: "getJournalWithHttpInfo",
     value: function getJournalWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getJournal");
       }
-
       var pathParams = {
         'id': id
       };
@@ -113,19 +103,21 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var returnType = _JournalEntryViewModel["default"];
       return this.apiClient.callApi('/v1/journals/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the journal entry by GUID.
      * @param {String} id Represent the Journal id by GUID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModel}
      */
-
   }, {
     key: "getJournal",
     value: function getJournal(id) {
       return this.getJournalWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
@@ -140,7 +132,6 @@ var JournalEntryApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JournalEntryViewModelGetAllModel} and HTTP response
      */
-
   }, {
     key: "getJournalsWithHttpInfo",
     value: function getJournalsWithHttpInfo(opts) {
@@ -166,6 +157,7 @@ var JournalEntryApi = /*#__PURE__*/function () {
       var returnType = _JournalEntryViewModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/journals', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of journals entries.
      * @param {Object} opts Optional parameters
@@ -180,16 +172,14 @@ var JournalEntryApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JournalEntryViewModelGetAllModel}
      */
-
   }, {
     key: "getJournals",
     value: function getJournals(opts) {
       return this.getJournalsWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return JournalEntryApi;
 }();
-
-exports["default"] = JournalEntryApi;

@@ -1,7 +1,6 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -33,6 +32,30 @@ Object.defineProperty(exports, "AccountModel", {
   enumerable: true,
   get: function get() {
     return _AccountModel["default"];
+  }
+});
+Object.defineProperty(exports, "AccountsPayableApi", {
+  enumerable: true,
+  get: function get() {
+    return _AccountsPayableApi["default"];
+  }
+});
+Object.defineProperty(exports, "AccountsPayableDue", {
+  enumerable: true,
+  get: function get() {
+    return _AccountsPayableDue["default"];
+  }
+});
+Object.defineProperty(exports, "AccountsPayableViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _AccountsPayableViewModel["default"];
+  }
+});
+Object.defineProperty(exports, "AccountsPayableViewModelGetAllModel", {
+  enumerable: true,
+  get: function get() {
+    return _AccountsPayableViewModelGetAllModel["default"];
   }
 });
 Object.defineProperty(exports, "AdditionalFields", {
@@ -107,6 +130,12 @@ Object.defineProperty(exports, "ContactModel", {
     return _ContactModel["default"];
   }
 });
+Object.defineProperty(exports, "CostCenter", {
+  enumerable: true,
+  get: function get() {
+    return _CostCenter["default"];
+  }
+});
 Object.defineProperty(exports, "CostCenterApi", {
   enumerable: true,
   get: function get() {
@@ -149,6 +178,18 @@ Object.defineProperty(exports, "CreateProductCommand", {
     return _CreateProductCommand["default"];
   }
 });
+Object.defineProperty(exports, "CreateTestBalanceByThirdpartyCommand", {
+  enumerable: true,
+  get: function get() {
+    return _CreateTestBalanceByThirdpartyCommand["default"];
+  }
+});
+Object.defineProperty(exports, "CreateTestBalanceCommand", {
+  enumerable: true,
+  get: function get() {
+    return _CreateTestBalanceCommand["default"];
+  }
+});
 Object.defineProperty(exports, "CreateVoucherCommand", {
   enumerable: true,
   get: function get() {
@@ -177,6 +218,12 @@ Object.defineProperty(exports, "CreditNoteViewModelGetAllModel", {
   enumerable: true,
   get: function get() {
     return _CreditNoteViewModelGetAllModel["default"];
+  }
+});
+Object.defineProperty(exports, "Currency", {
+  enumerable: true,
+  get: function get() {
+    return _Currency["default"];
   }
 });
 Object.defineProperty(exports, "CurrencyCommand", {
@@ -233,6 +280,12 @@ Object.defineProperty(exports, "CustomerViewModel", {
     return _CustomerViewModel["default"];
   }
 });
+Object.defineProperty(exports, "CustomerViewModelGetAllModel", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerViewModelGetAllModel["default"];
+  }
+});
 Object.defineProperty(exports, "CustomerVoucher", {
   enumerable: true,
   get: function get() {
@@ -261,6 +314,18 @@ Object.defineProperty(exports, "DiscountModel", {
   enumerable: true,
   get: function get() {
     return _DiscountModel["default"];
+  }
+});
+Object.defineProperty(exports, "DocumentBalanceApi", {
+  enumerable: true,
+  get: function get() {
+    return _DocumentBalanceApi["default"];
+  }
+});
+Object.defineProperty(exports, "DocumentBalanceViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _DocumentBalanceViewModel["default"];
   }
 });
 Object.defineProperty(exports, "DocumentCommand", {
@@ -329,16 +394,16 @@ Object.defineProperty(exports, "ErrorResponse", {
     return _ErrorResponse["default"];
   }
 });
-Object.defineProperty(exports, "FiscalResponsabilitiesModel", {
-  enumerable: true,
-  get: function get() {
-    return _FiscalResponsabilitiesModel["default"];
-  }
-});
 Object.defineProperty(exports, "FiscalResponsibilitiesCommand", {
   enumerable: true,
   get: function get() {
     return _FiscalResponsibilitiesCommand["default"];
+  }
+});
+Object.defineProperty(exports, "FiscalResponsibilitiesModel", {
+  enumerable: true,
+  get: function get() {
+    return _FiscalResponsibilitiesModel["default"];
   }
 });
 Object.defineProperty(exports, "FixedAssetCommand", {
@@ -419,6 +484,12 @@ Object.defineProperty(exports, "InvoicePdfViewModel", {
     return _InvoicePdfViewModel["default"];
   }
 });
+Object.defineProperty(exports, "InvoiceStampViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _InvoiceStampViewModel["default"];
+  }
+});
 Object.defineProperty(exports, "InvoiceViewModel", {
   enumerable: true,
   get: function get() {
@@ -447,6 +518,12 @@ Object.defineProperty(exports, "ItemDueCommand", {
   enumerable: true,
   get: function get() {
     return _ItemDueCommand["default"];
+  }
+});
+Object.defineProperty(exports, "ItemTransportData", {
+  enumerable: true,
+  get: function get() {
+    return _ItemTransportData["default"];
   }
 });
 Object.defineProperty(exports, "ItemVoucher", {
@@ -713,6 +790,12 @@ Object.defineProperty(exports, "ProductTaxesCommand", {
     return _ProductTaxesCommand["default"];
   }
 });
+Object.defineProperty(exports, "Provider", {
+  enumerable: true,
+  get: function get() {
+    return _Provider["default"];
+  }
+});
 Object.defineProperty(exports, "PurchaseOrderCommand", {
   enumerable: true,
   get: function get() {
@@ -749,10 +832,40 @@ Object.defineProperty(exports, "RetentionsOutModel", {
     return _RetentionsOutModel["default"];
   }
 });
+Object.defineProperty(exports, "SendElectronicInvoiceCommand", {
+  enumerable: true,
+  get: function get() {
+    return _SendElectronicInvoiceCommand["default"];
+  }
+});
+Object.defineProperty(exports, "SendElectronicInvoiceViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _SendElectronicInvoiceViewModel["default"];
+  }
+});
+Object.defineProperty(exports, "SendElectronicVoucherCommand", {
+  enumerable: true,
+  get: function get() {
+    return _SendElectronicVoucherCommand["default"];
+  }
+});
+Object.defineProperty(exports, "SendElectronicVoucherViewModel", {
+  enumerable: true,
+  get: function get() {
+    return _SendElectronicVoucherViewModel["default"];
+  }
+});
 Object.defineProperty(exports, "SendInvoiceByEmailCommand", {
   enumerable: true,
   get: function get() {
     return _SendInvoiceByEmailCommand["default"];
+  }
+});
+Object.defineProperty(exports, "SendVoucherByEmailCommand", {
+  enumerable: true,
+  get: function get() {
+    return _SendVoucherByEmailCommand["default"];
   }
 });
 Object.defineProperty(exports, "StampCommand", {
@@ -797,6 +910,24 @@ Object.defineProperty(exports, "TaxesModel", {
     return _TaxesModel["default"];
   }
 });
+Object.defineProperty(exports, "TestBalanceApi", {
+  enumerable: true,
+  get: function get() {
+    return _TestBalanceApi["default"];
+  }
+});
+Object.defineProperty(exports, "TestBalanceCustomer", {
+  enumerable: true,
+  get: function get() {
+    return _TestBalanceCustomer["default"];
+  }
+});
+Object.defineProperty(exports, "TestBalanceResultModel", {
+  enumerable: true,
+  get: function get() {
+    return _TestBalanceResultModel["default"];
+  }
+});
 Object.defineProperty(exports, "UnitProductsViewModel", {
   enumerable: true,
   get: function get() {
@@ -839,6 +970,12 @@ Object.defineProperty(exports, "VoucherApi", {
     return _VoucherApi["default"];
   }
 });
+Object.defineProperty(exports, "VoucherStampModel", {
+  enumerable: true,
+  get: function get() {
+    return _VoucherStampModel["default"];
+  }
+});
 Object.defineProperty(exports, "VoucherViewModel", {
   enumerable: true,
   get: function get() {
@@ -877,301 +1014,175 @@ Object.defineProperty(exports, "WarehousesApi", {
 });
 exports.initialize = initialize;
 exports.signIn = signIn;
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
-
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-
-var _ApiClient = _interopRequireDefault(require("./ApiClient"));
-
-var _Account = _interopRequireDefault(require("./model/Account"));
-
-var _AccountGroup = _interopRequireDefault(require("./model/AccountGroup"));
-
-var _AccountGroupViewModel = _interopRequireDefault(require("./model/AccountGroupViewModel"));
-
-var _AccountModel = _interopRequireDefault(require("./model/AccountModel"));
-
-var _AdditionalFields = _interopRequireDefault(require("./model/AdditionalFields"));
-
-var _AdditionalFieldsCommand = _interopRequireDefault(require("./model/AdditionalFieldsCommand"));
-
-var _AdditionalFieldsModel = _interopRequireDefault(require("./model/AdditionalFieldsModel"));
-
-var _AdditionalFieldsProducts = _interopRequireDefault(require("./model/AdditionalFieldsProducts"));
-
-var _AddressCommand = _interopRequireDefault(require("./model/AddressCommand"));
-
-var _AddressModel = _interopRequireDefault(require("./model/AddressModel"));
-
-var _AssetGroupsViewModel = _interopRequireDefault(require("./model/AssetGroupsViewModel"));
-
-var _CityCommand = _interopRequireDefault(require("./model/CityCommand"));
-
-var _CityModel = _interopRequireDefault(require("./model/CityModel"));
-
-var _ContactCommand = _interopRequireDefault(require("./model/ContactCommand"));
-
-var _ContactModel = _interopRequireDefault(require("./model/ContactModel"));
-
-var _CostCentersViewModel = _interopRequireDefault(require("./model/CostCentersViewModel"));
-
-var _CreateCreditNoteCommand = _interopRequireDefault(require("./model/CreateCreditNoteCommand"));
-
-var _CreateCustomerCommandCountry = _interopRequireDefault(require("./model/CreateCustomerCommandCountry"));
-
-var _CreateInvoiceCommand = _interopRequireDefault(require("./model/CreateInvoiceCommand"));
-
-var _CreateJournalEntryCommand = _interopRequireDefault(require("./model/CreateJournalEntryCommand"));
-
-var _CreateProductCommand = _interopRequireDefault(require("./model/CreateProductCommand"));
-
-var _CreateVoucherCommand = _interopRequireDefault(require("./model/CreateVoucherCommand"));
-
-var _CreditNotePdfViewModel = _interopRequireDefault(require("./model/CreditNotePdfViewModel"));
-
-var _CreditNoteViewModel = _interopRequireDefault(require("./model/CreditNoteViewModel"));
-
-var _CreditNoteViewModelGetAllModel = _interopRequireDefault(require("./model/CreditNoteViewModelGetAllModel"));
-
-var _CurrencyCommand = _interopRequireDefault(require("./model/CurrencyCommand"));
-
-var _CurrencyModel = _interopRequireDefault(require("./model/CurrencyModel"));
-
-var _CustomFieldsCommand = _interopRequireDefault(require("./model/CustomFieldsCommand"));
-
-var _CustomFieldsModel = _interopRequireDefault(require("./model/CustomFieldsModel"));
-
-var _Customer = _interopRequireDefault(require("./model/Customer"));
-
-var _CustomerCommand = _interopRequireDefault(require("./model/CustomerCommand"));
-
-var _CustomerDeleteViewModel = _interopRequireDefault(require("./model/CustomerDeleteViewModel"));
-
-var _CustomerViewModel = _interopRequireDefault(require("./model/CustomerViewModel"));
-
-var _CustomerVoucher = _interopRequireDefault(require("./model/CustomerVoucher"));
-
-var _DeliveryOrderCommand = _interopRequireDefault(require("./model/DeliveryOrderCommand"));
-
-var _DeliveryOrderModel = _interopRequireDefault(require("./model/DeliveryOrderModel"));
-
-var _DianReason = _interopRequireDefault(require("./model/DianReason"));
-
-var _DiscountModel = _interopRequireDefault(require("./model/DiscountModel"));
-
-var _DocumentCommand = _interopRequireDefault(require("./model/DocumentCommand"));
-
-var _DocumentModel = _interopRequireDefault(require("./model/DocumentModel"));
-
-var _DocumentTypeTaxModel = _interopRequireDefault(require("./model/DocumentTypeTaxModel"));
-
-var _DocumentTypeViewModel = _interopRequireDefault(require("./model/DocumentTypeViewModel"));
-
-var _DocumentVoucher = _interopRequireDefault(require("./model/DocumentVoucher"));
-
-var _Due = _interopRequireDefault(require("./model/Due"));
-
-var _EInvoiceErrorViewModel = _interopRequireDefault(require("./model/EInvoiceErrorViewModel"));
-
-var _EInvoiceErrorsViewModel = _interopRequireDefault(require("./model/EInvoiceErrorsViewModel"));
-
-var _ErrorDetail = _interopRequireDefault(require("./model/ErrorDetail"));
-
-var _ErrorResponse = _interopRequireDefault(require("./model/ErrorResponse"));
-
-var _FiscalResponsabilitiesModel = _interopRequireDefault(require("./model/FiscalResponsabilitiesModel"));
-
-var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./model/FiscalResponsibilitiesCommand"));
-
-var _FixedAssetCommand = _interopRequireDefault(require("./model/FixedAssetCommand"));
-
-var _FixedAssetModel = _interopRequireDefault(require("./model/FixedAssetModel"));
-
-var _FixedAssetsViewModel = _interopRequireDefault(require("./model/FixedAssetsViewModel"));
-
-var _GenericPageListModel = _interopRequireDefault(require("./model/GenericPageListModel"));
-
-var _GlobalTaxCommand = _interopRequireDefault(require("./model/GlobalTaxCommand"));
-
-var _GlobalTaxModel = _interopRequireDefault(require("./model/GlobalTaxModel"));
-
-var _IdTypeModel = _interopRequireDefault(require("./model/IdTypeModel"));
-
-var _InvoiceCustomerModel = _interopRequireDefault(require("./model/InvoiceCustomerModel"));
-
-var _InvoiceDeleteViewModel = _interopRequireDefault(require("./model/InvoiceDeleteViewModel"));
-
-var _InvoiceModel = _interopRequireDefault(require("./model/InvoiceModel"));
-
-var _InvoicePdfViewModel = _interopRequireDefault(require("./model/InvoicePdfViewModel"));
-
-var _InvoiceViewModel = _interopRequireDefault(require("./model/InvoiceViewModel"));
-
-var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("./model/InvoiceViewModelGetAllModel"));
-
-var _Item = _interopRequireDefault(require("./model/Item"));
-
-var _ItemDue = _interopRequireDefault(require("./model/ItemDue"));
-
-var _ItemDueCommand = _interopRequireDefault(require("./model/ItemDueCommand"));
-
-var _ItemVoucher = _interopRequireDefault(require("./model/ItemVoucher"));
-
-var _ItemsCommand = _interopRequireDefault(require("./model/ItemsCommand"));
-
-var _ItemsModel = _interopRequireDefault(require("./model/ItemsModel"));
-
-var _JournalDue = _interopRequireDefault(require("./model/JournalDue"));
-
-var _JournalEntryAccountModel = _interopRequireDefault(require("./model/JournalEntryAccountModel"));
-
-var _JournalEntryCustomerModel = _interopRequireDefault(require("./model/JournalEntryCustomerModel"));
-
-var _JournalEntryDocumentModel = _interopRequireDefault(require("./model/JournalEntryDocumentModel"));
-
-var _JournalEntryItem = _interopRequireDefault(require("./model/JournalEntryItem"));
-
-var _JournalEntryItemModel = _interopRequireDefault(require("./model/JournalEntryItemModel"));
-
-var _JournalEntryProductCommand = _interopRequireDefault(require("./model/JournalEntryProductCommand"));
-
-var _JournalEntryProductModel = _interopRequireDefault(require("./model/JournalEntryProductModel"));
-
-var _JournalEntryTaxModel = _interopRequireDefault(require("./model/JournalEntryTaxModel"));
-
-var _JournalEntryViewModel = _interopRequireDefault(require("./model/JournalEntryViewModel"));
-
-var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("./model/JournalEntryViewModelGetAllModel"));
-
-var _JournalEntryWarehouseModel = _interopRequireDefault(require("./model/JournalEntryWarehouseModel"));
-
-var _KeysProductsViewModel = _interopRequireDefault(require("./model/KeysProductsViewModel"));
-
-var _Link = _interopRequireDefault(require("./model/Link"));
-
-var _LinksPagination = _interopRequireDefault(require("./model/LinksPagination"));
-
-var _LiteCustomerCommand = _interopRequireDefault(require("./model/LiteCustomerCommand"));
-
-var _MailCommand = _interopRequireDefault(require("./model/MailCommand"));
-
-var _MailViewModel = _interopRequireDefault(require("./model/MailViewModel"));
-
-var _Metadata = _interopRequireDefault(require("./model/Metadata"));
-
-var _MetadataModel = _interopRequireDefault(require("./model/MetadataModel"));
-
-var _PageListDto = _interopRequireDefault(require("./model/PageListDto"));
-
-var _PageListModel = _interopRequireDefault(require("./model/PageListModel"));
-
-var _Payment = _interopRequireDefault(require("./model/Payment"));
-
-var _PaymentTypeViewModel = _interopRequireDefault(require("./model/PaymentTypeViewModel"));
-
-var _PaymentsCommand = _interopRequireDefault(require("./model/PaymentsCommand"));
-
-var _PaymentsModel = _interopRequireDefault(require("./model/PaymentsModel"));
-
-var _PhoneCommand = _interopRequireDefault(require("./model/PhoneCommand"));
-
-var _PhoneModel = _interopRequireDefault(require("./model/PhoneModel"));
-
-var _PriceListItemViewModel = _interopRequireDefault(require("./model/PriceListItemViewModel"));
-
-var _PriceListViewModel = _interopRequireDefault(require("./model/PriceListViewModel"));
-
-var _PriceListsViewModel = _interopRequireDefault(require("./model/PriceListsViewModel"));
-
-var _PricesListProducts = _interopRequireDefault(require("./model/PricesListProducts"));
-
-var _PricesProducts = _interopRequireDefault(require("./model/PricesProducts"));
-
-var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDeleteViewModel"));
-
-var _ProductModel = _interopRequireDefault(require("./model/ProductModel"));
-
-var _ProductModelGetAllModel = _interopRequireDefault(require("./model/ProductModelGetAllModel"));
-
-var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand"));
-
-var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand"));
-
-var _PursacheOrderModel = _interopRequireDefault(require("./model/PursacheOrderModel"));
-
-var _RelatedUsersCommand = _interopRequireDefault(require("./model/RelatedUsersCommand"));
-
-var _RelatedUsersModel = _interopRequireDefault(require("./model/RelatedUsersModel"));
-
-var _RetentionsCommand = _interopRequireDefault(require("./model/RetentionsCommand"));
-
-var _RetentionsOutModel = _interopRequireDefault(require("./model/RetentionsOutModel"));
-
-var _SendInvoiceByEmailCommand = _interopRequireDefault(require("./model/SendInvoiceByEmailCommand"));
-
-var _StampCommand = _interopRequireDefault(require("./model/StampCommand"));
-
-var _StampViewModel = _interopRequireDefault(require("./model/StampViewModel"));
-
-var _Tax = _interopRequireDefault(require("./model/Tax"));
-
-var _TaxViewModel = _interopRequireDefault(require("./model/TaxViewModel"));
-
-var _TaxesCommand = _interopRequireDefault(require("./model/TaxesCommand"));
-
-var _TaxesModel = _interopRequireDefault(require("./model/TaxesModel"));
-
-var _UnitProductsViewModel = _interopRequireDefault(require("./model/UnitProductsViewModel"));
-
-var _UpdateCustomerCommand = _interopRequireDefault(require("./model/UpdateCustomerCommand"));
-
-var _UpdateProductCommand = _interopRequireDefault(require("./model/UpdateProductCommand"));
-
-var _UsersModel = _interopRequireDefault(require("./model/UsersModel"));
-
-var _UsersViewModel = _interopRequireDefault(require("./model/UsersViewModel"));
-
-var _VoucherViewModel = _interopRequireDefault(require("./model/VoucherViewModel"));
-
-var _VoucherViewModelGetAllModel = _interopRequireDefault(require("./model/VoucherViewModelGetAllModel"));
-
-var _Warehouse = _interopRequireDefault(require("./model/Warehouse"));
-
-var _WarehouseModel = _interopRequireDefault(require("./model/WarehouseModel"));
-
-var _WarehouseViewModel = _interopRequireDefault(require("./model/WarehouseViewModel"));
-
-var _AccountGroupApi = _interopRequireDefault(require("./api/AccountGroupApi"));
-
-var _CostCenterApi = _interopRequireDefault(require("./api/CostCenterApi"));
-
-var _CreditNoteApi = _interopRequireDefault(require("./api/CreditNoteApi"));
-
-var _CustomerApi = _interopRequireDefault(require("./api/CustomerApi"));
-
-var _DocumentTypeApi = _interopRequireDefault(require("./api/DocumentTypeApi"));
-
-var _FixedAssetsApi = _interopRequireDefault(require("./api/FixedAssetsApi"));
-
-var _InvoiceApi = _interopRequireDefault(require("./api/InvoiceApi"));
-
-var _JournalEntryApi = _interopRequireDefault(require("./api/JournalEntryApi"));
-
-var _PaymentTypeApi = _interopRequireDefault(require("./api/PaymentTypeApi"));
-
-var _PriceApi = _interopRequireDefault(require("./api/PriceApi"));
-
-var _ProductApi = _interopRequireDefault(require("./api/ProductApi"));
-
-var _TaxApi = _interopRequireDefault(require("./api/TaxApi"));
-
-var _UserApi = _interopRequireDefault(require("./api/UserApi"));
-
-var _VoucherApi = _interopRequireDefault(require("./api/VoucherApi"));
-
-var _WarehousesApi = _interopRequireDefault(require("./api/WarehousesApi"));
-
+var _ApiClient = _interopRequireDefault(require("./ApiClient.js"));
+var _Account = _interopRequireDefault(require("./model/Account.js"));
+var _AccountGroup = _interopRequireDefault(require("./model/AccountGroup.js"));
+var _AccountGroupViewModel = _interopRequireDefault(require("./model/AccountGroupViewModel.js"));
+var _AccountModel = _interopRequireDefault(require("./model/AccountModel.js"));
+var _AccountsPayableDue = _interopRequireDefault(require("./model/AccountsPayableDue.js"));
+var _AccountsPayableViewModel = _interopRequireDefault(require("./model/AccountsPayableViewModel.js"));
+var _AccountsPayableViewModelGetAllModel = _interopRequireDefault(require("./model/AccountsPayableViewModelGetAllModel.js"));
+var _AdditionalFields = _interopRequireDefault(require("./model/AdditionalFields.js"));
+var _AdditionalFieldsCommand = _interopRequireDefault(require("./model/AdditionalFieldsCommand.js"));
+var _AdditionalFieldsModel = _interopRequireDefault(require("./model/AdditionalFieldsModel.js"));
+var _AdditionalFieldsProducts = _interopRequireDefault(require("./model/AdditionalFieldsProducts.js"));
+var _AddressCommand = _interopRequireDefault(require("./model/AddressCommand.js"));
+var _AddressModel = _interopRequireDefault(require("./model/AddressModel.js"));
+var _AssetGroupsViewModel = _interopRequireDefault(require("./model/AssetGroupsViewModel.js"));
+var _CityCommand = _interopRequireDefault(require("./model/CityCommand.js"));
+var _CityModel = _interopRequireDefault(require("./model/CityModel.js"));
+var _ContactCommand = _interopRequireDefault(require("./model/ContactCommand.js"));
+var _ContactModel = _interopRequireDefault(require("./model/ContactModel.js"));
+var _CostCenter = _interopRequireDefault(require("./model/CostCenter.js"));
+var _CostCentersViewModel = _interopRequireDefault(require("./model/CostCentersViewModel.js"));
+var _CreateCreditNoteCommand = _interopRequireDefault(require("./model/CreateCreditNoteCommand.js"));
+var _CreateCustomerCommandCountry = _interopRequireDefault(require("./model/CreateCustomerCommandCountry.js"));
+var _CreateInvoiceCommand = _interopRequireDefault(require("./model/CreateInvoiceCommand.js"));
+var _CreateJournalEntryCommand = _interopRequireDefault(require("./model/CreateJournalEntryCommand.js"));
+var _CreateProductCommand = _interopRequireDefault(require("./model/CreateProductCommand.js"));
+var _CreateTestBalanceByThirdpartyCommand = _interopRequireDefault(require("./model/CreateTestBalanceByThirdpartyCommand.js"));
+var _CreateTestBalanceCommand = _interopRequireDefault(require("./model/CreateTestBalanceCommand.js"));
+var _CreateVoucherCommand = _interopRequireDefault(require("./model/CreateVoucherCommand.js"));
+var _CreditNotePdfViewModel = _interopRequireDefault(require("./model/CreditNotePdfViewModel.js"));
+var _CreditNoteViewModel = _interopRequireDefault(require("./model/CreditNoteViewModel.js"));
+var _CreditNoteViewModelGetAllModel = _interopRequireDefault(require("./model/CreditNoteViewModelGetAllModel.js"));
+var _Currency = _interopRequireDefault(require("./model/Currency.js"));
+var _CurrencyCommand = _interopRequireDefault(require("./model/CurrencyCommand.js"));
+var _CurrencyModel = _interopRequireDefault(require("./model/CurrencyModel.js"));
+var _CustomFieldsCommand = _interopRequireDefault(require("./model/CustomFieldsCommand.js"));
+var _CustomFieldsModel = _interopRequireDefault(require("./model/CustomFieldsModel.js"));
+var _Customer = _interopRequireDefault(require("./model/Customer.js"));
+var _CustomerCommand = _interopRequireDefault(require("./model/CustomerCommand.js"));
+var _CustomerDeleteViewModel = _interopRequireDefault(require("./model/CustomerDeleteViewModel.js"));
+var _CustomerViewModel = _interopRequireDefault(require("./model/CustomerViewModel.js"));
+var _CustomerViewModelGetAllModel = _interopRequireDefault(require("./model/CustomerViewModelGetAllModel.js"));
+var _CustomerVoucher = _interopRequireDefault(require("./model/CustomerVoucher.js"));
+var _DeliveryOrderCommand = _interopRequireDefault(require("./model/DeliveryOrderCommand.js"));
+var _DeliveryOrderModel = _interopRequireDefault(require("./model/DeliveryOrderModel.js"));
+var _DianReason = _interopRequireDefault(require("./model/DianReason.js"));
+var _DiscountModel = _interopRequireDefault(require("./model/DiscountModel.js"));
+var _DocumentBalanceViewModel = _interopRequireDefault(require("./model/DocumentBalanceViewModel.js"));
+var _DocumentCommand = _interopRequireDefault(require("./model/DocumentCommand.js"));
+var _DocumentModel = _interopRequireDefault(require("./model/DocumentModel.js"));
+var _DocumentTypeTaxModel = _interopRequireDefault(require("./model/DocumentTypeTaxModel.js"));
+var _DocumentTypeViewModel = _interopRequireDefault(require("./model/DocumentTypeViewModel.js"));
+var _DocumentVoucher = _interopRequireDefault(require("./model/DocumentVoucher.js"));
+var _Due = _interopRequireDefault(require("./model/Due.js"));
+var _EInvoiceErrorViewModel = _interopRequireDefault(require("./model/EInvoiceErrorViewModel.js"));
+var _EInvoiceErrorsViewModel = _interopRequireDefault(require("./model/EInvoiceErrorsViewModel.js"));
+var _ErrorDetail = _interopRequireDefault(require("./model/ErrorDetail.js"));
+var _ErrorResponse = _interopRequireDefault(require("./model/ErrorResponse.js"));
+var _FiscalResponsibilitiesCommand = _interopRequireDefault(require("./model/FiscalResponsibilitiesCommand.js"));
+var _FiscalResponsibilitiesModel = _interopRequireDefault(require("./model/FiscalResponsibilitiesModel.js"));
+var _FixedAssetCommand = _interopRequireDefault(require("./model/FixedAssetCommand.js"));
+var _FixedAssetModel = _interopRequireDefault(require("./model/FixedAssetModel.js"));
+var _FixedAssetsViewModel = _interopRequireDefault(require("./model/FixedAssetsViewModel.js"));
+var _GenericPageListModel = _interopRequireDefault(require("./model/GenericPageListModel.js"));
+var _GlobalTaxCommand = _interopRequireDefault(require("./model/GlobalTaxCommand.js"));
+var _GlobalTaxModel = _interopRequireDefault(require("./model/GlobalTaxModel.js"));
+var _IdTypeModel = _interopRequireDefault(require("./model/IdTypeModel.js"));
+var _InvoiceCustomerModel = _interopRequireDefault(require("./model/InvoiceCustomerModel.js"));
+var _InvoiceDeleteViewModel = _interopRequireDefault(require("./model/InvoiceDeleteViewModel.js"));
+var _InvoiceModel = _interopRequireDefault(require("./model/InvoiceModel.js"));
+var _InvoicePdfViewModel = _interopRequireDefault(require("./model/InvoicePdfViewModel.js"));
+var _InvoiceStampViewModel = _interopRequireDefault(require("./model/InvoiceStampViewModel.js"));
+var _InvoiceViewModel = _interopRequireDefault(require("./model/InvoiceViewModel.js"));
+var _InvoiceViewModelGetAllModel = _interopRequireDefault(require("./model/InvoiceViewModelGetAllModel.js"));
+var _Item = _interopRequireDefault(require("./model/Item.js"));
+var _ItemDue = _interopRequireDefault(require("./model/ItemDue.js"));
+var _ItemDueCommand = _interopRequireDefault(require("./model/ItemDueCommand.js"));
+var _ItemTransportData = _interopRequireDefault(require("./model/ItemTransportData.js"));
+var _ItemVoucher = _interopRequireDefault(require("./model/ItemVoucher.js"));
+var _ItemsCommand = _interopRequireDefault(require("./model/ItemsCommand.js"));
+var _ItemsModel = _interopRequireDefault(require("./model/ItemsModel.js"));
+var _JournalDue = _interopRequireDefault(require("./model/JournalDue.js"));
+var _JournalEntryAccountModel = _interopRequireDefault(require("./model/JournalEntryAccountModel.js"));
+var _JournalEntryCustomerModel = _interopRequireDefault(require("./model/JournalEntryCustomerModel.js"));
+var _JournalEntryDocumentModel = _interopRequireDefault(require("./model/JournalEntryDocumentModel.js"));
+var _JournalEntryItem = _interopRequireDefault(require("./model/JournalEntryItem.js"));
+var _JournalEntryItemModel = _interopRequireDefault(require("./model/JournalEntryItemModel.js"));
+var _JournalEntryProductCommand = _interopRequireDefault(require("./model/JournalEntryProductCommand.js"));
+var _JournalEntryProductModel = _interopRequireDefault(require("./model/JournalEntryProductModel.js"));
+var _JournalEntryTaxModel = _interopRequireDefault(require("./model/JournalEntryTaxModel.js"));
+var _JournalEntryViewModel = _interopRequireDefault(require("./model/JournalEntryViewModel.js"));
+var _JournalEntryViewModelGetAllModel = _interopRequireDefault(require("./model/JournalEntryViewModelGetAllModel.js"));
+var _JournalEntryWarehouseModel = _interopRequireDefault(require("./model/JournalEntryWarehouseModel.js"));
+var _KeysProductsViewModel = _interopRequireDefault(require("./model/KeysProductsViewModel.js"));
+var _Link = _interopRequireDefault(require("./model/Link.js"));
+var _LinksPagination = _interopRequireDefault(require("./model/LinksPagination.js"));
+var _LiteCustomerCommand = _interopRequireDefault(require("./model/LiteCustomerCommand.js"));
+var _MailCommand = _interopRequireDefault(require("./model/MailCommand.js"));
+var _MailViewModel = _interopRequireDefault(require("./model/MailViewModel.js"));
+var _Metadata = _interopRequireDefault(require("./model/Metadata.js"));
+var _MetadataModel = _interopRequireDefault(require("./model/MetadataModel.js"));
+var _PageListModel = _interopRequireDefault(require("./model/PageListModel.js"));
+var _Payment = _interopRequireDefault(require("./model/Payment.js"));
+var _PaymentTypeViewModel = _interopRequireDefault(require("./model/PaymentTypeViewModel.js"));
+var _PaymentsCommand = _interopRequireDefault(require("./model/PaymentsCommand.js"));
+var _PaymentsModel = _interopRequireDefault(require("./model/PaymentsModel.js"));
+var _PhoneCommand = _interopRequireDefault(require("./model/PhoneCommand.js"));
+var _PhoneModel = _interopRequireDefault(require("./model/PhoneModel.js"));
+var _PriceListItemViewModel = _interopRequireDefault(require("./model/PriceListItemViewModel.js"));
+var _PriceListViewModel = _interopRequireDefault(require("./model/PriceListViewModel.js"));
+var _PriceListsViewModel = _interopRequireDefault(require("./model/PriceListsViewModel.js"));
+var _PricesListProducts = _interopRequireDefault(require("./model/PricesListProducts.js"));
+var _PricesProducts = _interopRequireDefault(require("./model/PricesProducts.js"));
+var _ProductDeleteViewModel = _interopRequireDefault(require("./model/ProductDeleteViewModel.js"));
+var _ProductModel = _interopRequireDefault(require("./model/ProductModel.js"));
+var _ProductModelGetAllModel = _interopRequireDefault(require("./model/ProductModelGetAllModel.js"));
+var _ProductTaxesCommand = _interopRequireDefault(require("./model/ProductTaxesCommand.js"));
+var _Provider = _interopRequireDefault(require("./model/Provider.js"));
+var _PurchaseOrderCommand = _interopRequireDefault(require("./model/PurchaseOrderCommand.js"));
+var _PursacheOrderModel = _interopRequireDefault(require("./model/PursacheOrderModel.js"));
+var _RelatedUsersCommand = _interopRequireDefault(require("./model/RelatedUsersCommand.js"));
+var _RelatedUsersModel = _interopRequireDefault(require("./model/RelatedUsersModel.js"));
+var _RetentionsCommand = _interopRequireDefault(require("./model/RetentionsCommand.js"));
+var _RetentionsOutModel = _interopRequireDefault(require("./model/RetentionsOutModel.js"));
+var _SendElectronicInvoiceCommand = _interopRequireDefault(require("./model/SendElectronicInvoiceCommand.js"));
+var _SendElectronicInvoiceViewModel = _interopRequireDefault(require("./model/SendElectronicInvoiceViewModel.js"));
+var _SendElectronicVoucherCommand = _interopRequireDefault(require("./model/SendElectronicVoucherCommand.js"));
+var _SendElectronicVoucherViewModel = _interopRequireDefault(require("./model/SendElectronicVoucherViewModel.js"));
+var _SendInvoiceByEmailCommand = _interopRequireDefault(require("./model/SendInvoiceByEmailCommand.js"));
+var _SendVoucherByEmailCommand = _interopRequireDefault(require("./model/SendVoucherByEmailCommand.js"));
+var _StampCommand = _interopRequireDefault(require("./model/StampCommand.js"));
+var _StampViewModel = _interopRequireDefault(require("./model/StampViewModel.js"));
+var _Tax = _interopRequireDefault(require("./model/Tax.js"));
+var _TaxViewModel = _interopRequireDefault(require("./model/TaxViewModel.js"));
+var _TaxesCommand = _interopRequireDefault(require("./model/TaxesCommand.js"));
+var _TaxesModel = _interopRequireDefault(require("./model/TaxesModel.js"));
+var _TestBalanceCustomer = _interopRequireDefault(require("./model/TestBalanceCustomer.js"));
+var _TestBalanceResultModel = _interopRequireDefault(require("./model/TestBalanceResultModel.js"));
+var _UnitProductsViewModel = _interopRequireDefault(require("./model/UnitProductsViewModel.js"));
+var _UpdateCustomerCommand = _interopRequireDefault(require("./model/UpdateCustomerCommand.js"));
+var _UpdateProductCommand = _interopRequireDefault(require("./model/UpdateProductCommand.js"));
+var _UsersModel = _interopRequireDefault(require("./model/UsersModel.js"));
+var _UsersViewModel = _interopRequireDefault(require("./model/UsersViewModel.js"));
+var _VoucherStampModel = _interopRequireDefault(require("./model/VoucherStampModel.js"));
+var _VoucherViewModel = _interopRequireDefault(require("./model/VoucherViewModel.js"));
+var _VoucherViewModelGetAllModel = _interopRequireDefault(require("./model/VoucherViewModelGetAllModel.js"));
+var _Warehouse = _interopRequireDefault(require("./model/Warehouse.js"));
+var _WarehouseModel = _interopRequireDefault(require("./model/WarehouseModel.js"));
+var _WarehouseViewModel = _interopRequireDefault(require("./model/WarehouseViewModel.js"));
+var _AccountGroupApi = _interopRequireDefault(require("./api/AccountGroupApi.js"));
+var _AccountsPayableApi = _interopRequireDefault(require("./api/AccountsPayableApi.js"));
+var _CostCenterApi = _interopRequireDefault(require("./api/CostCenterApi.js"));
+var _CreditNoteApi = _interopRequireDefault(require("./api/CreditNoteApi.js"));
+var _CustomerApi = _interopRequireDefault(require("./api/CustomerApi.js"));
+var _DocumentBalanceApi = _interopRequireDefault(require("./api/DocumentBalanceApi.js"));
+var _DocumentTypeApi = _interopRequireDefault(require("./api/DocumentTypeApi.js"));
+var _FixedAssetsApi = _interopRequireDefault(require("./api/FixedAssetsApi.js"));
+var _InvoiceApi = _interopRequireDefault(require("./api/InvoiceApi.js"));
+var _JournalEntryApi = _interopRequireDefault(require("./api/JournalEntryApi.js"));
+var _PaymentTypeApi = _interopRequireDefault(require("./api/PaymentTypeApi.js"));
+var _PriceApi = _interopRequireDefault(require("./api/PriceApi.js"));
+var _ProductApi = _interopRequireDefault(require("./api/ProductApi.js"));
+var _TaxApi = _interopRequireDefault(require("./api/TaxApi.js"));
+var _TestBalanceApi = _interopRequireDefault(require("./api/TestBalanceApi.js"));
+var _UserApi = _interopRequireDefault(require("./api/UserApi.js"));
+var _VoucherApi = _interopRequireDefault(require("./api/VoucherApi.js"));
+var _WarehousesApi = _interopRequireDefault(require("./api/WarehousesApi.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -1198,7 +1209,6 @@ function initialize(_ref) {
     urlSignIn = _ref.urlSignIn,
     userName = _ref.userName,
     accessKey = _ref.accessKey;
-
   _ApiClient["default"].initialize({
     basePath: basePath,
     urlSignIn: urlSignIn,
@@ -1206,14 +1216,13 @@ function initialize(_ref) {
     accessKey: accessKey
   });
 }
+
 /**
 * signIn in SiigoAPI to get Token. 
 * @param {Object} params - implicit object with params to signIn and get token.
 * @param {string} params.userName - The user name to sign-in.
 * @param {string} params.accessKey - The access key to sign-in.
 */
-
-
 function signIn(_x) {
   return _signIn.apply(this, arguments);
 }
@@ -1248,26 +1257,21 @@ function signIn(_x) {
 * @module index
 * @version v1
 */
-
-
 function _signIn() {
   _signIn = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(_ref2) {
     var userName, accessKey;
     return _regenerator["default"].wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            userName = _ref2.userName, accessKey = _ref2.accessKey;
-            _context.next = 3;
-            return _ApiClient["default"].signIn({
-              userName: userName,
-              accessKey: accessKey
-            });
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          userName = _ref2.userName, accessKey = _ref2.accessKey;
+          _context.next = 3;
+          return _ApiClient["default"].signIn({
+            userName: userName,
+            accessKey: accessKey
+          });
+        case 3:
+        case "end":
+          return _context.stop();
       }
     }, _callee);
   }));

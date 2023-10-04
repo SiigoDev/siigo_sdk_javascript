@@ -12,10 +12,15 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateVoucherCommand from '../model/CreateVoucherCommand';
-import VoucherViewModel from '../model/VoucherViewModel';
-import VoucherViewModelGetAllModel from '../model/VoucherViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateVoucherCommand from '../model/CreateVoucherCommand.js';
+import ErrorResponse from '../model/ErrorResponse.js';
+import MailViewModel from '../model/MailViewModel.js';
+import SendElectronicVoucherCommand from '../model/SendElectronicVoucherCommand.js';
+import SendElectronicVoucherViewModel from '../model/SendElectronicVoucherViewModel.js';
+import SendVoucherByEmailCommand from '../model/SendVoucherByEmailCommand.js';
+import VoucherViewModel from '../model/VoucherViewModel.js';
+import VoucherViewModelGetAllModel from '../model/VoucherViewModelGetAllModel.js';
 
 /**
 * Voucher service.
@@ -76,7 +81,7 @@ export default class VoucherApi {
     createVoucher(opts) {
       return this.createVoucherWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -122,7 +127,7 @@ export default class VoucherApi {
     getVoucher(id) {
       return this.getVoucherWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -191,7 +196,109 @@ export default class VoucherApi {
     getVouchers(opts) {
       return this.getVouchersWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
+        });
+    }
+
+
+    /**
+     * Send electronic voucher by GUID.
+     * @param {String} id Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendElectronicVoucherViewModel} and HTTP response
+     */
+    sendElectronicVoucherWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendElectronicVoucher");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = SendElectronicVoucherViewModel;
+      return this.apiClient.callApi(
+        '/v1/vouchers/{id}/stamp', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Send electronic voucher by GUID.
+     * @param {String} id Represents the unique Id of voucher, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendElectronicVoucherCommand} opts.sendElectronicVoucherCommand Cotains the email (and copy to emails) to send the electronic invoice.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendElectronicVoucherViewModel}
+     */
+    sendElectronicVoucher(id, opts) {
+      return this.sendElectronicVoucherWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
+        });
+    }
+
+
+    /**
+     * Send an invoice by email
+     * @param {String} id Represents the Guid of the Invoice.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MailViewModel} and HTTP response
+     */
+    sendVoucherByEmailWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling sendVoucherByEmail");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = MailViewModel;
+      return this.apiClient.callApi(
+        '/v1/vouchers/{id}/mail', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Send an invoice by email
+     * @param {String} id Represents the Guid of the Invoice.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SendVoucherByEmailCommand} opts.sendVoucherByEmailCommand Contains the parameters for sending the Email.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MailViewModel}
+     */
+    sendVoucherByEmail(id, opts) {
+      return this.sendVoucherByEmailWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

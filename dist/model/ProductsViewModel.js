@@ -1,24 +1,16 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _LinksPagination = _interopRequireDefault(require("./LinksPagination"));
-
 var _PageListDto = _interopRequireDefault(require("./PageListDto"));
-
 var _ProductModel = _interopRequireDefault(require("./ProductModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -31,7 +23,6 @@ var _ProductModel = _interopRequireDefault(require("./ProductModel"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The ProductsViewModel model module.
  * @module model/ProductsViewModel
@@ -51,11 +42,10 @@ var ProductsViewModel = /*#__PURE__*/function () {
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(ProductsViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>ProductsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -63,26 +53,21 @@ var ProductsViewModel = /*#__PURE__*/function () {
      * @param {module:model/ProductsViewModel} obj Optional instance to populate.
      * @return {module:model/ProductsViewModel} The populated <code>ProductsViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ProductsViewModel();
-
         if (data.hasOwnProperty('pagination')) {
           obj['pagination'] = _PageListDto["default"].constructFromObject(data['pagination']);
         }
-
         if (data.hasOwnProperty('results')) {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_ProductModel["default"]]);
         }
-
         if (data.hasOwnProperty('__links')) {
           obj['__links'] = _LinksPagination["default"].constructFromObject(data['__links']);
         }
       }
-
       return obj;
     }
   }]);
@@ -91,19 +76,16 @@ var ProductsViewModel = /*#__PURE__*/function () {
 /**
  * @member {module:model/PageListDto} pagination
  */
-
-
 ProductsViewModel.prototype['pagination'] = undefined;
+
 /**
  * Contains the Results, this results will be a list of products.
  * @member {Array.<module:model/ProductModel>} results
  */
-
 ProductsViewModel.prototype['results'] = undefined;
+
 /**
  * @member {module:model/LinksPagination} __links
  */
-
 ProductsViewModel.prototype['__links'] = undefined;
-var _default = ProductsViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = ProductsViewModel;

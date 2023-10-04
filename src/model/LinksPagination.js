@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Link from './Link';
+import ApiClient from '../ApiClient.js';
+import Link from './Link.js';
 
 /**
  * The LinksPagination model module.

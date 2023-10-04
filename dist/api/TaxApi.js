@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _TaxViewModel = _interopRequireDefault(require("../model/TaxViewModel"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _TaxViewModel = _interopRequireDefault(require("../model/TaxViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _TaxViewModel = _interopRequireDefault(require("../model/TaxViewModel"));
  * Do not edit the class manually.
  *
  */
-
 /**
 * Tax service.
 * @module api/TaxApi
 * @version v1
 */
-var TaxApi = /*#__PURE__*/function () {
+var TaxApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new TaxApi. 
   * @alias module:api/TaxApi
@@ -49,8 +42,6 @@ var TaxApi = /*#__PURE__*/function () {
    * Returns a list of taxes.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TaxViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(TaxApi, [{
     key: "getTaxesWithHttpInfo",
     value: function getTaxesWithHttpInfo() {
@@ -69,16 +60,14 @@ var TaxApi = /*#__PURE__*/function () {
      * Returns a list of taxes.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TaxViewModel>}
      */
-
   }, {
     key: "getTaxes",
     value: function getTaxes() {
       return this.getTaxesWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return TaxApi;
 }();
-
-exports["default"] = TaxApi;

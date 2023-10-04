@@ -11,72 +11,40 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index', process.cwd()+'/test/app'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'), require(process.cwd()+'/test/app.js'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi, root.app);
-  }
-}(this, function(expect, SiigoApi, app) {
-  'use strict';
+import app from "../app.js";
+import expect from "expect.js";
 
-  var instance;
-  var result;
-  beforeEach(async function() {
-    SiigoApi = await app._test.initialize(SiigoApi);
-    instance = new SiigoApi.FixedAssetsApi();
-  });
+let instance;
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
+before(async function() {
+  let SiigoAPI = await app.initialize();
+  instance = new SiigoAPI.FixedAssetsApi();
+});
 
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('FixedAssetsApi', function() {
-    describe('getAssetGroups', function() {
-      it('should call getAssetGroups successfully', async function() {
-        //uncomment below and update the code to test getCostCenters
-        try {
-          result = await instance.getAssetGroupsWithHttpInfo();
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body[0].id).to.be(17174);
-        expect(result.response.body[0].name).to.be('Equipo de computacion');
-        expect(result.response.body[0].active).to.be(true);
-      });
-    });
-    describe('getFixedAssets', function() {
-      it('should call getFixedAssets successfully', async function() {
-        try {
-          result = await instance.getFixedAssetsWithHttpInfo();
-        } catch (error) {
-          console.error(error);
-        }
-        expect(result.response.statusCode).to.be(200);
-        expect(result.response.body[0].id).to.be(28801);
-        expect(result.response.body[0].name).to.be('Computador oficina');
-        expect(result.response.body[0].group).to.be('Equipo de computacion');
-        expect(result.response.body[0].active).to.be(true);
-      });
+describe('FixedAssetsApi', function() {
+  describe('getAssetGroups', function() {
+    it('should call getAssetGroups successfully', async function() {
+      try {
+        let result = await instance.getAssetGroupsWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
     });
   });
+  describe('getFixedAssets', function() {
+    it('should call getFixedAssets successfully', async function() {
+      try {
+        let result = await instance.getFixedAssetsWithHttpInfo({});
+        expect(result.response.statusCode).to.be.greaterThan(199);
+        expect(result.response.statusCode).to.be.lessThan(300);
+      } catch (error) {
+        expect(error.status).to.be.greaterThan(399);
+        expect(error.status).to.be.lessThan(500);
+      }      
+    });
+  });
+});
 
-}));

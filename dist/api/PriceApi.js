@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _PriceListsViewModel = _interopRequireDefault(require("../model/PriceListsViewModel"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _PriceListsViewModel = _interopRequireDefault(require("../model/PriceListsViewModel.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _PriceListsViewModel = _interopRequireDefault(require("../model/PriceListsVi
  * Do not edit the class manually.
  *
  */
-
 /**
 * Price service.
 * @module api/PriceApi
 * @version v1
 */
-var PriceApi = /*#__PURE__*/function () {
+var PriceApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new PriceApi. 
   * @alias module:api/PriceApi
@@ -49,8 +42,6 @@ var PriceApi = /*#__PURE__*/function () {
    * Returns a list of price lists.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/PriceListsViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(PriceApi, [{
     key: "getPriceListWithHttpInfo",
     value: function getPriceListWithHttpInfo() {
@@ -69,16 +60,14 @@ var PriceApi = /*#__PURE__*/function () {
      * Returns a list of price lists.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/PriceListsViewModel>}
      */
-
   }, {
     key: "getPriceList",
     value: function getPriceList() {
       return this.getPriceListWithHttpInfo().then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return PriceApi;
 }();
-
-exports["default"] = PriceApi;

@@ -11,13 +11,13 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AddressCommand from './AddressCommand';
-import ContactCommand from './ContactCommand';
-import CustomFieldsCommand from './CustomFieldsCommand';
-import FiscalResponsibilitiesCommand from './FiscalResponsibilitiesCommand';
-import PhoneCommand from './PhoneCommand';
-import RelatedUsersCommand from './RelatedUsersCommand';
+import ApiClient from '../ApiClient.js';
+import AddressCommand from './AddressCommand.js';
+import ContactCommand from './ContactCommand.js';
+import CustomFieldsCommand from './CustomFieldsCommand.js';
+import FiscalResponsibilitiesCommand from './FiscalResponsibilitiesCommand.js';
+import PhoneCommand from './PhoneCommand.js';
+import RelatedUsersCommand from './RelatedUsersCommand.js';
 
 /**
  * The CreateCustomerCommandCountry model module.
@@ -106,6 +106,9 @@ class CreateCustomerCommandCountry {
             }
             if (data.hasOwnProperty('custom_fields')) {
                 obj['custom_fields'] = ApiClient.convertToType(data['custom_fields'], [CustomFieldsCommand]);
+            }
+            if (data.hasOwnProperty('fiscal_regime')) {
+                obj['fiscal_regime'] = ApiClient.convertToType(data['fiscal_regime'], 'String');
             }
         }
         return obj;
@@ -219,6 +222,12 @@ CreateCustomerCommandCountry.prototype['related_users'] = undefined;
  * @member {Array.<module:model/CustomFieldsCommand>} custom_fields
  */
 CreateCustomerCommandCountry.prototype['custom_fields'] = undefined;
+
+/**
+ * Represents fiscal Regime.
+ * @member {String} fiscal_regime
+ */
+CreateCustomerCommandCountry.prototype['fiscal_regime'] = undefined;
 
 
 

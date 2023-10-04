@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import ErrorDetail from './ErrorDetail';
+import ApiClient from '../ApiClient.js';
+import ErrorDetail from './ErrorDetail.js';
 
 /**
  * The ErrorResponse model module.

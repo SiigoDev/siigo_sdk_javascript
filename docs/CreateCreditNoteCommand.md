@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 **seller** | **Number** | Represents the Id of the seller associated with the invoice,   for example, the id &#39;629&#39; can represent a seller called &#39;Micke&#39;. | [optional] 
 **costCenter** | **Number** | Represents the id of the cost center, the value of this field must be an integer  number that represents the unique id of the cost center. | [optional] 
 **currency** | [**CurrencyCommand**](CurrencyCommand.md) |  | [optional] 
-**retentions** | [**[RetentionsCommand]**](RetentionsCommand.md) | Contains a list of information about every Retention associated to the invoice. | [optional] 
+**retentions** | [**[RetentionsCommand]**](RetentionsCommand.md) | Contains a list of information about every Retention associated with the invoice. | [optional] 
 **advancePayment** | **Number** | Represent the Advance Payment. For example, an advance payment of 33.3 dollars  for a product of 40 dollars. | [optional] 
 **observations** | **String** | Represent additional comments in document. | [optional] 
-**items** | [**[ItemsCommand]**](ItemsCommand.md) | Contains a list with items associated to invoice. | [optional] 
-**payments** | [**[PaymentsCommand]**](PaymentsCommand.md) | Contains a list with payments types associated to invoice. | [optional] 
+**items** | [**[ItemsCommand]**](ItemsCommand.md) | Contains a list with items associated with invoice. | [optional] 
+**payments** | [**[PaymentsCommand]**](PaymentsCommand.md) | Contains a list with payments types associated with invoice. | [optional] 
 
 

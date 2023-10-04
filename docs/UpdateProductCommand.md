@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **taxClassification** | **String** | Represent the tax classification, this field could be &#39;Taxed&#39;, &#39;Exempt&#39; or &#39;Excluded&#39;. | [optional] 
 **taxIncluded** | **Boolean** | Represents whether this product has VAT included.  This field can be &#39;true&#39; or &#39;false&#39;. | [optional] 
 **taxConsumptionValue** | **Number** | Represents value of consumption tax. | [optional] 
-**taxes** | [**[ProductTaxesCommand]**](ProductTaxesCommand.md) | Contains a list with ids of taxes associated to item. | [optional] 
+**taxes** | [**[ProductTaxesCommand]**](ProductTaxesCommand.md) | Contains a list with ids of taxes associated with item. | [optional] 
 **prices** | [**[PricesProducts]**](PricesProducts.md) | Contains a list with &#39;prices list&#39; of product. Every product can have up to 12 price list. | [optional] 
 **unit** | **String** | Represents the id of an unit of measurement, by default this field will be 94 only in Colombia | [optional] 
 **unitLabel** | **String** | Represents Unit of measure for invoice printing. | [optional] 

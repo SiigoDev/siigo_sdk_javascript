@@ -12,11 +12,11 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import CreateCreditNoteCommand from '../model/CreateCreditNoteCommand';
-import CreditNotePdfViewModel from '../model/CreditNotePdfViewModel';
-import CreditNoteViewModel from '../model/CreditNoteViewModel';
-import CreditNoteViewModelGetAllModel from '../model/CreditNoteViewModelGetAllModel';
+import ApiClient from "../ApiClient.js";
+import CreateCreditNoteCommand from '../model/CreateCreditNoteCommand.js';
+import CreditNotePdfViewModel from '../model/CreditNotePdfViewModel.js';
+import CreditNoteViewModel from '../model/CreditNoteViewModel.js';
+import CreditNoteViewModelGetAllModel from '../model/CreditNoteViewModelGetAllModel.js';
 
 /**
 * CreditNote service.
@@ -77,7 +77,7 @@ export default class CreditNoteApi {
     createCreditNote(opts) {
       return this.createCreditNoteWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -123,7 +123,7 @@ export default class CreditNoteApi {
     getCreditNote(id) {
       return this.getCreditNoteWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -169,7 +169,7 @@ export default class CreditNoteApi {
     getCreditNotePDF(id) {
       return this.getCreditNotePDFWithHttpInfo(id)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -238,7 +238,7 @@ export default class CreditNoteApi {
     getCreditNotes(opts) {
       return this.getCreditNotesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

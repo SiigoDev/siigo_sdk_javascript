@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AccountModel from './AccountModel';
-import Due from './Due';
-import TaxesModel from './TaxesModel';
+import ApiClient from '../ApiClient.js';
+import AccountModel from './AccountModel.js';
+import Due from './Due.js';
+import TaxesModel from './TaxesModel.js';
 
 /**
  * The ItemVoucher model module.

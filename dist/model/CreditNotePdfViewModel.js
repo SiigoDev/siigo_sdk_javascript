@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The CreditNotePdfViewModel model module.
  * @module model/CreditNotePdfViewModel
@@ -40,16 +34,16 @@ var CreditNotePdfViewModel = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, CreditNotePdfViewModel);
     CreditNotePdfViewModel.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(CreditNotePdfViewModel, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>CreditNotePdfViewModel</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,26 +51,21 @@ var CreditNotePdfViewModel = /*#__PURE__*/function () {
      * @param {module:model/CreditNotePdfViewModel} obj Optional instance to populate.
      * @return {module:model/CreditNotePdfViewModel} The populated <code>CreditNotePdfViewModel</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new CreditNotePdfViewModel();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
-
         if (data.hasOwnProperty('cude')) {
           obj['cude'] = _ApiClient["default"].convertToType(data['cude'], 'String');
         }
-
         if (data.hasOwnProperty('base64')) {
           obj['base64'] = _ApiClient["default"].convertToType(data['base64'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -86,20 +75,17 @@ var CreditNotePdfViewModel = /*#__PURE__*/function () {
  * Represents the unique Id of credit note, this value must be a 'Guid'  with the next format 00000000-0000-0000-0000-000000000000.
  * @member {String} id
  */
-
-
 CreditNotePdfViewModel.prototype['id'] = undefined;
+
 /**
  * Represents the CUDE of credit note.
  * @member {String} cude
  */
-
 CreditNotePdfViewModel.prototype['cude'] = undefined;
+
 /**
  * Represents the data of the credit note on base 64 to convert it to PDF.
  * @member {String} base64
  */
-
 CreditNotePdfViewModel.prototype['base64'] = undefined;
-var _default = CreditNotePdfViewModel;
-exports["default"] = _default;
+var _default = exports["default"] = CreditNotePdfViewModel;

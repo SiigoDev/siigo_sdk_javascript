@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The ErrorDetail model module.
  * @module model/ErrorDetail
@@ -45,11 +39,10 @@ var ErrorDetail = /*#__PURE__*/function () {
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(ErrorDetail, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>ErrorDetail</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,30 +50,24 @@ var ErrorDetail = /*#__PURE__*/function () {
      * @param {module:model/ErrorDetail} obj Optional instance to populate.
      * @return {module:model/ErrorDetail} The populated <code>ErrorDetail</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ErrorDetail();
-
         if (data.hasOwnProperty('code')) {
           obj['code'] = _ApiClient["default"].convertToType(data['code'], 'String');
         }
-
         if (data.hasOwnProperty('message')) {
           obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
         }
-
         if (data.hasOwnProperty('params')) {
           obj['params'] = _ApiClient["default"].convertToType(data['params'], ['String']);
         }
-
         if (data.hasOwnProperty('detail')) {
           obj['detail'] = _ApiClient["default"].convertToType(data['detail'], 'String');
         }
       }
-
       return obj;
     }
   }]);
@@ -89,23 +76,20 @@ var ErrorDetail = /*#__PURE__*/function () {
 /**
  * @member {String} code
  */
-
-
 ErrorDetail.prototype['code'] = undefined;
+
 /**
  * @member {String} message
  */
-
 ErrorDetail.prototype['message'] = undefined;
+
 /**
  * @member {Array.<String>} params
  */
-
 ErrorDetail.prototype['params'] = undefined;
+
 /**
  * @member {String} detail
  */
-
 ErrorDetail.prototype['detail'] = undefined;
-var _default = ErrorDetail;
-exports["default"] = _default;
+var _default = exports["default"] = ErrorDetail;

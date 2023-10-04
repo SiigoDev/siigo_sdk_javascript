@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import PhoneCommand from './PhoneCommand';
+import ApiClient from '../ApiClient.js';
+import PhoneCommand from './PhoneCommand.js';
 
 /**
  * The ContactCommand model module.

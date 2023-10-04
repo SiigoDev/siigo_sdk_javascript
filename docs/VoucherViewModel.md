@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **costCenter** | **Number** | Represents the id of the cost center, the value of this field must be an integer  number that represents the unique id of the cost center. | [optional] 
 **customer** | [**CustomerVoucher**](CustomerVoucher.md) |  | [optional] 
 **currency** | [**CurrencyModel**](CurrencyModel.md) |  | [optional] 
-**items** | [**[ItemVoucher]**](ItemVoucher.md) | Contains a list with items associated to voucher. | [optional] 
+**items** | [**[ItemVoucher]**](ItemVoucher.md) | Contains a list with items associated with voucher. | [optional] 
 **payment** | [**PaymentsModel**](PaymentsModel.md) |  | [optional] 
 **observations** | **String** | Represents additional comments in document. | [optional] 
 **metadata** | [**Metadata**](Metadata.md) |  | [optional] 

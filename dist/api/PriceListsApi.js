@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _PriceListsViewModel = _interopRequireDefault(require("../model/PriceListsViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _PriceListsViewModel = _interopRequireDefault(require("../model/PriceListsVi
  * Do not edit the class manually.
  *
  */
-
 /**
 * PriceLists service.
 * @module api/PriceListsApi
 * @version v1
 */
-var PriceListsApi = /*#__PURE__*/function () {
+var PriceListsApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new PriceListsApi. 
   * @alias module:api/PriceListsApi
@@ -45,12 +38,11 @@ var PriceListsApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, PriceListsApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of price lists.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/PriceListsViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(PriceListsApi, [{
     key: "getPriceListWithHttpInfo",
     value: function getPriceListWithHttpInfo() {
@@ -65,11 +57,11 @@ var PriceListsApi = /*#__PURE__*/function () {
       var returnType = [_PriceListsViewModel["default"]];
       return this.apiClient.callApi('/v1/price-lists', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of price lists.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/PriceListsViewModel>}
      */
-
   }, {
     key: "getPriceList",
     value: function getPriceList() {
@@ -80,5 +72,3 @@ var PriceListsApi = /*#__PURE__*/function () {
   }]);
   return PriceListsApi;
 }();
-
-exports["default"] = PriceListsApi;

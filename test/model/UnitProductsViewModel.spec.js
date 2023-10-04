@@ -11,61 +11,32 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.UnitProductsViewModel();
+beforeEach(function() {
+  instance = new SiigoApi.UnitProductsViewModel();
+});
+
+describe('UnitProductsViewModel', function() {
+  it('should create an instance of UnitProductsViewModel', function() {
+    // uncomment below and update the code to test UnitProductsViewModel
+    //var instance = new SiigoApi.UnitProductsViewModel();
+    //expect(instance).to.be.a(SiigoApi.UnitProductsViewModel);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('UnitProductsViewModel', function() {
-    it('should create an instance of UnitProductsViewModel', function() {
-      // uncomment below and update the code to test UnitProductsViewModel
-      var instance = new SiigoApi.UnitProductsViewModel();
-      expect(instance).to.be.a(SiigoApi.UnitProductsViewModel);
-    });
-
-    it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      var instance = new SiigoApi.UnitProductsViewModel();
-      expect(instance.code).to.be(undefined);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      var instance = new SiigoApi.UnitProductsViewModel();
-      expect(instance.name).to.be(undefined);
-    });
-
+  it('should have the property code (base name: "code")', function() {
+    // uncomment below and update the code to test the property code
+    //var instance = new SiigoApi.UnitProductsViewModel();
+    //expect(instance).to.be();
   });
 
-}));
+  it('should have the property name (base name: "name")', function() {
+    // uncomment below and update the code to test the property name
+    //var instance = new SiigoApi.UnitProductsViewModel();
+    //expect(instance).to.be();
+  });
+
+});

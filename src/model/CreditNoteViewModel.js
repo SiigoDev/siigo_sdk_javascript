@@ -11,16 +11,16 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import CurrencyModel from './CurrencyModel';
-import DocumentModel from './DocumentModel';
-import InvoiceCustomerModel from './InvoiceCustomerModel';
-import InvoiceModel from './InvoiceModel';
-import ItemsModel from './ItemsModel';
-import Metadata from './Metadata';
-import PaymentsModel from './PaymentsModel';
-import RetentionsOutModel from './RetentionsOutModel';
-import StampViewModel from './StampViewModel';
+import ApiClient from '../ApiClient.js';
+import CurrencyModel from './CurrencyModel.js';
+import DocumentModel from './DocumentModel.js';
+import InvoiceCustomerModel from './InvoiceCustomerModel.js';
+import InvoiceModel from './InvoiceModel.js';
+import ItemsModel from './ItemsModel.js';
+import Metadata from './Metadata.js';
+import PaymentsModel from './PaymentsModel.js';
+import RetentionsOutModel from './RetentionsOutModel.js';
+import StampViewModel from './StampViewModel.js';
 
 /**
  * The CreditNoteViewModel model module.
@@ -175,7 +175,7 @@ CreditNoteViewModel.prototype['currency'] = undefined;
 CreditNoteViewModel.prototype['seller'] = undefined;
 
 /**
- * Contains a list of information about every Retention associated to the invoice.
+ * Contains a list of information about every Retention associated with the invoice.
  * @member {Array.<module:model/RetentionsOutModel>} retentions
  */
 CreditNoteViewModel.prototype['retentions'] = undefined;
@@ -199,13 +199,13 @@ CreditNoteViewModel.prototype['total'] = undefined;
 CreditNoteViewModel.prototype['observations'] = undefined;
 
 /**
- * Contains a list with items associated to invoice.
+ * Contains a list with items associated with invoice.
  * @member {Array.<module:model/ItemsModel>} items
  */
 CreditNoteViewModel.prototype['items'] = undefined;
 
 /**
- * Contains a list with payments types associated to invoice.
+ * Contains a list with payments types associated with invoice.
  * @member {Array.<module:model/PaymentsModel>} payments
  */
 CreditNoteViewModel.prototype['payments'] = undefined;

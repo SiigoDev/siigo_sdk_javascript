@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The PageListDto model module.
  * @module model/PageListDto
@@ -45,11 +39,10 @@ var PageListDto = /*#__PURE__*/function () {
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(PageListDto, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>PageListDto</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,26 +50,21 @@ var PageListDto = /*#__PURE__*/function () {
      * @param {module:model/PageListDto} obj Optional instance to populate.
      * @return {module:model/PageListDto} The populated <code>PageListDto</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new PageListDto();
-
         if (data.hasOwnProperty('page')) {
           obj['page'] = _ApiClient["default"].convertToType(data['page'], 'Number');
         }
-
         if (data.hasOwnProperty('page_size')) {
           obj['page_size'] = _ApiClient["default"].convertToType(data['page_size'], 'Number');
         }
-
         if (data.hasOwnProperty('total_results')) {
           obj['total_results'] = _ApiClient["default"].convertToType(data['total_results'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -86,20 +74,17 @@ var PageListDto = /*#__PURE__*/function () {
  * Represents the current page.
  * @member {Number} page
  */
-
-
 PageListDto.prototype['page'] = undefined;
+
 /**
  * Represents the number of results per page.
  * @member {Number} page_size
  */
-
 PageListDto.prototype['page_size'] = undefined;
+
 /**
  * Respresents the total count of the results.
  * @member {Number} total_results
  */
-
 PageListDto.prototype['total_results'] = undefined;
-var _default = PageListDto;
-exports["default"] = _default;
+var _default = exports["default"] = PageListDto;

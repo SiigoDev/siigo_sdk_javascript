@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import Account from './Account';
-import ItemDue from './ItemDue';
-import TaxesCommand from './TaxesCommand';
+import ApiClient from '../ApiClient.js';
+import Account from './Account.js';
+import ItemDue from './ItemDue.js';
+import TaxesCommand from './TaxesCommand.js';
 
 /**
  * The Item model module.

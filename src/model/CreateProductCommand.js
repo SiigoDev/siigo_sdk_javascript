@@ -11,10 +11,10 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import AdditionalFieldsProducts from './AdditionalFieldsProducts';
-import PricesProducts from './PricesProducts';
-import ProductTaxesCommand from './ProductTaxesCommand';
+import ApiClient from '../ApiClient.js';
+import AdditionalFieldsProducts from './AdditionalFieldsProducts.js';
+import PricesProducts from './PricesProducts.js';
+import ProductTaxesCommand from './ProductTaxesCommand.js';
 
 /**
  * The CreateProductCommand model module.
@@ -172,7 +172,7 @@ CreateProductCommand.prototype['tax_included'] = undefined;
 CreateProductCommand.prototype['tax_consumption_value'] = undefined;
 
 /**
- * Contains a list with ids of taxes associated to item.
+ * Contains a list with ids of taxes associated with item.
  * @member {Array.<module:model/ProductTaxesCommand>} taxes
  */
 CreateProductCommand.prototype['taxes'] = undefined;

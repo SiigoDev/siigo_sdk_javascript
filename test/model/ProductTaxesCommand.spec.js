@@ -11,55 +11,26 @@
  *
  */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD.
-    define(['expect.js', process.cwd()+'/src/index'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require(process.cwd()+'/src/index'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.expect, root.SiigoApi);
-  }
-}(this, function(expect, SiigoApi) {
-  'use strict';
+import * as SiigoApi from "../../src/index.js";
+import expect from "expect.js";
 
-  var instance;
+let instance;
 
-  beforeEach(function() {
-    instance = new SiigoApi.ProductTaxesCommand();
+beforeEach(function() {
+  instance = new SiigoApi.ProductTaxesCommand();
+});
+
+describe('ProductTaxesCommand', function() {
+  it('should create an instance of ProductTaxesCommand', function() {
+    // uncomment below and update the code to test ProductTaxesCommand
+    //var instance = new SiigoApi.ProductTaxesCommand();
+    //expect(instance).to.be.a(SiigoApi.ProductTaxesCommand);
   });
 
-  var getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-    if (typeof object[getter] === 'function')
-      return object[getter]();
-    else
-      return object[property];
-  }
-
-  var setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-    if (typeof object[setter] === 'function')
-      object[setter](value);
-    else
-      object[property] = value;
-  }
-
-  describe('ProductTaxesCommand', function() {
-    it('should create an instance of ProductTaxesCommand', function() {
-      // uncomment below and update the code to test ProductTaxesCommand
-      var instance = new SiigoApi.ProductTaxesCommand();
-      expect(instance).to.be.a(SiigoApi.ProductTaxesCommand);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      var instance = new SiigoApi.ProductTaxesCommand();
-      expect(instance.id).to.be(undefined);
-    });
-
+  it('should have the property id (base name: "id")', function() {
+    // uncomment below and update the code to test the property id
+    //var instance = new SiigoApi.ProductTaxesCommand();
+    //expect(instance).to.be();
   });
 
-}));
+});

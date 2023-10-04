@@ -1,18 +1,13 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -25,7 +20,6 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
  * Do not edit the class manually.
  *
  */
-
 /**
  * The Warehouse model module.
  * @module model/Warehouse
@@ -40,16 +34,16 @@ var Warehouse = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, Warehouse);
     Warehouse.initialize(this);
   }
+
   /**
    * Initializes the fields of this object.
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-
-
   (0, _createClass2["default"])(Warehouse, null, [{
     key: "initialize",
     value: function initialize(obj) {}
+
     /**
      * Constructs a <code>Warehouse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -57,26 +51,21 @@ var Warehouse = /*#__PURE__*/function () {
      * @param {module:model/Warehouse} obj Optional instance to populate.
      * @return {module:model/Warehouse} The populated <code>Warehouse</code> instance.
      */
-
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new Warehouse();
-
         if (data.hasOwnProperty('id')) {
           obj['id'] = _ApiClient["default"].convertToType(data['id'], 'Number');
         }
-
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
-
         if (data.hasOwnProperty('quantity')) {
           obj['quantity'] = _ApiClient["default"].convertToType(data['quantity'], 'Number');
         }
       }
-
       return obj;
     }
   }]);
@@ -85,18 +74,15 @@ var Warehouse = /*#__PURE__*/function () {
 /**
  * @member {Number} id
  */
-
-
 Warehouse.prototype['id'] = undefined;
+
 /**
  * @member {String} name
  */
-
 Warehouse.prototype['name'] = undefined;
+
 /**
  * @member {Number} quantity
  */
-
 Warehouse.prototype['quantity'] = undefined;
-var _default = Warehouse;
-exports["default"] = _default;
+var _default = exports["default"] = Warehouse;

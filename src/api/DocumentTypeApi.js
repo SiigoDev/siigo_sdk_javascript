@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import DocumentTypeViewModel from '../model/DocumentTypeViewModel';
+import ApiClient from "../ApiClient.js";
+import DocumentTypeViewModel from '../model/DocumentTypeViewModel.js';
 
 /**
 * DocumentType service.
@@ -75,7 +75,7 @@ export default class DocumentTypeApi {
     getDocumentTypes(opts) {
       return this.getDocumentTypesWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

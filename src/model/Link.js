@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+import ApiClient from '../ApiClient.js';
 
 /**
  * The Link model module.
@@ -58,6 +58,7 @@ class Link {
 }
 
 /**
+ * Represents the link's href.
  * @member {String} href
  */
 Link.prototype['href'] = undefined;

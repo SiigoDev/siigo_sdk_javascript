@@ -12,8 +12,8 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import UsersViewModel from '../model/UsersViewModel';
+import ApiClient from "../ApiClient.js";
+import UsersViewModel from '../model/UsersViewModel.js';
 
 /**
 * User service.
@@ -78,7 +78,7 @@ export default class UserApi {
     getUsers(opts) {
       return this.getUsersWithHttpInfo(opts)
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

@@ -1,30 +1,19 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
-var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand"));
-
-var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse"));
-
-var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel"));
-
-var _ProductModel = _interopRequireDefault(require("../model/ProductModel"));
-
-var _ProductModelGetAllModel = _interopRequireDefault(require("../model/ProductModelGetAllModel"));
-
-var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand"));
-
+var _ApiClient = _interopRequireDefault(require("../ApiClient.js"));
+var _CreateProductCommand = _interopRequireDefault(require("../model/CreateProductCommand.js"));
+var _ErrorResponse = _interopRequireDefault(require("../model/ErrorResponse.js"));
+var _ProductDeleteViewModel = _interopRequireDefault(require("../model/ProductDeleteViewModel.js"));
+var _ProductModel = _interopRequireDefault(require("../model/ProductModel.js"));
+var _ProductModelGetAllModel = _interopRequireDefault(require("../model/ProductModelGetAllModel.js"));
+var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProductCommand.js"));
 /**
  * Siigo API
  * Siigo Api v1
@@ -37,13 +26,12 @@ var _UpdateProductCommand = _interopRequireDefault(require("../model/UpdateProdu
  * Do not edit the class manually.
  *
  */
-
 /**
 * Product service.
 * @module api/ProductApi
 * @version v1
 */
-var ProductApi = /*#__PURE__*/function () {
+var ProductApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new ProductApi. 
   * @alias module:api/ProductApi
@@ -55,14 +43,13 @@ var ProductApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, ProductApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Creates a product.
    * @param {Object} opts Optional parameters
    * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
    */
-
-
   (0, _createClass2["default"])(ProductApi, [{
     key: "createProductWithHttpInfo",
     value: function createProductWithHttpInfo(opts) {
@@ -78,35 +65,35 @@ var ProductApi = /*#__PURE__*/function () {
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Creates a product.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateProductCommand} opts.createProductCommand Represents the request with the product information.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
-
   }, {
     key: "createProduct",
     value: function createProduct(opts) {
       return this.createProductWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da;
+        return (_response_and_data$da = response_and_data.data) !== null && _response_and_data$da !== void 0 ? _response_and_data$da : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Deletes the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductDeleteViewModel} and HTTP response
      */
-
   }, {
     key: "deleteProductWithHttpInfo",
     value: function deleteProductWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling deleteProduct");
       }
-
       var pathParams = {
         'id': id
       };
@@ -119,34 +106,34 @@ var ProductApi = /*#__PURE__*/function () {
       var returnType = _ProductDeleteViewModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Deletes the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductDeleteViewModel}
      */
-
   }, {
     key: "deleteProduct",
     value: function deleteProduct(id) {
       return this.deleteProductWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da2;
+        return (_response_and_data$da2 = response_and_data.data) !== null && _response_and_data$da2 !== void 0 ? _response_and_data$da2 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
-
   }, {
     key: "getProductWithHttpInfo",
     value: function getProductWithHttpInfo(id) {
-      var postBody = null; // verify the required parameter 'id' is set
-
+      var postBody = null;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling getProduct");
       }
-
       var pathParams = {
         'id': id
       };
@@ -159,19 +146,21 @@ var ProductApi = /*#__PURE__*/function () {
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Gets the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
-
   }, {
     key: "getProduct",
     value: function getProduct(id) {
       return this.getProductWithHttpInfo(id).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da3;
+        return (_response_and_data$da3 = response_and_data.data) !== null && _response_and_data$da3 !== void 0 ? _response_and_data$da3 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Returns a paginated list of products.
      * @param {Object} opts Optional parameters
@@ -191,7 +180,6 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModelGetAllModel} and HTTP response
      */
-
   }, {
     key: "getProductsWithHttpInfo",
     value: function getProductsWithHttpInfo(opts) {
@@ -222,6 +210,7 @@ var ProductApi = /*#__PURE__*/function () {
       var returnType = _ProductModelGetAllModel["default"];
       return this.apiClient.callApi('/v1/products', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a paginated list of products.
      * @param {Object} opts Optional parameters
@@ -241,14 +230,15 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {Number} opts.pageSize Represents the number of results per page.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModelGetAllModel}
      */
-
   }, {
     key: "getProducts",
     value: function getProducts(opts) {
       return this.getProductsWithHttpInfo(opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da4;
+        return (_response_and_data$da4 = response_and_data.data) !== null && _response_and_data$da4 !== void 0 ? _response_and_data$da4 : JSON.parse(response_and_data.response.text);
       });
     }
+
     /**
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -256,17 +246,15 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProductModel} and HTTP response
      */
-
   }, {
     key: "updateProductWithHttpInfo",
     value: function updateProductWithHttpInfo(id, opts) {
       opts = opts || {};
-      var postBody = opts; // verify the required parameter 'id' is set
-
+      var postBody = opts;
+      // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling updateProduct");
       }
-
       var pathParams = {
         'id': id
       };
@@ -279,6 +267,7 @@ var ProductApi = /*#__PURE__*/function () {
       var returnType = _ProductModel["default"];
       return this.apiClient.callApi('/v1/products/{id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Updates the product by GUID.
      * @param {String} id Represents the unique Id of product, this value must be a Guid  with the next format 00000000-0000-0000-0000-000000000000.
@@ -286,16 +275,14 @@ var ProductApi = /*#__PURE__*/function () {
      * @param {module:model/UpdateProductCommand} opts.updateProductCommand Represents the request with the product information to update.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProductModel}
      */
-
   }, {
     key: "updateProduct",
     value: function updateProduct(id, opts) {
       return this.updateProductWithHttpInfo(id, opts).then(function (response_and_data) {
-        return response_and_data.data;
+        var _response_and_data$da5;
+        return (_response_and_data$da5 = response_and_data.data) !== null && _response_and_data$da5 !== void 0 ? _response_and_data$da5 : JSON.parse(response_and_data.response.text);
       });
     }
   }]);
   return ProductApi;
 }();
-
-exports["default"] = ProductApi;

@@ -12,9 +12,9 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import AssetGroupsViewModel from '../model/AssetGroupsViewModel';
-import FixedAssetsViewModel from '../model/FixedAssetsViewModel';
+import ApiClient from "../ApiClient.js";
+import AssetGroupsViewModel from '../model/AssetGroupsViewModel.js';
+import FixedAssetsViewModel from '../model/FixedAssetsViewModel.js';
 
 /**
 * FixedAssets service.
@@ -70,7 +70,7 @@ export default class FixedAssetsApi {
     getAssetGroups() {
       return this.getAssetGroupsWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 
@@ -109,7 +109,7 @@ export default class FixedAssetsApi {
     getFixedAssets() {
       return this.getFixedAssetsWithHttpInfo()
         .then(function(response_and_data) {
-          return response_and_data.data;
+          return response_and_data.data ?? JSON.parse(response_and_data.response.text);
         });
     }
 

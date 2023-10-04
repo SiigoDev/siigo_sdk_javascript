@@ -1,20 +1,14 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
-
 var _AccountGroupViewModel = _interopRequireDefault(require("../model/AccountGroupViewModel"));
-
 /**
  * Siigo API
  * Siigo Api v1
@@ -27,13 +21,12 @@ var _AccountGroupViewModel = _interopRequireDefault(require("../model/AccountGro
  * Do not edit the class manually.
  *
  */
-
 /**
 * AccountGroups service.
 * @module api/AccountGroupsApi
 * @version v1
 */
-var AccountGroupsApi = /*#__PURE__*/function () {
+var AccountGroupsApi = exports["default"] = /*#__PURE__*/function () {
   /**
   * Constructs a new AccountGroupsApi. 
   * @alias module:api/AccountGroupsApi
@@ -45,12 +38,11 @@ var AccountGroupsApi = /*#__PURE__*/function () {
     (0, _classCallCheck2["default"])(this, AccountGroupsApi);
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
+
   /**
    * Returns a list of account groups.
    * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AccountGroupViewModel>} and HTTP response
    */
-
-
   (0, _createClass2["default"])(AccountGroupsApi, [{
     key: "getAccountGroupsWithHttpInfo",
     value: function getAccountGroupsWithHttpInfo() {
@@ -65,11 +57,11 @@ var AccountGroupsApi = /*#__PURE__*/function () {
       var returnType = [_AccountGroupViewModel["default"]];
       return this.apiClient.callApi('/v1/account-groups', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
+
     /**
      * Returns a list of account groups.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AccountGroupViewModel>}
      */
-
   }, {
     key: "getAccountGroups",
     value: function getAccountGroups() {
@@ -80,5 +72,3 @@ var AccountGroupsApi = /*#__PURE__*/function () {
   }]);
   return AccountGroupsApi;
 }();
-
-exports["default"] = AccountGroupsApi;

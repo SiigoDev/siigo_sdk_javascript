@@ -33,7 +33,7 @@ class ApiClient {
      * @param {string} params.basePath - The base URL against which to resolve every API call's path.
      * @param {string} params.urlSignIn - The url sign-in.
      */
-    constructor({ basePath = 'http://local', urlSignIn }) {
+    constructor({ basePath = 'http://localhost', urlSignIn }) {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
@@ -42,7 +42,7 @@ class ApiClient {
         this.basePath = basePath.replace(/\/+$/, '');
         this.urlSignIn = urlSignIn.replace(/\/+$/, '');
 
-        // comment to generate new version to npmjs
+        this.urlSignIn = urlSignIn.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -726,7 +726,7 @@ class ApiClient {
     * @param {string} params.userName - The user name to sign-in.
     * @param {string} params.accessKey - The access key to sign-in.
     */
-    static async signIn({ userName, accessKey }) {
+    static async signIn({userName, accessKey}){
         const { access_token } = await ApiClient.instance.getAuthToken(userName, accessKey);
         ApiClient.instance.accessToken = access_token;
     }

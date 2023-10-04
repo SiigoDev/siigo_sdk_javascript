@@ -11,8 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
-import DocumentTypeTaxModel from './DocumentTypeTaxModel';
+import ApiClient from '../ApiClient.js';
+import DocumentTypeTaxModel from './DocumentTypeTaxModel.js';
 
 /**
  * The DocumentTypeViewModel model module.
@@ -122,6 +122,9 @@ class DocumentTypeViewModel {
             }
             if (data.hasOwnProperty('global_charges')) {
                 obj['global_charges'] = ApiClient.convertToType(data['global_charges'], [DocumentTypeTaxModel]);
+            }
+            if (data.hasOwnProperty('cargo_transportation')) {
+                obj['cargo_transportation'] = ApiClient.convertToType(data['cargo_transportation'], 'Boolean');
             }
             if (data.hasOwnProperty('i_s_r')) {
                 obj['i_s_r'] = ApiClient.convertToType(data['i_s_r'], 'Boolean');
@@ -272,16 +275,22 @@ DocumentTypeViewModel.prototype['document_support'] = undefined;
 DocumentTypeViewModel.prototype['prefix'] = undefined;
 
 /**
- * Contains information about the global discounts associated to document type.
+ * Contains information about the global discounts associated with document type.
  * @member {Array.<module:model/DocumentTypeTaxModel>} global_discounts
  */
 DocumentTypeViewModel.prototype['global_discounts'] = undefined;
 
 /**
- * Contains information about the global charges associated to document type.
+ * Contains information about the global charges associated with document type.
  * @member {Array.<module:model/DocumentTypeTaxModel>} global_charges
  */
 DocumentTypeViewModel.prototype['global_charges'] = undefined;
+
+/**
+ * Represents whether the document type is available for cargo transport.
+ * @member {Boolean} cargo_transportation
+ */
+DocumentTypeViewModel.prototype['cargo_transportation'] = undefined;
 
 /**
  * Represent if the document allows ISR. This field is only for Mexico.
