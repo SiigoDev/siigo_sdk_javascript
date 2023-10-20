@@ -53,6 +53,9 @@ class GlobalTaxCommand {
             if (data.hasOwnProperty('percentage')) {
                 obj['percentage'] = ApiClient.convertToType(data['percentage'], 'Number');
             }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'Number');
+            }
         }
         return obj;
     }
@@ -71,6 +74,11 @@ GlobalTaxCommand.prototype['id'] = undefined;
  * @member {Number} percentage
  */
 GlobalTaxCommand.prototype['percentage'] = undefined;
+
+/**
+ * @member {Number} value
+ */
+GlobalTaxCommand.prototype['value'] = undefined;
 
 
 
