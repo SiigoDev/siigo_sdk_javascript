@@ -1,6 +1,6 @@
 # siigo_api
 
-SiigoApi - JavaScript client for siigo_api 
+SiigoApi - JavaScript client for siigo_api
 
 
 ## Installation
